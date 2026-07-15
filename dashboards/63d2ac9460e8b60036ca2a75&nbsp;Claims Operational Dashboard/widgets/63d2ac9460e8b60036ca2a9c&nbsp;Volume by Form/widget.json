@@ -1,0 +1,248 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the volume of Institutional, Professional, and Dental Claims for current data set, up to two years. \n•\tPlacing the mouse over this widget will display the total number of claims per form. \n•\tTo view information for a specific form, select the desired form on the widget. The widgets will adjust to reflect information for that specific form only. Utilizing filter features will only affect that user’s view.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "continuous": false,
+                            "members": {
+                            }
+                        },
+                        "instanceid": "DE5B3-37C5-1D",
+                        "jaql": {
+                            "column": "Claim Form",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim Form]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Form"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color_bkp": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "92F8F-B66D-91",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "sort": "desc",
+                            "table": "Claim",
+                            "title": "Claim Count"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a9c",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "automaticHeight": false,
+        "convolution": {
+            "enabled": false,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "labels": {
+            "categories": true,
+            "color": "red",
+            "decimals": false,
+            "enabled": true,
+            "fontFamily": "Open Sans",
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "claim_form",
+                    "plural": "Claim Form",
+                    "singular": "Claim Form",
+                    "title": "Claim Form"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "pie/classic",
+    "title": "Volume by Form",
+    "type": "chart/pie"
+}

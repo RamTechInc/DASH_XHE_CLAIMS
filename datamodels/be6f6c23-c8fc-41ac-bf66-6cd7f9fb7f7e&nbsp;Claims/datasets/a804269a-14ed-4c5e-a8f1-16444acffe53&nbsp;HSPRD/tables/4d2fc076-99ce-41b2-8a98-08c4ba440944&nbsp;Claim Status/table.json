@@ -1,0 +1,104 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "d9d99ef2-98d1-4cd3-a524-639a89bf0d53",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "CUR_STATUS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CUR_STATUS",
+            "oid": "28e6a55e-ee31-47e5-a4bd-e33660c87123",
+            "precision": 35,
+            "scale": 0,
+            "size": 35,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "STATUS_DT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "STATUS_DT",
+            "oid": "fbd3ce6d-2a6a-4626-bb67-d79ba0ceb1da",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": false,
+            "id": "PROCESSOR_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PROCESSOR_ID",
+            "oid": "45a51f79-128e-4560-b627-fee7ae88e37c",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\r\nCEV.CEV_CLM_ID AS CLAIM_ID,\r\nCASE\r\n    WHEN TRIM(CEV.CEV_TYPE) = 'PD' AND CSEV.CSEV_CSV_CLM_ID IS NULL THEN 'Paid In Full'\r\n\tWHEN TRIM(CEV.CEV_TYPE) = 'PD' AND CSEV.CSEV_CSV_CLM_ID IS NOT NULL THEN 'Partial Denial'\r\n    WHEN CEV.CEV_RUN_ID IS NULL AND TRIM(CEV.CEV_TYPE) = 'DN' THEN 'Full Denial-INV'\r\n    WHEN CEV.CEV_RUN_ID IS NOT NULL AND TRIM(CEV.CEV_TYPE) = 'DN' THEN 'Full Denial'\r\n    ELSE INITCAP(TCL.TCL_TYPE_DESC)\r\nEND AS CUR_STATUS,\r\nCEV.CEV_EV_DT AS STATUS_DT,\r\nCEV.CEV_USER_ID\t\t\tAS PROCESSOR_ID\r\n\r\nFROM HS.CEV_CLM_EV AS CEV\r\nJOIN HS.CDT_CLM_DT       AS CDT ON CEV.CEV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nJOIN HS.TCL_TYPE_CD_LOOKUP AS TCL  ON TRIM(CEV.CEV_TYPE) = TCL.TCL_TYPE_CODE AND TCL.TCL_ID = 84\r\nLEFT JOIN\tHS.CSEV_CSV_EV\tAS CSEV\tON CEV.CEV_CLM_ID = CSEV.CSEV_CSV_CLM_ID \r\n                                    AND CSEV.CSEV_DEL_TS IS NULL \r\n                                    AND TRIM(CSEV.CSEV_TYPE) = 'DN' \r\n                                    AND CSEV.CSEV_ADD_TS = (SELECT CSEV_ADD_TS FROM HS.CSEV_CSV_EV WHERE CSEV_DEL_TS IS NULL AND CSEV_CSV_CLM_ID = CSEV.CSEV_CSV_CLM_ID AND CSEV_CSV_LN_NUM = CSEV.CSEV_CSV_LN_NUM ORDER BY CSEV_ADD_TS DESC FETCH FIRST 1 ROWS ONLY WITH UR)\r\n\r\nWHERE CEV.CEV_DEL_TS IS NULL\r\nAND CEV.CEV_ADD_TS = (SELECT cstat1.CEV_ADD_TS FROM HS.CEV_CLM_EV AS cstat1 WHERE cstat1.CEV_CLM_ID = CEV.CEV_CLM_ID AND cstat1.CEV_DEL_TS IS NULL ORDER BY cstat1.CEV_ADD_TS DESC FETCH FIRST 1 ROWS ONLY WITH UR)\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_gi5CjAYUX",
+    "isMaterialized": false,
+    "name": "Claim Status",
+    "oid": "4d2fc076-99ce-41b2-8a98-08c4ba440944",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "28e6a55e-ee31-47e5-a4bd-e33660c87123",
+                "displayName": "Current Status",
+                "name": "Current Status",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "fbd3ce6d-2a6a-4626-bb67-d79ba0ceb1da",
+                "displayName": "Current Status Date",
+                "name": "Current Status Date",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "45a51f79-128e-4560-b627-fee7ae88e37c",
+                "displayName": "Processor ID",
+                "name": "Processor ID",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "d9d99ef2-98d1-4cd3-a524-639a89bf0d53",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

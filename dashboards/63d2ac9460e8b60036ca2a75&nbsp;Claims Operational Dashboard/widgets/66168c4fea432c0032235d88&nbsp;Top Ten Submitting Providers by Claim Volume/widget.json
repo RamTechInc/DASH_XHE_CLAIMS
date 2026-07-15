@@ -1,0 +1,282 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "LocalHost/Claims",
+        "id": "aLOCALHOST_aCLAIMS",
+        "title": "Claims"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "continuous": false
+                        },
+                        "instanceid": "76868-374C-75",
+                        "jaql": {
+                            "column": "Submitting Provider Name",
+                            "datatype": "text",
+                            "dim": "[Submitting Provider Information.Submitting Provider Name]",
+                            "merged": true,
+                            "table": "Submitting Provider Information",
+                            "title": "Submitting Provider Name"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "8CF04-4121-A6",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "sort": "desc",
+                            "table": "Claim",
+                            "title": "# of unique Claim ID"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "4159C-9FEA-61",
+                        "jaql": {
+                            "collapsed": false,
+                            "column": "Submitting Provider Name",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "LocalHost/Claims",
+                                "id": "aLOCALHOST_aCLAIMS",
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Submitting Provider Information.Submitting Provider Name]",
+                            "filter": {
+                                "by": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "text",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "sort": "desc",
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                },
+                                "rankingMessage": "# of unique Claim ID",
+                                "top": 10
+                            },
+                            "merged": true,
+                            "table": "Submitting Provider Information",
+                            "title": "Submitting Provider Name"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "66168c4fea432c0032235d88",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "script": "./script.js",
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "submitting_provider_name",
+                    "plural": "Submitting Provider Name",
+                    "singular": "Submitting Provider Name",
+                    "title": "Submitting Provider Name"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": false,
+                "stacked": false,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "column/classic",
+    "title": "Top Ten Submitting Providers by Claim Volume",
+    "type": "chart/column"
+}

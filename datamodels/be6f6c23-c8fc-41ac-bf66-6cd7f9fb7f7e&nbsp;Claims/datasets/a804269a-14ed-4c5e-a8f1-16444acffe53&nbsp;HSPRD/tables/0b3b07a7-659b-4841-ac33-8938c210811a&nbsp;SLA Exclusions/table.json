@@ -1,0 +1,53 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLM_ID",
+            "oid": "4de5af93-1dfc-4878-98dc-78e7d79de9d6",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "SLA Exclusion Reason",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SLA Exclusion Reason",
+            "oid": "d30abed0-2caa-4ad9-8f8c-05ed8a82992e",
+            "precision": 35,
+            "scale": 0,
+            "size": 35,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "WITH CLAIM AS\r\n(SELECT\r\nCLM.CLM_ID,\r\nCPV.CPV_PRV_ID,\r\nCSV.CSV_PVC_TYPE,\r\nCSV.CSV_FSC_ID,\r\nDOS.CDT_DT AS DOS_CDT_DT,\r\nPPT.PPT_PLN_SHT_NM,\r\nPPT.PPT_PRD_SHT_NM,\r\nRCD.CDT_DT as RCD_CDT_DT\r\nFROM \tHS.CLM_CLAIM\t\t\tAS CLM\r\nJOIN \tHS.CDT_CLM_DT\t\t\tAS RCD ON CLM.CLM_ID = RCD.CDT_CLM_ID AND RCD.CDT_DT_QUAL = '050' AND RCD.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nJOIN\tHS.CDT_CLM_DT\t\t\tAS DOS ON CLM.CLM_ID = DOS.CDT_CLM_ID AND DOS.CDT_DT_QUAL = '150'\r\nJOIN\tHS.CSV_CLM_SRV\t\t\tAS CSV ON CLM.CLM_ID = CSV.CSV_CLM_ID\r\nJOIN\tHS.PPT_PRD_PLAN_TIER \tAS PPT ON CLM.CLM_MBR_BASE_PPT_ID = PPT.PPT_ID\r\nJOIN\tHS.CPV_CLM_PRV\t\t\tAS CPV ON CLM.CLM_ID = CPV.CPV_CLM_ID AND CPV.CPV_ENT_CD IN ('82','RN','SB') -- Rendering and Submitting Providers only\r\nWITH UR)\r\nSELECT DISTINCT \r\nCLM.CLM_ID,\r\nCASE\r\n\tWHEN RC.CLM_ID IS NULL AND MI.CEV_CLM_ID IS NULL AND VDR.CLM_ID IS NULL AND FEE.CLM_ID IS NULL AND CON.CLM_ID IS NULL THEN 'Valid Claim'\r\n\tWHEN MI.CEV_CLM_ID IS NOT NULL THEN 'MedImpact Claim'\r\n\tWHEN RC.CLM_ID IS NOT NULL THEN 'Voided Claim'\r\n\tWHEN VDR.CLM_ID IS NOT NULL THEN 'Originally Voided or Reversed Claim'\r\n    WHEN FEE.CLM_ID IS NOT NULL THEN 'Fee Schedule Added Late'\r\n    WHEN CON.CLM_ID IS NOT NULL THEN 'Contract Added Late'\r\nEND\tAS \"SLA Exclusion Reason\"\r\n\r\nFROM\t\tHS.CLM_CLAIM   AS CLM\r\nJOIN\t\tHS.CDT_CLM_DT  AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN\tHS.RTCLM1 \tAS RC ON CLM.CLM_ID = RC.CLM_ID AND TRIM(RC.CLM_EV_TYPE) IN ('VD')  --excludes voided claims\r\nLEFT JOIN\tHS.CEV_CLM_EV \tAS MI ON CLM.CLM_ID = MI.CEV_CLM_ID AND MI.CEV_ADD_TS = (SELECT CEV_ADD_TS FROM HS.CEV_CLM_EV WHERE TRIM(CEV_TYPE) = 'O' AND CEV_USER_ID = 'MEDIMPT' AND CEV_CLM_ID = MI.CEV_CLM_ID ORDER BY CEV_ADD_TS ASC FETCH FIRST 1 ROWS ONLY WITH UR) --excludes medimpact claims\r\nLEFT JOIN (SELECT XC.CLM_ID FROM HS.CLM_CLAIM XC JOIN HS.RTCLM1 RC ON XC.CLM_CLM_ID = RC.CLM_ID WHERE TRIM(XC.CLM_TYPE) IN ('VD','REV') AND TRIM(RC.CLM_EV_TYPE) in ('PD') WITH UR) AS VDR ON CLM.CLM_ID = VDR.CLM_ID --excludes claims where original claim is voided or reversed\r\nLEFT JOIN (SELECT CLM.CLM_ID\r\n            FROM\tCLAIM\tAS CLM\r\n            JOIN\tHS.PVF_PRV_FEE_SCHD\t\tAS PVF ON CLM.CPV_PRV_ID = PVF.PVF_PVC_PRV_ID AND PVF.PVF_DEL_TS IS NULL AND CLM.CSV_PVC_TYPE = PVF.PVF_PVC_TYPE AND CLM.CSV_FSC_ID = PVF.PVF_FSC_ID AND CLM.PPT_PLN_SHT_NM = PVF.PVF_PVC_PLN_SHT_NM AND CLM.PPT_PRD_SHT_NM = PVF.PVF_PVC_PRD_SHT_NM AND CLM.DOS_CDT_DT BETWEEN PVF.PVF_START_DT AND PVF.PVF_END_DT\r\n            WHERE DAYS(PVF.PVF_ADD_TS) - DAYS(CLM.RCD_CDT_DT) >= 10 WITH UR) AS FEE ON CLM.CLM_ID = FEE.CLM_ID --10 per with client sla exclusion timeframe\r\nLEFT JOIN (SELECT CLM.CLM_ID\r\n            FROM\tCLAIM\tAS CLM\r\n            JOIN\tHS.PVCR_PVC_RULE \t\tAS PVC ON CLM.CPV_PRV_ID = PVC.PVCR_PRV_ID AND CLM.PPT_PLN_SHT_NM = PVC.PVCR_PLN_SHT_NM AND CLM.PPT_PRD_SHT_NM = PVC.PVCR_PRD_SHT_NM AND PVC.PVCR_DEL_TS IS NULL AND CLM.DOS_CDT_DT BETWEEN PVC.PVCR_EFF_DT AND NVL(PVC.PVCR_EXP_DT,'12/31/9999') AND PVC.PVCR_RULE_QUAL = 'TS'\r\n            WHERE DAYS(PVC.PVCR_ADD_TS) - DAYS(CLM.RCD_CDT_DT) >= 10 WITH UR) AS CON ON CLM.CLM_ID = CON.CLM_ID --10 per with client sla exclusion timeframe\r\n\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_SuRcB45Jb",
+    "isMaterialized": false,
+    "name": "SLA Exclusions",
+    "oid": "0b3b07a7-659b-4841-ac33-8938c210811a",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "4de5af93-1dfc-4878-98dc-78e7d79de9d6",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

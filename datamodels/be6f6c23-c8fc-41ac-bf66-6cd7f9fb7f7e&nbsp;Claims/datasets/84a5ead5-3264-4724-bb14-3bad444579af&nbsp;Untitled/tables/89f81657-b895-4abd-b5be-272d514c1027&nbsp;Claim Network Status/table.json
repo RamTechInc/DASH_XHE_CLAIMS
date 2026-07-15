@@ -1,0 +1,46 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "02c5134b-bdb8-40ba-8674-61aa968101a3",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "968d025f-e4a4-4ac1-aec5-73f6df2f0b13",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "a5612971-0eac-493d-9bdb-7f27342ef291",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Claim Network Status",
+            "oid": "20ceb257-c83d-439f-a082-b37d9527756f",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "dataset": "84a5ead5-3264-4724-bb14-3bad444579af",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "3be31d48-b867-4105-9ce1-2da3bc661591"
+    },
+    "hidden": false,
+    "id": "Claim Network Status",
+    "isMaterialized": null,
+    "name": "Claim Network Status",
+    "oid": "89f81657-b895-4abd-b5be-272d514c1027",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

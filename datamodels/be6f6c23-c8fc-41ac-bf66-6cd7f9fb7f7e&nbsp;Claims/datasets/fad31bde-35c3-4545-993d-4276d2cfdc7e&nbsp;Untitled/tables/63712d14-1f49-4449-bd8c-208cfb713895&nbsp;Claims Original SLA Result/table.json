@@ -1,0 +1,82 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "95a5670f-e437-4fed-a40f-e4c5b6b9704b",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Claim ID",
+            "oid": "39f8b071-ae04-4088-a6da-a21a4a8984af",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "281fe19c-8451-43e7-9bf9-ae9b9138aca9",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SNF Clean Claim Processed Timely",
+            "oid": "e669fd9f-6f96-43ce-a87d-4b8b08347e7c",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "7e815af5-0df5-42e4-9814-56c0a3a0ccdf",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Clean Claim Processed Timely",
+            "oid": "a825f766-d552-40e3-9aab-d238e5506a61",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "11a825cc-ba53-482a-ab0f-fd2ce47fba1f",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "All Claim Processed Timely",
+            "oid": "d6e2eb0c-198e-41e7-9d41-2e04bb3d6a32",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "3bd6b4d7-7c75-4f2a-899c-3d0fa7c38671",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Interest Paid Correctly",
+            "oid": "18b5bc1b-a485-4661-97fd-1ef92649fd09",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "dataset": "fad31bde-35c3-4545-993d-4276d2cfdc7e",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "9c3285cd-39cf-413a-88dd-e6501fa6c618"
+    },
+    "hidden": false,
+    "id": "Claims Original SLA Result",
+    "isMaterialized": null,
+    "name": "Claims Original SLA Result",
+    "oid": "63712d14-1f49-4449-bd8c-208cfb713895",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

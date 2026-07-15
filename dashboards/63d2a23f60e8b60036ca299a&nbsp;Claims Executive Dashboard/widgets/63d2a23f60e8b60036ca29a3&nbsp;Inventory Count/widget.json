@@ -1,0 +1,244 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2a23f60e8b60036ca299a",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the total number of claims currently in inventory. Claims inventory will include the following statuses:\n•\tAllowed- claim has been processed and allowed for payment \n•\tFull Denial INV- The claim has been denied, has not processed for payment yet \n•\tOpen- claim is open and awaiting review \n•\tPayment Pending- claim has processed for payment, payment is pending \n•\tSuspended- claim has been suspended for errors to be reviewed",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "dirty": true,
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 3,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "7C72B-8675-9E",
+                        "jaql": {
+                            "context": {
+                                "[0BE97-5E8]": {
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "Claim ID"
+                                }
+                            },
+                            "formula": "(count([0BE97-5E8]))",
+                            "title": "Claim Count",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "value"
+            },
+            {
+                "items": [
+                ],
+                "name": "secondary"
+            },
+            {
+                "items": [
+                ],
+                "name": "min"
+            },
+            {
+                "items": [
+                ],
+                "name": "max"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "7864F-072D-89",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Status Type",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Status Type.Status Type]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Inventory"
+                                ],
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Status Type",
+                            "title": "Status Type"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2a23f60e8b60036ca29a3",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "disallowSelector": true,
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "selector": false,
+        "supportsHierarchies": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "style": {
+        "components": {
+            "icon": {
+                "enabled": true,
+                "inactive": true
+            },
+            "secondaryTitle": {
+                "enabled": true,
+                "inactive": true
+            },
+            "title": {
+                "enabled": false,
+                "inactive": false
+            }
+        },
+        "indicator/gauge": {
+            "components": {
+                "labels": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "ticks": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "round"
+        },
+        "indicator/numeric": {
+            "components": {
+                "icon": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "vertical",
+            "subtype": "simple"
+        },
+        "narration": {
+            "labels": [
+                {
+                    "id": "status_type",
+                    "plural": "Status Type",
+                    "singular": "Status Type",
+                    "title": "Status Type"
+                }
+            ]
+        },
+        "skin": "vertical",
+        "subtype": "simple"
+    },
+    "subtype": "indicator/numeric",
+    "title": "Inventory Count",
+    "type": "indicator"
+}

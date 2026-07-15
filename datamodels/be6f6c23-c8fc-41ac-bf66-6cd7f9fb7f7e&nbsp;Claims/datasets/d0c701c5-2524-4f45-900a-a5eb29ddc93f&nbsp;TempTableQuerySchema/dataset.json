@@ -1,0 +1,10 @@
+{
+    "connection": "./connection.json",
+    "database": "hstst",
+    "elasticube": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "oid": "d0c701c5-2524-4f45-900a-a5eb29ddc93f",
+    "schemaName": "TempTableQuerySchema",
+    "tables": [
+    ],
+    "type": "extract"
+}

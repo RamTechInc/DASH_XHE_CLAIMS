@@ -1,0 +1,1 @@
+"\r\nSELECT DISTINCT\r\nSTS.[Current Status],\r\nCASE\r\n    WHEN [Current Status] IN ('Paid In Full','Partial Denial','Full Denial','Void') THEN 'Processed'\r\n    WHEN [Current Status] IN ('Full Denial-INV','Allowed','Open','Payment Pending','Suspended') THEN 'Inventory'\r\nEND AS [Status Type]\r\n\r\nFROM [Claim Status] AS STS"

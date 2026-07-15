@@ -1,0 +1,299 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the percentage of the adjusted claims for all processed claims.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 3,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "conditions": [
+                                    {
+                                        "color": "#00a808",
+                                        "expression": ".07",
+                                        "expressionValue": ".07",
+                                        "operator": "<"
+                                    },
+                                    {
+                                        "color": "#ff0000",
+                                        "expression": "0.07",
+                                        "expressionValue": "0.07",
+                                        "operator": "≥"
+                                    }
+                                ],
+                                "type": "condition"
+                            },
+                            "mask": {
+                                "decimals": 2,
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "51506-ACAE-7C",
+                        "jaql": {
+                            "context": {
+                                "[890A1-FC4]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                },
+                                "[BCE13-CAA]": {
+                                    "collapsed": true,
+                                    "column": "Claim Type",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Claim.Claim Type]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "ADJ",
+                                            "REOPENED"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "Claim Type"
+                                }
+                            },
+                            "formula": "([890A1-FC4],[BCE13-CAA])/[890A1-FC4]",
+                            "title": "Adjustment Percentage",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "value"
+            },
+            {
+                "items": [
+                ],
+                "name": "secondary"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "decimals": 0,
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "1A2E7-6917-A3",
+                        "jaql": {
+                            "formula": "0",
+                            "title": "0 (default)"
+                        }
+                    }
+                ],
+                "name": "min"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "decimals": 0,
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "1F9E3-35CF-C3",
+                        "jaql": {
+                            "context": {
+                            },
+                            "formula": "0.10\n",
+                            "title": "0.10\n",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "max"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "73A42-891D-94",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Status Type",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Status Type.Status Type]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Processed"
+                                ],
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Status Type",
+                            "title": "Status Type"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a89",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "disallowSelector": true,
+        "selector": false,
+        "supportsHierarchies": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "style": {
+        "components": {
+            "labels": {
+                "enabled": true,
+                "inactive": false
+            },
+            "secondaryTitle": {
+                "enabled": true,
+                "inactive": true
+            },
+            "ticks": {
+                "enabled": true,
+                "inactive": false
+            },
+            "title": {
+                "enabled": true,
+                "inactive": false
+            }
+        },
+        "indicator/gauge": {
+            "components": {
+                "labels": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "ticks": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "round"
+        },
+        "indicator/numeric": {
+            "components": {
+                "icon": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "vertical",
+            "subtype": "simple"
+        },
+        "narration": {
+            "labels": [
+                {
+                    "id": "status_type",
+                    "plural": "Status Type",
+                    "singular": "Status Type",
+                    "title": "Status Type"
+                }
+            ]
+        },
+        "skin": "2",
+        "subtype": "round"
+    },
+    "subtype": "indicator/gauge",
+    "title": "Adjustment Rate",
+    "type": "indicator"
+}

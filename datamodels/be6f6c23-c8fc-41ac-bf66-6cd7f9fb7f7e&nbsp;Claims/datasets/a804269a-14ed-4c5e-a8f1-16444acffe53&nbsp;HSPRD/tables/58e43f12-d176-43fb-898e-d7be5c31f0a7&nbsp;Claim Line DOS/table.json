@@ -1,0 +1,99 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "cc8ca32a-2076-4193-9faa-c7a001ad6a6d",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": true,
+            "id": "CLAIM_LINE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_LINE",
+            "oid": "6152078c-97bd-47f9-936c-a2083861f472",
+            "precision": 0,
+            "scale": 0,
+            "size": 6,
+            "type": 16
+        },
+        {
+            "hidden": true,
+            "id": "LINE_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_ID",
+            "oid": "efd0b365-d402-47c0-8d72-3acbe60c7301",
+            "precision": 18,
+            "scale": 0,
+            "size": 18,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "LINE_DOS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_DOS",
+            "oid": "cf8f9405-fd6f-4d86-bfb6-8bc0bdb989f6",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": false,
+            "id": "LINE_DOS_TO",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_DOS_TO",
+            "oid": "a6e27e73-729e-4d0c-a684-feca26b2de6e",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\r\nDOS.CSDT_CSV_CLM_ID\t\tAS CLAIM_ID,\r\nDOS.CSDT_CSV_LN_NUM\t\tAS CLAIM_LINE,\r\nDOS.CSDT_CSV_CLM_ID\t || ' ' || CSDT_CSV_LN_NUM AS LINE_ID,\r\nDOS.CSDT_DT\t\t\t\tAS LINE_DOS,\r\nDOS.CSDT_TO_DT\t\t\tAS LINE_DOS_TO\r\n\r\nFROM HS.CSDT_CSV_DT     AS DOS\r\nJOIN HS.CDT_CLM_DT       AS CDT ON DOS.CSDT_CSV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\n\r\nWHERE CSDT_DT_QUAL = '150'\r\n\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_7IheosnZs",
+    "isMaterialized": false,
+    "name": "Claim Line DOS",
+    "oid": "58e43f12-d176-43fb-898e-d7be5c31f0a7",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "cf8f9405-fd6f-4d86-bfb6-8bc0bdb989f6",
+                "displayName": "Line DOS",
+                "name": "Line DOS",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "a6e27e73-729e-4d0c-a684-feca26b2de6e",
+                "displayName": "Line DOS To",
+                "name": "Line DOS To",
+                "oid": null
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "base"
+}

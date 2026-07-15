@@ -1,0 +1,9 @@
+{
+    "description": "",
+    "name": "Authorization (Simpra) 36",
+    "oid": "ebda6890-7628-43a0-bd7f-4c4360d90313",
+    "provider": "GenericJDBC_111",
+    "supportedModelTypes": [
+        "EXTRACT"
+    ]
+}

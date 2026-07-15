@@ -1,0 +1,146 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "d2c585d7-5daf-4951-b8bc-c9002d7447b3",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "ENCOUNTER_SLA_DT_MONTH",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "ENCOUNTER_SLA_DT_MONTH",
+            "oid": "455f173f-4a67-44da-b708-d3f014f9afea",
+            "precision": 26,
+            "scale": 0,
+            "size": 29,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_FINALIZED_DATE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_FINALIZED_DATE",
+            "oid": "2fb6fd80-d327-4e33-8bff-2f25ccbf5e5f",
+            "precision": 26,
+            "scale": 0,
+            "size": 29,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "ENCOUNTER_SUB_DATE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "ENCOUNTER_SUB_DATE",
+            "oid": "919496d1-eab2-4c00-9491-45615864fea2",
+            "precision": 26,
+            "scale": 0,
+            "size": 29,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "ENCOUNTER_SLA_AGE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "ENCOUNTER_SLA_AGE",
+            "oid": "788b3138-b084-4701-9276-c87e1cf1a701",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "ENCOUNTER_SUBMITTED_TIMELY",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "ENCOUNTER_SUBMITTED_TIMELY",
+            "oid": "321f06a9-7e8a-4d85-b025-8ece7f84a1c0",
+            "precision": 3,
+            "scale": 0,
+            "size": 3,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\r\nCEV.CEV_CLM_ID \t\t\tAS CLAIM_ID,\r\n\r\nFIRST_DAY(SUB.CRS_ADD_TS)    AS ENCOUNTER_SLA_DT_MONTH,\r\nCEV.CEV_ADD_TS \t\tAS CLAIM_FINALIZED_DATE,\r\nSUB.CRS_ADD_TS      AS ENCOUNTER_SUB_DATE,\r\nDAYS(SUB.CRS_ADD_TS) - DAYS(CEV.CEV_EV_DT) \r\n\t\t\t\t\t\tAS ENCOUNTER_SLA_AGE,\r\nCASE \r\n\tWHEN SUB.CRS_ADD_TS BETWEEN CEV.CEV_ADD_TS AND LAST_DAY(CEV.CEV_ADD_TS+ 1 MONTH) THEN 'Yes'\r\n\tELSE 'No'\r\nEND \t\t\t\t\tAS ENCOUNTER_SUBMITTED_TIMELY\t\t\t\t\t\t\r\n\r\nFROM HS.CLM_CLAIM AS CLM\r\nJOIN HS.CEV_CLM_EV AS CEV ON CLM.CLM_ID = CEV.CEV_CLM_ID AND CEV.CEV_DEL_TS IS NULL AND CEV.CEV_RUN_ID IS NOT NULL AND CEV.CEV_RUN_ID !=0 AND TRIM(CEV.CEV_TYPE) IN ('PD','DN') AND (CEV.CEV_ADD_TS = (SELECT CEV_ADD_TS FROM HS.CEV_CLM_EV WHERE CEV_CLM_ID = CEV.CEV_CLM_ID AND CEV_DEL_TS IS NULL AND CEV_RUN_ID IS NOT NULL AND CEV_RUN_ID !=0 AND TRIM(CEV_TYPE) = 'DN' ORDER BY CEV_ADD_TS ASC FETCH FIRST 1 ROWS ONLY WITH UR) \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOR CEV.CEV_ADD_TS = (SELECT CEV_ADD_TS FROM HS.CEV_CLM_EV WHERE CEV_CLM_ID = CEV.CEV_CLM_ID AND CEV_DEL_TS IS NULL AND CEV_RUN_ID IS NOT NULL AND CEV_RUN_ID !=0 AND TRIM(CEV_TYPE) = 'PD' ORDER BY CEV_ADD_TS ASC FETCH FIRST 1 ROWS ONLY WITH UR))\r\nJOIN HS.CDT_CLM_DT       AS CDT ON CEV.CEV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nJOIN\tHS.CRS_CLM_RESULT\tAS SUB ON CLM.CLM_ID = SUB.CRS_CLM_ID AND SUB.CRS_DEL_TS IS NULL AND SUB.CRS_TYPE IN ('023','024','025','049','050','051') /* AND SUB.CRS_ADDL_INFO IN ('998403440','998403441','998403446','998403447','998403442','998403443','998403448','998403449','998403444','998403445') */\r\n\t\t\t\t\t\t\t\t\tAND SUB.CRS_ADD_TS = (SELECT CRS_ADD_TS FROM HS.CRS_CLM_RESULT WHERE CRS_DEL_TS IS NULL AND CRS_TYPE IN ('023','024','025','049','050','051') AND SUB.CRS_CLM_ID = CRS_CLM_ID AND CRS_ADD_TS >= CEV.CEV_ADD_TS /*AND CRS_ADDL_INFO IN ('998403440','998403441','998403446','998403447','998403442','998403443','998403448','998403449','998403444','998403445')*/ ORDER BY CRS_ADD_TS ASC FETCH FIRST 1 ROWS ONLY WITH UR)\r\n\r\n\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_naFxjcygy",
+    "isMaterialized": false,
+    "name": "Encounter SLA Calculation",
+    "oid": "18045696-a161-4356-b4aa-8d9c2609f8a3",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "455f173f-4a67-44da-b708-d3f014f9afea",
+                "displayName": "Encounter SLA Month",
+                "name": "Encounter SLA Month",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "2fb6fd80-d327-4e33-8bff-2f25ccbf5e5f",
+                "displayName": "Claim Finalized Date",
+                "name": "Claim Finalized Date",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "919496d1-eab2-4c00-9491-45615864fea2",
+                "displayName": "Encounter Submission Date",
+                "name": "Encounter Submission Date",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "788b3138-b084-4701-9276-c87e1cf1a701",
+                "displayName": "Encounter Timeliness Age",
+                "name": "Encounter Timeliness Age",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "321f06a9-7e8a-4d85-b025-8ece7f84a1c0",
+                "displayName": "Encounter Submitted Timely",
+                "name": "Encounter Submitted Timely",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "d2c585d7-5daf-4951-b8bc-c9002d7447b3",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

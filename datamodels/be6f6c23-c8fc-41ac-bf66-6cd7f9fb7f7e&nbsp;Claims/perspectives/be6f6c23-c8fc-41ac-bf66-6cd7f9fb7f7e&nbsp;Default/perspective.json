@@ -1,0 +1,16 @@
+{
+    "analyticalEngine": {
+        "customTranslationMode": null,
+        "generateDependenciesMode": null,
+        "queryAeMode": "LEGACY"
+    },
+    "datamodelOid": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "description": "",
+    "importedIdIdentifier": "651eb29896cbdd002ceda559",
+    "isDefault": true,
+    "name": "Default",
+    "oid": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "parentOid": null,
+    "tables": [
+    ]
+}

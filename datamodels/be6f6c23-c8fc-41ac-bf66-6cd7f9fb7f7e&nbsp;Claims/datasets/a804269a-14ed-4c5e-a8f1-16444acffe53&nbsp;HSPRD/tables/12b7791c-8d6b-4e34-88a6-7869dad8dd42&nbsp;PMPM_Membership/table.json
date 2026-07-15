@@ -1,0 +1,57 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "HSN",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "HSN",
+            "oid": "0652e476-bc18-4871-ae22-d6174f5fa254",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": true,
+            "id": "MEMBERSHIP_PLAN_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MEMBERSHIP_PLAN_ID",
+            "oid": "5bee7207-b863-4f2d-b85e-5ca02c38beac",
+            "precision": 21,
+            "scale": 0,
+            "size": 21,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "Membership Month",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Membership Month",
+            "oid": "f3a88c85-5e7e-41b1-acd6-cf629607554c",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \r\nINS.INS_CUS_ID\t\tAS HSN,\r\nCAL.DATEOFMONTH || CCP.CCP_PPT_ID\t\tAS MEMBERSHIP_PLAN_ID,\r\nCAL.DATEOFMONTH\t    AS \"Membership Month\"\r\n\r\n\r\nFROM \tHS.INS_INSURED\t\t\tAS INS\r\nJOIN \tHS.CCP_CUS_CNTRCT_PRD\tAS CCP ON INS.INS_CCN_ID = CCP.CCP_CCN_ID AND CCP.CCP_DEL_TS IS NULL AND NVL(CCP.CCP_TERM_DT,'12/31/9999') > CCP.CCP_EFF_DT\r\nJOIN \tBPAAS.MONTHLY_CAL \t\tAS CAL ON CAL.DATEOFMONTH BETWEEN CCP.CCP_EFF_DT AND NVL(CCP.CCP_TERM_DT,'12/31/9999') AND CAL.DATEOFMONTH BETWEEN FIRST_DAY(CURRENT_DATE - 2 YEAR) AND CURRENT_DATE \r\n\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_NYP7AI4iL",
+    "isMaterialized": false,
+    "name": "PMPM_Membership",
+    "oid": "12b7791c-8d6b-4e34-88a6-7869dad8dd42",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}

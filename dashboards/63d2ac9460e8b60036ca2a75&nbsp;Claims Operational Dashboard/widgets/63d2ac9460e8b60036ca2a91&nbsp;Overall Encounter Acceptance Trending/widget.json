@@ -1,0 +1,579 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays encounter submission volume per month broken out by response status, and acceptance percentage trendline.\n•\tPlacing the mouse over an encounter will display the volume for that encounter per month. \n•\tPlacing the mouse over the line will display the cumulative acceptance rate percentage per month. \n•\tTo view information for a specific month, select the desired encounter on the widget. The widgets will adjust to reflect information for that specific encounter and month only. Utilizing filter features will only affect that user’s view.\n•\tUsing the scroll filter below this widget will filter down monthly encounters for specific timeframes. Using the scroll filter feature will only affect this widget. \n•\tTo filter all corresponding widgets by grouped selection, left click and drag across the desired information. Click select. All correlating widgets will adjust.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard. \nEncounter Response Status:  Accepted, Rejected, No Response",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/yyyy HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "seconds": "MM/dd/yyyy HH:mm:ss",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "05793-C248-49",
+                        "jaql": {
+                            "column": "Encounter Submission Date",
+                            "datatype": "datetime",
+                            "dim": "[Encounter Information.Encounter Submission Date (Calendar)]",
+                            "level": "months",
+                            "merged": true,
+                            "table": "Encounter Information",
+                            "title": "Months in Encounter Submission Date"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#60B8CC",
+                                "isHandPickedColor": true,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "F1C15-1499-19",
+                        "jaql": {
+                            "context": {
+                                "[28C62-912]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                },
+                                "[77F90-743]": {
+                                    "collapsed": true,
+                                    "column": "Encounter Current Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Encounter Current Status.Encounter Current Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "ACCEPTED BY CMS - MAO-002          ",
+                                            "ACCEPTED BY MEDICAID - 277DRA      ",
+                                            "ACCEPTED BY MEDICAID - ERROR DETECT"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Encounter Current Status",
+                                    "title": "Encounter Current Status"
+                                }
+                            },
+                            "formula": "([28C62-912],[77F90-743])",
+                            "title": "Accepted Volume",
+                            "type": "measure"
+                        },
+                        "panel": "measures",
+                        "singleSeriesType": "column"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#fc7570",
+                                "isHandPickedColor": true,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "1747F-39D1-4A",
+                        "jaql": {
+                            "context": {
+                                "[80599-060]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                },
+                                "[BAF6E-0D0]": {
+                                    "collapsed": true,
+                                    "column": "Encounter Current Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Encounter Current Status.Encounter Current Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "REJECTED BY CMS                    "
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Encounter Current Status",
+                                    "title": "Encounter Current Status"
+                                }
+                            },
+                            "formula": "([80599-060],[BAF6E-0D0])",
+                            "title": "Rejected Volume",
+                            "type": "measure"
+                        },
+                        "panel": "measures",
+                        "singleSeriesType": "column"
+                    },
+                    {
+                        "disabled": false,
+                        "format": {
+                            "color": {
+                                "color": "#A2B86C",
+                                "isHandPickedColor": true,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "4D75C-8397-3F",
+                        "jaql": {
+                            "context": {
+                                "[5FAEB-DDB]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                },
+                                "[712C8-36B]": {
+                                    "collapsed": true,
+                                    "column": "Encounter Current Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Encounter Current Status.Encounter Current Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "N\\A"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Encounter Current Status",
+                                    "title": "Encounter Current Status"
+                                }
+                            },
+                            "formula": "([5FAEB-DDB],[712C8-36B])",
+                            "title": "No Response",
+                            "type": "measure"
+                        },
+                        "panel": "measures",
+                        "singleSeriesType": "column"
+                    },
+                    {
+                        "field": {
+                            "id": "[MAIN_CLAIM.CLAIM_ID]_count",
+                            "index": 2
+                        },
+                        "format": {
+                            "color": {
+                                "color": "#117899",
+                                "isHandPickedColor": true,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "decimals": 2,
+                                "percent": true,
+                                "percentMultiplier": 100
+                            },
+                            "nullzero": true
+                        },
+                        "instanceid": "C2E3A-4641-F2",
+                        "jaql": {
+                            "context": {
+                                "[50E01-329]": {
+                                    "collapsed": true,
+                                    "column": "Encounter Current Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Encounter Current Status.Encounter Current Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "REJECTED BY CMS                    ",
+                                            "ACCEPTED BY CMS - MAO-002          ",
+                                            "ACCEPTED BY MEDICAID - 277DRA      ",
+                                            "ACCEPTED BY MEDICAID - ERROR DETECT",
+                                            "REJECTED BY MEDICAID               "
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Encounter Current Status",
+                                    "title": "Encounter Current Status"
+                                },
+                                "[87956-3AF]": {
+                                    "collapsed": true,
+                                    "column": "Encounter Current Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Encounter Current Status.Encounter Current Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "ACCEPTED BY CMS - MAO-002          ",
+                                            "ACCEPTED BY MEDICAID - 277DRA      ",
+                                            "ACCEPTED BY MEDICAID - ERROR DETECT"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Encounter Current Status",
+                                    "title": "Encounter Current Status"
+                                },
+                                "[B189D-C62]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                }
+                            },
+                            "formula": "([B189D-C62],[87956-3AF])/([B189D-C62],[50E01-329])",
+                            "title": "Acceptance Rate",
+                            "type": "measure"
+                        },
+                        "panel": "measures",
+                        "singleSeriesType": "line",
+                        "y2": true
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/yyyy HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "seconds": "MM/dd/yyyy HH:mm:ss",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "instanceid": "8FA78-1EE5-88",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Encounter Submission Date",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "datetime",
+                            "dim": "[Encounter Information.Encounter Submission Date (Calendar)]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "N\\A"
+                                    ]
+                                },
+                                "explicit": false,
+                                "multiSelection": true
+                            },
+                            "level": "years",
+                            "merged": true,
+                            "table": "Encounter Information",
+                            "title": "Years in Encounter Submission Date"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a91",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "script": "./script.js",
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "months_in_encounter_submission_date",
+                    "plural": "Months in Encounter Submission Date",
+                    "singular": "Months in Encounter Submission Date",
+                    "title": "Months in Encounter Submission Date"
+                },
+                {
+                    "id": "years_in_encounter_submission_date",
+                    "plural": "Years in Encounter Submission Date",
+                    "singular": "Years in Encounter Submission Date",
+                    "title": "Years in Encounter Submission Date"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": true,
+                "stacked": true,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "templateMainYHasGridLines": true,
+            "ticks": true,
+            "title": {
+                "enabled": true
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "column/stackedcolumn",
+    "title": "Overall Encounter Acceptance Trending",
+    "type": "chart/column"
+}

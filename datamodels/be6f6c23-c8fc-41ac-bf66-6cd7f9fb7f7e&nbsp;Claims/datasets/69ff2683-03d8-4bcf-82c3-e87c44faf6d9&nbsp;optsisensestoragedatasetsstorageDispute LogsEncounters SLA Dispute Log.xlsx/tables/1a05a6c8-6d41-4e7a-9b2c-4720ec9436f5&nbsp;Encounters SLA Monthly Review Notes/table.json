@@ -1,0 +1,48 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "SLA Date",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SLA Date",
+            "oid": "d720c784-fe51-43d4-972a-c5aeca93c9ef",
+            "precision": 0,
+            "scale": 0,
+            "size": 50,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "Review Notes",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Review Notes",
+            "oid": "1f853da0-d7a5-4d8a-993b-abd6ebe9099c",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "columnsDateTimePatterns": "{}",
+        "culture": "en-US",
+        "fieldsInFirstRow": true,
+        "staticRange": ""
+    },
+    "dataset": "69ff2683-03d8-4bcf-82c3-e87c44faf6d9",
+    "hidden": false,
+    "id": "Monthly Review",
+    "isMaterialized": false,
+    "name": "Encounters SLA Monthly Review Notes",
+    "oid": "1a05a6c8-6d41-4e7a-9b2c-4720ec9436f5",
+    "schemaName": "/opt/sisense/storage/datasets/storage/Dispute Logs/Encounters SLA Dispute Log.xlsx",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}

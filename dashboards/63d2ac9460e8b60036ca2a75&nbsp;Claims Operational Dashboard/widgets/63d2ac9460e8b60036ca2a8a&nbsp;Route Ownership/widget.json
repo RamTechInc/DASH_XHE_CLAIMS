@@ -1,0 +1,479 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the percentage of route ownership. \n•\tPlacing the mouse over this widget will display the total number of claims that reflect that percentage. (RAM/Client) \n•\tTo view information for specific route ownership, select the desired route on the widget. The widgets will adjust to reflect information for that route ownership only. Utilizing filter features will only affect that user’s view.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "drillHistory": [
+            {
+                "format": {
+                    "members": {
+                        "0120           ": {
+                            "color": "#117899",
+                            "inResultset": true,
+                            "sortData": "0120           ",
+                            "title": "0120           "
+                        },
+                        "0551           ": {
+                            "color": "#60B8CC",
+                            "inResultset": true,
+                            "sortData": "0551           ",
+                            "title": "0551           "
+                        },
+                        "0570           ": {
+                            "color": "#5CA793",
+                            "inResultset": true,
+                            "sortData": "0570           ",
+                            "title": "0570           "
+                        },
+                        "11056          ": {
+                            "color": "#A2B86C",
+                            "inResultset": true,
+                            "sortData": "11056          ",
+                            "title": "11056          "
+                        },
+                        "11721          ": {
+                            "color": "#EBC844",
+                            "inResultset": true,
+                            "sortData": "11721          ",
+                            "title": "11721          "
+                        },
+                        "3103           ": {
+                            "color": "#ECAA38",
+                            "inResultset": true,
+                            "sortData": "3103           ",
+                            "title": "3103           "
+                        },
+                        "93990          ": {
+                            "color": "#EF8B2C",
+                            "inResultset": true,
+                            "sortData": "93990          ",
+                            "title": "93990          "
+                        },
+                        "99211          ": {
+                            "color": "#F16C20",
+                            "inResultset": true,
+                            "sortData": "99211          ",
+                            "title": "99211          "
+                        },
+                        "99213          ": {
+                            "color": "#D94E1F",
+                            "inResultset": true,
+                            "sortData": "99213          ",
+                            "title": "99213          "
+                        },
+                        "99307          ": {
+                            "color": "#C02E1D",
+                            "inResultset": true,
+                            "sortData": "99307          ",
+                            "title": "99307          "
+                        },
+                        "E0156          ": {
+                            "color": "#893B32",
+                            "inResultset": true,
+                            "sortData": "E0156          ",
+                            "title": "E0156          "
+                        },
+                        "E0431          ": {
+                            "color": "#0D3C55",
+                            "inResultset": true,
+                            "sortData": "E0431          ",
+                            "title": "E0431          "
+                        },
+                        "E0600          ": {
+                            "color": "#0F5B78",
+                            "inResultset": true,
+                            "sortData": "E0600          ",
+                            "title": "E0600          "
+                        },
+                        "E0630          ": {
+                            "color": "#148ab0",
+                            "inResultset": true,
+                            "sortData": "E0630          ",
+                            "title": "E0630          "
+                        },
+                        "E1390          ": {
+                            "color": "#6ed4eb",
+                            "inResultset": true,
+                            "sortData": "E1390          ",
+                            "title": "E1390          "
+                        },
+                        "S5161          ": {
+                            "color": "#6ac0a9",
+                            "inResultset": true,
+                            "sortData": "S5161          ",
+                            "title": "S5161          "
+                        },
+                        "T1019          ": {
+                            "color": "#bad47c",
+                            "inResultset": true,
+                            "sortData": "T1019          ",
+                            "title": "T1019          "
+                        },
+                        "T4535          ": {
+                            "color": "#ffdb53",
+                            "inResultset": true,
+                            "sortData": "T4535          ",
+                            "title": "T4535          "
+                        }
+                    }
+                },
+                "jaql": {
+                    "column": "Line Code",
+                    "datatype": "text",
+                    "dim": "[CLAIM_LINE.Line Code]",
+                    "merged": true,
+                    "table": "CLAIM_LINE",
+                    "title": "Line Code"
+                },
+                "parent": {
+                    "format": {
+                        "members": {
+                            "Client": {
+                                "color": "#60B8CC",
+                                "inResultset": true,
+                                "sortData": "Client",
+                                "title": "Client"
+                            },
+                            "N\\A": {
+                                "color": "#117899",
+                                "sortData": "N\\A",
+                                "title": "N\\A"
+                            },
+                            "Ram": {
+                                "color": "#5CA793",
+                                "inResultset": true,
+                                "sortData": "Ram",
+                                "title": "Ram"
+                            }
+                        }
+                    },
+                    "instanceid": "6D11E-AD48-C0",
+                    "jaql": {
+                        "column": "Queue Owner",
+                        "datatype": "text",
+                        "dim": "[CLAIM_ROUTING.Queue Owner]",
+                        "merged": true,
+                        "table": "CLAIM_ROUTING",
+                        "title": "Queue Owner"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Queue Owner",
+                        "datatype": "text",
+                        "dim": "[CLAIM_ROUTING.Queue Owner]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Client"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "CLAIM_ROUTING",
+                        "title": "Queue Owner"
+                    }
+                }
+            }
+        ],
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "continuous": false,
+                            "members": {
+                            }
+                        },
+                        "instanceid": "CC9FE-0A5C-9E",
+                        "jaql": {
+                            "column": "Queue Owner",
+                            "datatype": "text",
+                            "dim": "[Claim Routing.Queue Owner]",
+                            "merged": true,
+                            "table": "Claim Routing",
+                            "title": "Queue Owner"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "AA861-E392-97",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "sort": "desc",
+                            "table": "Claim",
+                            "title": "Claim Count"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "2334D-68B1-C5",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Status Type",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Status Type.Status Type]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Inventory"
+                                ],
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Status Type",
+                            "title": "Status Type"
+                        }
+                    },
+                    {
+                        "instanceid": "2B225-F1FB-07",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Queue Owner",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Claim Routing.Queue Owner]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "N\\A"
+                                    ]
+                                },
+                                "explicit": false,
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Claim Routing",
+                            "title": "Queue Owner"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a8a",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "selector": true,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "automaticHeight": false,
+        "convolution": {
+            "enabled": false,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "labels": {
+            "categories": true,
+            "color": "red",
+            "decimals": false,
+            "enabled": true,
+            "fontFamily": "Open Sans",
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "queue_owner",
+                    "plural": "Queue Owner",
+                    "singular": "Queue Owner",
+                    "title": "Queue Owner"
+                },
+                {
+                    "id": "status_type",
+                    "plural": "Status Type",
+                    "singular": "Status Type",
+                    "title": "Status Type"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "pie/classic",
+    "title": "Route Ownership",
+    "type": "chart/pie"
+}

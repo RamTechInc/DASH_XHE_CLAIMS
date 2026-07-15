@@ -1,0 +1,53 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "f68adf6e-d39e-4997-a075-d53210f1e396",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "Last Iteration FLag",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Last Iteration FLag",
+            "oid": "54a55f20-f20a-4302-814f-39962d7fbe4f",
+            "precision": 3,
+            "scale": 0,
+            "size": 3,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT CLM.CLM_ID AS CLAIM_ID,\r\nCASE\r\n\tWHEN CLM1.CLM_CLM_ID IS NULL THEN 'Yes'\r\n\tELSE 'No'\r\nEND AS \"Last Iteration FLag\"\r\n\r\nFROM HS.CLM_CLAIM AS CLM \r\nJOIN HS.CDT_CLM_DT   AS CDT  ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN HS.CLM_CLAIM AS CLM1 ON CLM.CLM_ID = CLM1.CLM_CLM_ID\r\n\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_OqIYY8O79",
+    "isMaterialized": false,
+    "name": "Last Iteration Flag",
+    "oid": "27dc1677-9626-4283-821b-5b591318cbb2",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "f68adf6e-d39e-4997-a075-d53210f1e396",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

@@ -1,0 +1,5229 @@
+{
+    "defaultFilters": [
+        {
+            "disabled": false,
+            "instanceid": "7D4E7-F737-68",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim ID"
+            }
+        },
+        {
+            "instanceid": "F0272-B38E-DD",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Line Number",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line.Claim Line Number]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line",
+                "title": "Claim Line Number"
+            }
+        },
+        {
+            "instanceid": "F91E7-5F0B-F2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Type",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim Type]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim Type"
+            }
+        },
+        {
+            "instanceid": "D7FC2-3A54-F9",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Original Claim ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Original Claim ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Original Claim ID"
+            }
+        },
+        {
+            "instanceid": "BA77E-7B0C-66",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "HSN",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Member HSN.HSN]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Member HSN",
+                "title": "HSN"
+            }
+        },
+        {
+            "instanceid": "9D8FE-696C-52",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Submitter",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim Submitter]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim Submitter"
+            }
+        },
+        {
+            "instanceid": "D4D73-B816-24",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Product",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Plan Information.Product]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Plan Information",
+                "title": "Product"
+            }
+        },
+        {
+            "instanceid": "B18EF-6B44-54",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "PBP",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Plan Information.PBP]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Plan Information",
+                "title": "PBP"
+            }
+        },
+        {
+            "instanceid": "6CA32-5904-A2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Plan Name",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Plan Information.Plan Name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Plan Information",
+                "title": "Plan Name"
+            }
+        },
+        {
+            "instanceid": "22291-CC1B-E0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Bill Type",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Bill Type]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Bill Type"
+            }
+        },
+        {
+            "instanceid": "473BE-9F17-FF",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Network Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Network Status.Claim Network Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Network Status",
+                "title": "Claim Network Status"
+            }
+        },
+        {
+            "instanceid": "C85DF-5138-81",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Form",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim Form]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim Form"
+            }
+        },
+        {
+            "instanceid": "67B4A-E4F8-AB",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Receipt Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Receipt Date.Receipt Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Receipt Date",
+                "title": "Days in Receipt Date"
+            }
+        },
+        {
+            "instanceid": "050F8-8DB4-71",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Origin Form",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Source.Claim Origin Form]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Source",
+                "title": "Claim Origin Form"
+            }
+        },
+        {
+            "instanceid": "B3589-4AA8-24",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Origin Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Claim Source.Origin Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Claim Source",
+                "title": "Days in Origin Date"
+            }
+        },
+        {
+            "instanceid": "8E7C7-5D3C-EE",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Current Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Status.Current Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Status",
+                "title": "Current Status"
+            }
+        },
+        {
+            "instanceid": "231BF-35C7-9B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Current Status Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Claim Status.Current Status Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Claim Status",
+                "title": "Days in Current Status Date"
+            }
+        },
+        {
+            "instanceid": "5C851-F670-88",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Clean Indicator",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Clean Indicator]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Clean Indicator"
+            }
+        },
+        {
+            "instanceid": "F7C0D-5BB2-EA",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Age",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Aging.Age]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Aging",
+                "title": "Age"
+            }
+        },
+        {
+            "instanceid": "41430-F53E-80",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Client Age",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Client Age.Client Age]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Client Age",
+                "title": "Client Age"
+            }
+        },
+        {
+            "instanceid": "94140-E4B5-EF",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "DOS",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[DOS.DOS (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "DOS",
+                "title": "Days in DOS"
+            }
+        },
+        {
+            "instanceid": "8C934-D9F4-19",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "DOS to",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[DOS.DOS to (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "DOS",
+                "title": "Days in DOS to"
+            }
+        },
+        {
+            "instanceid": "F5C21-58B7-3B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Denial Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Denial Reason.Denial Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Denial Reason",
+                "title": "Denial Code"
+            }
+        },
+        {
+            "instanceid": "8CC29-4DB3-67",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Denial Reason",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Denial Reason.Denial Reason]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Denial Reason",
+                "title": "Denial Reason"
+            }
+        },
+        {
+            "instanceid": "C9AC6-9769-44",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Queue",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Routing.Queue]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Routing",
+                "title": "Queue"
+            }
+        },
+        {
+            "instanceid": "699CB-78A3-C1",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Queue Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Claim Routing.Queue Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "years",
+                "merged": true,
+                "table": "Claim Routing",
+                "title": "Years in Queue Date"
+            }
+        },
+        {
+            "instanceid": "F0D5C-E9E1-E0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Queue Owner",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Routing.Queue Owner]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Routing",
+                "title": "Queue Owner"
+            }
+        },
+        {
+            "instanceid": "2BDFE-FB6A-EE",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Message Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Messages.Message Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Messages",
+                "title": "Message Code"
+            }
+        },
+        {
+            "instanceid": "E16A4-C553-77",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Message",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Messages.Message]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Messages",
+                "title": "Message"
+            }
+        },
+        {
+            "instanceid": "429CF-2645-6D",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Suspend Error Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Suspend Errors.Suspend Error Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Suspend Errors",
+                "title": "Suspend Error Code"
+            }
+        },
+        {
+            "instanceid": "FB735-6F59-1C",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Suspend Error Message",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Suspend Errors.Suspend Error Message]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Suspend Errors",
+                "title": "Suspend Error Message"
+            }
+        },
+        {
+            "instanceid": "B944F-FB1F-91",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "DRG Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.DRG Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "DRG Code"
+            }
+        },
+        {
+            "instanceid": "E18AE-C40A-07",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "DRG Description",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[DRG Description.DRG Description]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "DRG Description",
+                "title": "DRG Description"
+            }
+        },
+        {
+            "instanceid": "A9C0E-43FC-0E",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Authorization ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim Authorization ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim Authorization ID"
+            }
+        },
+        {
+            "instanceid": "F13C2-A988-95",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Adjudication Type",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Adjudication Type]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Adjudication Type"
+            }
+        },
+        {
+            "instanceid": "F5AE8-1B5C-6A",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Billed Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Billed Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Billed Amount"
+            }
+        },
+        {
+            "instanceid": "3E778-2D00-86",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Allowed Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Allowed Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Allowed Amount"
+            }
+        },
+        {
+            "instanceid": "D411C-18F4-6F",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Paid Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Paid Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Paid Amount"
+            }
+        },
+        {
+            "instanceid": "2647A-9E98-70",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Interest Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Interest Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Interest Amount"
+            }
+        },
+        {
+            "instanceid": "8B36F-FAED-B0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Copay/Coinsurance",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Copay/Coinsurance]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Copay/Coinsurance"
+            }
+        },
+        {
+            "instanceid": "96B5F-3F29-8B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Deductible",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Deductible]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Deductible"
+            }
+        },
+        {
+            "instanceid": "74070-6F6F-21",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Payment Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Payment Set.Payment Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Payment Set",
+                "title": "Days in Payment Date"
+            }
+        },
+        {
+            "instanceid": "D2F33-1F3F-FE",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Recoupment",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Payment Set.Claim Recoupment]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Payment Set",
+                "title": "Claim Recoupment"
+            }
+        },
+        {
+            "instanceid": "498CB-66B9-15",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Check Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Payment Set.Check Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Payment Set",
+                "title": "Check Amount"
+            }
+        },
+        {
+            "instanceid": "8EEC1-CF02-91",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Check Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Payment Set.Check Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Payment Set",
+                "title": "Days in Check Date"
+            }
+        },
+        {
+            "instanceid": "71703-37A1-12",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Payee Name",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Payment Set.Payee Name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Payment Set",
+                "title": "Payee Name"
+            }
+        },
+        {
+            "instanceid": "740FC-E810-59",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Payment Set ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Payment Set.Payment Set ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Payment Set",
+                "title": "Payment Set ID"
+            }
+        },
+        {
+            "instanceid": "5B274-8FAE-0E",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Category of Service",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter Information.Encounter Category of Service]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Encounter Category of Service"
+            }
+        },
+        {
+            "instanceid": "92CEA-014D-A9",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Provider Specialty",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter Information.Encounter Provider Specialty]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Encounter Provider Specialty"
+            }
+        },
+        {
+            "instanceid": "5C935-2B39-D3",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Submission Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Encounter Information.Encounter Submission Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Days in Encounter Submission Date"
+            }
+        },
+        {
+            "instanceid": "9A6B7-5EF3-15",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Current Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter Current Status.Encounter Current Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter Current Status",
+                "title": "Encounter Current Status"
+            }
+        },
+        {
+            "instanceid": "2940E-6198-7C",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter 277CA Response Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Encounter 277CA Information.Encounter 277CA Response Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Encounter 277CA Information",
+                "title": "Days in Encounter 277CA Response Date"
+            }
+        },
+        {
+            "instanceid": "B32F4-B8DD-67",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter 277CA Response Result",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter 277CA Information.Encounter 277CA Response Result]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter 277CA Information",
+                "title": "Encounter 277CA Response Result"
+            }
+        },
+        {
+            "instanceid": "1070E-4C42-18",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter MAO002 Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter MAO002 Information.Encounter MAO002 Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter MAO002 Information",
+                "title": "Encounter MAO002 Status"
+            }
+        },
+        {
+            "instanceid": "A6ADC-D1B3-CC",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Resubmission Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Encounter Information.Encounter Resubmission Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Days in Encounter Resubmission Date"
+            }
+        },
+        {
+            "instanceid": "6F78C-D640-60",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Void Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Encounter Information.Encounter Void Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Days in Encounter Void Date"
+            }
+        },
+        {
+            "instanceid": "94C6D-B1F0-9B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter 277CA Error",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter 277CA Information.Encounter 277CA Error]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter 277CA Information",
+                "title": "Encounter 277CA Error"
+            }
+        },
+        {
+            "instanceid": "24C91-6110-6C",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter MAO002 Error",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter MAO002 Information.Encounter MAO002 Error]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter MAO002 Information",
+                "title": "Encounter MAO002 Error"
+            }
+        },
+        {
+            "instanceid": "B004E-0698-DC",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Providers.Submitting Provider ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Providers",
+                "title": "Submitting Provider ID"
+            }
+        },
+        {
+            "instanceid": "F9DBA-785A-61",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider Name",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Submitting Provider Information.Submitting Provider Name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Submitting Provider Information",
+                "title": "Submitting Provider Name"
+            }
+        },
+        {
+            "instanceid": "9DE7C-204B-B0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider NPI",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Submitting Provider Information.Submitting Provider NPI]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Submitting Provider Information",
+                "title": "Submitting Provider NPI"
+            }
+        },
+        {
+            "instanceid": "4435B-708A-5A",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider Tax ID SSN",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Submitting Provider Information.Submitting Provider Tax ID SSN]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Submitting Provider Information",
+                "title": "Submitting Provider Tax ID SSN"
+            }
+        },
+        {
+            "instanceid": "5A7D2-EC16-B0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider Network Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Providers.Submitting Provider Network Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Providers",
+                "title": "Submitting Provider Network Status"
+            }
+        },
+        {
+            "instanceid": "5E543-F2E8-10",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Rendering Provider ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Providers.Rendering Provider ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Providers",
+                "title": "Rendering Provider ID"
+            }
+        },
+        {
+            "instanceid": "EC07A-37CA-B7",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Rendering Provider Name",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Rendering Provider Information.Rendering Provider Name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Rendering Provider Information",
+                "title": "Rendering Provider Name"
+            }
+        },
+        {
+            "instanceid": "740CC-2D91-FC",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Rendering Provider NPI",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Rendering Provider Information.Rendering Provider NPI]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Rendering Provider Information",
+                "title": "Rendering Provider NPI"
+            }
+        },
+        {
+            "instanceid": "5E0B3-1FFE-1A",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Rendering Provider Tax ID SSN",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Rendering Provider Information.Rendering Provider Tax ID SSN]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Rendering Provider Information",
+                "title": "Rendering Provider Tax ID SSN"
+            }
+        },
+        {
+            "instanceid": "3BDE9-728C-F1",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Rendering Provider Network Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Providers.Rendering Provider Network Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Providers",
+                "title": "Rendering Provider Network Status"
+            }
+        },
+        {
+            "instanceid": "E854D-7654-03",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Fee ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line.Line Fee ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line",
+                "title": "Line Fee ID"
+            }
+        },
+        {
+            "instanceid": "D8B47-D507-80",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Place of Service",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Place of Service]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Place of Service"
+            }
+        },
+        {
+            "instanceid": "E52B0-15B3-A2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Service Quantity",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line.Line Service Quantity]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line",
+                "title": "Line Service Quantity"
+            }
+        },
+        {
+            "instanceid": "32002-1F2A-B6",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line I Unit Rate",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line.Line I Unit Rate]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line",
+                "title": "Line I Unit Rate"
+            }
+        },
+        {
+            "instanceid": "6D2AB-BA3E-F0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Code Qualifier",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Code Qualifier]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Code Qualifier"
+            }
+        },
+        {
+            "instanceid": "DA2D8-F80B-C6",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Code"
+            }
+        },
+        {
+            "instanceid": "C18EB-8E07-45",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line  Revenue Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line  Revenue Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line  Revenue Code"
+            }
+        },
+        {
+            "instanceid": "5C113-A4C4-10",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Modifier 1",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Modifier 1]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Modifier 1"
+            }
+        },
+        {
+            "instanceid": "29B2D-BC2A-AE",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Modifier 2",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Modifier 2]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Modifier 2"
+            }
+        },
+        {
+            "instanceid": "24CE4-494E-E1",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line  Modifier 3",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line  Modifier 3]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line  Modifier 3"
+            }
+        },
+        {
+            "instanceid": "AD841-AABB-4B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Modifier 4",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Modifier 4]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Modifier 4"
+            }
+        },
+        {
+            "instanceid": "FF43E-2966-59",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line  Billed Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line  Billed Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line  Billed Amount"
+            }
+        },
+        {
+            "instanceid": "D1F3F-6E97-C2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line  Allowed Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line  Allowed Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line  Allowed Amount"
+            }
+        },
+        {
+            "instanceid": "18E44-283E-B4",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Paid Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line Paid Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line Paid Amount"
+            }
+        },
+        {
+            "instanceid": "8C1F3-7DFB-24",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Copay Coinsurance",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line Copay Coinsurance]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line Copay Coinsurance"
+            }
+        },
+        {
+            "instanceid": "358E1-9E49-F4",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Deductible",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line Deductible]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line Deductible"
+            }
+        },
+        {
+            "instanceid": "46846-0E98-7F",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Sequestration",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line Sequestration]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line Sequestration"
+            }
+        },
+        {
+            "instanceid": "309BA-7100-E2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line UCR",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line UCR]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line UCR"
+            }
+        },
+        {
+            "instanceid": "1B051-296D-9B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Denial Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Denial Reason.Line Denial Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Denial Reason",
+                "title": "Line Denial Code"
+            }
+        },
+        {
+            "instanceid": "8C70C-1EE6-85",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Denial Reason",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line Denial Reason.Line Denial Reason]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line Denial Reason",
+                "title": "Line Denial Reason"
+            }
+        },
+        {
+            "instanceid": "7DB08-6EED-43",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Message",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line Messages.Line Message]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line Messages",
+                "title": "Line Message"
+            }
+        },
+        {
+            "instanceid": "B5DB8-AD0C-1D",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Message Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Messages.Line Message Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Messages",
+                "title": "Line Message Code"
+            }
+        },
+        {
+            "instanceid": "2E788-5E3C-05",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Suspend Error Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Suspend Errors.Line Suspend Error Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Suspend Errors",
+                "title": "Line Suspend Error Code"
+            }
+        },
+        {
+            "instanceid": "1DFAF-DE4F-EC",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Suspend Error",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line Suspend Errors.Line Suspend Error]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line Suspend Errors",
+                "title": "Line Suspend Error"
+            }
+        },
+        {
+            "instanceid": "13573-C358-63",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line NDC",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line NDC Information.Line NDC]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line NDC Information",
+                "title": "Line NDC"
+            }
+        },
+        {
+            "instanceid": "8100C-265D-81",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Primary Diagnosis",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Diagnosis.Primary Diagnosis]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Diagnosis",
+                "title": "Primary Diagnosis"
+            }
+        },
+        {
+            "instanceid": "F34E1-2080-04",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Secondary Diagnosis",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Diagnosis.Secondary Diagnosis]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Diagnosis",
+                "title": "Secondary Diagnosis"
+            }
+        },
+        {
+            "instanceid": "6A6FB-A88C-D4",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Tertiary Diagnosis",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Diagnosis.Tertiary Diagnosis]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Diagnosis",
+                "title": "Tertiary Diagnosis"
+            }
+        }
+    ],
+    "filters": [
+        {
+            "disabled": false,
+            "instanceid": "7D4E7-F737-68",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": false,
+                "column": "Claim ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim ID"
+            }
+        },
+        {
+            "instanceid": "F0272-B38E-DD",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Line Number",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line.Claim Line Number]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line",
+                "title": "Claim Line Number"
+            }
+        },
+        {
+            "disabled": false,
+            "instanceid": "F91E7-5F0B-F2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Type",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim Type]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim Type"
+            }
+        },
+        {
+            "instanceid": "BCED4-1E5E-0B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Original Claim ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Original Claim ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "locale": "en-us",
+                "merged": true,
+                "table": "Claim",
+                "title": "Original Claim ID"
+            }
+        },
+        {
+            "instanceid": "BA77E-7B0C-66",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "HSN",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Member HSN.HSN]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Member HSN",
+                "title": "HSN"
+            }
+        },
+        {
+            "instanceid": "9D8FE-696C-52",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Submitter",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim Submitter]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim Submitter"
+            }
+        },
+        {
+            "instanceid": "D4D73-B816-24",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Product",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Plan Information.Product]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Plan Information",
+                "title": "Product"
+            }
+        },
+        {
+            "instanceid": "B18EF-6B44-54",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "PBP",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Plan Information.PBP]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Plan Information",
+                "title": "PBP"
+            }
+        },
+        {
+            "instanceid": "6CA32-5904-A2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Plan Name",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Plan Information.Plan Name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Plan Information",
+                "title": "Plan Name"
+            }
+        },
+        {
+            "instanceid": "22291-CC1B-E0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Bill Type",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Bill Type]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Bill Type"
+            }
+        },
+        {
+            "instanceid": "473BE-9F17-FF",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Network Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Network Status.Claim Network Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Network Status",
+                "title": "Claim Network Status"
+            }
+        },
+        {
+            "instanceid": "C85DF-5138-81",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Form",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim Form]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim Form"
+            }
+        },
+        {
+            "instanceid": "67B4A-E4F8-AB",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Receipt Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Receipt Date.Receipt Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Receipt Date",
+                "title": "Days in Receipt Date"
+            }
+        },
+        {
+            "instanceid": "050F8-8DB4-71",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Origin Form",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Source.Claim Origin Form]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Source",
+                "title": "Claim Origin Form"
+            }
+        },
+        {
+            "instanceid": "B3589-4AA8-24",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Origin Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Claim Source.Origin Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Claim Source",
+                "title": "Days in Origin Date"
+            }
+        },
+        {
+            "instanceid": "8E7C7-5D3C-EE",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Current Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Status.Current Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Status",
+                "title": "Current Status"
+            }
+        },
+        {
+            "instanceid": "231BF-35C7-9B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Current Status Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Claim Status.Current Status Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Claim Status",
+                "title": "Days in Current Status Date"
+            }
+        },
+        {
+            "instanceid": "5C851-F670-88",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Clean Indicator",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Clean Indicator]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Clean Indicator"
+            }
+        },
+        {
+            "instanceid": "F7C0D-5BB2-EA",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Age",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Aging.Age]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Aging",
+                "title": "Age"
+            }
+        },
+        {
+            "instanceid": "41430-F53E-80",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Client Age",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Client Age.Client Age]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Client Age",
+                "title": "Client Age"
+            }
+        },
+        {
+            "instanceid": "94140-E4B5-EF",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "DOS",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[DOS.DOS (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "DOS",
+                "title": "Days in DOS"
+            }
+        },
+        {
+            "instanceid": "8C934-D9F4-19",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "DOS to",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[DOS.DOS to (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "DOS",
+                "title": "Days in DOS to"
+            }
+        },
+        {
+            "instanceid": "F5C21-58B7-3B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Denial Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Denial Reason.Denial Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Denial Reason",
+                "title": "Denial Code"
+            }
+        },
+        {
+            "instanceid": "8CC29-4DB3-67",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Denial Reason",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Denial Reason.Denial Reason]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Denial Reason",
+                "title": "Denial Reason"
+            }
+        },
+        {
+            "instanceid": "C9AC6-9769-44",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Queue",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Routing.Queue]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Routing",
+                "title": "Queue"
+            }
+        },
+        {
+            "instanceid": "699CB-78A3-C1",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Queue Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Claim Routing.Queue Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "years",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "years",
+                "merged": true,
+                "table": "Claim Routing",
+                "title": "Years in Queue Date"
+            }
+        },
+        {
+            "instanceid": "F0D5C-E9E1-E0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Queue Owner",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Routing.Queue Owner]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Routing",
+                "title": "Queue Owner"
+            }
+        },
+        {
+            "instanceid": "2BDFE-FB6A-EE",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Message Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Messages.Message Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Messages",
+                "title": "Message Code"
+            }
+        },
+        {
+            "instanceid": "E16A4-C553-77",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Message",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Messages.Message]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Messages",
+                "title": "Message"
+            }
+        },
+        {
+            "instanceid": "429CF-2645-6D",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Suspend Error Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Suspend Errors.Suspend Error Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Suspend Errors",
+                "title": "Suspend Error Code"
+            }
+        },
+        {
+            "instanceid": "FB735-6F59-1C",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Suspend Error Message",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Suspend Errors.Suspend Error Message]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Suspend Errors",
+                "title": "Suspend Error Message"
+            }
+        },
+        {
+            "instanceid": "B944F-FB1F-91",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "DRG Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.DRG Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "DRG Code"
+            }
+        },
+        {
+            "instanceid": "E18AE-C40A-07",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "DRG Description",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[DRG Description.DRG Description]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "DRG Description",
+                "title": "DRG Description"
+            }
+        },
+        {
+            "instanceid": "A9C0E-43FC-0E",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Authorization ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim Authorization ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim Authorization ID"
+            }
+        },
+        {
+            "instanceid": "F13C2-A988-95",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Adjudication Type",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Adjudication Type]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Adjudication Type"
+            }
+        },
+        {
+            "instanceid": "F5AE8-1B5C-6A",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Billed Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Billed Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Billed Amount"
+            }
+        },
+        {
+            "instanceid": "3E778-2D00-86",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Allowed Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Allowed Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Allowed Amount"
+            }
+        },
+        {
+            "instanceid": "D411C-18F4-6F",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Paid Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Paid Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Paid Amount"
+            }
+        },
+        {
+            "instanceid": "2647A-9E98-70",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Interest Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Interest Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Interest Amount"
+            }
+        },
+        {
+            "instanceid": "8B36F-FAED-B0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Copay/Coinsurance",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Copay/Coinsurance]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Copay/Coinsurance"
+            }
+        },
+        {
+            "instanceid": "96B5F-3F29-8B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Deductible",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Amount.Claim Deductible]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Amount",
+                "title": "Claim Deductible"
+            }
+        },
+        {
+            "instanceid": "74070-6F6F-21",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Payment Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Payment Set.Payment Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Payment Set",
+                "title": "Days in Payment Date"
+            }
+        },
+        {
+            "instanceid": "D2F33-1F3F-FE",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Recoupment",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Payment Set.Claim Recoupment]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Payment Set",
+                "title": "Claim Recoupment"
+            }
+        },
+        {
+            "instanceid": "2F1CD-290F-2A",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Check Number",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Payment Set.Check Number]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Payment Set",
+                "title": "Check Number"
+            }
+        },
+        {
+            "instanceid": "498CB-66B9-15",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Check Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Payment Set.Check Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Payment Set",
+                "title": "Check Amount"
+            }
+        },
+        {
+            "instanceid": "8EEC1-CF02-91",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Check Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Payment Set.Check Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Payment Set",
+                "title": "Days in Check Date"
+            }
+        },
+        {
+            "instanceid": "71703-37A1-12",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Payee Name",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Payment Set.Payee Name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Payment Set",
+                "title": "Payee Name"
+            }
+        },
+        {
+            "instanceid": "740FC-E810-59",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Payment Set ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Payment Set.Payment Set ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Payment Set",
+                "title": "Payment Set ID"
+            }
+        },
+        {
+            "instanceid": "5B274-8FAE-0E",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Category of Service",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter Information.Encounter Category of Service]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Encounter Category of Service"
+            }
+        },
+        {
+            "instanceid": "92CEA-014D-A9",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Provider Specialty",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter Information.Encounter Provider Specialty]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Encounter Provider Specialty"
+            }
+        },
+        {
+            "instanceid": "5C935-2B39-D3",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Submission Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Encounter Information.Encounter Submission Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Days in Encounter Submission Date"
+            }
+        },
+        {
+            "instanceid": "9A6B7-5EF3-15",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Current Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter Current Status.Encounter Current Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter Current Status",
+                "title": "Encounter Current Status"
+            }
+        },
+        {
+            "instanceid": "2940E-6198-7C",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter 277CA Response Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Encounter 277CA Information.Encounter 277CA Response Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Encounter 277CA Information",
+                "title": "Days in Encounter 277CA Response Date"
+            }
+        },
+        {
+            "instanceid": "B32F4-B8DD-67",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter 277CA Response Result",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter 277CA Information.Encounter 277CA Response Result]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter 277CA Information",
+                "title": "Encounter 277CA Response Result"
+            }
+        },
+        {
+            "instanceid": "1070E-4C42-18",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter MAO002 Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter MAO002 Information.Encounter MAO002 Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter MAO002 Information",
+                "title": "Encounter MAO002 Status"
+            }
+        },
+        {
+            "instanceid": "A6ADC-D1B3-CC",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Resubmission Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Encounter Information.Encounter Resubmission Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Days in Encounter Resubmission Date"
+            }
+        },
+        {
+            "instanceid": "6F78C-D640-60",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter Void Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "datetime",
+                "dim": "[Encounter Information.Encounter Void Date (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "level": "days",
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "level": "days",
+                "merged": true,
+                "table": "Encounter Information",
+                "title": "Days in Encounter Void Date"
+            }
+        },
+        {
+            "instanceid": "94C6D-B1F0-9B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter 277CA Error",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter 277CA Information.Encounter 277CA Error]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter 277CA Information",
+                "title": "Encounter 277CA Error"
+            }
+        },
+        {
+            "instanceid": "24C91-6110-6C",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Encounter MAO002 Error",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Encounter MAO002 Information.Encounter MAO002 Error]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Encounter MAO002 Information",
+                "title": "Encounter MAO002 Error"
+            }
+        },
+        {
+            "instanceid": "D6151-F211-9D",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Providers.Submitting Provider ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Providers",
+                "title": "Submitting Provider ID"
+            }
+        },
+        {
+            "instanceid": "F9DBA-785A-61",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider Name",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Submitting Provider Information.Submitting Provider Name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Submitting Provider Information",
+                "title": "Submitting Provider Name"
+            }
+        },
+        {
+            "instanceid": "9DE7C-204B-B0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider NPI",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Submitting Provider Information.Submitting Provider NPI]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Submitting Provider Information",
+                "title": "Submitting Provider NPI"
+            }
+        },
+        {
+            "instanceid": "93095-9BAE-6F",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider TIN",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Providers.Submitting Provider TIN]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Providers",
+                "title": "Submitting Provider TIN"
+            }
+        },
+        {
+            "instanceid": "5A7D2-EC16-B0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Submitting Provider Network Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Providers.Submitting Provider Network Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Providers",
+                "title": "Submitting Provider Network Status"
+            }
+        },
+        {
+            "instanceid": "F96B1-10C2-02",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Rendering Provider ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Providers.Rendering Provider ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Providers",
+                "title": "Rendering Provider ID"
+            }
+        },
+        {
+            "instanceid": "EC07A-37CA-B7",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Rendering Provider Name",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Rendering Provider Information.Rendering Provider Name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Rendering Provider Information",
+                "title": "Rendering Provider Name"
+            }
+        },
+        {
+            "instanceid": "740CC-2D91-FC",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Rendering Provider NPI",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Rendering Provider Information.Rendering Provider NPI]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Rendering Provider Information",
+                "title": "Rendering Provider NPI"
+            }
+        },
+        {
+            "instanceid": "3BDE9-728C-F1",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Rendering Provider Network Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Providers.Rendering Provider Network Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Providers",
+                "title": "Rendering Provider Network Status"
+            }
+        },
+        {
+            "instanceid": "E854D-7654-03",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Fee ID",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line.Line Fee ID]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line",
+                "title": "Line Fee ID"
+            }
+        },
+        {
+            "instanceid": "D8B47-D507-80",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Place of Service",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Place of Service]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Place of Service"
+            }
+        },
+        {
+            "instanceid": "E52B0-15B3-A2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Service Quantity",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line.Line Service Quantity]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line",
+                "title": "Line Service Quantity"
+            }
+        },
+        {
+            "instanceid": "32002-1F2A-B6",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line I Unit Rate",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line.Line I Unit Rate]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line",
+                "title": "Line I Unit Rate"
+            }
+        },
+        {
+            "instanceid": "6D2AB-BA3E-F0",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Code Qualifier",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Code Qualifier]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Code Qualifier"
+            }
+        },
+        {
+            "instanceid": "DA2D8-F80B-C6",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Code"
+            }
+        },
+        {
+            "instanceid": "C18EB-8E07-45",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line  Revenue Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line  Revenue Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line  Revenue Code"
+            }
+        },
+        {
+            "instanceid": "5C113-A4C4-10",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Modifier 1",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Modifier 1]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Modifier 1"
+            }
+        },
+        {
+            "instanceid": "29B2D-BC2A-AE",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Modifier 2",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Modifier 2]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Modifier 2"
+            }
+        },
+        {
+            "instanceid": "24CE4-494E-E1",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line  Modifier 3",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line  Modifier 3]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line  Modifier 3"
+            }
+        },
+        {
+            "instanceid": "AD841-AABB-4B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Modifier 4",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line.Line Modifier 4]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line",
+                "title": "Line Modifier 4"
+            }
+        },
+        {
+            "instanceid": "FF43E-2966-59",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line  Billed Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line  Billed Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line  Billed Amount"
+            }
+        },
+        {
+            "instanceid": "D1F3F-6E97-C2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line  Allowed Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line  Allowed Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line  Allowed Amount"
+            }
+        },
+        {
+            "instanceid": "18E44-283E-B4",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Paid Amount",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line Paid Amount]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line Paid Amount"
+            }
+        },
+        {
+            "instanceid": "8C1F3-7DFB-24",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Copay Coinsurance",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line Copay Coinsurance]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line Copay Coinsurance"
+            }
+        },
+        {
+            "instanceid": "358E1-9E49-F4",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Deductible",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line Deductible]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line Deductible"
+            }
+        },
+        {
+            "instanceid": "46846-0E98-7F",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Sequestration",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line Sequestration]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line Sequestration"
+            }
+        },
+        {
+            "instanceid": "309BA-7100-E2",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line UCR",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Amount.Line UCR]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Amount",
+                "title": "Line UCR"
+            }
+        },
+        {
+            "instanceid": "1B051-296D-9B",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Denial Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Denial Reason.Line Denial Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Denial Reason",
+                "title": "Line Denial Code"
+            }
+        },
+        {
+            "instanceid": "8C70C-1EE6-85",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Denial Reason",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line Denial Reason.Line Denial Reason]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line Denial Reason",
+                "title": "Line Denial Reason"
+            }
+        },
+        {
+            "instanceid": "7DB08-6EED-43",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Message",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line Messages.Line Message]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line Messages",
+                "title": "Line Message"
+            }
+        },
+        {
+            "instanceid": "B5DB8-AD0C-1D",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Message Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Messages.Line Message Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Messages",
+                "title": "Line Message Code"
+            }
+        },
+        {
+            "instanceid": "2E788-5E3C-05",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Suspend Error Code",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "numeric",
+                "dim": "[Claim Line Suspend Errors.Line Suspend Error Code]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "table": "Claim Line Suspend Errors",
+                "title": "Line Suspend Error Code"
+            }
+        },
+        {
+            "instanceid": "1DFAF-DE4F-EC",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line Suspend Error",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line Suspend Errors.Line Suspend Error]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line Suspend Errors",
+                "title": "Line Suspend Error"
+            }
+        },
+        {
+            "instanceid": "13573-C358-63",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Line NDC",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Line NDC Information.Line NDC]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Line NDC Information",
+                "title": "Line NDC"
+            }
+        },
+        {
+            "instanceid": "8100C-265D-81",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Primary Diagnosis",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Diagnosis.Primary Diagnosis]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Diagnosis",
+                "title": "Primary Diagnosis"
+            }
+        },
+        {
+            "instanceid": "F34E1-2080-04",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Secondary Diagnosis",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Diagnosis.Secondary Diagnosis]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Diagnosis",
+                "title": "Secondary Diagnosis"
+            }
+        },
+        {
+            "instanceid": "6A6FB-A88C-D4",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Tertiary Diagnosis",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Diagnosis.Tertiary Diagnosis]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Diagnosis",
+                "title": "Tertiary Diagnosis"
+            }
+        },
+        {
+            "instanceid": "7134D-D779-53",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Original Claim Current Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Adjusted Claim Original Status.Original Claim Current Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Adjusted Claim Original Status",
+                "title": "Original Claim Current Status"
+            }
+        },
+        {
+            "instanceid": "0E4DB-96AB-F9",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Last Iteration FLag",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Last Iteration Flag.Last Iteration FLag]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Last Iteration Flag",
+                "title": "Last Iteration FLag"
+            }
+        }
+    ]
+}

@@ -1,0 +1,149 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "984167c3-1b37-449d-b003-042eb094d44c",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "SNF_IND",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SNF_IND",
+            "oid": "ae909c35-f56b-4df2-bee8-2d18ad562cec",
+            "precision": 3,
+            "scale": 0,
+            "size": 3,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "SLA_STATUS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SLA_STATUS",
+            "oid": "474d669e-6f17-4d37-ae17-1b802858fce3",
+            "precision": 35,
+            "scale": 0,
+            "size": 35,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "SLA_DT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SLA_DT",
+            "oid": "66ca2072-88f2-4268-8053-86042eee4825",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": true,
+            "id": "SLA_DT_MONTH",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SLA_DT_MONTH",
+            "oid": "9f95f5ee-f598-4651-8bce-8c7e4e0e6b75",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": false,
+            "id": "SLA_AGE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SLA_AGE",
+            "oid": "938416a0-d08c-4e5d-aa52-537d9221c7c4",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "First Allowed Date",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "First Allowed Date",
+            "oid": "caab38d5-27b5-444b-859a-ad0f174b7b54",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\r\nCEV.CEV_CLM_ID \t\t\tAS CLAIM_ID,\r\nCASE \r\n\tWHEN CLM.CLM_FC_CD IN ('21','22','23') THEN 'Yes'\r\n\tELSE 'No'\r\nEND\t\t\t\t\tAS SNF_IND,\r\nINITCAP(TCL.TCL_TYPE_DESC) \tAS SLA_STATUS,\r\nCEV.CEV_EV_DT \t\t\t\tAS SLA_DT,\r\nFIRST_DAY(CEV.CEV_EV_DT)    AS SLA_DT_MONTH,\r\nDAYS(CEV.CEV_EV_DT) - DAYS(CDT.CDT_DT) \r\n\t\t\t\t\t\tAS SLA_AGE,\r\nAL1.CEV_EV_DT\t\t\tAS \"First Allowed Date\" -- added due to CHC issue\r\n\r\nFROM HS.CEV_CLM_EV AS CEV\r\nJOIN HS.CLM_CLAIM AS CLM ON CEV.CEV_CLM_ID = CLM.CLM_ID\r\nJOIN HS.CDT_CLM_DT       AS CDT ON CEV.CEV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nJOIN HS.TCL_TYPE_CD_LOOKUP AS TCL  ON TRIM(CEV.CEV_TYPE) = TCL.TCL_TYPE_CODE AND TCL.TCL_ID = 84\r\n\r\n-- added due to CHC issue\r\nLEFT JOIN HS.CEV_CLM_EV AS AL1 ON CEV.CEV_CLM_ID = AL1.CEV_CLM_ID AND AL1.CEV_DEL_TS IS NULL AND AL1.CEV_TYPE = 'ALW' AND AL1.CEV_ADD_TS = (SELECT CEV_ADD_TS FROM HS.CEV_CLM_EV WHERE CEV_CLM_ID = AL1.CEV_CLM_ID AND CEV_DEL_TS IS NULL AND CEV_TYPE = 'ALW' ORDER BY CEV_ADD_TS ASC FETCH FIRST 1 ROWS ONLY WITH UR)\r\n-- added due to CHC issue\r\n\r\nWHERE CEV.CEV_DEL_TS IS NULL\r\nAND CEV.CEV_RUN_ID IS NOT NULL AND CEV.CEV_RUN_ID !=0\r\nAND TRIM(CEV.CEV_TYPE) IN ('PD','DN')\r\nAND CEV.CEV_ADD_TS = (SELECT CEV_ADD_TS FROM HS.CEV_CLM_EV WHERE CEV_CLM_ID = CEV.CEV_CLM_ID AND CEV_DEL_TS IS NULL AND CEV_RUN_ID IS NOT NULL AND CEV_RUN_ID !=0 AND TRIM(CEV_TYPE) IN ('PD','DN') ORDER BY CEV_ADD_TS ASC FETCH FIRST 1 ROWS ONLY WITH UR)\r\n\r\nWITH UR"
+    },
+    "dataset": "ace1cb31-8866-438f-9360-67450bc10dd9",
+    "hidden": false,
+    "id": "tq_OO8vSFWUq",
+    "isMaterialized": false,
+    "name": "Claims SLA Calculation",
+    "oid": "b596e56c-c1c8-4af3-b915-85f101469aac",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "474d669e-6f17-4d37-ae17-1b802858fce3",
+                "displayName": "SLA Status",
+                "name": "SLA Status",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "66ca2072-88f2-4268-8053-86042eee4825",
+                "displayName": "SLA Date",
+                "name": "SLA Date",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "938416a0-d08c-4e5d-aa52-537d9221c7c4",
+                "displayName": "SLA Age",
+                "name": "SLA Age",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "ae909c35-f56b-4df2-bee8-2d18ad562cec",
+                "displayName": "SNF Indicator",
+                "name": "SNF Indicator",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "984167c3-1b37-449d-b003-042eb094d44c",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

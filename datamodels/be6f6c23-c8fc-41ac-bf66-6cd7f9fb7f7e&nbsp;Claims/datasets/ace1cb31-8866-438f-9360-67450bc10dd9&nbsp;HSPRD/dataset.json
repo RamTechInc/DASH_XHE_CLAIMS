@@ -1,0 +1,32 @@
+{
+    "connection": "./connection.json",
+    "database": "HSPRD",
+    "elasticube": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "oid": "ace1cb31-8866-438f-9360-67450bc10dd9",
+    "schemaName": "HSPRD",
+    "tables": [
+        "./3fe7b1ca-c53a-4f61-a87b-c516a9bcaf24/table.json",
+        "./55107a1f-89b2-4074-9efa-953c922c17cd/table.json",
+        "./6b80ec67-d0d6-473c-9dca-b4c7822d2cdf/table.json",
+        "./6d4014f3-9d48-442e-b653-201f0170a188/table.json",
+        "./7545a70a-7c42-414e-a758-d4c80a39123f/table.json",
+        "./77ab8224-24ef-435b-9c10-4a0464989033/table.json",
+        "./7955e580-ca22-402f-b5a2-8bb8d97db98d/table.json",
+        "./7b29243d-0ce3-4b28-869b-7208050f7427/table.json",
+        "./7b4c4f74-b906-4207-9422-42ffadd3c335/table.json",
+        "./8029eb09-5f9c-44f9-bab0-a812a37a1464/table.json",
+        "./8d66b491-d6da-4d18-8cac-b2f93f2cff53/table.json",
+        "./ad19d4de-ff6a-46dd-aa35-615aa4906097/table.json",
+        "./b0a9af76-9f55-49ae-bedd-dca40f849d38/table.json",
+        "./b35c7c4a-9592-4928-964d-0676a1b10834/table.json",
+        "./b596e56c-c1c8-4af3-b915-85f101469aac/table.json",
+        "./b847ef7d-92c4-4f36-bce7-4bf15dffd7b1/table.json",
+        "./bc389243-8d26-4b4e-8577-86a70ecd341e/table.json",
+        "./cdcb40cf-f54c-4d5d-8676-306fcd76abcc/table.json",
+        "./dbf4430d-979a-4772-8da8-c126cfec13d6/table.json",
+        "./e61f9ba1-9746-4b22-b57d-c2f888bcc3b0/table.json",
+        "./f2ea245c-2c36-4899-9422-cdec24e318a4/table.json",
+        "./fa64b1ee-4066-4712-89e5-14c5ae61494e/table.json"
+    ],
+    "type": "extract"
+}

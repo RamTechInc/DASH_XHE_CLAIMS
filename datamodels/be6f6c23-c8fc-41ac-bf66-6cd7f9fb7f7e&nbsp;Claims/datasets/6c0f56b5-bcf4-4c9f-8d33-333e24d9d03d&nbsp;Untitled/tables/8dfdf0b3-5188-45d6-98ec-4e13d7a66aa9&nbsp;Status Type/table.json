@@ -1,0 +1,46 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "9460a5c4-81d9-48f4-a5a0-125aaba0e2e6",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Current Status",
+            "oid": "cb3245f7-b5c7-4576-9ba6-ff7440faa77a",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "15ee0daa-43a7-45fa-bf1e-f61c7ad280b1",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Status Type",
+            "oid": "11331faf-80cf-43c7-85e5-c6340e1e1f85",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "dataset": "6c0f56b5-bcf4-4c9f-8d33-333e24d9d03d",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "74c52490-2498-499f-a5a9-acda44967074"
+    },
+    "hidden": false,
+    "id": "STATUS_TYPE",
+    "isMaterialized": false,
+    "name": "Status Type",
+    "oid": "8dfdf0b3-5188-45d6-98ec-4e13d7a66aa9",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

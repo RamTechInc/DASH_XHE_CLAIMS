@@ -1,0 +1,453 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2a23f60e8b60036ca299a",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays encounter acceptance rate trending, accepted encounters claims paid amount volume, and processed claim paid amount volume per quarter. \n•\tPlacing the mouse over an encounter will display the volume for that encounter per quarter. \n•\tTo view information for a specific quarter, select the desired encounter on the widget. The widgets will adjust to reflect information for that specific encounter and quarter only. Utilizing filter features will only affect that user’s view.\n•\tTo filter all corresponding widgets by grouped selection, left click and drag across the desired information. Click select. All correlating widgets will adjust.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard. \nEncounters: (Accepted, Rejected, No Response)",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "77D5B-25FB-E2",
+                        "jaql": {
+                            "column": "SLA Date",
+                            "datatype": "datetime",
+                            "dim": "[Claims SLA Calculation.SLA Date (Calendar)]",
+                            "level": "quarters",
+                            "merged": true,
+                            "table": "Claims SLA Calculation",
+                            "title": "Quarters in SLA Date"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "disabled": true,
+                        "format": {
+                            "color": {
+                                "color": "#f16c20",
+                                "isHandPickedColor": true,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": "auto"
+                            }
+                        },
+                        "instanceid": "9FA2B-6242-BC",
+                        "jaql": {
+                            "context": {
+                                "[7E7A0-773]": {
+                                    "agg": "sum",
+                                    "column": "Claim Paid Amount",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim Amount.Claim Paid Amount]",
+                                    "table": "Claim Amount",
+                                    "title": "Total Claim Paid Amount"
+                                }
+                            },
+                            "formula": "[7E7A0-773]",
+                            "title": "Claim  Paid  Amount",
+                            "type": "measure"
+                        },
+                        "panel": "measures",
+                        "singleSeriesType": "column"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 4,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": "auto"
+                            }
+                        },
+                        "instanceid": "3E7EA-6DA4-29",
+                        "jaql": {
+                            "context": {
+                                "[23AA1-7D1]": {
+                                    "collapsed": true,
+                                    "column": "Encounter Current Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Encounter Current Status.Encounter Current Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "CMS ENCTR SUB NOT SENT, ADJ/VOID   "
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Encounter Current Status",
+                                    "title": "Encounter Current Status"
+                                },
+                                "[A39D0-79D]": {
+                                    "agg": "sum",
+                                    "column": "Claim Paid Amount",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim Amount.Claim Paid Amount]",
+                                    "table": "Claim Amount",
+                                    "title": "Total Claim Paid Amount"
+                                }
+                            },
+                            "formula": "([A39D0-79D],[23AA1-7D1])",
+                            "title": "Identified",
+                            "type": "measure"
+                        },
+                        "panel": "measures",
+                        "singleSeriesType": "column"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 2,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": "auto"
+                            }
+                        },
+                        "instanceid": "3E7EA-6DA4-29",
+                        "jaql": {
+                            "context": {
+                                "[6E283-2FA]": {
+                                    "collapsed": true,
+                                    "column": "Encounter Current Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Encounter Current Status.Encounter Current Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "N\\A"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Encounter Current Status",
+                                    "title": "Encounter Current Status"
+                                },
+                                "[A8651-BC4]": {
+                                    "agg": "sum",
+                                    "column": "Claim Paid Amount",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim Amount.Claim Paid Amount]",
+                                    "table": "Claim Amount",
+                                    "title": "Total Claim Paid Amount"
+                                }
+                            },
+                            "formula": "([A8651-BC4],[6E283-2FA])",
+                            "title": "Unidentified",
+                            "type": "measure"
+                        },
+                        "panel": "measures",
+                        "singleSeriesType": "column"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "instanceid": "2B050-8A6B-C4",
+                        "jaql": {
+                            "collapsed": false,
+                            "column": "Encounter Submission Date",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "datetime",
+                            "dim": "[Encounter Information.Encounter Submission Date (Calendar)]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "N\\A"
+                                ],
+                                "multiSelection": true
+                            },
+                            "level": "years",
+                            "merged": true,
+                            "table": "Encounter Information",
+                            "title": "Years in Encounter Submission Date"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "659d788c87fe010032462bdc",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "quarters_in_sla_date",
+                    "plural": "Quarters in SLA Date",
+                    "singular": "Quarters in SLA Date",
+                    "title": "Quarters in SLA Date"
+                },
+                {
+                    "id": "years_in_encounter_submission_date",
+                    "plural": "Years in Encounter Submission Date",
+                    "singular": "Years in Encounter Submission Date",
+                    "title": "Years in Encounter Submission Date"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": false,
+                "stacked": false,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": false,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "templateMainYHasGridLines": true,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "column/classic",
+    "title": "Unsubmitted Encounter Trending",
+    "type": "chart/column"
+}

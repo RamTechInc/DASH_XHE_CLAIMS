@@ -1,0 +1,9 @@
+{
+    "description": "",
+    "name": "GenericJDBC_111 - 4448467260",
+    "oid": "88731be4-9c5b-4bc9-b189-4241d11ef3c5",
+    "provider": "GenericJDBC_111",
+    "supportedModelTypes": [
+        "EXTRACT"
+    ]
+}

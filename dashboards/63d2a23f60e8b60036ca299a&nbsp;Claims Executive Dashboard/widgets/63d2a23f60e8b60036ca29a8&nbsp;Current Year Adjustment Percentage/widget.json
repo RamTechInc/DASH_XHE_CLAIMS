@@ -1,0 +1,352 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2a23f60e8b60036ca299a",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the percentage of the claim adjustments for the current year",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 3,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": true,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "conditions": [
+                                    {
+                                        "color": "#00a808",
+                                        "expression": ".07",
+                                        "expressionValue": ".07",
+                                        "operator": "<"
+                                    },
+                                    {
+                                        "color": "#ff0000",
+                                        "expression": ".07",
+                                        "expressionValue": ".07",
+                                        "operator": "≥"
+                                    }
+                                ],
+                                "type": "condition"
+                            },
+                            "mask": {
+                                "decimals": 2,
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "5F1F7-1D38-C7",
+                        "jaql": {
+                            "context": {
+                                "[84A11-47E]": {
+                                    "collapsed": true,
+                                    "column": "Claim Type",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Claim.Claim Type]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "ADJ",
+                                            "REOPENED"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "Claim Type"
+                                },
+                                "[EB1BE-885]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                }
+                            },
+                            "formula": "([EB1BE-885],[84A11-47E])/[EB1BE-885]",
+                            "title": "Adjustment Percentage",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "value"
+            },
+            {
+                "items": [
+                ],
+                "name": "secondary"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "decimals": "auto",
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "FDF30-B812-F2",
+                        "jaql": {
+                            "formula": "0",
+                            "title": "0 (default)"
+                        }
+                    }
+                ],
+                "name": "min"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "decimals": "auto",
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "0C2E7-53B4-0D",
+                        "jaql": {
+                            "context": {
+                            },
+                            "formula": "0.10\n\n",
+                            "title": "0.10\n\n",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "max"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "instanceid": "E4AC0-4D02-C9",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Current Status Date",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "datetime",
+                            "dim": "[Claim Status.Current Status Date (Calendar)]",
+                            "filter": {
+                                "last": {
+                                    "count": 1,
+                                    "offset": 0
+                                }
+                            },
+                            "level": "years",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Years in Current Status Date"
+                        }
+                    },
+                    {
+                        "instanceid": "AD242-ACCA-01",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Status Type",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Status Type.Status Type]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Processed"
+                                ],
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Status Type",
+                            "title": "Status Type"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2a23f60e8b60036ca29a8",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "disallowSelector": true,
+        "selector": false,
+        "supportsHierarchies": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "style": {
+        "components": {
+            "labels": {
+                "enabled": true,
+                "inactive": false
+            },
+            "secondaryTitle": {
+                "enabled": true,
+                "inactive": true
+            },
+            "ticks": {
+                "enabled": true,
+                "inactive": false
+            },
+            "title": {
+                "enabled": true,
+                "inactive": false
+            }
+        },
+        "indicator/gauge": {
+            "components": {
+                "labels": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "ticks": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "round"
+        },
+        "indicator/numeric": {
+            "components": {
+                "icon": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "vertical",
+            "subtype": "simple"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "years_in_current_status_date",
+                    "plural": "Years in Current Status Date",
+                    "singular": "Years in Current Status Date",
+                    "title": "Years in Current Status Date"
+                },
+                {
+                    "id": "status_type",
+                    "plural": "Status Type",
+                    "singular": "Status Type",
+                    "title": "Status Type"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "skin": "2",
+        "subtype": "round"
+    },
+    "subtype": "indicator/gauge",
+    "title": "Current Year Adjustment Percentage",
+    "type": "indicator"
+}

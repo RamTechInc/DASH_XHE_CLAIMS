@@ -1,0 +1,3381 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "65c55e5f5bb13200325873c6",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                ],
+                "name": "Break By"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                        },
+                        "instanceid": "941E3-FC94-7B",
+                        "jaql": {
+                            "column": "Claim ID",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim ID"
+                        }
+                    },
+                    {
+                        "colSize": "67.75px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": false
+                                }
+                            }
+                        },
+                        "instanceid": "B59C1-CAD1-6C",
+                        "jaql": {
+                            "column": "Claim Line Number",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line.Claim Line Number]",
+                            "table": "Claim Line",
+                            "title": "Claim Line Number"
+                        }
+                    },
+                    {
+                        "colSize": "49px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "DBC7E-3BE9-5E",
+                        "jaql": {
+                            "column": "Claim Type",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim Type]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Type"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "B5F25-573D-A9",
+                        "jaql": {
+                            "column": "Original Claim ID",
+                            "datatype": "text",
+                            "dim": "[Claim.Original Claim ID]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Original Claim ID"
+                        }
+                    },
+                    {
+                        "colSize": "107.969px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "A03A9-F2A7-52",
+                        "jaql": {
+                            "column": "HSN",
+                            "datatype": "text",
+                            "dim": "[Member HSN.HSN]",
+                            "merged": true,
+                            "table": "Member HSN",
+                            "title": "HSN"
+                        }
+                    },
+                    {
+                        "colSize": "152.797px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "25B97-9831-28",
+                        "jaql": {
+                            "column": "Claim Submitter",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim Submitter]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Submitter"
+                        }
+                    },
+                    {
+                        "colSize": "44.6875px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "090A5-6446-18",
+                        "jaql": {
+                            "column": "Product",
+                            "datatype": "text",
+                            "dim": "[Claim Plan Information.Product]",
+                            "merged": true,
+                            "table": "Claim Plan Information",
+                            "title": "Product"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "D1FC1-558E-A5",
+                        "jaql": {
+                            "column": "PBP",
+                            "datatype": "text",
+                            "dim": "[Claim Plan Information.PBP]",
+                            "merged": true,
+                            "table": "Claim Plan Information",
+                            "title": "PBP"
+                        }
+                    },
+                    {
+                        "colSize": "243.641px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "2EA9C-501F-0E",
+                        "jaql": {
+                            "column": "Plan Name",
+                            "datatype": "text",
+                            "dim": "[Claim Plan Information.Plan Name]",
+                            "merged": true,
+                            "table": "Claim Plan Information",
+                            "title": "Plan Name"
+                        }
+                    },
+                    {
+                        "colSize": "243.641px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "668E5-A592-52",
+                        "jaql": {
+                            "column": "Bill Type",
+                            "datatype": "text",
+                            "dim": "[Claim.Bill Type]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Bill Type"
+                        }
+                    },
+                    {
+                        "colSize": "243.641px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "4D815-E949-B1",
+                        "jaql": {
+                            "column": "Claim Form",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim Form]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Form"
+                        }
+                    },
+                    {
+                        "colSize": "106.156px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "E0FC2-AE03-76",
+                        "jaql": {
+                            "column": "Receipt Date",
+                            "datatype": "datetime",
+                            "dim": "[Receipt Date.Receipt Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Receipt Date",
+                            "title": "Receipt Date"
+                        }
+                    },
+                    {
+                        "colSize": "69.1875px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "5C3E0-7CF2-D4",
+                        "jaql": {
+                            "column": "Claim Origin Form",
+                            "datatype": "text",
+                            "dim": "[Claim Source.Claim Origin Form]",
+                            "merged": true,
+                            "table": "Claim Source",
+                            "title": "Claim Origin Form"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "5AA91-4D32-FC",
+                        "jaql": {
+                            "column": "Origin Date",
+                            "datatype": "datetime",
+                            "dim": "[Claim Source.Origin Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Claim Source",
+                            "title": "Origin Date"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "949B4-AC94-58",
+                        "jaql": {
+                            "column": "Current Status",
+                            "datatype": "text",
+                            "dim": "[Claim Status.Current Status]",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Current Status"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "01F04-8A0E-97",
+                        "jaql": {
+                            "column": "Current Status Date",
+                            "datatype": "datetime",
+                            "dim": "[Claim Status.Current Status Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Current Status Date"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "F3E05-3032-BF",
+                        "jaql": {
+                            "column": "Claim Network Status",
+                            "datatype": "text",
+                            "dim": "[Claim Network Status.Claim Network Status]",
+                            "merged": true,
+                            "table": "Claim Network Status",
+                            "title": "Claim Network Status"
+                        }
+                    },
+                    {
+                        "colSize": "72.0625px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "791ED-4895-0B",
+                        "jaql": {
+                            "column": "Clean Indicator",
+                            "datatype": "text",
+                            "dim": "[Claim.Clean Indicator]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Clean Indicator"
+                        }
+                    },
+                    {
+                        "colSize": "44.6875px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "2CD6D-3F94-F8",
+                        "jaql": {
+                            "column": "Age",
+                            "datatype": "numeric",
+                            "dim": "[Claim Aging.Age]",
+                            "table": "Claim Aging",
+                            "title": "Age"
+                        }
+                    },
+                    {
+                        "colSize": "49px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "C869C-9076-C5",
+                        "jaql": {
+                            "column": "Client Age",
+                            "datatype": "numeric",
+                            "dim": "[Client Age.Client Age]",
+                            "table": "Client Age",
+                            "title": "Client Age"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "2FE67-7DCF-CE",
+                        "jaql": {
+                            "column": "DOS",
+                            "datatype": "datetime",
+                            "dim": "[DOS.DOS (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "DOS",
+                            "title": "DOS"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "6C23A-9A4B-E4",
+                        "jaql": {
+                            "column": "DOS to",
+                            "datatype": "datetime",
+                            "dim": "[DOS.DOS to (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "DOS",
+                            "title": "DOS to"
+                        }
+                    },
+                    {
+                        "colSize": "53.3438px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": false
+                                }
+                            }
+                        },
+                        "instanceid": "2F233-3388-A7",
+                        "jaql": {
+                            "column": "Denial Code",
+                            "datatype": "numeric",
+                            "dim": "[Denial Reason.Denial Code]",
+                            "table": "Denial Reason",
+                            "title": "Denial Code"
+                        }
+                    },
+                    {
+                        "colSize": "64.875px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "1D165-640B-B0",
+                        "jaql": {
+                            "column": "Denial Reason",
+                            "datatype": "text",
+                            "dim": "[Denial Reason.Denial Reason]",
+                            "merged": true,
+                            "table": "Denial Reason",
+                            "title": "Denial Reason"
+                        }
+                    },
+                    {
+                        "colSize": "318.641px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "B31A9-3659-40",
+                        "jaql": {
+                            "column": "Queue",
+                            "datatype": "text",
+                            "dim": "[Claim Routing.Queue]",
+                            "merged": true,
+                            "table": "Claim Routing",
+                            "title": "Queue"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "F74FB-18B1-A1",
+                        "jaql": {
+                            "column": "Queue Date",
+                            "datatype": "datetime",
+                            "dim": "[Claim Routing.Queue Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Claim Routing",
+                            "title": "Queue Date"
+                        }
+                    },
+                    {
+                        "colSize": "57.625px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "40F11-975B-4A",
+                        "jaql": {
+                            "column": "Queue Owner",
+                            "datatype": "text",
+                            "dim": "[Claim Routing.Queue Owner]",
+                            "merged": true,
+                            "table": "Claim Routing",
+                            "title": "Queue Owner"
+                        }
+                    },
+                    {
+                        "colSize": "57.625px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "22CFC-C25B-7B",
+                        "jaql": {
+                            "column": "Message",
+                            "datatype": "text",
+                            "dim": "[Claim Messages.Message]",
+                            "merged": true,
+                            "table": "Claim Messages",
+                            "title": "Message"
+                        }
+                    },
+                    {
+                        "colSize": "57.625px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": false
+                                }
+                            }
+                        },
+                        "instanceid": "4C98A-9662-C3",
+                        "jaql": {
+                            "column": "Suspend Error Code",
+                            "datatype": "numeric",
+                            "dim": "[Suspend Errors.Suspend Error Code]",
+                            "table": "Suspend Errors",
+                            "title": "Suspend Error Code"
+                        }
+                    },
+                    {
+                        "colSize": "76.375px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "6C900-D3D8-2F",
+                        "jaql": {
+                            "column": "Suspend Error Message",
+                            "datatype": "text",
+                            "dim": "[Suspend Errors.Suspend Error Message]",
+                            "merged": true,
+                            "table": "Suspend Errors",
+                            "title": "Suspend Error Message"
+                        }
+                    },
+                    {
+                        "colSize": "46.125px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "2B697-51F5-A1",
+                        "jaql": {
+                            "column": "DRG Code",
+                            "datatype": "text",
+                            "dim": "[Claim.DRG Code]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "DRG Code"
+                        }
+                    },
+                    {
+                        "colSize": "95.125px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "B0953-2343-72",
+                        "jaql": {
+                            "column": "DRG Description",
+                            "datatype": "text",
+                            "dim": "[DRG Description.DRG Description]",
+                            "merged": true,
+                            "table": "DRG Description",
+                            "title": "DRG Description"
+                        }
+                    },
+                    {
+                        "colSize": "109.547px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "836AB-774E-AB",
+                        "jaql": {
+                            "column": "Claim Authorization ID",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim Authorization ID]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Authorization ID"
+                        }
+                    },
+                    {
+                        "colSize": "102.344px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "C9683-135B-DC",
+                        "jaql": {
+                            "column": "Adjudication Type",
+                            "datatype": "text",
+                            "dim": "[Claim.Adjudication Type]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Adjudication Type"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "6C46E-16B5-A2",
+                        "jaql": {
+                            "column": "Claim Billed Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Billed Amount]",
+                            "table": "Claim Amount",
+                            "title": "Claim Billed Amount"
+                        }
+                    },
+                    {
+                        "colSize": "66.3125px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "2C985-0DAD-0F",
+                        "jaql": {
+                            "column": "Claim Allowed Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Allowed Amount]",
+                            "table": "Claim Amount",
+                            "title": "Claim Allowed Amount"
+                        }
+                    },
+                    {
+                        "colSize": "64.875px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "8EE53-3B5C-DE",
+                        "jaql": {
+                            "column": "Claim Paid Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Paid Amount]",
+                            "table": "Claim Amount",
+                            "title": "Claim Paid Amount"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "FCA50-49E3-3A",
+                        "jaql": {
+                            "column": "Claim Interest Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Interest Amount]",
+                            "table": "Claim Amount",
+                            "title": "Claim Interest Amount"
+                        }
+                    },
+                    {
+                        "colSize": "165.797px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "1D95A-4891-5F",
+                        "jaql": {
+                            "column": "Claim Copay/Coinsurance",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Copay/Coinsurance]",
+                            "table": "Claim Amount",
+                            "title": "Claim Copay/Coinsurance"
+                        }
+                    },
+                    {
+                        "colSize": "89.375px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "9C2D2-6D0A-89",
+                        "jaql": {
+                            "column": "Claim Deductible",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Deductible]",
+                            "table": "Claim Amount",
+                            "title": "Claim Deductible"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "ED9E5-C8CC-5B",
+                        "jaql": {
+                            "column": "Payment Date",
+                            "datatype": "datetime",
+                            "dim": "[Payment Set.Payment Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Payment Set",
+                            "title": "Payment Date"
+                        }
+                    },
+                    {
+                        "colSize": "106.688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "9DF7B-DA11-DA",
+                        "jaql": {
+                            "column": "Claim Recoupment",
+                            "datatype": "numeric",
+                            "dim": "[Payment Set.Claim Recoupment]",
+                            "table": "Payment Set",
+                            "title": "Claim Recoupment"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "03799-B138-E0",
+                        "jaql": {
+                            "column": "Check Number",
+                            "datatype": "text",
+                            "dim": "[Payment Set.Check Number]",
+                            "merged": true,
+                            "table": "Payment Set",
+                            "title": "Check Number"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "AAF4C-138A-93",
+                        "jaql": {
+                            "column": "Check Amount",
+                            "datatype": "numeric",
+                            "dim": "[Payment Set.Check Amount]",
+                            "table": "Payment Set",
+                            "title": "Check Amount"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "D2F72-B792-86",
+                        "jaql": {
+                            "column": "Check Date",
+                            "datatype": "datetime",
+                            "dim": "[Payment Set.Check Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Payment Set",
+                            "title": "Check Date"
+                        }
+                    },
+                    {
+                        "colSize": "312.844px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "754BC-1316-DD",
+                        "jaql": {
+                            "column": "Payee Name",
+                            "datatype": "text",
+                            "dim": "[Payment Set.Payee Name]",
+                            "merged": true,
+                            "table": "Payment Set",
+                            "title": "Payee Name"
+                        }
+                    },
+                    {
+                        "colSize": "74.9688px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": false
+                                }
+                            }
+                        },
+                        "instanceid": "A8408-F5F9-FD",
+                        "jaql": {
+                            "column": "Payment Set ID",
+                            "datatype": "numeric",
+                            "dim": "[Payment Set.Payment Set ID]",
+                            "table": "Payment Set",
+                            "title": "Payment Set ID"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "1A45E-148A-6D",
+                        "jaql": {
+                            "column": "Payment Status",
+                            "datatype": "text",
+                            "dim": "[Payment Set.Payment Status]",
+                            "merged": true,
+                            "table": "Payment Set",
+                            "title": "Payment Status"
+                        }
+                    },
+                    {
+                        "colSize": "208.047px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "2063B-DA8E-C1",
+                        "jaql": {
+                            "column": "Encounter Category of Service",
+                            "datatype": "text",
+                            "dim": "[Encounter Information.Encounter Category of Service]",
+                            "merged": true,
+                            "table": "Encounter Information",
+                            "title": "Encounter Category of Service"
+                        }
+                    },
+                    {
+                        "colSize": "198.641px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "D84CC-095D-9A",
+                        "jaql": {
+                            "column": "Encounter Provider Specialty",
+                            "datatype": "text",
+                            "dim": "[Encounter Information.Encounter Provider Specialty]",
+                            "merged": true,
+                            "table": "Encounter Information",
+                            "title": "Encounter Provider Specialty"
+                        }
+                    },
+                    {
+                        "colSize": "192.141px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "8FE18-045C-DB",
+                        "jaql": {
+                            "column": "Encounter Submission Date",
+                            "datatype": "datetime",
+                            "dim": "[Encounter Information.Encounter Submission Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Encounter Information",
+                            "title": "Encounter Submission Date"
+                        }
+                    },
+                    {
+                        "colSize": "206.594px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "750A3-4F89-A1",
+                        "jaql": {
+                            "column": "Encounter Resubmission Date",
+                            "datatype": "datetime",
+                            "dim": "[Encounter Information.Encounter Resubmission Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Encounter Information",
+                            "title": "Encounter Resubmission Date"
+                        }
+                    },
+                    {
+                        "colSize": "150.25px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "BE248-74E2-41",
+                        "jaql": {
+                            "column": "Encounter Void Date",
+                            "datatype": "datetime",
+                            "dim": "[Encounter Information.Encounter Void Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Encounter Information",
+                            "title": "Encounter Void Date"
+                        }
+                    },
+                    {
+                        "colSize": "208.188px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "8E9E5-10E8-6F",
+                        "jaql": {
+                            "column": "Encounter Current Status",
+                            "datatype": "text",
+                            "dim": "[Encounter Current Status.Encounter Current Status]",
+                            "merged": true,
+                            "table": "Encounter Current Status",
+                            "title": "Encounter Current Status"
+                        }
+                    },
+                    {
+                        "colSize": "235.516px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "675F1-9BB7-B9",
+                        "jaql": {
+                            "column": "Encounter 277CA Response Result",
+                            "datatype": "text",
+                            "dim": "[Encounter 277CA Information.Encounter 277CA Response Result]",
+                            "merged": true,
+                            "table": "Encounter 277CA Information",
+                            "title": "Encounter 277CA Response Result"
+                        }
+                    },
+                    {
+                        "colSize": "226.141px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "9D061-62EC-D5",
+                        "jaql": {
+                            "column": "Encounter 277CA Response Date",
+                            "datatype": "datetime",
+                            "dim": "[Encounter 277CA Information.Encounter 277CA Response Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Encounter 277CA Information",
+                            "title": "Encounter 277CA Response Date"
+                        }
+                    },
+                    {
+                        "colSize": "165.391px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "E2680-A676-EA",
+                        "jaql": {
+                            "column": "Encounter 277CA Error",
+                            "datatype": "text",
+                            "dim": "[Encounter 277CA Information.Encounter 277CA Error]",
+                            "merged": true,
+                            "table": "Encounter 277CA Information",
+                            "title": "Encounter 277CA Error"
+                        }
+                    },
+                    {
+                        "colSize": "98.1875px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "83E90-01BB-1B",
+                        "jaql": {
+                            "column": "Encounter MAO002 Status",
+                            "datatype": "text",
+                            "dim": "[Encounter MAO002 Information.Encounter MAO002 Status]",
+                            "merged": true,
+                            "table": "Encounter MAO002 Information",
+                            "title": "Encounter MAO002 Status"
+                        }
+                    },
+                    {
+                        "colSize": "153.125px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "D55DA-B73F-29",
+                        "jaql": {
+                            "column": "Encounter MAO002 Error",
+                            "datatype": "text",
+                            "dim": "[Encounter MAO002 Information.Encounter MAO002 Error]",
+                            "merged": true,
+                            "table": "Encounter MAO002 Information",
+                            "title": "Encounter MAO002 Error"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "5173F-C318-EF",
+                        "jaql": {
+                            "column": "Submitting Provider ID",
+                            "datatype": "text",
+                            "dim": "[Claim Providers.Submitting Provider ID]",
+                            "merged": true,
+                            "table": "Claim Providers",
+                            "title": "Submitting Provider ID"
+                        }
+                    },
+                    {
+                        "colSize": "120.594px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "D213C-DE63-46",
+                        "jaql": {
+                            "column": "Submitting Provider Name",
+                            "datatype": "text",
+                            "dim": "[Submitting Provider Information.Submitting Provider Name]",
+                            "merged": true,
+                            "table": "Submitting Provider Information",
+                            "title": "Submitting Provider Name"
+                        }
+                    },
+                    {
+                        "colSize": "142.297px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "F386D-1889-C3",
+                        "jaql": {
+                            "column": "Submitting Provider Network Status",
+                            "datatype": "text",
+                            "dim": "[Claim Providers.Submitting Provider Network Status]",
+                            "merged": true,
+                            "table": "Claim Providers",
+                            "title": "Submitting Provider Network Status"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "47638-8CA8-66",
+                        "jaql": {
+                            "column": "Rendering Provider ID",
+                            "datatype": "text",
+                            "dim": "[Claim Providers.Rendering Provider ID]",
+                            "merged": true,
+                            "table": "Claim Providers",
+                            "title": "Rendering Provider ID"
+                        }
+                    },
+                    {
+                        "colSize": "145.922px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "0ECEE-AB1F-0B",
+                        "jaql": {
+                            "column": "Rendering Provider Name",
+                            "datatype": "text",
+                            "dim": "[Rendering Provider Information.Rendering Provider Name]",
+                            "merged": true,
+                            "table": "Rendering Provider Information",
+                            "title": "Rendering Provider Name"
+                        }
+                    },
+                    {
+                        "colSize": "116.266px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "AD771-79D6-79",
+                        "jaql": {
+                            "column": "Rendering Provider Network Status",
+                            "datatype": "text",
+                            "dim": "[Claim Providers.Rendering Provider Network Status]",
+                            "merged": true,
+                            "table": "Claim Providers",
+                            "title": "Rendering Provider Network Status"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "4608B-1116-E7",
+                        "jaql": {
+                            "column": "Billing Provider ID",
+                            "datatype": "text",
+                            "dim": "[Claim Providers.Billing Provider ID]",
+                            "merged": true,
+                            "table": "Claim Providers",
+                            "title": "Billing Provider ID"
+                        }
+                    },
+                    {
+                        "colSize": "116.266px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "94E28-9865-D0",
+                        "jaql": {
+                            "column": "Billing Provider Name",
+                            "datatype": "text",
+                            "dim": "[Billing Provider Information.Billing Provider Name]",
+                            "merged": true,
+                            "table": "Billing Provider Information",
+                            "title": "Billing Provider Name"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "F1BC6-3421-B2",
+                        "jaql": {
+                            "column": "Servicing Provider ID",
+                            "datatype": "text",
+                            "dim": "[Claim Providers.Servicing Provider ID]",
+                            "merged": true,
+                            "table": "Claim Providers",
+                            "title": "Servicing Provider ID"
+                        }
+                    },
+                    {
+                        "colSize": "138.688px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "184D6-0951-65",
+                        "jaql": {
+                            "column": "Servicing Provider Name",
+                            "datatype": "text",
+                            "dim": "[Servicing Provider Information.Servicing Provider Name]",
+                            "merged": true,
+                            "table": "Servicing Provider Information",
+                            "title": "Servicing Provider Name"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "CADCF-943C-71",
+                        "jaql": {
+                            "column": "Referring Provider ID",
+                            "datatype": "text",
+                            "dim": "[Claim Providers.Referring Provider ID]",
+                            "merged": true,
+                            "table": "Claim Providers",
+                            "title": "Referring Provider ID"
+                        }
+                    },
+                    {
+                        "colSize": "95.7969px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "0947E-89AF-C8",
+                        "jaql": {
+                            "column": "Referring Provider Name",
+                            "datatype": "text",
+                            "dim": "[Referring Provider Information.Referring Provider Name]",
+                            "merged": true,
+                            "table": "Referring Provider Information",
+                            "title": "Referring Provider Name"
+                        }
+                    },
+                    {
+                        "colSize": "95.7969px",
+                        "disabled": false,
+                        "format": {
+                        },
+                        "instanceid": "1B3BB-9AEE-A6",
+                        "jaql": {
+                            "column": "PCP Name",
+                            "datatype": "text",
+                            "dim": "[PCP Information.PCP Name]",
+                            "merged": true,
+                            "table": "PCP Information",
+                            "title": "PCP Name"
+                        }
+                    },
+                    {
+                        "colSize": "165.391px",
+                        "disabled": false,
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": false
+                                }
+                            }
+                        },
+                        "instanceid": "217F0-44F7-E3",
+                        "jaql": {
+                            "column": "Line Fee ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line.Line Fee ID]",
+                            "table": "Claim Line",
+                            "title": "Line Fee ID"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "BAA0F-4749-DE",
+                        "jaql": {
+                            "column": "Line Place of Service",
+                            "datatype": "text",
+                            "dim": "[Claim Line.Line Place of Service]",
+                            "merged": true,
+                            "table": "Claim Line",
+                            "title": "Line Place of Service"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "43D39-3BFB-BE",
+                        "jaql": {
+                            "column": "Line Service Quantity",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line.Line Service Quantity]",
+                            "table": "Claim Line",
+                            "title": "Line Service Quantity"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "B02D4-4688-D8",
+                        "jaql": {
+                            "column": "Line I Unit Rate",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line.Line I Unit Rate]",
+                            "table": "Claim Line",
+                            "title": "Line I Unit Rate"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "36AA4-CFB2-8B",
+                        "jaql": {
+                            "column": "Line Code Qualifier",
+                            "datatype": "text",
+                            "dim": "[Claim Line.Line Code Qualifier]",
+                            "merged": true,
+                            "table": "Claim Line",
+                            "title": "Line Code Qualifier"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "9C7E7-7E1B-8C",
+                        "jaql": {
+                            "column": "Line Code",
+                            "datatype": "text",
+                            "dim": "[Claim Line.Line Code]",
+                            "merged": true,
+                            "table": "Claim Line",
+                            "title": "Line Code"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "4E248-C535-49",
+                        "jaql": {
+                            "column": "Benefit ID",
+                            "datatype": "text",
+                            "dim": "[Claim Line.Benefit ID]",
+                            "merged": true,
+                            "table": "Claim Line",
+                            "title": "Benefit ID"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "10CBC-D824-E1",
+                        "jaql": {
+                            "column": "Line  Revenue Code",
+                            "datatype": "text",
+                            "dim": "[Claim Line.Line  Revenue Code]",
+                            "merged": true,
+                            "table": "Claim Line",
+                            "title": "Line  Revenue Code"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "7FC7F-BDCA-F5",
+                        "jaql": {
+                            "column": "Line Modifier 1",
+                            "datatype": "text",
+                            "dim": "[Claim Line.Line Modifier 1]",
+                            "merged": true,
+                            "table": "Claim Line",
+                            "title": "Line Modifier 1"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "C8C12-0D6D-2A",
+                        "jaql": {
+                            "column": "Line Modifier 2",
+                            "datatype": "text",
+                            "dim": "[Claim Line.Line Modifier 2]",
+                            "merged": true,
+                            "table": "Claim Line",
+                            "title": "Line Modifier 2"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "A7FE6-27A5-97",
+                        "jaql": {
+                            "column": "Line  Modifier 3",
+                            "datatype": "text",
+                            "dim": "[Claim Line.Line  Modifier 3]",
+                            "merged": true,
+                            "table": "Claim Line",
+                            "title": "Line  Modifier 3"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "DF1C9-562D-51",
+                        "jaql": {
+                            "column": "Line Modifier 4",
+                            "datatype": "text",
+                            "dim": "[Claim Line.Line Modifier 4]",
+                            "merged": true,
+                            "table": "Claim Line",
+                            "title": "Line Modifier 4"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "E3F46-CF18-77",
+                        "jaql": {
+                            "column": "Line  Billed Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line Amount.Line  Billed Amount]",
+                            "table": "Claim Line Amount",
+                            "title": "Line  Billed Amount"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "53B11-D547-91",
+                        "jaql": {
+                            "column": "Line  Allowed Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line Amount.Line  Allowed Amount]",
+                            "table": "Claim Line Amount",
+                            "title": "Line  Allowed Amount"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "E7B00-2956-2C",
+                        "jaql": {
+                            "column": "Line Paid Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line Amount.Line Paid Amount]",
+                            "table": "Claim Line Amount",
+                            "title": "Line Paid Amount"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "C7B55-9B48-10",
+                        "jaql": {
+                            "column": "Line Copay Coinsurance",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line Amount.Line Copay Coinsurance]",
+                            "table": "Claim Line Amount",
+                            "title": "Line Copay Coinsurance"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "0E903-BA5F-B6",
+                        "jaql": {
+                            "column": "Line Deductible",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line Amount.Line Deductible]",
+                            "table": "Claim Line Amount",
+                            "title": "Line Deductible"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "AD2E2-5637-20",
+                        "jaql": {
+                            "column": "Line Sequestration",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line Amount.Line Sequestration]",
+                            "table": "Claim Line Amount",
+                            "title": "Line Sequestration"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "BF95A-13BD-06",
+                        "jaql": {
+                            "column": "Line Denial Code",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line Denial Reason.Line Denial Code]",
+                            "table": "Claim Line Denial Reason",
+                            "title": "Line Denial Code"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "ECA63-3107-5D",
+                        "jaql": {
+                            "column": "Line Denial Reason",
+                            "datatype": "text",
+                            "dim": "[Claim Line Denial Reason.Line Denial Reason]",
+                            "merged": true,
+                            "table": "Claim Line Denial Reason",
+                            "title": "Line Denial Reason"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "42CB8-AF70-94",
+                        "jaql": {
+                            "column": "Line Message",
+                            "datatype": "text",
+                            "dim": "[Claim Line Messages.Line Message]",
+                            "merged": true,
+                            "table": "Claim Line Messages",
+                            "title": "Line Message"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "F23F1-23BC-01",
+                        "jaql": {
+                            "column": "Line Suspend Error Code",
+                            "datatype": "numeric",
+                            "dim": "[Claim Line Suspend Errors.Line Suspend Error Code]",
+                            "table": "Claim Line Suspend Errors",
+                            "title": "Line Suspend Error Code"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "51F8C-63D7-3A",
+                        "jaql": {
+                            "column": "Line Suspend Error",
+                            "datatype": "text",
+                            "dim": "[Claim Line Suspend Errors.Line Suspend Error]",
+                            "merged": true,
+                            "table": "Claim Line Suspend Errors",
+                            "title": "Line Suspend Error"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "B6396-C55C-56",
+                        "jaql": {
+                            "column": "Line NDC",
+                            "datatype": "text",
+                            "dim": "[Claim Line NDC Information.Line NDC]",
+                            "merged": true,
+                            "table": "Claim Line NDC Information",
+                            "title": "Line NDC"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "F70C9-CE43-CF",
+                        "jaql": {
+                            "column": "Primary Diagnosis",
+                            "datatype": "text",
+                            "dim": "[Claim Diagnosis.Primary Diagnosis]",
+                            "merged": true,
+                            "table": "Claim Diagnosis",
+                            "title": "Primary Diagnosis"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "ED71A-A6FC-71",
+                        "jaql": {
+                            "column": "Primary Diagnosis Description",
+                            "datatype": "text",
+                            "dim": "[Claim Diagnosis.Primary Diagnosis Description]",
+                            "merged": true,
+                            "table": "Claim Diagnosis",
+                            "title": "Primary Diagnosis Description"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "2C43F-C8CE-6D",
+                        "jaql": {
+                            "column": "Secondary Diagnosis",
+                            "datatype": "text",
+                            "dim": "[Claim Diagnosis.Secondary Diagnosis]",
+                            "merged": true,
+                            "table": "Claim Diagnosis",
+                            "title": "Secondary Diagnosis"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "31CB1-FB06-61",
+                        "jaql": {
+                            "column": "Secondary Diagnosis Description",
+                            "datatype": "text",
+                            "dim": "[Claim Diagnosis.Secondary Diagnosis Description]",
+                            "merged": true,
+                            "table": "Claim Diagnosis",
+                            "title": "Secondary Diagnosis Description"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "4BF25-67E2-5C",
+                        "jaql": {
+                            "column": "Tertiary Diagnosis",
+                            "datatype": "text",
+                            "dim": "[Claim Diagnosis.Tertiary Diagnosis]",
+                            "merged": true,
+                            "table": "Claim Diagnosis",
+                            "title": "Tertiary Diagnosis"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "D5346-9F81-D5",
+                        "jaql": {
+                            "column": "Tertiary Diagnosis Description",
+                            "datatype": "text",
+                            "dim": "[Claim Diagnosis.Tertiary Diagnosis Description]",
+                            "merged": true,
+                            "table": "Claim Diagnosis",
+                            "title": "Tertiary Diagnosis Description"
+                        }
+                    },
+                    {
+                        "disabled": true,
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "4A948-B4E2-35",
+                        "jaql": {
+                            "column": "Original Claim Paid Amount",
+                            "datatype": "numeric",
+                            "dim": "[Adjusted Claim Original Amount.Original Claim Paid Amount]",
+                            "table": "Adjusted Claim Original Amount",
+                            "title": "Original Claim Paid Amount"
+                        }
+                    },
+                    {
+                        "disabled": true,
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "days": "MM/dd/yyyy",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "2541D-E1F1-E0",
+                        "jaql": {
+                            "column": "Original Claim Status Date",
+                            "datatype": "datetime",
+                            "dim": "[Adjusted Claim Original Status.Original Claim Status Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Adjusted Claim Original Status",
+                            "title": "Original Claim Paid Date"
+                        }
+                    },
+                    {
+                        "disabled": true,
+                        "format": {
+                        },
+                        "instanceid": "9171E-17E1-82",
+                        "jaql": {
+                            "column": "Submitting Provider TIN",
+                            "datatype": "text",
+                            "dim": "[Claim Providers.Submitting Provider TIN]",
+                            "merged": true,
+                            "table": "Claim Providers",
+                            "title": "Submitting Provider TIN"
+                        }
+                    }
+                ],
+                "name": "Columns"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "65c55e5f5bb13200325873c7",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "designPanelConfig": {
+            "selectedItem": -1,
+            "shouldRender": true
+        },
+        "selector": false,
+        "shouldRefreshData": false,
+        "state": {
+            "columns": [
+                {
+                    "dataField": "Claim ID",
+                    "dataType": "string",
+                    "name": "Claim ID",
+                    "visible": true,
+                    "visibleIndex": 0
+                },
+                {
+                    "dataField": "Claim Line Number",
+                    "dataType": "number",
+                    "name": "Claim Line Number",
+                    "visible": true,
+                    "visibleIndex": 1
+                },
+                {
+                    "dataField": "Claim Type",
+                    "dataType": "string",
+                    "name": "Claim Type",
+                    "visible": true,
+                    "visibleIndex": 2
+                },
+                {
+                    "dataField": "Original Claim ID",
+                    "dataType": "string",
+                    "name": "Original Claim ID",
+                    "visible": true,
+                    "visibleIndex": 3
+                },
+                {
+                    "dataField": "HSN",
+                    "dataType": "string",
+                    "name": "HSN",
+                    "visible": true,
+                    "visibleIndex": 4
+                },
+                {
+                    "dataField": "Claim Submitter",
+                    "dataType": "string",
+                    "name": "Claim Submitter",
+                    "visible": true,
+                    "visibleIndex": 5
+                },
+                {
+                    "dataField": "Product",
+                    "dataType": "string",
+                    "name": "Product",
+                    "visible": true,
+                    "visibleIndex": 6
+                },
+                {
+                    "dataField": "PBP",
+                    "dataType": "string",
+                    "name": "PBP",
+                    "visible": true,
+                    "visibleIndex": 7
+                },
+                {
+                    "dataField": "Plan Name",
+                    "dataType": "string",
+                    "name": "Plan Name",
+                    "visible": true,
+                    "visibleIndex": 8
+                },
+                {
+                    "dataField": "Bill Type",
+                    "dataType": "string",
+                    "name": "Bill Type",
+                    "visible": true,
+                    "visibleIndex": 9
+                },
+                {
+                    "dataField": "Claim Form",
+                    "dataType": "string",
+                    "name": "Claim Form",
+                    "visible": true,
+                    "visibleIndex": 10
+                },
+                {
+                    "dataField": "Receipt Date",
+                    "dataType": "date",
+                    "name": "Receipt Date",
+                    "visible": true,
+                    "visibleIndex": 11
+                },
+                {
+                    "dataField": "Claim Origin Form",
+                    "dataType": "string",
+                    "name": "Claim Origin Form",
+                    "visible": true,
+                    "visibleIndex": 12
+                },
+                {
+                    "dataField": "Origin Date",
+                    "dataType": "date",
+                    "name": "Origin Date",
+                    "visible": true,
+                    "visibleIndex": 13
+                },
+                {
+                    "dataField": "Current Status",
+                    "dataType": "string",
+                    "name": "Current Status",
+                    "visible": true,
+                    "visibleIndex": 14
+                },
+                {
+                    "dataField": "Current Status Date",
+                    "dataType": "date",
+                    "name": "Current Status Date",
+                    "visible": true,
+                    "visibleIndex": 15
+                },
+                {
+                    "dataField": "Claim Network Status",
+                    "dataType": "string",
+                    "name": "Claim Network Status",
+                    "visible": true,
+                    "visibleIndex": 16
+                },
+                {
+                    "dataField": "Clean Indicator",
+                    "dataType": "string",
+                    "name": "Clean Indicator",
+                    "visible": true,
+                    "visibleIndex": 17
+                },
+                {
+                    "dataField": "Age",
+                    "dataType": "number",
+                    "name": "Age",
+                    "visible": true,
+                    "visibleIndex": 18
+                },
+                {
+                    "dataField": "Client Age",
+                    "dataType": "number",
+                    "name": "Client Age",
+                    "visible": true,
+                    "visibleIndex": 19
+                },
+                {
+                    "dataField": "DOS",
+                    "dataType": "date",
+                    "name": "DOS",
+                    "visible": true,
+                    "visibleIndex": 20
+                },
+                {
+                    "dataField": "DOS to",
+                    "dataType": "date",
+                    "name": "DOS to",
+                    "visible": true,
+                    "visibleIndex": 21
+                },
+                {
+                    "dataField": "Denial Code",
+                    "dataType": "number",
+                    "name": "Denial Code",
+                    "visible": true,
+                    "visibleIndex": 22
+                },
+                {
+                    "dataField": "Denial Reason",
+                    "dataType": "string",
+                    "name": "Denial Reason",
+                    "visible": true,
+                    "visibleIndex": 23
+                },
+                {
+                    "dataField": "Queue",
+                    "dataType": "string",
+                    "name": "Queue",
+                    "visible": true,
+                    "visibleIndex": 24
+                },
+                {
+                    "dataField": "Queue Date",
+                    "dataType": "date",
+                    "name": "Queue Date",
+                    "visible": true,
+                    "visibleIndex": 25
+                },
+                {
+                    "dataField": "Queue Owner",
+                    "dataType": "string",
+                    "name": "Queue Owner",
+                    "visible": true,
+                    "visibleIndex": 26
+                },
+                {
+                    "dataField": "Message",
+                    "dataType": "string",
+                    "name": "Message",
+                    "visible": true,
+                    "visibleIndex": 27
+                },
+                {
+                    "dataField": "Suspend Error Code",
+                    "dataType": "number",
+                    "name": "Suspend Error Code",
+                    "visible": true,
+                    "visibleIndex": 28
+                },
+                {
+                    "dataField": "Suspend Error Message",
+                    "dataType": "string",
+                    "name": "Suspend Error Message",
+                    "visible": true,
+                    "visibleIndex": 29
+                },
+                {
+                    "dataField": "DRG Code",
+                    "dataType": "string",
+                    "name": "DRG Code",
+                    "visible": true,
+                    "visibleIndex": 30
+                },
+                {
+                    "dataField": "DRG Description",
+                    "dataType": "string",
+                    "name": "DRG Description",
+                    "visible": true,
+                    "visibleIndex": 31
+                },
+                {
+                    "dataField": "Claim Authorization ID",
+                    "dataType": "string",
+                    "name": "Claim Authorization ID",
+                    "visible": true,
+                    "visibleIndex": 32
+                },
+                {
+                    "dataField": "Adjudication Type",
+                    "dataType": "string",
+                    "name": "Adjudication Type",
+                    "visible": true,
+                    "visibleIndex": 33
+                },
+                {
+                    "dataField": "Claim Billed Amount",
+                    "dataType": "number",
+                    "name": "Claim Billed Amount",
+                    "visible": true,
+                    "visibleIndex": 34
+                },
+                {
+                    "dataField": "Claim Allowed Amount",
+                    "dataType": "number",
+                    "name": "Claim Allowed Amount",
+                    "visible": true,
+                    "visibleIndex": 35
+                },
+                {
+                    "dataField": "Claim Paid Amount",
+                    "dataType": "number",
+                    "name": "Claim Paid Amount",
+                    "visible": true,
+                    "visibleIndex": 36
+                },
+                {
+                    "dataField": "Claim Interest Amount",
+                    "dataType": "number",
+                    "name": "Claim Interest Amount",
+                    "visible": true,
+                    "visibleIndex": 37
+                },
+                {
+                    "dataField": "Claim Copay/Coinsurance",
+                    "dataType": "number",
+                    "name": "Claim Copay/Coinsurance",
+                    "visible": true,
+                    "visibleIndex": 38
+                },
+                {
+                    "dataField": "Claim Deductible",
+                    "dataType": "number",
+                    "name": "Claim Deductible",
+                    "visible": true,
+                    "visibleIndex": 39
+                },
+                {
+                    "dataField": "Payment Date",
+                    "dataType": "date",
+                    "name": "Payment Date",
+                    "visible": true,
+                    "visibleIndex": 40
+                },
+                {
+                    "dataField": "Claim Recoupment",
+                    "dataType": "number",
+                    "name": "Claim Recoupment",
+                    "visible": true,
+                    "visibleIndex": 41
+                },
+                {
+                    "dataField": "Check Number",
+                    "dataType": "string",
+                    "name": "Check Number",
+                    "visible": true,
+                    "visibleIndex": 42
+                },
+                {
+                    "dataField": "Check Amount",
+                    "dataType": "number",
+                    "name": "Check Amount",
+                    "visible": true,
+                    "visibleIndex": 43
+                },
+                {
+                    "dataField": "Check Date",
+                    "dataType": "date",
+                    "name": "Check Date",
+                    "visible": true,
+                    "visibleIndex": 44
+                },
+                {
+                    "dataField": "Payee Name",
+                    "dataType": "string",
+                    "name": "Payee Name",
+                    "visible": true,
+                    "visibleIndex": 45
+                },
+                {
+                    "dataField": "Payment Set ID",
+                    "dataType": "number",
+                    "name": "Payment Set ID",
+                    "visible": true,
+                    "visibleIndex": 46
+                },
+                {
+                    "dataField": "Payment Status",
+                    "dataType": "string",
+                    "name": "Payment Status",
+                    "visible": true,
+                    "visibleIndex": 47
+                },
+                {
+                    "dataField": "Encounter Category of Service",
+                    "dataType": "string",
+                    "name": "Encounter Category of Service",
+                    "visible": true,
+                    "visibleIndex": 48
+                },
+                {
+                    "dataField": "Encounter Provider Specialty",
+                    "dataType": "string",
+                    "name": "Encounter Provider Specialty",
+                    "visible": true,
+                    "visibleIndex": 49
+                },
+                {
+                    "dataField": "Encounter Submission Date",
+                    "dataType": "date",
+                    "name": "Encounter Submission Date",
+                    "visible": true,
+                    "visibleIndex": 50
+                },
+                {
+                    "dataField": "Encounter Resubmission Date",
+                    "dataType": "date",
+                    "name": "Encounter Resubmission Date",
+                    "visible": true,
+                    "visibleIndex": 51
+                },
+                {
+                    "dataField": "Encounter Void Date",
+                    "dataType": "date",
+                    "name": "Encounter Void Date",
+                    "visible": true,
+                    "visibleIndex": 52
+                },
+                {
+                    "dataField": "Encounter Current Status",
+                    "dataType": "string",
+                    "name": "Encounter Current Status",
+                    "visible": true,
+                    "visibleIndex": 53
+                },
+                {
+                    "dataField": "Encounter 277CA Response Result",
+                    "dataType": "string",
+                    "name": "Encounter 277CA Response Result",
+                    "visible": true,
+                    "visibleIndex": 54
+                },
+                {
+                    "dataField": "Encounter 277CA Response Date",
+                    "dataType": "date",
+                    "name": "Encounter 277CA Response Date",
+                    "visible": true,
+                    "visibleIndex": 55
+                },
+                {
+                    "dataField": "Encounter 277CA Error",
+                    "dataType": "string",
+                    "name": "Encounter 277CA Error",
+                    "visible": true,
+                    "visibleIndex": 56
+                },
+                {
+                    "dataField": "Encounter MAO002 Status",
+                    "dataType": "string",
+                    "name": "Encounter MAO002 Status",
+                    "visible": true,
+                    "visibleIndex": 57
+                },
+                {
+                    "dataField": "Encounter MAO002 Error",
+                    "dataType": "string",
+                    "name": "Encounter MAO002 Error",
+                    "visible": true,
+                    "visibleIndex": 58
+                },
+                {
+                    "dataField": "Submitting Provider ID",
+                    "dataType": "string",
+                    "name": "Submitting Provider ID",
+                    "visible": true,
+                    "visibleIndex": 59
+                },
+                {
+                    "dataField": "Submitting Provider Name",
+                    "dataType": "string",
+                    "name": "Submitting Provider Name",
+                    "visible": true,
+                    "visibleIndex": 60
+                },
+                {
+                    "dataField": "Submitting Provider Network Status",
+                    "dataType": "string",
+                    "name": "Submitting Provider Network Status",
+                    "visible": true,
+                    "visibleIndex": 61
+                },
+                {
+                    "dataField": "Rendering Provider ID",
+                    "dataType": "string",
+                    "name": "Rendering Provider ID",
+                    "visible": true,
+                    "visibleIndex": 62
+                },
+                {
+                    "dataField": "Rendering Provider Name",
+                    "dataType": "string",
+                    "name": "Rendering Provider Name",
+                    "visible": true,
+                    "visibleIndex": 63
+                },
+                {
+                    "dataField": "Rendering Provider Network Status",
+                    "dataType": "string",
+                    "name": "Rendering Provider Network Status",
+                    "visible": true,
+                    "visibleIndex": 64
+                },
+                {
+                    "dataField": "Billing Provider ID",
+                    "dataType": "string",
+                    "name": "Billing Provider ID",
+                    "visible": true,
+                    "visibleIndex": 65
+                },
+                {
+                    "dataField": "Billing Provider Name",
+                    "dataType": "string",
+                    "name": "Billing Provider Name",
+                    "visible": true,
+                    "visibleIndex": 66
+                },
+                {
+                    "dataField": "Servicing Provider ID",
+                    "dataType": "string",
+                    "name": "Servicing Provider ID",
+                    "visible": true,
+                    "visibleIndex": 67
+                },
+                {
+                    "dataField": "Servicing Provider Name",
+                    "dataType": "string",
+                    "name": "Servicing Provider Name",
+                    "visible": true,
+                    "visibleIndex": 68
+                },
+                {
+                    "dataField": "Referring Provider ID",
+                    "dataType": "string",
+                    "name": "Referring Provider ID",
+                    "visible": true,
+                    "visibleIndex": 69
+                },
+                {
+                    "dataField": "Referring Provider Name",
+                    "dataType": "string",
+                    "name": "Referring Provider Name",
+                    "visible": true,
+                    "visibleIndex": 70
+                },
+                {
+                    "dataField": "PCP Name",
+                    "dataType": "string",
+                    "name": "PCP Name",
+                    "visible": true,
+                    "visibleIndex": 71
+                },
+                {
+                    "dataField": "Line Fee ID",
+                    "dataType": "number",
+                    "name": "Line Fee ID",
+                    "visible": true,
+                    "visibleIndex": 72
+                },
+                {
+                    "dataField": "Line Place of Service",
+                    "dataType": "string",
+                    "name": "Line Place of Service",
+                    "visible": true,
+                    "visibleIndex": 73
+                },
+                {
+                    "dataField": "Line Service Quantity",
+                    "dataType": "number",
+                    "name": "Line Service Quantity",
+                    "visible": true,
+                    "visibleIndex": 74
+                },
+                {
+                    "dataField": "Line I Unit Rate",
+                    "dataType": "number",
+                    "name": "Line I Unit Rate",
+                    "visible": true,
+                    "visibleIndex": 75
+                },
+                {
+                    "dataField": "Line Code Qualifier",
+                    "dataType": "string",
+                    "name": "Line Code Qualifier",
+                    "visible": true,
+                    "visibleIndex": 76
+                },
+                {
+                    "dataField": "Line Code",
+                    "dataType": "string",
+                    "name": "Line Code",
+                    "visible": true,
+                    "visibleIndex": 77
+                },
+                {
+                    "dataField": "Benefit ID",
+                    "dataType": "string",
+                    "name": "Benefit ID",
+                    "visible": true,
+                    "visibleIndex": 78
+                },
+                {
+                    "dataField": "Line  Revenue Code",
+                    "dataType": "string",
+                    "name": "Line  Revenue Code",
+                    "visible": true,
+                    "visibleIndex": 79
+                },
+                {
+                    "dataField": "Line Modifier 1",
+                    "dataType": "string",
+                    "name": "Line Modifier 1",
+                    "visible": true,
+                    "visibleIndex": 80
+                },
+                {
+                    "dataField": "Line Modifier 2",
+                    "dataType": "string",
+                    "name": "Line Modifier 2",
+                    "visible": true,
+                    "visibleIndex": 81
+                },
+                {
+                    "dataField": "Line  Modifier 3",
+                    "dataType": "string",
+                    "name": "Line  Modifier 3",
+                    "visible": true,
+                    "visibleIndex": 82
+                },
+                {
+                    "dataField": "Line Modifier 4",
+                    "dataType": "string",
+                    "name": "Line Modifier 4",
+                    "visible": true,
+                    "visibleIndex": 83
+                },
+                {
+                    "dataField": "Line  Billed Amount",
+                    "dataType": "number",
+                    "name": "Line  Billed Amount",
+                    "visible": true,
+                    "visibleIndex": 84
+                },
+                {
+                    "dataField": "Line  Allowed Amount",
+                    "dataType": "number",
+                    "name": "Line  Allowed Amount",
+                    "visible": true,
+                    "visibleIndex": 85
+                },
+                {
+                    "dataField": "Line Paid Amount",
+                    "dataType": "number",
+                    "name": "Line Paid Amount",
+                    "visible": true,
+                    "visibleIndex": 86
+                },
+                {
+                    "dataField": "Line Copay Coinsurance",
+                    "dataType": "number",
+                    "name": "Line Copay Coinsurance",
+                    "visible": true,
+                    "visibleIndex": 87
+                },
+                {
+                    "dataField": "Line Deductible",
+                    "dataType": "number",
+                    "name": "Line Deductible",
+                    "visible": true,
+                    "visibleIndex": 88
+                },
+                {
+                    "dataField": "Line Sequestration",
+                    "dataType": "number",
+                    "name": "Line Sequestration",
+                    "visible": true,
+                    "visibleIndex": 89
+                },
+                {
+                    "dataField": "Line Denial Code",
+                    "dataType": "number",
+                    "name": "Line Denial Code",
+                    "visible": true,
+                    "visibleIndex": 90
+                },
+                {
+                    "dataField": "Line Denial Reason",
+                    "dataType": "string",
+                    "name": "Line Denial Reason",
+                    "visible": true,
+                    "visibleIndex": 91
+                },
+                {
+                    "dataField": "Line Message",
+                    "dataType": "string",
+                    "name": "Line Message",
+                    "visible": true,
+                    "visibleIndex": 92
+                },
+                {
+                    "dataField": "Line Suspend Error Code",
+                    "dataType": "number",
+                    "name": "Line Suspend Error Code",
+                    "visible": true,
+                    "visibleIndex": 93
+                },
+                {
+                    "dataField": "Line Suspend Error",
+                    "dataType": "string",
+                    "name": "Line Suspend Error",
+                    "visible": true,
+                    "visibleIndex": 94
+                },
+                {
+                    "dataField": "Line NDC",
+                    "dataType": "string",
+                    "name": "Line NDC",
+                    "visible": true,
+                    "visibleIndex": 95
+                },
+                {
+                    "dataField": "Primary Diagnosis",
+                    "dataType": "string",
+                    "name": "Primary Diagnosis",
+                    "visible": true,
+                    "visibleIndex": 96
+                },
+                {
+                    "dataField": "Primary Diagnosis Description",
+                    "dataType": "string",
+                    "name": "Primary Diagnosis Description",
+                    "visible": true,
+                    "visibleIndex": 97
+                },
+                {
+                    "dataField": "Secondary Diagnosis",
+                    "dataType": "string",
+                    "name": "Secondary Diagnosis",
+                    "visible": true,
+                    "visibleIndex": 98
+                },
+                {
+                    "dataField": "Secondary Diagnosis Description",
+                    "dataType": "string",
+                    "name": "Secondary Diagnosis Description",
+                    "visible": true,
+                    "visibleIndex": 99
+                },
+                {
+                    "dataField": "Tertiary Diagnosis",
+                    "dataType": "string",
+                    "name": "Tertiary Diagnosis",
+                    "visible": true,
+                    "visibleIndex": 100
+                },
+                {
+                    "dataField": "Tertiary Diagnosis Description",
+                    "dataType": "string",
+                    "name": "Tertiary Diagnosis Description",
+                    "visible": true,
+                    "visibleIndex": 101
+                }
+            ]
+        },
+        "triggersDomready": true
+    },
+    "originalOid": "65c55e5f5bb13200325873c7",
+    "prevSortObjects": [
+    ],
+    "shownErrorAboutCustomFormats": false,
+    "style": {
+        "enablePresets": true,
+        "enableToolbar": true,
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "claim_id",
+                    "plural": "Claim ID",
+                    "singular": "Claim ID",
+                    "title": "Claim ID"
+                },
+                {
+                    "id": "claim_line_number",
+                    "plural": "Claim Line Number",
+                    "singular": "Claim Line Number",
+                    "title": "Claim Line Number"
+                },
+                {
+                    "id": "claim_type",
+                    "plural": "Claim Type",
+                    "singular": "Claim Type",
+                    "title": "Claim Type"
+                },
+                {
+                    "id": "original_claim_id",
+                    "plural": "Original Claim ID",
+                    "singular": "Original Claim ID",
+                    "title": "Original Claim ID"
+                },
+                {
+                    "id": "hsn",
+                    "plural": "HSN",
+                    "singular": "HSN",
+                    "title": "HSN"
+                },
+                {
+                    "id": "claim_submitter",
+                    "plural": "Claim Submitter",
+                    "singular": "Claim Submitter",
+                    "title": "Claim Submitter"
+                },
+                {
+                    "id": "product",
+                    "plural": "Product",
+                    "singular": "Product",
+                    "title": "Product"
+                },
+                {
+                    "id": "pbp",
+                    "plural": "PBP",
+                    "singular": "PBP",
+                    "title": "PBP"
+                },
+                {
+                    "id": "plan_name",
+                    "plural": "Plan Name",
+                    "singular": "Plan Name",
+                    "title": "Plan Name"
+                },
+                {
+                    "id": "bill_type",
+                    "plural": "Bill Type",
+                    "singular": "Bill Type",
+                    "title": "Bill Type"
+                },
+                {
+                    "id": "claim_form",
+                    "plural": "Claim Form",
+                    "singular": "Claim Form",
+                    "title": "Claim Form"
+                },
+                {
+                    "id": "receipt_date",
+                    "plural": "Receipt Date",
+                    "singular": "Receipt Date",
+                    "title": "Receipt Date"
+                },
+                {
+                    "id": "claim_origin_form",
+                    "plural": "Claim Origin Form",
+                    "singular": "Claim Origin Form",
+                    "title": "Claim Origin Form"
+                },
+                {
+                    "id": "origin_date",
+                    "plural": "Origin Date",
+                    "singular": "Origin Date",
+                    "title": "Origin Date"
+                },
+                {
+                    "id": "current_status",
+                    "plural": "Current Status",
+                    "singular": "Current Status",
+                    "title": "Current Status"
+                },
+                {
+                    "id": "current_status_date",
+                    "plural": "Current Status Date",
+                    "singular": "Current Status Date",
+                    "title": "Current Status Date"
+                },
+                {
+                    "id": "claim_network_status",
+                    "plural": "Claim Network Status",
+                    "singular": "Claim Network Status",
+                    "title": "Claim Network Status"
+                },
+                {
+                    "id": "clean_indicator",
+                    "plural": "Clean Indicator",
+                    "singular": "Clean Indicator",
+                    "title": "Clean Indicator"
+                },
+                {
+                    "id": "age",
+                    "plural": "Age",
+                    "singular": "Age",
+                    "title": "Age"
+                },
+                {
+                    "id": "client_age",
+                    "plural": "Client Age",
+                    "singular": "Client Age",
+                    "title": "Client Age"
+                },
+                {
+                    "id": "dos",
+                    "plural": "DOS",
+                    "singular": "DOS",
+                    "title": "DOS"
+                },
+                {
+                    "id": "dos_to",
+                    "plural": "DOS to",
+                    "singular": "DOS to",
+                    "title": "DOS to"
+                },
+                {
+                    "id": "denial_code",
+                    "plural": "Denial Code",
+                    "singular": "Denial Code",
+                    "title": "Denial Code"
+                },
+                {
+                    "id": "denial_reason",
+                    "plural": "Denial Reason",
+                    "singular": "Denial Reason",
+                    "title": "Denial Reason"
+                },
+                {
+                    "id": "queue",
+                    "plural": "Queue",
+                    "singular": "Queue",
+                    "title": "Queue"
+                },
+                {
+                    "id": "queue_date",
+                    "plural": "Queue Date",
+                    "singular": "Queue Date",
+                    "title": "Queue Date"
+                },
+                {
+                    "id": "queue_owner",
+                    "plural": "Queue Owner",
+                    "singular": "Queue Owner",
+                    "title": "Queue Owner"
+                },
+                {
+                    "id": "message",
+                    "plural": "Message",
+                    "singular": "Message",
+                    "title": "Message"
+                },
+                {
+                    "id": "suspend_error_code",
+                    "plural": "Suspend Error Code",
+                    "singular": "Suspend Error Code",
+                    "title": "Suspend Error Code"
+                },
+                {
+                    "id": "suspend_error_message",
+                    "plural": "Suspend Error Message",
+                    "singular": "Suspend Error Message",
+                    "title": "Suspend Error Message"
+                },
+                {
+                    "id": "drg_code",
+                    "plural": "DRG Code",
+                    "singular": "DRG Code",
+                    "title": "DRG Code"
+                },
+                {
+                    "id": "drg_description",
+                    "plural": "DRG Description",
+                    "singular": "DRG Description",
+                    "title": "DRG Description"
+                },
+                {
+                    "id": "claim_authorization_id",
+                    "plural": "Claim Authorization ID",
+                    "singular": "Claim Authorization ID",
+                    "title": "Claim Authorization ID"
+                },
+                {
+                    "id": "adjudication_type",
+                    "plural": "Adjudication Type",
+                    "singular": "Adjudication Type",
+                    "title": "Adjudication Type"
+                },
+                {
+                    "id": "claim_billed_amount",
+                    "plural": "Claim Billed Amount",
+                    "singular": "Claim Billed Amount",
+                    "title": "Claim Billed Amount"
+                },
+                {
+                    "id": "claim_allowed_amount",
+                    "plural": "Claim Allowed Amount",
+                    "singular": "Claim Allowed Amount",
+                    "title": "Claim Allowed Amount"
+                },
+                {
+                    "id": "claim_paid_amount",
+                    "plural": "Claim Paid Amount",
+                    "singular": "Claim Paid Amount",
+                    "title": "Claim Paid Amount"
+                },
+                {
+                    "id": "claim_interest_amount",
+                    "plural": "Claim Interest Amount",
+                    "singular": "Claim Interest Amount",
+                    "title": "Claim Interest Amount"
+                },
+                {
+                    "id": "claim_copay/coinsurance",
+                    "plural": "Claim Copay/Coinsurance",
+                    "singular": "Claim Copay/Coinsurance",
+                    "title": "Claim Copay/Coinsurance"
+                },
+                {
+                    "id": "claim_deductible",
+                    "plural": "Claim Deductible",
+                    "singular": "Claim Deductible",
+                    "title": "Claim Deductible"
+                },
+                {
+                    "id": "payment_date",
+                    "plural": "Payment Date",
+                    "singular": "Payment Date",
+                    "title": "Payment Date"
+                },
+                {
+                    "id": "claim_recoupment",
+                    "plural": "Claim Recoupment",
+                    "singular": "Claim Recoupment",
+                    "title": "Claim Recoupment"
+                },
+                {
+                    "id": "check_number",
+                    "plural": "Check Number",
+                    "singular": "Check Number",
+                    "title": "Check Number"
+                },
+                {
+                    "id": "check_amount",
+                    "plural": "Check Amount",
+                    "singular": "Check Amount",
+                    "title": "Check Amount"
+                },
+                {
+                    "id": "check_date",
+                    "plural": "Check Date",
+                    "singular": "Check Date",
+                    "title": "Check Date"
+                },
+                {
+                    "id": "payee_name",
+                    "plural": "Payee Name",
+                    "singular": "Payee Name",
+                    "title": "Payee Name"
+                },
+                {
+                    "id": "payment_set_id",
+                    "plural": "Payment Set ID",
+                    "singular": "Payment Set ID",
+                    "title": "Payment Set ID"
+                },
+                {
+                    "id": "payment_status",
+                    "plural": "Payment Status",
+                    "singular": "Payment Status",
+                    "title": "Payment Status"
+                },
+                {
+                    "id": "encounter_category_of_service",
+                    "plural": "Encounter Category of Service",
+                    "singular": "Encounter Category of Service",
+                    "title": "Encounter Category of Service"
+                },
+                {
+                    "id": "encounter_provider_specialty",
+                    "plural": "Encounter Provider Specialty",
+                    "singular": "Encounter Provider Specialty",
+                    "title": "Encounter Provider Specialty"
+                },
+                {
+                    "id": "encounter_submission_date",
+                    "plural": "Encounter Submission Date",
+                    "singular": "Encounter Submission Date",
+                    "title": "Encounter Submission Date"
+                },
+                {
+                    "id": "encounter_resubmission_date",
+                    "plural": "Encounter Resubmission Date",
+                    "singular": "Encounter Resubmission Date",
+                    "title": "Encounter Resubmission Date"
+                },
+                {
+                    "id": "encounter_void_date",
+                    "plural": "Encounter Void Date",
+                    "singular": "Encounter Void Date",
+                    "title": "Encounter Void Date"
+                },
+                {
+                    "id": "encounter_current_status",
+                    "plural": "Encounter Current Status",
+                    "singular": "Encounter Current Status",
+                    "title": "Encounter Current Status"
+                },
+                {
+                    "id": "encounter_277ca_response_result",
+                    "plural": "Encounter 277CA Response Result",
+                    "singular": "Encounter 277CA Response Result",
+                    "title": "Encounter 277CA Response Result"
+                },
+                {
+                    "id": "encounter_277ca_response_date",
+                    "plural": "Encounter 277CA Response Date",
+                    "singular": "Encounter 277CA Response Date",
+                    "title": "Encounter 277CA Response Date"
+                },
+                {
+                    "id": "encounter_277ca_error",
+                    "plural": "Encounter 277CA Error",
+                    "singular": "Encounter 277CA Error",
+                    "title": "Encounter 277CA Error"
+                },
+                {
+                    "id": "encounter_mao002_status",
+                    "plural": "Encounter MAO002 Status",
+                    "singular": "Encounter MAO002 Status",
+                    "title": "Encounter MAO002 Status"
+                },
+                {
+                    "id": "encounter_mao002_error",
+                    "plural": "Encounter MAO002 Error",
+                    "singular": "Encounter MAO002 Error",
+                    "title": "Encounter MAO002 Error"
+                },
+                {
+                    "id": "submitting_provider_id",
+                    "plural": "Submitting Provider ID",
+                    "singular": "Submitting Provider ID",
+                    "title": "Submitting Provider ID"
+                },
+                {
+                    "id": "submitting_provider_name",
+                    "plural": "Submitting Provider Name",
+                    "singular": "Submitting Provider Name",
+                    "title": "Submitting Provider Name"
+                },
+                {
+                    "id": "submitting_provider_network_status",
+                    "plural": "Submitting Provider Network Status",
+                    "singular": "Submitting Provider Network Status",
+                    "title": "Submitting Provider Network Status"
+                },
+                {
+                    "id": "rendering_provider_id",
+                    "plural": "Rendering Provider ID",
+                    "singular": "Rendering Provider ID",
+                    "title": "Rendering Provider ID"
+                },
+                {
+                    "id": "rendering_provider_name",
+                    "plural": "Rendering Provider Name",
+                    "singular": "Rendering Provider Name",
+                    "title": "Rendering Provider Name"
+                },
+                {
+                    "id": "rendering_provider_network_status",
+                    "plural": "Rendering Provider Network Status",
+                    "singular": "Rendering Provider Network Status",
+                    "title": "Rendering Provider Network Status"
+                },
+                {
+                    "id": "billing_provider_id",
+                    "plural": "Billing Provider ID",
+                    "singular": "Billing Provider ID",
+                    "title": "Billing Provider ID"
+                },
+                {
+                    "id": "billing_provider_name",
+                    "plural": "Billing Provider Name",
+                    "singular": "Billing Provider Name",
+                    "title": "Billing Provider Name"
+                },
+                {
+                    "id": "servicing_provider_id",
+                    "plural": "Servicing Provider ID",
+                    "singular": "Servicing Provider ID",
+                    "title": "Servicing Provider ID"
+                },
+                {
+                    "id": "servicing_provider_name",
+                    "plural": "Servicing Provider Name",
+                    "singular": "Servicing Provider Name",
+                    "title": "Servicing Provider Name"
+                },
+                {
+                    "id": "referring_provider_id",
+                    "plural": "Referring Provider ID",
+                    "singular": "Referring Provider ID",
+                    "title": "Referring Provider ID"
+                },
+                {
+                    "id": "referring_provider_name",
+                    "plural": "Referring Provider Name",
+                    "singular": "Referring Provider Name",
+                    "title": "Referring Provider Name"
+                },
+                {
+                    "id": "pcp_name",
+                    "plural": "PCP Name",
+                    "singular": "PCP Name",
+                    "title": "PCP Name"
+                },
+                {
+                    "id": "line_fee_id",
+                    "plural": "Line Fee ID",
+                    "singular": "Line Fee ID",
+                    "title": "Line Fee ID"
+                },
+                {
+                    "id": "line_place_of_service",
+                    "plural": "Line Place of Service",
+                    "singular": "Line Place of Service",
+                    "title": "Line Place of Service"
+                },
+                {
+                    "id": "line_service_quantity",
+                    "plural": "Line Service Quantity",
+                    "singular": "Line Service Quantity",
+                    "title": "Line Service Quantity"
+                },
+                {
+                    "id": "line_i_unit_rate",
+                    "plural": "Line I Unit Rate",
+                    "singular": "Line I Unit Rate",
+                    "title": "Line I Unit Rate"
+                },
+                {
+                    "id": "line_code_qualifier",
+                    "plural": "Line Code Qualifier",
+                    "singular": "Line Code Qualifier",
+                    "title": "Line Code Qualifier"
+                },
+                {
+                    "id": "line_code",
+                    "plural": "Line Code",
+                    "singular": "Line Code",
+                    "title": "Line Code"
+                },
+                {
+                    "id": "line__revenue_code",
+                    "plural": "Line  Revenue Code",
+                    "singular": "Line  Revenue Code",
+                    "title": "Line  Revenue Code"
+                },
+                {
+                    "id": "line_modifier_1",
+                    "plural": "Line Modifier 1",
+                    "singular": "Line Modifier 1",
+                    "title": "Line Modifier 1"
+                },
+                {
+                    "id": "line_modifier_2",
+                    "plural": "Line Modifier 2",
+                    "singular": "Line Modifier 2",
+                    "title": "Line Modifier 2"
+                },
+                {
+                    "id": "line__modifier_3",
+                    "plural": "Line  Modifier 3",
+                    "singular": "Line  Modifier 3",
+                    "title": "Line  Modifier 3"
+                },
+                {
+                    "id": "line_modifier_4",
+                    "plural": "Line Modifier 4",
+                    "singular": "Line Modifier 4",
+                    "title": "Line Modifier 4"
+                },
+                {
+                    "id": "line__billed_amount",
+                    "plural": "Line  Billed Amount",
+                    "singular": "Line  Billed Amount",
+                    "title": "Line  Billed Amount"
+                },
+                {
+                    "id": "line__allowed_amount",
+                    "plural": "Line  Allowed Amount",
+                    "singular": "Line  Allowed Amount",
+                    "title": "Line  Allowed Amount"
+                },
+                {
+                    "id": "line_paid_amount",
+                    "plural": "Line Paid Amount",
+                    "singular": "Line Paid Amount",
+                    "title": "Line Paid Amount"
+                },
+                {
+                    "id": "line_copay_coinsurance",
+                    "plural": "Line Copay Coinsurance",
+                    "singular": "Line Copay Coinsurance",
+                    "title": "Line Copay Coinsurance"
+                },
+                {
+                    "id": "line_deductible",
+                    "plural": "Line Deductible",
+                    "singular": "Line Deductible",
+                    "title": "Line Deductible"
+                },
+                {
+                    "id": "line_sequestration",
+                    "plural": "Line Sequestration",
+                    "singular": "Line Sequestration",
+                    "title": "Line Sequestration"
+                },
+                {
+                    "id": "line_denial_code",
+                    "plural": "Line Denial Code",
+                    "singular": "Line Denial Code",
+                    "title": "Line Denial Code"
+                },
+                {
+                    "id": "line_denial_reason",
+                    "plural": "Line Denial Reason",
+                    "singular": "Line Denial Reason",
+                    "title": "Line Denial Reason"
+                },
+                {
+                    "id": "line_message",
+                    "plural": "Line Message",
+                    "singular": "Line Message",
+                    "title": "Line Message"
+                },
+                {
+                    "id": "line_suspend_error_code",
+                    "plural": "Line Suspend Error Code",
+                    "singular": "Line Suspend Error Code",
+                    "title": "Line Suspend Error Code"
+                },
+                {
+                    "id": "line_suspend_error",
+                    "plural": "Line Suspend Error",
+                    "singular": "Line Suspend Error",
+                    "title": "Line Suspend Error"
+                },
+                {
+                    "id": "line_ndc",
+                    "plural": "Line NDC",
+                    "singular": "Line NDC",
+                    "title": "Line NDC"
+                },
+                {
+                    "id": "primary_diagnosis",
+                    "plural": "Primary Diagnosis",
+                    "singular": "Primary Diagnosis",
+                    "title": "Primary Diagnosis"
+                },
+                {
+                    "id": "primary_diagnosis_description",
+                    "plural": "Primary Diagnosis Description",
+                    "singular": "Primary Diagnosis Description",
+                    "title": "Primary Diagnosis Description"
+                },
+                {
+                    "id": "secondary_diagnosis",
+                    "plural": "Secondary Diagnosis",
+                    "singular": "Secondary Diagnosis",
+                    "title": "Secondary Diagnosis"
+                },
+                {
+                    "id": "secondary_diagnosis_description",
+                    "plural": "Secondary Diagnosis Description",
+                    "singular": "Secondary Diagnosis Description",
+                    "title": "Secondary Diagnosis Description"
+                },
+                {
+                    "id": "tertiary_diagnosis",
+                    "plural": "Tertiary Diagnosis",
+                    "singular": "Tertiary Diagnosis",
+                    "title": "Tertiary Diagnosis"
+                },
+                {
+                    "id": "tertiary_diagnosis_description",
+                    "plural": "Tertiary Diagnosis Description",
+                    "singular": "Tertiary Diagnosis Description",
+                    "title": "Tertiary Diagnosis Description"
+                },
+                {
+                    "id": "original_claim_paid_amount",
+                    "plural": "Original Claim Paid Amount",
+                    "singular": "Original Claim Paid Amount",
+                    "title": "Original Claim Paid Amount"
+                },
+                {
+                    "id": "original_claim_paid_date",
+                    "plural": "Original Claim Paid Date",
+                    "singular": "Original Claim Paid Date",
+                    "title": "Original Claim Paid Date"
+                },
+                {
+                    "id": "submitting_provider_tin",
+                    "plural": "Submitting Provider TIN",
+                    "singular": "Submitting Provider TIN",
+                    "title": "Submitting Provider TIN"
+                },
+                {
+                    "id": "benefit_id",
+                    "plural": "Benefit ID",
+                    "singular": "Benefit ID",
+                    "title": "Benefit ID"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        }
+    },
+    "subtype": "Advanced Table With Aggregation",
+    "title": "",
+    "type": "Advanced Table With Aggregation"
+}

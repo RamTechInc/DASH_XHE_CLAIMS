@@ -1,0 +1,55 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "LocalHost/Claims",
+        "id": "aLOCALHOST_aCLAIMS",
+        "title": "Claims"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "65c28fafc70db000326ec902",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "designPanelConfig": {
+            "selectedItem": -1,
+            "shouldRender": true
+        },
+        "selector": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        }
+    },
+    "subtype": "Filter Bookmarks",
+    "title": "",
+    "type": "Filter Bookmarks"
+}

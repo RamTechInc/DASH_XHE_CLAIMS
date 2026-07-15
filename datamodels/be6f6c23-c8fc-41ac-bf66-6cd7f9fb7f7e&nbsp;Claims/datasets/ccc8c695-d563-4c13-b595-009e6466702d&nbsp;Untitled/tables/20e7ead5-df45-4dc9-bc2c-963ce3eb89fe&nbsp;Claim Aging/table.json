@@ -1,0 +1,58 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "47352f79-4c28-4262-af07-e801d124e1c8",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "4938587f-57c5-4617-a4c7-cf3c0167bc88",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "b94e5bfc-e7e3-410c-a494-0a6192eb5032",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Suspended Age Group",
+            "oid": "75a50a17-45fa-4516-97e3-fec6dc9defae",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "d4527246-4ddd-406e-8eff-63751d501d9d",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Age",
+            "oid": "60d01b45-772e-437b-a993-56a21cebbb6b",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 6
+        }
+    ],
+    "dataset": "ccc8c695-d563-4c13-b595-009e6466702d",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "cf4ad5a3-6f00-4474-ba0a-9d90970b074b"
+    },
+    "hidden": false,
+    "id": "CLAIM_AGING",
+    "isMaterialized": false,
+    "name": "Claim Aging",
+    "oid": "20e7ead5-df45-4dc9-bc2c-963ce3eb89fe",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

@@ -1,0 +1,28 @@
+{
+    "connection": "./connection.json",
+    "database": "HSPRD",
+    "elasticube": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "oid": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "schemaName": "HSPRD",
+    "tables": [
+        "./05e16bf9-62d6-4d82-abf8-b8e6c130a086/table.json",
+        "./0678b34c-f130-486d-a228-4764ee7bd9bf/table.json",
+        "./07e19f16-1570-4adc-98da-1bca85769e17/table.json",
+        "./0b3b07a7-659b-4841-ac33-8938c210811a/table.json",
+        "./12b7791c-8d6b-4e34-88a6-7869dad8dd42/table.json",
+        "./18045696-a161-4356-b4aa-8d9c2609f8a3/table.json",
+        "./18d17c03-d5a6-4f83-9d47-aa12141bdc01/table.json",
+        "./2656afef-3226-4a5d-864b-fe795da54833/table.json",
+        "./27dc1677-9626-4283-821b-5b591318cbb2/table.json",
+        "./2db258db-1334-4245-bd50-4326f4510e64/table.json",
+        "./47f6e160-0d7c-4467-ad6c-4eda27cba156/table.json",
+        "./4a48a2cd-8bae-43f3-9f91-1b913b454961/table.json",
+        "./4b82ae9a-ce43-443e-b990-5067b8d60475/table.json",
+        "./4d2fc076-99ce-41b2-8a98-08c4ba440944/table.json",
+        "./58e43f12-d176-43fb-898e-d7be5c31f0a7/table.json",
+        "./5beb0bdb-b860-49db-adf4-9a43aa4520ed/table.json",
+        "./621ebfa9-7abd-41ab-a3b1-066c5847fe47/table.json",
+        "./6b1bc430-0341-4108-9a9e-9b416bf3e056/table.json"
+    ],
+    "type": "extract"
+}

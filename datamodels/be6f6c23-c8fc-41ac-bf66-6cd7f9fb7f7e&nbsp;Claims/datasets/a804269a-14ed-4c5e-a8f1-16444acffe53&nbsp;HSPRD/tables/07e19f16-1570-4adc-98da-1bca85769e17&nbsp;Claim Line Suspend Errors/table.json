@@ -1,0 +1,99 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "94c344f3-0d66-4e13-b945-b1872e6f47af",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": true,
+            "id": "CLAIM_LINE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_LINE",
+            "oid": "362694ca-3037-4041-b3ae-377e7e13324e",
+            "precision": 0,
+            "scale": 0,
+            "size": 6,
+            "type": 16
+        },
+        {
+            "hidden": true,
+            "id": "LINE_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_ID",
+            "oid": "0667934c-668d-4d4d-95af-e09a614b5bdf",
+            "precision": 18,
+            "scale": 0,
+            "size": 18,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "LINE_ERROR_CD",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_ERROR_CD",
+            "oid": "04026d87-b738-4bd7-a04f-81cdc0ff3f11",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "LINE_ERROR_MESSAGE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_ERROR_MESSAGE",
+            "oid": "b22c3b9e-89e6-4cb0-bd77-857b6c5fb12c",
+            "precision": 254,
+            "scale": 0,
+            "size": 254,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \nCLAIM.CSV_CLM_ID AS CLAIM_ID,\nCLAIM.CSV_LN_NUM AS CLAIM_LINE,\nCLAIM.CSV_CLM_ID || ' ' || CLAIM.CSV_LN_NUM AS LINE_ID,\nERRMS.CMSG_ID AS LINE_ERROR_CD,\nINITCAP(ERRMS.CMSG_DESC) AS LINE_ERROR_MESSAGE\n\nFROM        HS.CSV_CLM_SRV\t\tAS CLAIM\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLAIM.CSV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\nLEFT JOIN\tHS.CSER_CSV_ERROR\tAS LIERR ON CLAIM.CSV_CLM_ID = LIERR.CSER_CSV_CLM_ID AND CLAIM.CSV_LN_NUM = LIERR.CSER_CSV_LN_NUM AND LIERR.CSER_OVRID_CD IS NULL\nLEFT JOIN\tHS.CMSG_CLM_MSG\tAS ERRMS ON LIERR.CSER_CD  = ERRMS.CMSG_ID AND ERRMS.CMSG_SUS_DN_CD = 'S'\n\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_VnYcrFVLk",
+    "isMaterialized": false,
+    "name": "Claim Line Suspend Errors",
+    "oid": "07e19f16-1570-4adc-98da-1bca85769e17",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "04026d87-b738-4bd7-a04f-81cdc0ff3f11",
+                "displayName": "Line Suspend Error Code",
+                "name": "Line Suspend Error Code",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "b22c3b9e-89e6-4cb0-bd77-857b6c5fb12c",
+                "displayName": "Line Suspend Error",
+                "name": "Line Suspend Error",
+                "oid": null
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "base"
+}

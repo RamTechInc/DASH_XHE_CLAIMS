@@ -1,0 +1,65 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "c298f215-51ea-49e2-ad43-20ab9c725e63",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "Admit Date From",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Admit Date From",
+            "oid": "0cb546a8-b9c6-4ec7-bb36-437d059707af",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": false,
+            "id": "Admit Date To",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Admit Date To",
+            "oid": "42fc65a0-0c7e-4627-af79-1c694d365f94",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \nCDT.CDT_CLM_ID AS CLAIM_ID, \nADM.CDT_DT AS \"Admit Date From\", \nADM.CDT_TO_DT AS \"Admit Date To\" \n\nFROM HS.CDT_CLM_DT AS CDT\nLEFT JOIN HS.CDT_CLM_DT AS ADM ON CDT.CDT_CLM_ID = ADM.CDT_CLM_ID AND ADM.CDT_DT_QUAL = '435' \n\nWHERE CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\n\nWITH UR"
+    },
+    "dataset": "ace1cb31-8866-438f-9360-67450bc10dd9",
+    "hidden": false,
+    "id": "tq_3yjgA7SJO",
+    "isMaterialized": false,
+    "name": "Admit Dates",
+    "oid": "7545a70a-7c42-414e-a758-d4c80a39123f",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "c298f215-51ea-49e2-ad43-20ab9c725e63",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

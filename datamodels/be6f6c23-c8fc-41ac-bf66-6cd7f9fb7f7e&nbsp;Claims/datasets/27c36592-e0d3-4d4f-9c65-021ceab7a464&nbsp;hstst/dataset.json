@@ -1,0 +1,10 @@
+{
+    "connection": "./connection.json",
+    "database": "hstst",
+    "elasticube": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "oid": "27c36592-e0d3-4d4f-9c65-021ceab7a464",
+    "schemaName": "hstst",
+    "tables": [
+    ],
+    "type": "extract"
+}

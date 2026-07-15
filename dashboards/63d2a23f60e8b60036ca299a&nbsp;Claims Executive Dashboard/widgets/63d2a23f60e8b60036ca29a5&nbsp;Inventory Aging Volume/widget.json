@@ -1,0 +1,330 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2a23f60e8b60036ca299a",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the aging inventory volume per claim status. \n•\tPlacing the mouse over this widget will display the total number of claims per status per age. \n•\tTo view inventory age information for a specific claim status by age, select the desired claim status on the widget. The widgets will adjust to reflect information for that specific claim status only. Utilizing filter features will only affect that user’s view.\n•\tTo filter all corresponding widgets by grouped selection, left click and drag across the desired information. Click select. All correlating widgets will adjust.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "instanceid": "9EB1E-50C2-1D",
+                        "jaql": {
+                            "column": "Suspended Age Group",
+                            "datatype": "text",
+                            "dim": "[Claim Aging.Suspended Age Group]",
+                            "merged": true,
+                            "table": "Claim Aging",
+                            "title": "Suspended Age Group"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color_bkp": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "EEA78-5034-ED",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Count"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "members": {
+                                "Allowed": {
+                                    "color": "#EBC844",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Allowed",
+                                    "title": "Allowed"
+                                },
+                                "Full Denial-INV": {
+                                    "color": "#ECAA38",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Full Denial-INV",
+                                    "title": "Full Denial-INV"
+                                },
+                                "Open": {
+                                    "color": "#F16C20",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Open",
+                                    "title": "Open"
+                                },
+                                "Payment Pending": {
+                                    "color": "#D94E1F",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Payment Pending",
+                                    "title": "Payment Pending"
+                                },
+                                "Suspended": {
+                                    "color": "#EF8B2C",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Suspended",
+                                    "title": "Suspended"
+                                }
+                            }
+                        },
+                        "instanceid": "8509E-A574-5D",
+                        "jaql": {
+                            "column": "Current Status",
+                            "datatype": "text",
+                            "dim": "[Claim Status.Current Status]",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Current Status"
+                        },
+                        "panel": "columns"
+                    }
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "08541-EB59-78",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Status Type",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Status Type.Status Type]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Inventory"
+                                ],
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Status Type",
+                            "title": "Status Type"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2a23f60e8b60036ca29a5",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "suspended_age_group",
+                    "plural": "Suspended Age Group",
+                    "singular": "Suspended Age Group",
+                    "title": "Suspended Age Group"
+                },
+                {
+                    "id": "current_status",
+                    "plural": "Current Status",
+                    "singular": "Current Status",
+                    "title": "Current Status"
+                },
+                {
+                    "id": "status_type",
+                    "plural": "Status Type",
+                    "singular": "Status Type",
+                    "title": "Status Type"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": true,
+                "stacked": true,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "column/stackedcolumn",
+    "title": "Inventory Aging Volume",
+    "type": "chart/column"
+}

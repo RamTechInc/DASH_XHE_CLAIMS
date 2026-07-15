@@ -1,0 +1,70 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "a72bebe1-1d2c-4e94-bf53-dc6f1754ba48",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "7e4cabc9-376c-472b-bbb1-f036e98877e4",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "715b5f86-3e18-4d30-8d07-03ba62ba2633",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Current Status",
+            "oid": "4633bc14-f7ed-4566-8ac6-a11be14e820b",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "839acd96-7d54-4761-999f-cb5903cfd785",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Status Date",
+            "oid": "f217b576-4a7d-4a60-8c3c-053c98bbf271",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 19
+        },
+        {
+            "hidden": false,
+            "id": "074870f7-9f57-4a98-9db7-a8ea2727a44d",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Original Processor",
+            "oid": "8704188b-e74c-4d9a-b6b1-75beba7be339",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "dataset": "42f94dac-94b1-4b49-b372-f2e1168145ec",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "818c7e76-9f6c-4cc5-83b5-7ffa81a3b7db"
+    },
+    "hidden": false,
+    "id": "Adjusted Claim Original Status",
+    "isMaterialized": null,
+    "name": "Adjusted Claim Original Status",
+    "oid": "2e5e4a67-4c75-4216-853f-64ffbe4f4400",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

@@ -1,0 +1,375 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the auto adjudication trend and processed claim volume by processed date. \n•\tPlacing the mouse over this widget will display the auto adjudication percentage or processed claim volume for specific day. \n•\tSelecting the Analyze It icon above the widget, will open a pop up with options to view trends\n•\tPlacing the mouse over the dotted trend line will display auto adjudication for the following per date: Type, Local Value Percentage, Trend Data Percentages: Min/Max/Median/Average\n•\tSelecting the dotted trend line will populate a Quick Settings box. The trend line view can be adjusted (Linear Trend/Logarithmic Trend/Advanced Smoothing/Local Estimates) \n•\tUsing the Compare To drop down box, the widget has the capability to compare current information to the following: Previous Year, Previous Quarter, Previous Month \n•\tTo view information for a specific date, select the desired date on the widget. The widgets will adjust to reflect information for that specific date only. Utilizing filter features will only affect that user’s view. \n•\tUsing the scroll filter below this widget will filter down the widget to specific timeframes. Using the scroll filter feature will only affect this widget.\n•\tTo filter all corresponding widgets by grouped selection, left click and drag across the desired information. Click select. All correlating widgets will adjust\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "shortDate",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "MM/dd/yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "9474C-01C1-85",
+                        "jaql": {
+                            "column": "Current Status Date",
+                            "datatype": "datetime",
+                            "dim": "[Claim Status.Current Status Date (Calendar)]",
+                            "firstday": "mon",
+                            "level": "weeks",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Weeks in Current Status Date"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "decimals": 0,
+                                "percent": true,
+                                "percentMultiplier": 100
+                            }
+                        },
+                        "instanceid": "84E71-9EEF-22",
+                        "jaql": {
+                            "context": {
+                                "[CA124-2FD]": {
+                                    "collapsed": true,
+                                    "column": "Adjudication Type",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Claim.Adjudication Type]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "Auto"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "Adjudication Type"
+                                },
+                                "[FD74F-B35]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                }
+                            },
+                            "formula": "([FD74F-B35],[CA124-2FD])\n/([FD74F-B35])",
+                            "title": "Auto Adjudication Rate",
+                            "type": "measure"
+                        },
+                        "originalJaql": {
+                            "agg": "count",
+                            "column": "CLAIM_ID",
+                            "datatype": "numeric",
+                            "dim": "[MAIN_CLAIM.CLAIM_ID]",
+                            "merged": true,
+                            "table": "MAIN_CLAIM",
+                            "title": "# of unique CLAIM_ID"
+                        },
+                        "panel": "measures",
+                        "quickFunction": "Contribution",
+                        "statisticalModels": {
+                            "trend": {
+                                "compare": {
+                                    "isEnabled": false,
+                                    "period": "year"
+                                },
+                                "ignoreAnomalies": true,
+                                "isAccessible": true,
+                                "isEnabled": true,
+                                "isViewerDisabled": false,
+                                "trendOnForecast": false,
+                                "trendType": "local"
+                            }
+                        }
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#6eda55",
+                                "isHandPickedColor": true,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "02A9E-E2B4-CC",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Count"
+                        },
+                        "panel": "measures",
+                        "y2": true
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "A6BF4-9174-CC",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Status Type",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Status Type.Status Type]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Processed"
+                                ],
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Status Type",
+                            "title": "Status Type"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a8c",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": 104,
+            "min": 85.548387096774
+        },
+        "selector": true,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "script": "./script.js",
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "weeks_in_current_status_date",
+                    "plural": "Weeks in Current Status Date",
+                    "singular": "Weeks in Current Status Date",
+                    "title": "Weeks in Current Status Date"
+                },
+                {
+                    "id": "status_type",
+                    "plural": "Status Type",
+                    "singular": "Status Type",
+                    "title": "Status Type"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "templateMainYHasGridLines": true,
+            "ticks": true,
+            "title": {
+                "enabled": true
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": true
+            }
+        }
+    },
+    "subtype": "line/spline",
+    "title": "Auto Adjudication Trending",
+    "type": "chart/line"
+}

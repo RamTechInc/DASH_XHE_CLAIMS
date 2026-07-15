@@ -1,0 +1,99 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "3e61e8d7-cac1-4c1b-bcdf-d4b20d6e6164",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": true,
+            "id": "CLAIM_LINE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_LINE",
+            "oid": "b69c4547-0795-4126-8f10-29014a8a33ce",
+            "precision": 0,
+            "scale": 0,
+            "size": 6,
+            "type": 16
+        },
+        {
+            "hidden": true,
+            "id": "LINE_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_ID",
+            "oid": "d688012e-99ae-4302-b17f-030a46ea1ad4",
+            "precision": 18,
+            "scale": 0,
+            "size": 18,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "LINE_MSG_CD",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_MSG_CD",
+            "oid": "099def57-c96e-487e-ad82-4fbf819a7934",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "LINE_MSG_DESC",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_MSG_DESC",
+            "oid": "25330156-bce4-4e50-a954-1717e31ffd53",
+            "precision": 254,
+            "scale": 0,
+            "size": 254,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \r\nCLAIM.CSV_CLM_ID AS CLAIM_ID,\r\nCLAIM.CSV_LN_NUM AS CLAIM_LINE,\r\nCLAIM.CSV_CLM_ID || ' ' || CLAIM.CSV_LN_NUM AS LINE_ID,\r\nCERRMS.CMSG_ID AS LINE_MSG_CD,\r\nINITCAP(CERRMS.CMSG_DESC) AS LINE_MSG_DESC\r\n\r\nFROM       \tHS.CSV_CLM_SRV\t\tAS CLAIM\r\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLAIM.CSV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN\tHS.CSER_CSV_ERROR\tAS CLERR ON CLAIM.CSV_CLM_ID = CLERR.CSER_CSV_CLM_ID AND CLAIM.CSV_LN_NUM = CLERR.CSER_CSV_LN_NUM AND CLERR.CSER_OVRID_CD IS NULL\r\nLEFT JOIN\tHS.CMSG_CLM_MSG\tAS CERRMS ON CLERR.CSER_CD  = CERRMS.CMSG_ID \r\n\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_raRtTFmdt",
+    "isMaterialized": false,
+    "name": "Claim Line Messages",
+    "oid": "0678b34c-f130-486d-a228-4764ee7bd9bf",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "099def57-c96e-487e-ad82-4fbf819a7934",
+                "displayName": "Line Message Code",
+                "name": "Line Message Code",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "25330156-bce4-4e50-a954-1717e31ffd53",
+                "displayName": "Line Message",
+                "name": "Line Message",
+                "oid": null
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "base"
+}

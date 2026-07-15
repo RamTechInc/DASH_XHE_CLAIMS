@@ -1,0 +1,108 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "PLAN_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PLAN_ID",
+            "oid": "94eb63e5-a79f-42b3-a4df-a6fff3852352",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "PRODUCT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PRODUCT",
+            "oid": "9bd3d5da-1ea3-4fb0-8e6c-d62e1bf8a93b",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "PLAN",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PLAN",
+            "oid": "e73468f2-9a0c-40a6-b313-0e8049f14a44",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "PBP",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PBP",
+            "oid": "9e3e38e7-7a93-457c-8dec-27126012786f",
+            "precision": 18,
+            "scale": 0,
+            "size": 18,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "PLAN_NAME",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PLAN_NAME",
+            "oid": "61722b11-d614-402e-94d8-cc40e5df8662",
+            "precision": 50,
+            "scale": 0,
+            "size": 50,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\nnull            AS PLAN_ID,\nnull\t\t\tAS PRODUCT,\nnull\t\t\tAS PLAN,\nnull\t\t\tAS PBP,\nnull\t\t\tAS PLAN_NAME\n\nFROM BPAAS.MONTHLY_CAL\n\nUNION ALL\n\nSELECT DISTINCT\nPPT.PPT_ID                  AS PLAN_ID,\nPPT.PPT_PRD_SHT_NM\t\t\tAS PRODUCT,\nPPT.PPT_PLN_SHT_NM\t\t\tAS PLAN,\nPPTA.PPTA_GRP\t\t\t\tAS PBP,\nPPT.PPT_DESC\t\t\t\tAS PLAN_NAME\n\nFROM HS.PPT_PRD_PLAN_TIER AS PPT\nJOIN HS.PPTA_PPT_ALIAS AS PPTA\tON PPT.PPT_ID = PPTA.PPTA_PPT_ID AND PPTA.PPTA_DEL_TS IS NULL AND PPTA.PPTA_CD = '004'\n                                \nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_OEGD6l5Sy",
+    "isMaterialized": false,
+    "name": "Claim Plan Information",
+    "oid": "621ebfa9-7abd-41ab-a3b1-066c5847fe47",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "9bd3d5da-1ea3-4fb0-8e6c-d62e1bf8a93b",
+                "displayName": "Product",
+                "name": "Product",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "e73468f2-9a0c-40a6-b313-0e8049f14a44",
+                "displayName": "Plan",
+                "name": "Plan",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "61722b11-d614-402e-94d8-cc40e5df8662",
+                "displayName": "Plan Name",
+                "name": "Plan Name",
+                "oid": null
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "base"
+}

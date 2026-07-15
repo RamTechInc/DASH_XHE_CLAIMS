@@ -1,0 +1,58 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "22ecc557-3d4d-447a-8a0d-53931c5fb87d",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Claim Origin User ID",
+            "oid": "fee73e2a-7234-46fa-8749-cb7cbde05b32",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "1d4e5e34-0642-44bd-8ce0-1c4f626917f3",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Max Origin Date",
+            "oid": "d540aa26-01bd-43ac-bf75-2611163b3d3f",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 19
+        },
+        {
+            "hidden": false,
+            "id": "4f245c3a-b1e4-4364-bf30-70de0b81a713",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Days Since Load",
+            "oid": "8e856b9b-1c65-47cb-99cd-19cfa4400a0c",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 6
+        }
+    ],
+    "dataset": "547a6a86-c20b-4d9b-87d8-62f001eae0d6",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "a55a0496-6b75-4485-b444-9d4f60c85b1c"
+    },
+    "hidden": false,
+    "id": "New Custom Table",
+    "isMaterialized": false,
+    "name": "Max File Load Date",
+    "oid": "0db8065a-7a6f-4ae9-92fa-a7f9db163bf2",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

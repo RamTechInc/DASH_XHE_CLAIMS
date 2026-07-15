@@ -1,0 +1,9 @@
+{
+    "description": "",
+    "name": "Enrollment 157",
+    "oid": "a66e645a-f52f-4791-a9f4-a6cb9fe7ccd7",
+    "provider": "GenericJDBC_111",
+    "supportedModelTypes": [
+        "EXTRACT"
+    ]
+}

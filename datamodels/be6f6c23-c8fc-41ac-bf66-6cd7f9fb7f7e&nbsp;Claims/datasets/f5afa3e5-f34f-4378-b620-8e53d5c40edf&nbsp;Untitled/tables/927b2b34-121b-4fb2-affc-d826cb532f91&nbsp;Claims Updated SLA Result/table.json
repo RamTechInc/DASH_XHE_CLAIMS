@@ -1,0 +1,82 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "95a5670f-e437-4fed-a40f-e4c5b6b9704b",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Claim ID",
+            "oid": "a2dc1e25-6a89-4b0f-b684-ea7a512b8cd2",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "d62ee7d6-e167-43d5-83c3-153cfa075ef5",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Updated SNF Clean Claim Processed Timely",
+            "oid": "bd24aeb4-8a72-4574-be0c-ff3da830c850",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "e3f610ed-39af-4d19-a120-6b019c8078bd",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Updated Clean Claim Processed Timely",
+            "oid": "a5011b59-4e39-440a-9709-2ac36d1e3649",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "e67b6eda-b639-4e84-8387-0b09db2e2849",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Updated All Claim Processed Timely",
+            "oid": "0ea27b56-081b-4865-b9f2-b33bd9a40e0f",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "d848b8f5-eb1c-48ef-b0e4-0a6e585afc6d",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Updated Interest Paid Correctly",
+            "oid": "ca4a77f5-26e3-48ef-af80-3a97bedcec58",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "dataset": "f5afa3e5-f34f-4378-b620-8e53d5c40edf",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "459269c0-a47c-4038-843a-dfdbb026649b"
+    },
+    "hidden": false,
+    "id": "Claims Original SLA Result (1)",
+    "isMaterialized": null,
+    "name": "Claims Updated SLA Result",
+    "oid": "927b2b34-121b-4fb2-affc-d826cb532f91",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

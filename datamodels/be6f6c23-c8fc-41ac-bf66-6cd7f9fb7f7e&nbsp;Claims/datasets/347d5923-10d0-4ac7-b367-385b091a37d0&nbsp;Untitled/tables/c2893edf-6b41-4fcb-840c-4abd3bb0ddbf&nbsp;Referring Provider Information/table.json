@@ -1,0 +1,106 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "b0d42be7-ec90-4623-a2d3-9f61c40c0750",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PROV_ID",
+            "oid": "5f9f1fb1-c96b-486d-839c-48fdcacda88d",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "bc79617b-ce48-483a-a879-be40e734bdef",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Referring Provider Name",
+            "oid": "1d4857d6-ece4-465c-8c9c-4315b444d11a",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "6368c0e5-275e-466f-9a33-f3d6b55d971a",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Referring Provider Type",
+            "oid": "425a9fa9-e8d8-4102-a308-c22154b2b43e",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "5cef1c17-81d8-4c5d-83f1-b0d2ad97e851",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Referring Provider NPI",
+            "oid": "db7b40f7-79c1-412e-8371-475c93435b9c",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "0a08be29-5339-4c13-8e54-51ed006bab3b",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Referring Provider State License ID",
+            "oid": "84bd788e-fe23-4717-b172-153d291dbf57",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "721a6e33-cd92-4671-92b4-2e95d632b22c",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Referring Provider Medicaid ID",
+            "oid": "6059920e-4094-4e99-8682-53ea2a85bc63",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "9c230d47-207c-4874-b0b9-2057d86895a0",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Referring Provider Network Access Vendor",
+            "oid": "4ca39b33-7f5e-4d61-9716-afb814082934",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "dataset": "347d5923-10d0-4ac7-b367-385b091a37d0",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "420e68a7-7729-4018-866f-54d2df9ce7c5"
+    },
+    "hidden": false,
+    "id": "Referring Provider Information1",
+    "isMaterialized": null,
+    "name": "Referring Provider Information",
+    "oid": "c2893edf-6b41-4fcb-840c-4abd3bb0ddbf",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

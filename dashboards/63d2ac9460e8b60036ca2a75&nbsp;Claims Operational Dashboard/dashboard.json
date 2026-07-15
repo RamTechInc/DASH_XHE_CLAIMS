@@ -1,0 +1,121 @@
+{
+    "aiSettings": {
+        "explanations": {
+            "dimensionsForRecommendation": "allDataModelDims"
+        }
+    },
+    "allowChangeSubscription": false,
+    "dataExploration": true,
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "defaultFilterRelations": null,
+    "desc": "",
+    "filters": "./filters.json",
+    "hasPrevioiusVersion": true,
+    "hierarchies": [
+    ],
+    "layout": "./layout.json",
+    "oid": "63d2ac9460e8b60036ca2a75",
+    "script": "./script.js",
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "style": {
+        "palette": {
+            "colors": [
+                "#117899",
+                "#60B8CC",
+                "#5CA793",
+                "#A2B86C",
+                "#EBC844",
+                "#ECAA38",
+                "#EF8B2C",
+                "#F16C20",
+                "#D94E1F",
+                "#C02E1D",
+                "#893B32",
+                "#0D3C55",
+                "#0F5B78"
+            ],
+            "name": "Midnight Light"
+        }
+    },
+    "subscription": {
+        "active": false,
+        "context": {
+            "dashboardid": "63d2ac9460e8b60036ca2a75"
+        },
+        "emailSettings": {
+            "isEmail": true,
+            "isPdf": false
+        },
+        "executionPerDay": 1,
+        "isDataChange": true,
+        "reportType": {
+            "inline": true
+        },
+        "schedule": "* * * * * *",
+        "startAt": "2023-01-26",
+        "subscribe": false,
+        "timezone": 240,
+        "type": "onUpdate",
+        "tzName": "America/New_York"
+    },
+    "title": "Claims Operational Dashboard",
+    "widgets": [
+        "./widgets/63d2ac9460e8b60036ca2a76/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a77/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a78/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a79/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a7a/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a7b/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a7c/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a7d/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a7e/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a7f/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a80/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a81/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a82/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a83/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a84/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a85/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a86/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a87/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a88/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a89/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a8a/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a8b/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a8c/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a8d/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a8e/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a8f/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a90/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a91/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a92/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a93/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a94/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a95/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a96/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a97/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a98/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a99/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a9a/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a9b/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a9c/widget.json",
+        "./widgets/63d2ac9460e8b60036ca2a9d/widget.json",
+        "./widgets/6435aebab014cb00340a3ddb/widget.json",
+        "./widgets/64f9e4e770b7c20034e73bc8/widget.json",
+        "./widgets/654265ab5b7aaa0032570b53/widget.json",
+        "./widgets/65c28fafc70db000326ec902/widget.json",
+        "./widgets/66168c4fea432c0032235d88/widget.json",
+        "./widgets/66168db7ea432c0032235d94/widget.json",
+        "./widgets/66180129ea432c0032235e51/widget.json",
+        "./widgets/66b9f57e580e09003296d89e/widget.json"
+    ]
+}

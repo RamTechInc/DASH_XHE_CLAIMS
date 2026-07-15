@@ -1,0 +1,547 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the claim reimbursement amount per date.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "4D12F-FCB0-6E",
+                        "jaql": {
+                            "column": "Payment Date",
+                            "datatype": "datetime",
+                            "dim": "[Payment Set.Payment Date (Calendar)]",
+                            "level": "months",
+                            "merged": true,
+                            "table": "Payment Set",
+                            "title": "Months in Payment Date"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 1,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": "auto"
+                            }
+                        },
+                        "instanceid": "D37B5-BA50-B4",
+                        "jaql": {
+                            "context": {
+                                "[0B413-E09]": {
+                                    "agg": "sum",
+                                    "column": "Claim Paid Amount",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim Amount.Claim Paid Amount]",
+                                    "table": "Claim Amount",
+                                    "title": "Total Claim Paid Amount"
+                                }
+                            },
+                            "formula": "[0B413-E09]",
+                            "title": "Paid  Amount",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 1,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "9D0AD-63E8-B0",
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Claim Capitation",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Capitation]",
+                            "table": "Claim Amount",
+                            "title": "Capitation"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 2,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "7279F-CA66-42",
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Claim Copay/Coinsurance",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Copay/Coinsurance]",
+                            "table": "Claim Amount",
+                            "title": "Copay/Coinsurance"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 3,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "A2FA8-F6D2-79",
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Claim Deductible",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Deductible]",
+                            "table": "Claim Amount",
+                            "title": "Deductible"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 4,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "EC8CE-8F20-FA",
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Claim Interest Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Interest Amount]",
+                            "table": "Claim Amount",
+                            "title": "Interest Amount"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 5,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "6E42B-D514-83",
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Claim Sequestration",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Sequestration]",
+                            "table": "Claim Amount",
+                            "title": "Sequestration"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "disabled": true,
+                        "format": {
+                            "color": {
+                                "colorIndex": 6,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "E13B5-A55D-78",
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Claim UCR",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim UCR]",
+                            "table": "Claim Amount",
+                            "title": "UCR"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/yyyy HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "seconds": "MM/dd/yyyy HH:mm:ss",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "instanceid": "663F3-53BB-90",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Payment Date",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "datetime",
+                            "dim": "[Payment Set.Payment Date (Calendar)]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "N\\A"
+                                    ]
+                                },
+                                "explicit": false,
+                                "multiSelection": true
+                            },
+                            "level": "years",
+                            "merged": true,
+                            "table": "Payment Set",
+                            "title": "Years in Payment Date"
+                        },
+                        "panel": "scope"
+                    },
+                    {
+                        "instanceid": "0E382-67ED-A9",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Claim Origin User ID",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "lastBuildTime": "2024-04-09T14:52:51.972Z",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Claim Source.Claim Origin User ID]",
+                            "dimension": "[Payment Set.Payment Date (Calendar)]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "CONVERT "
+                                    ]
+                                },
+                                "explicit": false,
+                                "isCondition": true,
+                                "multiSelection": true
+                            },
+                            "firstday": "mon",
+                            "locale": "en-us",
+                            "merged": true,
+                            "table": "Claim Source",
+                            "title": "Claim Origin User ID"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "66168db7ea432c0032235d94",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "script": "./script.js",
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "months_in_payment_date",
+                    "plural": "Months in Payment Date",
+                    "singular": "Months in Payment Date",
+                    "title": "Months in Payment Date"
+                },
+                {
+                    "id": "years_in_payment_date",
+                    "plural": "Years in Payment Date",
+                    "singular": "Years in Payment Date",
+                    "title": "Years in Payment Date"
+                },
+                {
+                    "id": "claim_origin_user_id",
+                    "plural": "Claim Origin User ID",
+                    "singular": "Claim Origin User ID",
+                    "title": "Claim Origin User ID"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": true,
+                "stacked": true,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "column/stackedcolumn",
+    "title": "Claim Payment Trend by Reimbursement Method",
+    "type": "chart/column"
+}

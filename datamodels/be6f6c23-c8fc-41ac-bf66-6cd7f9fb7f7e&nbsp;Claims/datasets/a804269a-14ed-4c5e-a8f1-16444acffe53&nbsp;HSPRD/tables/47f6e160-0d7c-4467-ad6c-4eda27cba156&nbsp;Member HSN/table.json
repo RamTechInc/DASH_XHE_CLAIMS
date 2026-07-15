@@ -1,0 +1,53 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "da330caf-d0f7-4eb3-af86-1ef2e9980e70",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "HSN",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "HSN",
+            "oid": "da587d33-e7ab-4242-a6e9-50fac054f043",
+            "precision": 30,
+            "scale": 0,
+            "size": 30,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "\r\nSELECT DISTINCT \r\nRTC.CLM_ID AS CLAIM_ID,\r\nCID.CID_ID AS HSN\r\n\r\nFROM            HS.RTCLM1\t\t\tAS RTC\r\nJOIN            HS.CDT_CLM_DT       AS CDT ON RTC.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nJOIN\t\t\tHS.INS_INSURED\t\tAS INS\tON RTC.INS_ID = INS.INS_ID AND INS.INS_DEL_TS IS NULL\r\nJOIN\t\t\tHS.CID_CUST_ID\t\tAS CID \tON INS.INS_CUS_ID = CID.CID_CUS_ID AND CID.CID_DEL_TS IS NULL AND CID.CID_TYPE = 'HSN' AND CID.CID_EFF_DT = (SELECT CID_EFF_DT FROM HS.CID_CUST_ID WHERE CID.CID_CUS_ID = CID_CUS_ID AND CID_TYPE = 'HSN' AND CID_DEL_TS IS NULL ORDER BY CID_EFF_DT DESC FETCH FIRST 1 ROWS ONLY WITH UR)\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_HTczIWwe8",
+    "isMaterialized": false,
+    "name": "Member HSN",
+    "oid": "47f6e160-0d7c-4467-ad6c-4eda27cba156",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "da330caf-d0f7-4eb3-af86-1ef2e9980e70",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

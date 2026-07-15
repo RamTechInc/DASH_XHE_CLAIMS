@@ -1,0 +1,106 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "d9e66b08-ee93-4ced-b3bd-bb471da79c83",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PROV_ID",
+            "oid": "4c751396-6cb5-4310-89a7-d069ffc6eff3",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "9ddf31ed-3449-4594-a69f-fc5e1cc0a2b7",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Billing Provider Name",
+            "oid": "1299c8c1-4908-4fd6-b5ae-d79d1b08b56c",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "13638587-c203-4edd-9da8-47b79ad16a7f",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Billing Provider Type",
+            "oid": "79962874-43fd-4532-8837-f48ba6d585ec",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "efa749eb-ce40-4ddd-9128-713a2f7c8d72",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Billing Provider NPI",
+            "oid": "35fba78c-a7bc-427b-92a1-08cb89b8ed24",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "ea9fe048-a39f-4ed6-b38b-a4380397d78f",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Billing Provider State License ID",
+            "oid": "415e36d8-832e-476c-b960-09c568fd343f",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "510f5633-dd8d-48b2-a16a-04f7628a187d",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Billing Provider Medicaid ID",
+            "oid": "3972f85c-9a90-4bdc-ac8a-424ab546ff9f",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "39c8ddfc-5598-4f25-afaf-12d678b8951a",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Billing Provider Network Access Vendor",
+            "oid": "60421390-3b5d-4107-aabe-9c6c4372ef05",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "dataset": "e766e620-c3fa-439b-87aa-5f1ec2963ffc",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "d09f80a5-63af-4fa6-8fbb-67141c799905"
+    },
+    "hidden": false,
+    "id": "Billing Provider Information1",
+    "isMaterialized": null,
+    "name": "Billing Provider Information",
+    "oid": "4ea28bd2-6c60-4ba1-ab78-ff38e9f4b86e",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

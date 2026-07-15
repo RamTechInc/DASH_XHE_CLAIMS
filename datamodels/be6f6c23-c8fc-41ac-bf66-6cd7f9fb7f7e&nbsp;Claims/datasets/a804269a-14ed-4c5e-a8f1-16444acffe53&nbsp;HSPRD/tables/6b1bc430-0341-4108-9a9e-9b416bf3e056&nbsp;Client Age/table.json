@@ -1,0 +1,62 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "03df53d3-ed0c-4118-adcc-872aa6ee0d96",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "CLIENT_AGE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLIENT_AGE",
+            "oid": "0d740cee-dd28-4fad-8989-d3c1f4899810",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        }
+    ],
+    "configOptions": {
+        "importQuery": "WITH CLIENT_AGE1 AS (\r\nSELECT CLM.CLM_ID, \r\nCL.H_CAU_REQ_TO,\r\nCL.H_ADD_TS AS STARTDT,\r\nNCL.H_ADD_TS AS ENDDT\r\n\r\nFROM HS.CLM_CLAIM\t\tAS CLM\r\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN HS.H_CAU_CLM_AUD \tAS CL\tON CLM.CLM_ID = CL.H_CAU_CLM_ID AND TRIM(CL.H_CAU_REQ_TO) IN (SELECT TRIM(CLM_QUEUE) FROM BPAAS.CLM_QUEUE_OWNER WHERE CLM_QUEUE_OWNER = 'CLIENT' WITH UR) AND CL.H_TYPE_IND != 'D' AND CL.H_CAU_TYPE = 'REV'\r\nLEFT JOIN HS.H_CAU_CLM_AUD \tAS NCL \tON CL.H_CAU_CLM_ID = NCL.H_CAU_CLM_ID AND (TRIM(NCL.H_CAU_REQ_TO) IN (SELECT TRIM(CLM_QUEUE) FROM BPAAS.CLM_QUEUE_OWNER WHERE CLM_QUEUE_OWNER = 'CLIENT' WITH UR)) \r\n\t\t\t\t\t\t\tAND NCL.H_CAU_TYPE = 'REV' AND NCL.H_TYPE_IND IN ('D')\r\n\t\t\t\t\t\t\tAND CL.H_CAU_ADD_TS = NCL.H_CAU_ADD_TS\r\nWITH UR\r\n),\r\n\r\nCLIENT_AGE2 AS (\r\nSELECT DISTINCT A1.CLM_ID,\r\nDATE(A1.STARTDT) AS STARTUP,\r\nMAX(DATE(A2.ENDDT)) AS ENDUP\r\n\r\nFROM CLIENT_AGE1 AS A1\r\nLEFT JOIN CLIENT_AGE1 AS A2 ON A1.CLM_ID = A2.CLM_ID AND A1.ENDDT BETWEEN A2.STARTDT AND A2.ENDDT\r\n \r\nGROUP BY A1.CLM_ID, A1.STARTDT),\r\n\r\nCLIENT_AGE AS (\r\nSELECT DISTINCT A1.CLM_ID,\r\nMIN(DATE(A1.STARTUP)) AS STARTUP,\r\nA2.ENDUP AS ENDUP\r\n\r\nFROM CLIENT_AGE2 AS A1\r\nLEFT JOIN CLIENT_AGE2 AS A2 ON A1.CLM_ID = A2.CLM_ID AND A1.ENDUP = A2.ENDUP\r\n \r\nGROUP BY A1.CLM_ID, A2.ENDUP\r\n)\r\n\r\nSELECT \r\nCLM_ID AS CLAIM_ID,\r\nSUM(DAYS(NVL(ENDUP,CURRENT_DATE)) - DAYS(NVL(STARTUP,CURRENT_DATE))) AS CLIENT_AGE\r\nFROM CLIENT_AGE \r\nGROUP BY CLM_ID"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_AYj7jFsOg",
+    "isMaterialized": false,
+    "name": "Client Age",
+    "oid": "6b1bc430-0341-4108-9a9e-9b416bf3e056",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "0d740cee-dd28-4fad-8989-d3c1f4899810",
+                "displayName": "Client Age",
+                "name": "Client Age",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "03df53d3-ed0c-4118-adcc-872aa6ee0d96",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

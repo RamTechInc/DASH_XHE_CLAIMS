@@ -1,0 +1,1 @@
+"SELECT DISTINCT\nCS.[Claim Origin User ID],\nMAX(CS.[Origin Date]) AS \"Max Origin Date\",\nDAYDIFF(NOW(),MAX(CS.[Origin Date])) AS \"Days Since Load\"\n\nFROM [Claim Source] AS CS\n\nWHERE CS.[Claim Origin User ID] LIKE ('EDI%') OR  CS.[Claim Origin User ID] LIKE ('OCR%')\n\nGROUP BY CS.[Claim Origin User ID]"

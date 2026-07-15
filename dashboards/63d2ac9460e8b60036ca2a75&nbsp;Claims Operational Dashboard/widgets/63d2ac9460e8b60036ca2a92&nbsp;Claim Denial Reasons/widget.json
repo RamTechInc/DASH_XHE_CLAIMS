@@ -1,0 +1,489 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the volume of claim denials per reason. \n•\tPlacing the mouse over this widget will display the total number of claim errors per denial reasons. \n•\tTo view information for a specific denial reason, select the desired denial reason on the widget. The widgets will adjust to reflect information for that specific denial reason only.  Utilizing filter features will only affect that user’s view.\n•\tUsing the scroll filter below this widget will filter down the widget to specific claim denial reasons. Using the scroll filter feature will only affect this widget.\n•\tTo filter all corresponding widgets by grouped selection, left click and drag across the desired information. Click select. All correlating widgets will adjust.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "drillHistory": [
+            {
+                "jaql": {
+                    "column": "Submitting Provider Name",
+                    "datatype": "text",
+                    "dim": "[SUBMITTING_PROVIDER_INFO.Submitting Provider Name]",
+                    "merged": true,
+                    "table": "SUBMITTING_PROVIDER_INFO",
+                    "title": "Submitting Provider Name"
+                },
+                "parent": {
+                    "format": {
+                        "continuous": false
+                    },
+                    "instanceid": "4ECAB-92EA-C0",
+                    "jaql": {
+                        "column": "Denial Reason",
+                        "datatype": "text",
+                        "dim": "[DENIAL_REASON.Denial Reason]",
+                        "merged": true,
+                        "table": "DENIAL_REASON",
+                        "title": "Denial Reason"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Denial Reason",
+                        "datatype": "text",
+                        "dim": "[DENIAL_REASON.Denial Reason]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Invalid Or Missing Fips Code"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "DENIAL_REASON",
+                        "title": "Denial Reason"
+                    }
+                }
+            },
+            {
+                "jaql": {
+                    "column": "Billing Provider Name",
+                    "datatype": "text",
+                    "dim": "[BILLING_PROVIDER_INFO.Billing Provider Name]",
+                    "merged": true,
+                    "table": "BILLING_PROVIDER_INFO",
+                    "title": "Billing Provider Name"
+                },
+                "parent": {
+                    "format": {
+                        "continuous": false
+                    },
+                    "instanceid": "4ECAB-92EA-C0",
+                    "jaql": {
+                        "column": "Denial Reason",
+                        "datatype": "text",
+                        "dim": "[DENIAL_REASON.Denial Reason]",
+                        "merged": true,
+                        "table": "DENIAL_REASON",
+                        "title": "Denial Reason"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Denial Reason",
+                        "datatype": "text",
+                        "dim": "[DENIAL_REASON.Denial Reason]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Invalid Or Missing Fips Code"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "DENIAL_REASON",
+                        "title": "Denial Reason"
+                    }
+                }
+            },
+            {
+                "jaql": {
+                    "column": "Rendering Provider Name",
+                    "datatype": "text",
+                    "dim": "[RENDERING_PROVIDER_INFO.Rendering Provider Name]",
+                    "merged": true,
+                    "table": "RENDERING_PROVIDER_INFO",
+                    "title": "Rendering Provider Name"
+                },
+                "parent": {
+                    "format": {
+                        "continuous": false
+                    },
+                    "instanceid": "4ECAB-92EA-C0",
+                    "jaql": {
+                        "column": "Denial Reason",
+                        "datatype": "text",
+                        "dim": "[DENIAL_REASON.Denial Reason]",
+                        "merged": true,
+                        "table": "DENIAL_REASON",
+                        "title": "Denial Reason"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Denial Reason",
+                        "datatype": "text",
+                        "dim": "[DENIAL_REASON.Denial Reason]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Invalid Or Missing Fips Code"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "DENIAL_REASON",
+                        "title": "Denial Reason"
+                    }
+                }
+            },
+            {
+                "jaql": {
+                    "column": "Submitting Provider ID",
+                    "datatype": "numeric",
+                    "dim": "[CLAIM_PROVIDERS.Submitting Provider ID]",
+                    "merged": true,
+                    "table": "CLAIM_PROVIDERS",
+                    "title": "Submitting Provider ID"
+                },
+                "parent": {
+                    "format": {
+                        "continuous": false
+                    },
+                    "instanceid": "4ECAB-92EA-C0",
+                    "jaql": {
+                        "column": "Denial Reason",
+                        "datatype": "text",
+                        "dim": "[DENIAL_REASON.Denial Reason]",
+                        "merged": true,
+                        "table": "DENIAL_REASON",
+                        "title": "Denial Reason"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Denial Reason",
+                        "datatype": "text",
+                        "dim": "[DENIAL_REASON.Denial Reason]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Invalid Or Missing Fips Code"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "DENIAL_REASON",
+                        "title": "Denial Reason"
+                    }
+                }
+            }
+        ],
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "continuous": false
+                        },
+                        "instanceid": "CD2B8-BA4A-67",
+                        "jaql": {
+                            "column": "Denial Reason",
+                            "datatype": "text",
+                            "dim": "[Denial Reason.Denial Reason]",
+                            "merged": true,
+                            "table": "Denial Reason",
+                            "title": "Denial Reason"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "C5732-BFAA-F1",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "sort": "desc",
+                            "table": "Claim",
+                            "title": "Claim Count"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "38FB8-F0D6-AA",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Denial Code",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "numeric",
+                            "dim": "[Denial Reason.Denial Code]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "N\\A"
+                                    ]
+                                },
+                                "explicit": false,
+                                "multiSelection": true
+                            },
+                            "table": "Denial Reason",
+                            "title": "Denial Code"
+                        },
+                        "panel": "scope"
+                    },
+                    {
+                        "instanceid": "089D4-F06C-C6",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Current Status",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Claim Status.Current Status]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Full Denial",
+                                    "Full Denial-INV",
+                                    "Partial Denial"
+                                ],
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Current Status"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a92",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "script": "./script.js",
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "denial_reason",
+                    "plural": "Denial Reason",
+                    "singular": "Denial Reason",
+                    "title": "Denial Reason"
+                },
+                {
+                    "id": "denial_code",
+                    "plural": "Denial Code",
+                    "singular": "Denial Code",
+                    "title": "Denial Code"
+                },
+                {
+                    "id": "current_status",
+                    "plural": "Current Status",
+                    "singular": "Current Status",
+                    "title": "Current Status"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": false,
+                "stacked": false,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": -45
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "column/classic",
+    "title": "Claim Denial Reasons",
+    "type": "chart/column"
+}

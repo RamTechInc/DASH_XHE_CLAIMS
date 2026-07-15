@@ -1,0 +1,261 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the percentage of the claim denial percentage",
+    "drillToDashboardConfig": {
+        "displayDashboardsPane": false,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 3,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "conditions": [
+                                    {
+                                        "color": "#00a808",
+                                        "expression": ".160",
+                                        "expressionValue": ".160",
+                                        "operator": "<"
+                                    },
+                                    {
+                                        "color": "#ff0000",
+                                        "expression": "0.16",
+                                        "expressionValue": "0.16",
+                                        "operator": "≥"
+                                    }
+                                ],
+                                "type": "condition"
+                            },
+                            "mask": {
+                                "decimals": 2,
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "51506-ACAE-7C",
+                        "jaql": {
+                            "context": {
+                                "[13705-DD0]": {
+                                    "collapsed": true,
+                                    "column": "Current Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Claim Status.Current Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "Full Denial"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "Claim Status",
+                                    "title": "Current Status"
+                                },
+                                "[B027C-2C7]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                }
+                            },
+                            "formula": "([B027C-2C7],[13705-DD0])/[B027C-2C7]",
+                            "title": "Denial Percentage",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "value"
+            },
+            {
+                "items": [
+                ],
+                "name": "secondary"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "decimals": 0,
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "1A2E7-6917-A3",
+                        "jaql": {
+                            "formula": "0",
+                            "title": "0 (default)"
+                        }
+                    }
+                ],
+                "name": "min"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "decimals": 0,
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "1F9E3-35CF-C3",
+                        "jaql": {
+                            "context": {
+                            },
+                            "formula": "0.2\n",
+                            "title": "0.2\n",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "max"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a8f",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "disallowSelector": true,
+        "selector": false,
+        "supportsHierarchies": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "style": {
+        "components": {
+            "labels": {
+                "enabled": true,
+                "inactive": false
+            },
+            "secondaryTitle": {
+                "enabled": true,
+                "inactive": true
+            },
+            "ticks": {
+                "enabled": true,
+                "inactive": false
+            },
+            "title": {
+                "enabled": true,
+                "inactive": false
+            }
+        },
+        "indicator/gauge": {
+            "components": {
+                "labels": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "ticks": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "round"
+        },
+        "indicator/numeric": {
+            "components": {
+                "icon": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "vertical",
+            "subtype": "simple"
+        },
+        "narration": {
+            "labels": [
+            ]
+        },
+        "skin": "2",
+        "subtype": "round"
+    },
+    "subtype": "indicator/gauge",
+    "title": "Denial Rate",
+    "type": "indicator"
+}

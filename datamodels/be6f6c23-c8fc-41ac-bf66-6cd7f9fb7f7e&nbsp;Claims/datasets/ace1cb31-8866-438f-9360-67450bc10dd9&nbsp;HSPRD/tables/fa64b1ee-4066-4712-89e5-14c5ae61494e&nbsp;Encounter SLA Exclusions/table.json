@@ -1,0 +1,53 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "8fed645c-f86a-499b-a209-ca33b5be76ce",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "Encounter SLA Exclusion Reason",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter SLA Exclusion Reason",
+            "oid": "d78f28b3-e769-4c9b-b773-02802091ccc3",
+            "precision": 33,
+            "scale": 0,
+            "size": 33,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \r\nCLM.CLM_ID AS CLAIM_ID,\r\nCASE\r\n\tWHEN DNU.CEV_CLM_ID IS NULL AND UNC.CER_CLM_ID IS NULL AND UNL.CSER_CSV_CLM_ID IS NULL AND ADJ.CRS_CLM_ID IS NULL THEN 'Valid Encounter'\r\n\tWHEN DNU.CEV_CLM_ID IS NOT NULL THEN 'Denied Claim with unclean message'\r\n\tWHEN UNC.CER_CLM_ID IS NOT NULL THEN 'Unclean Message'\r\n\tWHEN UNL.CSER_CSV_CLM_ID IS NOT NULL THEN 'Unclean Message'\r\n\tWHEN ADJ.CRS_CLM_ID IS NOT NULL THEN 'Adjusted'\r\nEND\tAS \"Encounter SLA Exclusion Reason\"\r\n\r\nFROM\t\tHS.CLM_CLAIM   AS CLM\r\nJOIN\t\tHS.CDT_CLM_DT  AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN (SELECT DN.CEV_CLM_ID FROM HS.CEV_CLM_EV AS DN \r\n\t\t\t\t\t\t\tJOIN HS.CAU_CLM_AUD\tAS CAU ON DN.CEV_CLM_ID = CAU.CAU_CLM_ID AND CAU.CAU_TYPE = 'NC'\r\n\t\t\t\t\t\t\tWHERE DN.CEV_DEL_TS IS NULL AND DN.CEV_RUN_ID IS NOT NULL AND TRIM(DN.CEV_TYPE) = 'DN' AND DN.CEV_ADD_TS = (SELECT CEV_ADD_TS FROM HS.CEV_CLM_EV WHERE DN.CEV_CLM_ID = CEV_CLM_ID AND CEV_DEL_TS IS NULL ORDER BY CEV_ADD_TS DESC FETCH FIRST 1 ROWS ONLY WITH UR)\r\n\t\t\tWITH UR) AS DNU ON CLM.CLM_ID = DNU.CEV_CLM_ID\r\nLEFT JOIN (SELECT CER.CER_CLM_ID FROM HS.CER_CLM_ERROR AS CER WHERE CER.CER_CD IN (557,592,1386,1387,1385,8005,8006,8016,3983) WITH UR) AS UNC ON CLM.CLM_ID = UNC.CER_CLM_ID\r\nLEFT JOIN (SELECT CSER.CSER_CSV_CLM_ID FROM HS.CSER_CSV_ERROR AS CSER WHERE CSER.CSER_CD IN (557,592,1386,1387,1385,8005,8006,8016,3983) WITH UR) AS UNL ON CLM.CLM_ID = UNL.CSER_CSV_CLM_ID\r\nLEFT JOIN (SELECT CRS_CLM_ID FROM HS.CRS_CLM_RESULT WHERE CRS_TYPE = '077' AND CRS_DEL_TS IS NULL WITH UR) AS ADJ ON CLM.CLM_ID = ADJ.CRS_CLM_ID\r\n\r\nWITH UR"
+    },
+    "dataset": "ace1cb31-8866-438f-9360-67450bc10dd9",
+    "hidden": false,
+    "id": "tq_baBtmdXDZ",
+    "isMaterialized": false,
+    "name": "Encounter SLA Exclusions",
+    "oid": "fa64b1ee-4066-4712-89e5-14c5ae61494e",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "8fed645c-f86a-499b-a209-ca33b5be76ce",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

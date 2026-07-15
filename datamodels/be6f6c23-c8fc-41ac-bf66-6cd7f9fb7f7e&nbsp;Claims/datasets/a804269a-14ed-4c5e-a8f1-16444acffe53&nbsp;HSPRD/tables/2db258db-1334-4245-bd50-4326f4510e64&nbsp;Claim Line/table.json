@@ -1,0 +1,337 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "43f7be49-888d-4491-b2cf-4cf67868c7c2",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "LINE_NUM",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_NUM",
+            "oid": "06df98f2-9e4b-4d91-b07b-8656b53cd86d",
+            "precision": 0,
+            "scale": 0,
+            "size": 6,
+            "type": 16
+        },
+        {
+            "hidden": true,
+            "id": "LINE_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_ID",
+            "oid": "84f57fde-585e-489b-aa3d-7b910112b97a",
+            "precision": 18,
+            "scale": 0,
+            "size": 18,
+            "type": 18
+        },
+        {
+            "hidden": true,
+            "id": "Claim Network Status",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Claim Network Status",
+            "oid": "46a48d48-a31c-4660-b80d-177d19e67d31",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "CODE_QUAL",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CODE_QUAL",
+            "oid": "539ff7c0-380d-425f-aeeb-4096caf89ee1",
+            "precision": 2,
+            "scale": 0,
+            "size": 2,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "CODE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CODE",
+            "oid": "6acd3084-ceff-4e55-a96d-8a12bd141c3e",
+            "precision": 15,
+            "scale": 0,
+            "size": 15,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "MOD1",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MOD1",
+            "oid": "7bb967cf-f477-4cc6-9b62-94a4c9bbecd0",
+            "precision": 2,
+            "scale": 0,
+            "size": 2,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "MOD2",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MOD2",
+            "oid": "c3ccca50-04d9-4816-984f-b5dca6cbaa28",
+            "precision": 2,
+            "scale": 0,
+            "size": 2,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "MOD3",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MOD3",
+            "oid": "543c5f5b-c9bc-4923-bfe5-2ae3941d9996",
+            "precision": 2,
+            "scale": 0,
+            "size": 2,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "MOD4",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MOD4",
+            "oid": "ae83b599-ad9c-4b34-9a15-5996430ea79e",
+            "precision": 2,
+            "scale": 0,
+            "size": 2,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "SERV_QTY",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SERV_QTY",
+            "oid": "fb2744e6-83d1-40a8-98f3-b288d1bc700e",
+            "precision": 15,
+            "scale": 3,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "I_UNIT_RT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "I_UNIT_RT",
+            "oid": "4c4064b5-268b-4645-8e4d-12eb7401fb89",
+            "precision": 10,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "REV_CD",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "REV_CD",
+            "oid": "6de86b8e-d713-43f4-9742-67a4d1be8965",
+            "precision": 30,
+            "scale": 0,
+            "size": 30,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "POS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "POS",
+            "oid": "028430e1-7081-4c9c-9c32-ecf28b74bec0",
+            "precision": 2,
+            "scale": 0,
+            "size": 2,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "LINE_FEE_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_FEE_ID",
+            "oid": "fdd3d699-73a8-4fff-bfc5-43fb4550d256",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "Benefit ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Benefit ID",
+            "oid": "d168da21-e7b8-4346-b942-78ce01aac214",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\nCSV_CLM_ID      AS CLAIM_ID,\nCSV_LN_NUM      AS LINE_NUM,\nCSV_CLM_ID || ' ' || CSV_LN_NUM AS LINE_ID,\nPPTL.PPTL_RULE_VAL_C    AS \"Claim Network Status\",\nCSV_PRC_ID_QUAL AS CODE_QUAL,\nCSV_PRC_CD      AS CODE,\nCSV_PRC_MOD_1   AS MOD1,\nCSV_PRC_MOD_2   AS MOD2,\nCSV_PRC_MOD_3   AS MOD3,\nCSV_PRC_MOD_4   AS MOD4,\nCSV_SRV_QTY     AS SERV_QTY,\nCSV_I_UNIT_RT   AS I_UNIT_RT,\nCSV_REV_CD      AS REV_CD,\nCSV_SVP_CD\t    AS POS,\nCSV_FSC_ID      AS LINE_FEE_ID,\nCSV_PRB_ID      AS \"Benefit ID\"\n\nFROM HS.CSV_CLM_SRV\nJOIN HS.CDT_CLM_DT       AS CDT ON CSV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\nLEFT JOIN HS.PPTL_PPT_RULE AS PPTL ON CSV_PPT_ID = PPTL.PPTL_PPT_ID AND PPTL.PPTL_RULE_QUAL = 'TS' AND PPTL.PPTL_DEL_TS IS NULL\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_0KEygpYjI",
+    "isMaterialized": false,
+    "name": "Claim Line",
+    "oid": "2db258db-1334-4245-bd50-4326f4510e64",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "06df98f2-9e4b-4d91-b07b-8656b53cd86d",
+                "displayName": "Claim Line Number",
+                "name": "Claim Line Number",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "539ff7c0-380d-425f-aeeb-4096caf89ee1",
+                "displayName": "Line Code Qualifier",
+                "name": "Line Code Qualifier",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "6acd3084-ceff-4e55-a96d-8a12bd141c3e",
+                "displayName": "Line Code",
+                "name": "Line Code",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "7bb967cf-f477-4cc6-9b62-94a4c9bbecd0",
+                "displayName": "Line Modifier 1",
+                "name": "Line Modifier 1",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "c3ccca50-04d9-4816-984f-b5dca6cbaa28",
+                "displayName": "Line Modifier 2",
+                "name": "Line Modifier 2",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "543c5f5b-c9bc-4923-bfe5-2ae3941d9996",
+                "displayName": "Line  Modifier 3",
+                "name": "Line  Modifier 3",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "ae83b599-ad9c-4b34-9a15-5996430ea79e",
+                "displayName": "Line Modifier 4",
+                "name": "Line Modifier 4",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "fb2744e6-83d1-40a8-98f3-b288d1bc700e",
+                "displayName": "Line Service Quantity",
+                "name": "Line Service Quantity",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "4c4064b5-268b-4645-8e4d-12eb7401fb89",
+                "displayName": "Line I Unit Rate",
+                "name": "Line I Unit Rate",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "6de86b8e-d713-43f4-9742-67a4d1be8965",
+                "displayName": "Line  Revenue Code",
+                "name": "Line  Revenue Code",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "028430e1-7081-4c9c-9c32-ecf28b74bec0",
+                "displayName": "Line Place of Service",
+                "name": "Line Place of Service",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "fdd3d699-73a8-4fff-bfc5-43fb4550d256",
+                "displayName": "Line Fee ID",
+                "name": "Line Fee ID",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "43f7be49-888d-4491-b2cf-4cf67868c7c2",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        },
+        {
+            "arguments": {
+                "column": "d168da21-e7b8-4346-b942-78ce01aac214",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

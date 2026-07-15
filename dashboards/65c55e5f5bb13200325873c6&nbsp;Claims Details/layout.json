@@ -1,0 +1,59 @@
+{
+    "layout": {
+        "columns": [
+            {
+                "cells": [
+                    {
+                        "subcells": [
+                            {
+                                "elements": [
+                                    {
+                                        "defaultWidth": 512,
+                                        "height": "64px",
+                                        "maxHeight": 400,
+                                        "maxWidth": 2048,
+                                        "minHeight": 80,
+                                        "minWidth": 128,
+                                        "widgetid": "65cf5494f1cfaa00323500be"
+                                    }
+                                ],
+                                "index": 0,
+                                "pxlWidth": 1431,
+                                "stretchable": false,
+                                "width": 100
+                            }
+                        ]
+                    },
+                    {
+                        "subcells": [
+                            {
+                                "elements": [
+                                    {
+                                        "defaultWidth": 512,
+                                        "height": 512,
+                                        "maxHeight": 2400,
+                                        "maxWidth": 3840,
+                                        "minHeight": 256,
+                                        "minWidth": 256,
+                                        "widgetid": "65c55e5f5bb13200325873c7"
+                                    }
+                                ],
+                                "index": 0,
+                                "pxlWidth": 1431,
+                                "stretchable": false,
+                                "width": 100
+                            }
+                        ]
+                    }
+                ],
+                "index": 0,
+                "pxlWidth": 1431,
+                "width": 100
+            }
+        ],
+        "instanceid": "E34AF-219C-21",
+        "type": "columnar"
+    },
+    "previewLayout": [
+    ]
+}

@@ -1,0 +1,517 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays volume based on daily claim receipts for up to two years. \n•\tPlacing the mouse over a date will display the claim count for that day. \n•\tTo view information for a specific date, select the desired date on the widget. The Widgets will adjust to reflect information for that specific date only. Utilizing filter features will only affect that user’s view.\n•\tUsing the scroll filter below this widget will filter down daily claim volumes for specific timeframes. Using the scroll filter feature will only affect this widget. To filter all corresponding widgets by grouped selection, left click and drag across the desired information. Click select. All correlating widgets will adjust. \n•\tTo filter all corresponding widgets by grouped selection, left click and drag across the desired information. Click select. All correlating widgets will adjust.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "drillHistory": [
+            {
+                "hierarchies": [
+                    "calendar",
+                    "calendar - weeks"
+                ],
+                "jaql": {
+                    "column": "CLAIM_FORMAT",
+                    "datatype": "text",
+                    "dim": "[CLAIM_FORMAT.CLAIM_FORMAT]",
+                    "merged": true,
+                    "table": "CLAIM_FORMAT",
+                    "title": "CLAIM_FORMAT"
+                },
+                "parent": {
+                    "format": {
+                        "mask": {
+                            "days": "MM-dd-yyyy",
+                            "minutes": "HH:mm",
+                            "months": "MM/yyyy",
+                            "quarters": "yyyy Q",
+                            "weeks": "ww yyyy",
+                            "years": "yyyy"
+                        }
+                    },
+                    "hierarchies": [
+                        "calendar",
+                        "calendar - weeks"
+                    ],
+                    "jaql": {
+                        "column": "ADJ_RECEIPT_DT",
+                        "datatype": "datetime",
+                        "dim": "[MAIN_CLAIM.ADJ_RECEIPT_DT (Calendar)]",
+                        "level": "days",
+                        "merged": true,
+                        "table": "MAIN_CLAIM",
+                        "title": "Days in ADJ_RECEIPT_DT"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "ADJ_RECEIPT_DT",
+                        "datatype": "datetime",
+                        "dim": "[MAIN_CLAIM.ADJ_RECEIPT_DT (Calendar)]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "2021-04-23T00:00:00"
+                            ],
+                            "multiSelection": true
+                        },
+                        "level": "days",
+                        "table": "MAIN_CLAIM",
+                        "title": "Days in ADJ_RECEIPT_DT"
+                    }
+                }
+            },
+            {
+                "hierarchies": [
+                    "calendar",
+                    "calendar - weeks"
+                ],
+                "jaql": {
+                    "column": "PROVIDER_NAME",
+                    "datatype": "text",
+                    "dim": "[PROVIDER_INFO.PROVIDER_NAME]",
+                    "merged": true,
+                    "table": "PROVIDER_INFO",
+                    "title": "PROVIDER_NAME"
+                },
+                "parent": {
+                    "format": {
+                        "mask": {
+                            "days": "MM-dd-yyyy",
+                            "minutes": "HH:mm",
+                            "months": "MM/yyyy",
+                            "quarters": "yyyy Q",
+                            "weeks": "ww yyyy",
+                            "years": "yyyy"
+                        }
+                    },
+                    "hierarchies": [
+                        "calendar",
+                        "calendar - weeks"
+                    ],
+                    "jaql": {
+                        "column": "DATE",
+                        "datatype": "datetime",
+                        "dim": "[CLAIM_DATE.DATE (Calendar)]",
+                        "level": "days",
+                        "merged": true,
+                        "table": "CLAIM_DATE",
+                        "title": "Days in DATE"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "DATE",
+                        "datatype": "datetime",
+                        "dim": "[CLAIM_DATE.DATE (Calendar)]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "2021-07-15T00:00:00"
+                            ],
+                            "multiSelection": true
+                        },
+                        "level": "days",
+                        "table": "CLAIM_DATE",
+                        "title": "Days in DATE"
+                    }
+                }
+            },
+            {
+                "hierarchies": [
+                    "calendar",
+                    "calendar - weeks"
+                ],
+                "jaql": {
+                    "column": "ERROR_MESSAGE",
+                    "datatype": "text",
+                    "dim": "[ERROR_CLAIM.ERROR_MESSAGE]",
+                    "merged": true,
+                    "table": "ERROR_CLAIM",
+                    "title": "ERROR_MESSAGE"
+                },
+                "parent": {
+                    "hierarchies": [
+                        "calendar",
+                        "calendar - weeks"
+                    ],
+                    "jaql": {
+                        "column": "PROVIDER_NAME",
+                        "datatype": "text",
+                        "dim": "[PROVIDER_INFO.PROVIDER_NAME]",
+                        "merged": true,
+                        "table": "PROVIDER_INFO",
+                        "title": "PROVIDER_NAME"
+                    },
+                    "parent": {
+                        "format": {
+                            "mask": {
+                                "days": "MM-dd-yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "jaql": {
+                            "column": "DATE",
+                            "datatype": "datetime",
+                            "dim": "[CLAIM_DATE.DATE (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "CLAIM_DATE",
+                            "title": "Days in DATE"
+                        }
+                    },
+                    "through": {
+                        "jaql": {
+                            "column": "DATE",
+                            "datatype": "datetime",
+                            "dim": "[CLAIM_DATE.DATE (Calendar)]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "2021-07-15T00:00:00"
+                                ],
+                                "multiSelection": true
+                            },
+                            "level": "days",
+                            "table": "CLAIM_DATE",
+                            "title": "Days in DATE"
+                        }
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "PROVIDER_NAME",
+                        "datatype": "text",
+                        "dim": "[PROVIDER_INFO.PROVIDER_NAME]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "EDDY VNA"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "PROVIDER_INFO",
+                        "title": "PROVIDER_NAME"
+                    }
+                }
+            },
+            {
+                "hierarchies": [
+                    "calendar",
+                    "calendar - weeks"
+                ],
+                "jaql": {
+                    "column": "Claim Form",
+                    "datatype": "text",
+                    "dim": "[MAIN_CLAIM.Claim Form]",
+                    "merged": true,
+                    "table": "MAIN_CLAIM",
+                    "title": "Claim Form"
+                },
+                "parent": {
+                    "format": {
+                        "mask": {
+                            "days": "MM/dd/yyyy",
+                            "minutes": "HH:mm",
+                            "months": "MM/yyyy",
+                            "quarters": "yyyy Q",
+                            "weeks": "ww yyyy",
+                            "years": "yyyy"
+                        }
+                    },
+                    "hierarchies": [
+                        "calendar",
+                        "calendar - weeks"
+                    ],
+                    "jaql": {
+                        "column": "Receipt Date",
+                        "datatype": "datetime",
+                        "dim": "[RECEIPT_DATE.Receipt Date (Calendar)]",
+                        "level": "days",
+                        "merged": true,
+                        "table": "RECEIPT_DATE",
+                        "title": "Days in Receipt Date"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Receipt Date",
+                        "datatype": "datetime",
+                        "dim": "[RECEIPT_DATE.Receipt Date (Calendar)]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "2021-12-16T00:00:00"
+                            ],
+                            "multiSelection": true
+                        },
+                        "level": "days",
+                        "table": "RECEIPT_DATE",
+                        "title": "Days in Receipt Date"
+                    }
+                }
+            }
+        ],
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "9A87C-5725-79",
+                        "jaql": {
+                            "column": "Receipt Date",
+                            "datatype": "datetime",
+                            "dim": "[Receipt Date.Receipt Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Receipt Date",
+                            "title": "Days in Receipt Date"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "307D9-3A9A-87",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Count"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a76",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "script": "./script.js",
+    "showNulls": {
+        "# of unique CLAIM_ID": false,
+        "Days in ADJ_RECEIPT_DT": false
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "days_in_receipt_date",
+                    "plural": "Days in Receipt Date",
+                    "singular": "Days in Receipt Date",
+                    "title": "Days in Receipt Date"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "max": "",
+            "min": -0.5,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "line/spline",
+    "title": "Claim Receipt Volume Trending",
+    "type": "chart/line"
+}

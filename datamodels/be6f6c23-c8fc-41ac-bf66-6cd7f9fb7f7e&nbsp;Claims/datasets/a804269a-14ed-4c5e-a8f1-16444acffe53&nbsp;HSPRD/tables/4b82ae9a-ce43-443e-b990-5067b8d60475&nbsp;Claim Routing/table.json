@@ -1,0 +1,104 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "4ebc8fe6-1f5d-4f0e-b512-c40d17c4584f",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "QUEUE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "QUEUE",
+            "oid": "0a703323-5473-4325-b491-16f9ffdf7867",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "QUEUE_DT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "QUEUE_DT",
+            "oid": "01289a65-4b82-4c6d-82c6-3ca7f0216a2f",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": false,
+            "id": "QUEUE_OWNER",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "QUEUE_OWNER",
+            "oid": "ad9816ab-8c32-4858-875a-d12cda7855c6",
+            "precision": 6,
+            "scale": 0,
+            "size": 6,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \r\nCLM.CLM_ID\t\tAS CLAIM_ID,\r\nCLAUD.CAU_REQ_TO\tAS QUEUE,\r\nCLAUD.CAU_PRC_DT\tAS QUEUE_DT,\r\nCASE\r\n\tWHEN TRIM(CLAUD.CAU_REQ_TO) IN (SELECT TRIM(CLM_QUEUE) FROM BPAAS.CLM_QUEUE_OWNER WHERE CLM_QUEUE_OWNER = 'CLIENT' WITH UR) THEN 'Client'\r\n\tWHEN TRIM(CLAUD.CAU_REQ_TO) NOT IN (SELECT TRIM(CLM_QUEUE) FROM BPAAS.CLM_QUEUE_OWNER WHERE CLM_QUEUE_OWNER = 'CLIENT' WITH UR) THEN 'RAM'\r\nEND\t\t\t\tAS QUEUE_OWNER\r\n\r\nFROM        HS.CLM_CLAIM        AS CLM\r\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN\tHS.CAU_CLM_AUD\t\tAS CLAUD ON CLM.CLM_ID = CLAUD.CAU_CLM_ID AND CLAUD.CAU_REQ_TO IS NOT NULL\r\n\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_Je4sSi2f8",
+    "isMaterialized": false,
+    "name": "Claim Routing",
+    "oid": "4b82ae9a-ce43-443e-b990-5067b8d60475",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "0a703323-5473-4325-b491-16f9ffdf7867",
+                "displayName": "Queue",
+                "name": "Queue",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "01289a65-4b82-4c6d-82c6-3ca7f0216a2f",
+                "displayName": "Queue Date",
+                "name": "Queue Date",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "ad9816ab-8c32-4858-875a-d12cda7855c6",
+                "displayName": "Queue Owner",
+                "name": "Queue Owner",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "4ebc8fe6-1f5d-4f0e-b512-c40d17c4584f",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

@@ -1,0 +1,99 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "08264d6d-17ef-4d33-80d5-4f3571a013b1",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": true,
+            "id": "LINE_NUM",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_NUM",
+            "oid": "b34a814c-be30-482b-9a75-7fc9db2ddfa3",
+            "precision": 0,
+            "scale": 0,
+            "size": 6,
+            "type": 16
+        },
+        {
+            "hidden": true,
+            "id": "LINE_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_ID",
+            "oid": "e2bb3c9e-55f5-4e1c-968e-f23355012170",
+            "precision": 18,
+            "scale": 0,
+            "size": 18,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "LINE_CUR_STATUS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_CUR_STATUS",
+            "oid": "e082087f-bb42-43e3-bb58-975c9097a389",
+            "precision": 35,
+            "scale": 0,
+            "size": 35,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "LINE_STATUS_DT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_STATUS_DT",
+            "oid": "aeea066f-311e-4e79-b996-deecc135b0d1",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT\r\nCSEV.CSEV_CSV_CLM_ID AS CLAIM_ID,\r\nCSEV.CSEV_CSV_LN_NUM AS LINE_NUM,\r\nCSEV.CSEV_CSV_CLM_ID || ' ' || CSEV.CSEV_CSV_LN_NUM AS LINE_ID,\r\nINITCAP(TCL.TCL_TYPE_DESC) AS LINE_CUR_STATUS,\r\nCSEV.CSEV_EV_DT AS LINE_STATUS_DT\r\n\r\nFROM HS.CSEV_CSV_EV\tAS CSEV\r\nJOIN HS.CDT_CLM_DT AS CDT ON CSEV.CSEV_CSV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR                                  \r\nJOIN HS.TCL_TYPE_CD_LOOKUP AS TCL  ON TRIM(CSEV.CSEV_TYPE) = TCL.TCL_TYPE_CODE AND TCL.TCL_ID = 84\r\nWHERE CSEV.CSEV_DEL_TS IS NULL AND CSEV.CSEV_ADD_TS = (SELECT CSEV_ADD_TS FROM HS.CSEV_CSV_EV WHERE CSEV_DEL_TS IS NULL AND CSEV_CSV_CLM_ID = CSEV.CSEV_CSV_CLM_ID AND CSEV_CSV_LN_NUM = CSEV.CSEV_CSV_LN_NUM ORDER BY CSEV_ADD_TS DESC FETCH FIRST 1 ROWS ONLY WITH UR)\r\nWITH UR"
+    },
+    "dataset": "ace1cb31-8866-438f-9360-67450bc10dd9",
+    "hidden": false,
+    "id": "tq_tApOe11tt",
+    "isMaterialized": false,
+    "name": "Claim Line Status",
+    "oid": "e61f9ba1-9746-4b22-b57d-c2f888bcc3b0",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "e082087f-bb42-43e3-bb58-975c9097a389",
+                "displayName": "Current Line Status",
+                "name": "Current Line Status",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "aeea066f-311e-4e79-b996-deecc135b0d1",
+                "displayName": "Line Status Date",
+                "name": "Line Status Date",
+                "oid": null
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "base"
+}

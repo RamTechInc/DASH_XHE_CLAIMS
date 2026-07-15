@@ -1,0 +1,53 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLM_ID",
+            "oid": "790e399f-903b-4182-89d9-0f3ad8ee8b66",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "DCN",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "DCN",
+            "oid": "a7c92f54-1801-4392-9fb8-0f3e3acc50dd",
+            "precision": 30,
+            "scale": 0,
+            "size": 30,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\r\nCLM.CLM_ID,\r\nDCN.CRF_REF_NUM AS DCN\r\n\r\nFROM        HS.CLM_CLAIM        AS CLM\r\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN \tHS.CRF_CLM_REF \t\tAS DCN ON CLM.CLM_ID = DCN.CRF_CLM_ID AND DCN.CRF_REF_QUAL = 'D9'\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_n6bH1ZhJI",
+    "isMaterialized": false,
+    "name": "DCN",
+    "oid": "4a48a2cd-8bae-43f3-9f91-1b913b454961",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "790e399f-903b-4182-89d9-0f3ad8ee8b66",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

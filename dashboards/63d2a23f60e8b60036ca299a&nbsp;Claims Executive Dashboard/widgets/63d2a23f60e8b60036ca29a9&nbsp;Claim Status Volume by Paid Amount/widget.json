@@ -1,0 +1,307 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2a23f60e8b60036ca299a",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the total paid amount of claims by the current claim status. \n•\tPlacing the mouse over this widget will display the total paid amount of the claims per that current status.\n•\tTo view information for a claim status, select the desired status on the widget. The widgets will adjust to reflect information for that enrollment source only. Utilizing filter features will only affect that user’s view.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "members": {
+                                "Allowed": {
+                                    "color": "#EBC844",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Allowed",
+                                    "title": "Allowed"
+                                },
+                                "Full Denial": {
+                                    "color": "#EF8B2C",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Full Denial",
+                                    "title": "Full Denial"
+                                },
+                                "Full Denial-INV": {
+                                    "color": "#F16C20",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Full Denial-INV",
+                                    "title": "Full Denial-INV"
+                                },
+                                "Open": {
+                                    "color": "#D94E1F",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Open",
+                                    "title": "Open"
+                                },
+                                "Paid In Full": {
+                                    "color": "#117899",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Paid In Full",
+                                    "title": "Paid In Full"
+                                },
+                                "Partial Denial": {
+                                    "color": "#60B8CC",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Partial Denial",
+                                    "title": "Partial Denial"
+                                },
+                                "Payment Pending": {
+                                    "color": "#5CA793",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Payment Pending",
+                                    "title": "Payment Pending"
+                                },
+                                "Suspended": {
+                                    "color": "#A2B86C",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Suspended",
+                                    "title": "Suspended"
+                                },
+                                "Void": {
+                                    "color": "#ECAA38",
+                                    "isHandPickedColor": true,
+                                    "sortData": "Void",
+                                    "title": "Void"
+                                }
+                            }
+                        },
+                        "instanceid": "D1EE7-5721-8D",
+                        "jaql": {
+                            "column": "Current Status",
+                            "datatype": "text",
+                            "dim": "[Claim Status.Current Status]",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Current Status"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color_bkp": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": "auto"
+                            }
+                        },
+                        "instanceid": "BDCD9-00AB-73",
+                        "jaql": {
+                            "context": {
+                                "[B8AE8-4B8]": {
+                                    "agg": "sum",
+                                    "column": "Claim Paid Amount",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim Amount.Claim Paid Amount]",
+                                    "table": "Claim Amount",
+                                    "title": "Total Claim Paid Amount"
+                                }
+                            },
+                            "formula": "[B8AE8-4B8]",
+                            "sort": "desc",
+                            "title": "Total Claim Paid Amount",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2a23f60e8b60036ca29a9",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "automaticHeight": false,
+        "convolution": {
+            "enabled": false,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "labels": {
+            "categories": true,
+            "color": "red",
+            "decimals": false,
+            "enabled": true,
+            "fontFamily": "Open Sans",
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "current_status",
+                    "plural": "Current Status",
+                    "singular": "Current Status",
+                    "title": "Current Status"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "pie/classic",
+    "title": "Claim Status Volume by Paid Amount",
+    "type": "chart/pie"
+}

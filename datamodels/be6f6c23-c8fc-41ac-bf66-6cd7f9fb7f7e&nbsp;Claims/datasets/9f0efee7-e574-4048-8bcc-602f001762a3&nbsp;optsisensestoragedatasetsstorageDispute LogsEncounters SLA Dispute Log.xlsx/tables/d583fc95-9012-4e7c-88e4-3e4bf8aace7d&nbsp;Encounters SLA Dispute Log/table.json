@@ -1,0 +1,296 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "Claim ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Claim ID",
+            "oid": "817dcfa7-d799-43bf-91d3-0a0a8857e34d",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 8
+        },
+        {
+            "hidden": true,
+            "id": "Category of Service",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Category of Service",
+            "oid": "d1b95da8-ce21-4dcb-9d23-5d73425e68bb",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": true,
+            "id": "Claim Type",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Claim Type",
+            "oid": "52cc9667-27f0-42fb-98a0-88808885f941",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": true,
+            "id": "Claim Form",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Claim Form",
+            "oid": "46f2b790-2a33-4413-b2eb-c0a466d8fdfc",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": true,
+            "id": "Clean Indicator",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Clean Indicator",
+            "oid": "9816fa7a-a526-4b1b-8d72-64df6d511d11",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": true,
+            "id": "Receipt Date",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Receipt Date",
+            "oid": "8be945ca-1db2-46f5-9352-b0d17f744b4f",
+            "precision": 0,
+            "scale": 0,
+            "size": 50,
+            "type": 4
+        },
+        {
+            "hidden": true,
+            "id": "Claim Finalized Date",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Claim Finalized Date",
+            "oid": "c6b4be52-03bb-44d6-a3d3-5a9bea6195eb",
+            "precision": 0,
+            "scale": 0,
+            "size": 50,
+            "type": 4
+        },
+        {
+            "hidden": true,
+            "id": "Encounter Submission Date",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter Submission Date",
+            "oid": "8bdf764d-607f-4d10-89d4-a3602550c221",
+            "precision": 0,
+            "scale": 0,
+            "size": 50,
+            "type": 4
+        },
+        {
+            "hidden": true,
+            "id": "Encounter Submitted Timely",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter Submitted Timely",
+            "oid": "418f6700-c722-4696-a396-82162987821d",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": true,
+            "id": "Encounter MAO002 Status",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter MAO002 Status",
+            "oid": "11aa4510-2acd-45f0-9bc5-18583dff4c97",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": true,
+            "id": "Encounter SLA Exclusion Reason",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter SLA Exclusion Reason",
+            "oid": "2621fefe-4a67-4cba-8b1e-ed44f6b43b2d",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": true,
+            "id": "Updated Timeliness SLA Result",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Updated Timeliness SLA Result",
+            "oid": "842955bb-967f-4c44-bbe4-5db3a135693e",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": true,
+            "id": "Updated Acceptance SLA Result",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Updated Acceptance SLA Result",
+            "oid": "76015cd9-e57c-41e1-af02-ff2361d39f62",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "columnsDateTimePatterns": "{}",
+        "culture": "en-US",
+        "fieldsInFirstRow": true,
+        "staticRange": ""
+    },
+    "dataset": "9f0efee7-e574-4048-8bcc-602f001762a3",
+    "hidden": true,
+    "id": "Details",
+    "isMaterialized": false,
+    "name": "Encounters SLA Dispute Log",
+    "oid": "d583fc95-9012-4e7c-88e4-3e4bf8aace7d",
+    "schemaName": "/opt/sisense/storage/datasets/storage/Dispute Logs/Encounters SLA Dispute Log.xlsx",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "d1b95da8-ce21-4dcb-9d23-5d73425e68bb",
+                "displayName": "Category of Service(Dispute Log)",
+                "name": "Category of Service(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "52cc9667-27f0-42fb-98a0-88808885f941",
+                "displayName": "Claim Type(Dispute Log)",
+                "name": "Claim Type(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "46f2b790-2a33-4413-b2eb-c0a466d8fdfc",
+                "displayName": "Claim Form(Dispute Log)",
+                "name": "Claim Form(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "9816fa7a-a526-4b1b-8d72-64df6d511d11",
+                "displayName": "Clean Indicator(Dispute Log)",
+                "name": "Clean Indicator(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "8be945ca-1db2-46f5-9352-b0d17f744b4f",
+                "displayName": "Receipt Date(Dispute Log)",
+                "name": "Receipt Date(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "c6b4be52-03bb-44d6-a3d3-5a9bea6195eb",
+                "displayName": "Claim Finalized Date(Dispute Log)",
+                "name": "Claim Finalized Date(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "8bdf764d-607f-4d10-89d4-a3602550c221",
+                "displayName": "Encounter Submission Date(Dispute Log)",
+                "name": "Encounter Submission Date(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "418f6700-c722-4696-a396-82162987821d",
+                "displayName": "Encounter Submitted Timely(Dispute Log)",
+                "name": "Encounter Submitted Timely(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "11aa4510-2acd-45f0-9bc5-18583dff4c97",
+                "displayName": "Encounter MAO002 Status(Dispute Log)",
+                "name": "Encounter MAO002 Status(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "2621fefe-4a67-4cba-8b1e-ed44f6b43b2d",
+                "displayName": "Encounter SLA Exclusion Reason(Dispute Log)",
+                "name": "Encounter SLA Exclusion Reason(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "842955bb-967f-4c44-bbe4-5db3a135693e",
+                "displayName": "Updated Timeliness SLA Result(Dispute Log)",
+                "name": "Updated Timeliness SLA Result(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "76015cd9-e57c-41e1-af02-ff2361d39f62",
+                "displayName": "Updated Acceptance SLA Result(Dispute Log)",
+                "name": "Updated Acceptance SLA Result(Dispute Log)",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "817dcfa7-d799-43bf-91d3-0a0a8857e34d",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

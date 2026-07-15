@@ -1,0 +1,143 @@
+{
+    "filters": [
+        {
+            "disabled": false,
+            "instanceid": "E1208-57E8-8C",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Type",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim.Claim Type]",
+                "filter": {
+                    "explicit": true,
+                    "members": [
+                        "NEW"
+                    ],
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim",
+                "title": "Claim Type"
+            }
+        },
+        {
+            "disabled": false,
+            "instanceid": "7B484-A505-BE",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Plan Name",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Plan Information.Plan Name]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Plan Information",
+                "title": "Plan Name"
+            }
+        },
+        {
+            "instanceid": "A1C8D-BA4F-9F",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Current Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Status.Current Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Status",
+                "title": "Current Status"
+            }
+        },
+        {
+            "instanceid": "41010-FCA0-5D",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Origin Form",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Source.Claim Origin Form]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Source",
+                "title": "Claim Origin Form"
+            }
+        },
+        {
+            "instanceid": "C7E24-7DC3-62",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Claim Network Status",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aClaims",
+                    "fullname": "localhost/Claims",
+                    "id": "localhost_aClaims",
+                    "live": false,
+                    "title": "Claims"
+                },
+                "datatype": "text",
+                "dim": "[Claim Network Status.Claim Network Status]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Claim Network Status",
+                "title": "Claim Network Status"
+            }
+        }
+    ]
+}

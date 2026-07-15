@@ -1,0 +1,83 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "cde8c0e2-342d-4e83-b36a-f75e0ee12613",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "ERROR_CD",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "ERROR_CD",
+            "oid": "5acc90d3-071a-47dd-bf99-bf1053c25264",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "ERROR_MESSAGE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "ERROR_MESSAGE",
+            "oid": "3a348a8a-73f1-4eeb-8790-47c7969e208d",
+            "precision": 254,
+            "scale": 0,
+            "size": 254,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \nCLAIM.CLM_ID AS CLAIM_ID,\nCERRMS.CMSG_ID AS ERROR_CD,\nINITCAP(CERRMS.CMSG_DESC) AS ERROR_MESSAGE\n\nFROM        HS.CLM_CLAIM\t\tAS CLAIM\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLAIM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\nLEFT JOIN\tHS.CER_CLM_ERROR\tAS CLERR ON CLAIM.CLM_ID = CLERR.CER_CLM_ID AND CLERR.CER_OVRID_CD IS NULL\nLEFT JOIN\tHS.CMSG_CLM_MSG\tAS CERRMS ON CLERR.CER_CD  = CERRMS.CMSG_ID AND CERRMS.CMSG_SUS_DN_CD = 'S'\n\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_nj6V71w5q",
+    "isMaterialized": false,
+    "name": "Suspend Errors",
+    "oid": "18d17c03-d5a6-4f83-9d47-aa12141bdc01",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "5acc90d3-071a-47dd-bf99-bf1053c25264",
+                "displayName": "Suspend Error Code",
+                "name": "Suspend Error Code",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "3a348a8a-73f1-4eeb-8790-47c7969e208d",
+                "displayName": "Suspend Error Message",
+                "name": "Suspend Error Message",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "cde8c0e2-342d-4e83-b36a-f75e0ee12613",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

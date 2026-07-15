@@ -1,0 +1,328 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the claim volume by type for current data set, up to two years. \n•\tPlacing the mouse over this widget will display the total number of claims per type.\n•\tTo view information for a specific claim type, select the desired claim type on the widget. The widgets will adjust to reflect information for that specific claim type only. Utilizing filter features will only affect that user’s view.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "drillHistory": [
+            {
+                "format": {
+                    "members": {
+                        "Contract Added Late": {
+                            "color": "#117899",
+                            "inResultset": true,
+                            "isHandPickedColor": false,
+                            "sortData": "Contract Added Late",
+                            "title": "Contract Added Late"
+                        },
+                        "Fee Schedule Added Late": {
+                            "color": "#60B8CC",
+                            "inResultset": true,
+                            "isHandPickedColor": false,
+                            "sortData": "Fee Schedule Added Late",
+                            "title": "Fee Schedule Added Late"
+                        },
+                        "Valid Claim": {
+                            "color": "#5CA793",
+                            "inResultset": true,
+                            "isHandPickedColor": false,
+                            "sortData": "Valid Claim",
+                            "title": "Valid Claim"
+                        },
+                        "Voided Claim": {
+                            "color": "#A2B86C",
+                            "inResultset": true,
+                            "isHandPickedColor": false,
+                            "sortData": "Voided Claim",
+                            "title": "Voided Claim"
+                        }
+                    }
+                },
+                "jaql": {
+                    "column": "SLA Exclusion Reason",
+                    "datatype": "text",
+                    "dim": "[SLA Exclusions.SLA Exclusion Reason]",
+                    "merged": true,
+                    "table": "SLA Exclusions",
+                    "title": "SLA Exclusion Reason"
+                },
+                "parent": {
+                    "format": {
+                        "continuous": false,
+                        "members": {
+                        }
+                    },
+                    "instanceid": "70848-5A2D-78",
+                    "jaql": {
+                        "column": "Claim Type",
+                        "datatype": "text",
+                        "dim": "[Claim.Claim Type]",
+                        "merged": true,
+                        "table": "Claim",
+                        "title": "Claim Type"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Claim Type",
+                        "datatype": "text",
+                        "dim": "[Claim.Claim Type]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "NEW"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "Claim",
+                        "title": "Claim Type"
+                    }
+                }
+            }
+        ],
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "continuous": false,
+                            "members": {
+                            }
+                        },
+                        "instanceid": "70848-5A2D-78",
+                        "jaql": {
+                            "column": "Claim Type",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim Type]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Type"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color_bkp": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "D0C35-A07F-AB",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "sort": "desc",
+                            "table": "Claim",
+                            "title": "Claim Count"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a7d",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "automaticHeight": false,
+        "convolution": {
+            "enabled": false,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "labels": {
+            "categories": true,
+            "color": "red",
+            "decimals": false,
+            "enabled": true,
+            "fontFamily": "Open Sans",
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "claim_type",
+                    "plural": "Claim Type",
+                    "singular": "Claim Type",
+                    "title": "Claim Type"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "pie/classic",
+    "title": "Volume by Type",
+    "type": "chart/pie"
+}

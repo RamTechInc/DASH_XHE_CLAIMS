@@ -1,0 +1,9 @@
+{
+    "description": "",
+    "name": "Claims (Demo) 52",
+    "oid": "b7b5eacb-746e-4b02-a4cb-a8edd6cffb09",
+    "provider": "GenericJDBC_111",
+    "supportedModelTypes": [
+        "EXTRACT"
+    ]
+}

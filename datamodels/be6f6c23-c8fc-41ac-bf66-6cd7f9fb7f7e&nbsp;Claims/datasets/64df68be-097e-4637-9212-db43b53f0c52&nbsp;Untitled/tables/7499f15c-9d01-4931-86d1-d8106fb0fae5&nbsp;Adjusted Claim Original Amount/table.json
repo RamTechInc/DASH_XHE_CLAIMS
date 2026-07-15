@@ -1,0 +1,142 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "f70721c7-a1c5-4123-adfd-2a48e0e7229d",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "3232dc6e-ce88-4fa1-8fb7-66e3888c55a3",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "b86b7fbc-76f4-4793-8308-ac3f41c8f6fd",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Billed Amount",
+            "oid": "f290a4c3-cdc0-418a-9d91-d64e082dbde2",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "59fac861-1854-4298-9e51-0704daa24042",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim UCR",
+            "oid": "01721567-4eab-4026-8eca-bee6b43a9bc1",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "66667790-d7ce-45b7-a1c0-773ae2c98f16",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Allowed Amount",
+            "oid": "3f08996c-65be-456a-b634-d7d243a25d1e",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "985b043f-6ec5-4fe8-b10b-4d4055c04825",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Deductible",
+            "oid": "7b550047-e6ad-4963-bfa9-c383cea035ce",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "114b7248-7213-48d5-8446-122fa15189aa",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Copay/Coinsurance",
+            "oid": "c6c7ad84-6926-4f49-8d93-fe2fbdfe81fe",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "2344e438-fd35-42e0-86c9-92848d4de4ea",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Sequestration",
+            "oid": "6df6d1bc-51d7-44d9-ad0e-7ea97606aad4",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "4ba2a31e-1eae-4f8e-b744-98f1b35e68eb",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Capitation",
+            "oid": "91774bba-5e55-49c4-993a-42a6cd16ad10",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "64647080-039f-4afc-861d-1d751326f6d4",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Interest Amount",
+            "oid": "11e61764-bba4-4d98-a573-c0b0b54a6426",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "4269e988-2d4d-4a76-b9a6-e9ac0c1160a2",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Original Claim Paid Amount",
+            "oid": "e469224f-19b1-4965-89a4-2e436b143358",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 5
+        }
+    ],
+    "dataset": "64df68be-097e-4637-9212-db43b53f0c52",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "2841b4cb-9aa7-4733-86a6-8b31f5a3e99f"
+    },
+    "hidden": false,
+    "id": "Adjusted Claim Original Amount 1",
+    "isMaterialized": null,
+    "name": "Adjusted Claim Original Amount",
+    "oid": "7499f15c-9d01-4931-86d1-d8106fb0fae5",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

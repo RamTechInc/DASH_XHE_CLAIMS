@@ -1,0 +1,62 @@
+{
+    "allowChangeSubscription": false,
+    "dataExploration": false,
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "defaultFilterRelations": null,
+    "desc": "",
+    "filters": "./filters.json",
+    "hasPrevioiusVersion": true,
+    "hierarchies": [
+    ],
+    "layout": "./layout.json",
+    "oid": "65c55e5f5bb13200325873c6",
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "style": {
+        "palette": {
+            "colors": [
+                "#00cee6",
+                "#9b9bd7",
+                "#6EDA55",
+                "#fc7570",
+                "#fbb755",
+                "#218A8C"
+            ],
+            "name": "Vivid"
+        }
+    },
+    "subscription": {
+        "active": false,
+        "context": {
+            "dashboardid": "65c55e5f5bb13200325873c6"
+        },
+        "emailSettings": {
+            "isEmail": true,
+            "isPdf": false
+        },
+        "executionPerDay": 1,
+        "isDataChange": true,
+        "reportType": {
+            "inline": true
+        },
+        "schedule": "* * * * * *",
+        "startAt": "2024-02-08",
+        "subscribe": false,
+        "timezone": 240,
+        "type": "onUpdate",
+        "tzName": "America/New_York"
+    },
+    "title": "Claims Details",
+    "widgets": [
+        "./widgets/65c55e5f5bb13200325873c7/widget.json",
+        "./widgets/65cf5494f1cfaa00323500be/widget.json"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "description": "",
+    "name": "Claims 5",
+    "oid": "66d964b7-9cec-49cb-a30e-45fcdc96672b",
+    "provider": "Excel",
+    "supportedModelTypes": [
+        "EXTRACT"
+    ]
+}

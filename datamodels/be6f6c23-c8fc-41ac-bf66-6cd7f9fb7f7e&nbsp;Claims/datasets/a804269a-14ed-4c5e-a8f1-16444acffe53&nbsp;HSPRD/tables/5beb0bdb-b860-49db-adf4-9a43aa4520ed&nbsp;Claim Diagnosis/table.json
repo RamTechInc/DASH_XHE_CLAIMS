@@ -1,0 +1,167 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "2bc2faa0-8857-4987-822b-3ec2c5ceb672",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "PRIMARY_DIAG",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PRIMARY_DIAG",
+            "oid": "7500566b-35f9-4d1f-aa0a-dacfdc170805",
+            "precision": 20,
+            "scale": 0,
+            "size": 20,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "PRIMARY_DIAG_DESC",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PRIMARY_DIAG_DESC",
+            "oid": "6a3d6d1f-32ae-43c3-a8b7-8caf4c2cf159",
+            "precision": 35,
+            "scale": 0,
+            "size": 35,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "SECOND_DIAG",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SECOND_DIAG",
+            "oid": "4e831995-8ba9-4087-baca-6fe5805acc7d",
+            "precision": 20,
+            "scale": 0,
+            "size": 20,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "SECOND_DIAG_DESC",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SECOND_DIAG_DESC",
+            "oid": "83cdca13-ddd3-44d9-9170-3459fa71df2d",
+            "precision": 35,
+            "scale": 0,
+            "size": 35,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "THIRD_DIAG",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "THIRD_DIAG",
+            "oid": "51073498-0180-40a7-af4a-18e034a2756a",
+            "precision": 20,
+            "scale": 0,
+            "size": 20,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "THIRD_DIAG_DESC",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "THIRD_DIAG_DESC",
+            "oid": "a0a2fb06-2f97-4b9b-9ce4-be8491d1fd6a",
+            "precision": 35,
+            "scale": 0,
+            "size": 35,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\r\nCLM.CLM_ID\t\tAS CLAIM_ID,\r\nPRI.CHI_CD\t\tAS PRIMARY_DIAG,\r\nINITCAP(PRD.DGN_DSC)\r\n                AS PRIMARY_DIAG_DESC,\r\nSEC.CHI_CD\t\tAS SECOND_DIAG,\r\nINITCAP(SED.DGN_DSC)\r\n                AS SECOND_DIAG_DESC,\r\nTIR.CHI_CD\t\tAS THIRD_DIAG,\r\nINITCAP(TID.DGN_DSC)\r\n                AS THIRD_DIAG_DESC\r\n\r\n\r\nFROM      HS.CLM_CLAIM        AS CLM\r\nJOIN      HS.CDT_CLM_DT       AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN HS.CHI_CLM_HLTH_CD\tAS PRI ON CLM.CLM_ID = PRI.CHI_CLM_ID AND PRI.CHI_CD_QUAL = 'ABK'\r\nLEFT JOIN HS.DGN_DIAGNOSIS\tAS PRD ON PRI.CHI_CD = PRD.DGN_CD_VAL AND PRD.DGN_EXP_DT IS NULL\r\nLEFT JOIN HS.CHI_CLM_HLTH_CD\tAS SEC ON CLM.CLM_ID = SEC.CHI_CLM_ID AND SEC.CHI_CD_QUAL = 'ASD'\r\nLEFT JOIN HS.DGN_DIAGNOSIS\tAS SED ON SEC.CHI_CD = SED.DGN_CD_VAL AND SED.DGN_EXP_DT IS NULL\r\nLEFT JOIN HS.CHI_CLM_HLTH_CD\tAS TIR ON CLM.CLM_ID = TIR.CHI_CLM_ID AND TIR.CHI_CD_QUAL = 'ATD'\r\nLEFT JOIN HS.DGN_DIAGNOSIS\tAS TID ON TIR.CHI_CD = TID.DGN_CD_VAL AND TID.DGN_EXP_DT IS NULL\r\n\r\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_I0laB8xcq",
+    "isMaterialized": false,
+    "name": "Claim Diagnosis",
+    "oid": "5beb0bdb-b860-49db-adf4-9a43aa4520ed",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "7500566b-35f9-4d1f-aa0a-dacfdc170805",
+                "displayName": "Primary Diagnosis",
+                "name": "Primary Diagnosis",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "4e831995-8ba9-4087-baca-6fe5805acc7d",
+                "displayName": "Secondary Diagnosis",
+                "name": "Secondary Diagnosis",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "51073498-0180-40a7-af4a-18e034a2756a",
+                "displayName": "Tertiary Diagnosis",
+                "name": "Tertiary Diagnosis",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "6a3d6d1f-32ae-43c3-a8b7-8caf4c2cf159",
+                "displayName": "Primary Diagnosis Description",
+                "name": "Primary Diagnosis Description",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "83cdca13-ddd3-44d9-9170-3459fa71df2d",
+                "displayName": "Secondary Diagnosis Description",
+                "name": "Secondary Diagnosis Description",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "a0a2fb06-2f97-4b9b-9ce4-be8491d1fd6a",
+                "displayName": "Tertiary Diagnosis Description",
+                "name": "Tertiary Diagnosis Description",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "2bc2faa0-8857-4987-822b-3ec2c5ceb672",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

@@ -1,0 +1,74 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "8f427996-c6e1-4fef-a8a7-209dfe9483e8",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "DOS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "DOS",
+            "oid": "5b676fab-7015-4777-885a-8e4027094ab6",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": false,
+            "id": "DOS_TO",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "DOS_TO",
+            "oid": "98ad2f35-77a5-4573-92ca-32abcb2b05ce",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \nDOS.CDT_CLM_ID AS CLAIM_ID, \nDOS.CDT_DT AS DOS, \nDOS.CDT_TO_DT AS DOS_TO \n\nFROM HS.CDT_CLM_DT AS DOS\nJOIN HS.CDT_CLM_DT AS CDT ON DOS.CDT_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\n\nWHERE DOS.CDT_DT_QUAL = '150' \n\nWITH UR"
+    },
+    "dataset": "a804269a-14ed-4c5e-a8f1-16444acffe53",
+    "hidden": false,
+    "id": "tq_dgy7nhHcc",
+    "isMaterialized": false,
+    "name": "DOS",
+    "oid": "05e16bf9-62d6-4d82-abf8-b8e6c130a086",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "98ad2f35-77a5-4573-92ca-32abcb2b05ce",
+                "displayName": "DOS to",
+                "name": "DOS to",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "8f427996-c6e1-4fef-a8a7-209dfe9483e8",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

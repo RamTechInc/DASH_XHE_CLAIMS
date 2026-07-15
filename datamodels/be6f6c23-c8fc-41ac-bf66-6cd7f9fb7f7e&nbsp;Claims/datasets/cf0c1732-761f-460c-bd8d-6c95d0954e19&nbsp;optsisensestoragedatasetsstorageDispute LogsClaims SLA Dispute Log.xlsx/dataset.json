@@ -1,0 +1,11 @@
+{
+    "connection": "./connection.json",
+    "database": "",
+    "elasticube": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "oid": "cf0c1732-761f-460c-bd8d-6c95d0954e19",
+    "schemaName": "/opt/sisense/storage/datasets/storage/Dispute Logs/Claims SLA Dispute Log.xlsx",
+    "tables": [
+        "./fee133d0-3eb4-4822-b673-886c3a519ee4/table.json"
+    ],
+    "type": "extract"
+}

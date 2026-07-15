@@ -1,0 +1,423 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2a23f60e8b60036ca299a",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the paid claim volume per month for current and previous years.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "instanceid": "1C676-ED1A-C9",
+                        "jaql": {
+                            "column": "Payment Month",
+                            "datatype": "text",
+                            "dim": "[Payment Set.Payment Month]",
+                            "merged": true,
+                            "table": "Payment Set",
+                            "title": "Payment Month"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "24B85-8020-CE",
+                        "jaql": {
+                            "context": {
+                                "[21727-F51]": {
+                                    "column": "Payment Date",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "lastBuildTime": "2024-04-10T13:26:02.494Z",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "datetime",
+                                    "dim": "[Payment Set.Payment Date (Calendar)]",
+                                    "filter": {
+                                        "last": {
+                                            "count": 1,
+                                            "offset": 0
+                                        }
+                                    },
+                                    "level": "years",
+                                    "merged": true,
+                                    "table": "Payment Set",
+                                    "title": "Years in Payment Date"
+                                },
+                                "[CBA26-079]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "text",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                }
+                            },
+                            "formula": "([CBA26-079],[21727-F51])",
+                            "title": "Current Year Claims Paid",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#ffab03",
+                                "isHandPickedColor": true,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "24B85-8020-CE",
+                        "jaql": {
+                            "context": {
+                                "[31D10-55A]": {
+                                    "column": "Payment Date",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aClaims",
+                                        "fullname": "localhost/Claims",
+                                        "id": "localhost_aClaims",
+                                        "lastBuildTime": "2024-04-10T13:26:02.494Z",
+                                        "live": false,
+                                        "title": "Claims"
+                                    },
+                                    "datatype": "datetime",
+                                    "dim": "[Payment Set.Payment Date (Calendar)]",
+                                    "filter": {
+                                        "last": {
+                                            "count": 1,
+                                            "offset": 1
+                                        }
+                                    },
+                                    "level": "years",
+                                    "merged": true,
+                                    "table": "Payment Set",
+                                    "title": "Years in Payment Date"
+                                },
+                                "[52B42-C36]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "text",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                }
+                            },
+                            "formula": "([52B42-C36],[31D10-55A])",
+                            "title": "Last Year Claims Paid",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/yyyy HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "seconds": "MM/dd/yyyy HH:mm:ss",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "instanceid": "C2D2A-ED9B-C2",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Payment Date",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "datetime",
+                            "dim": "[Payment Set.Payment Date (Calendar)]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "N\\A"
+                                    ]
+                                },
+                                "explicit": false,
+                                "multiSelection": true
+                            },
+                            "level": "years",
+                            "merged": true,
+                            "table": "Payment Set",
+                            "title": "Years in Payment Date"
+                        },
+                        "panel": "scope"
+                    },
+                    {
+                        "instanceid": "26734-E0D3-78",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Claim Origin User ID",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "lastBuildTime": "2024-04-10T13:26:02.494Z",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Claim Source.Claim Origin User ID]",
+                            "dimension": "[Payment Set.Payment Month]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "CONVERT "
+                                    ]
+                                },
+                                "explicit": false,
+                                "isCondition": true,
+                                "multiSelection": true
+                            },
+                            "firstday": "mon",
+                            "locale": "en-us",
+                            "merged": true,
+                            "table": "Claim Source",
+                            "title": "Claim Origin User ID"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "6617cafcea432c0032235de5",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "script": "./script.js",
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "payment_month",
+                    "plural": "Payment Month",
+                    "singular": "Payment Month",
+                    "title": "Payment Month"
+                },
+                {
+                    "id": "years_in_payment_date",
+                    "plural": "Years in Payment Date",
+                    "singular": "Years in Payment Date",
+                    "title": "Years in Payment Date"
+                },
+                {
+                    "id": "claim_origin_user_id",
+                    "plural": "Claim Origin User ID",
+                    "singular": "Claim Origin User ID",
+                    "title": "Claim Origin User ID"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "line/spline",
+    "title": "Paid Claim Volume Year to Year",
+    "type": "chart/line"
+}

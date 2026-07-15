@@ -1,0 +1,450 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the volume of manual claims vs auto adjudication claims \n•\tPlacing the mouse over this widget will display the total number of claims per adjudication type. \n•\tTo view information for a specific adjudication type, select the desired adjudication type on the widget. The widgets will adjust to reflect information for that specific adjudication type only. Utilizing filter features will only affect that user’s view.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "drillHistory": [
+            {
+                "format": {
+                    "members": {
+                        "CLAIM PAYMENT                      ": {
+                            "color": "#117899",
+                            "inResultset": true,
+                            "sortData": "CLAIM PAYMENT                      ",
+                            "title": "CLAIM PAYMENT                      "
+                        },
+                        "CLAIM VOID                         ": {
+                            "color": "#5CA793",
+                            "inResultset": true,
+                            "sortData": "CLAIM VOID                         ",
+                            "title": "CLAIM VOID                         "
+                        },
+                        "N\\A": {
+                            "color": "#60B8CC",
+                            "inResultset": true,
+                            "sortData": "N\\A",
+                            "title": "N\\A"
+                        }
+                    }
+                },
+                "jaql": {
+                    "column": "Payment Type",
+                    "datatype": "text",
+                    "dim": "[Payment Set.Payment Type]",
+                    "merged": true,
+                    "table": "Payment Set",
+                    "title": "Payment Type"
+                },
+                "parent": {
+                    "format": {
+                        "members": {
+                            "Auto": {
+                                "color": "#117899",
+                                "inResultset": true,
+                                "sortData": "Auto",
+                                "title": "Auto"
+                            },
+                            "Manual": {
+                                "color": "#60B8CC",
+                                "inResultset": true,
+                                "sortData": "Manual",
+                                "title": "Manual"
+                            }
+                        }
+                    },
+                    "instanceid": "00BA9-EFCB-42",
+                    "jaql": {
+                        "column": "Adjudication Type",
+                        "datatype": "text",
+                        "dim": "[Claim.Adjudication Type]",
+                        "merged": true,
+                        "table": "Claim",
+                        "title": "Adjudication Type"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Adjudication Type",
+                        "datatype": "text",
+                        "dim": "[Claim.Adjudication Type]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Auto"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "Claim",
+                        "title": "Adjudication Type"
+                    }
+                }
+            },
+            {
+                "format": {
+                    "members": {
+                        "ISSUED                             ": {
+                            "color": "#117899",
+                            "inResultset": true,
+                            "sortData": "ISSUED                             ",
+                            "title": "ISSUED                             "
+                        },
+                        "N\\A": {
+                            "color": "#60B8CC",
+                            "inResultset": true,
+                            "sortData": "N\\A",
+                            "title": "N\\A"
+                        },
+                        "PARTIAL DENIAL": {
+                            "color": "#5CA793",
+                            "inResultset": true,
+                            "sortData": "PARTIAL DENIAL",
+                            "title": "PARTIAL DENIAL"
+                        }
+                    }
+                },
+                "jaql": {
+                    "column": "Payment Status",
+                    "datatype": "text",
+                    "dim": "[Payment Set.Payment Status]",
+                    "merged": true,
+                    "table": "Payment Set",
+                    "title": "Payment Status"
+                },
+                "parent": {
+                    "format": {
+                        "members": {
+                            "Auto": {
+                                "color": "#117899",
+                                "inResultset": true,
+                                "sortData": "Auto",
+                                "title": "Auto"
+                            },
+                            "Manual": {
+                                "color": "#60B8CC",
+                                "inResultset": true,
+                                "sortData": "Manual",
+                                "title": "Manual"
+                            }
+                        }
+                    },
+                    "instanceid": "00BA9-EFCB-42",
+                    "jaql": {
+                        "column": "Adjudication Type",
+                        "datatype": "text",
+                        "dim": "[Claim.Adjudication Type]",
+                        "merged": true,
+                        "table": "Claim",
+                        "title": "Adjudication Type"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Adjudication Type",
+                        "datatype": "text",
+                        "dim": "[Claim.Adjudication Type]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Auto"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "Claim",
+                        "title": "Adjudication Type"
+                    }
+                }
+            }
+        ],
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "members": {
+                            }
+                        },
+                        "instanceid": "00BA9-EFCB-42",
+                        "jaql": {
+                            "column": "Adjudication Type",
+                            "datatype": "text",
+                            "dim": "[Claim.Adjudication Type]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Adjudication Type"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color_bkp": {
+                                "conditions": [
+                                    {
+                                        "color": "#ff0000",
+                                        "expression": ".85",
+                                        "expressionValue": ".85",
+                                        "operator": "<"
+                                    },
+                                    {
+                                        "color": "#5cb747",
+                                        "expression": ".85",
+                                        "expressionValue": ".85",
+                                        "operator": "≥"
+                                    }
+                                ],
+                                "type": "condition"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "2443D-E725-32",
+                        "jaql": {
+                            "context": {
+                                "[6C615-D63]": {
+                                    "agg": "count",
+                                    "column": "Claim ID",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim.Claim ID]",
+                                    "merged": true,
+                                    "table": "Claim",
+                                    "title": "# of unique Claim ID"
+                                }
+                            },
+                            "formula": "[6C615-D63]",
+                            "sort": "desc",
+                            "title": "Auto Adjudication Rate",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "6EB99-F791-AF",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Status Type",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Status Type.Status Type]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Processed"
+                                ],
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Status Type",
+                            "title": "Status Type"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a88",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "style": {
+        "automaticHeight": false,
+        "components": {
+            "labels": {
+                "enabled": true,
+                "inactive": false
+            },
+            "secondaryTitle": {
+                "enabled": true,
+                "inactive": true
+            },
+            "ticks": {
+                "enabled": true,
+                "inactive": false
+            },
+            "title": {
+                "enabled": true,
+                "inactive": false
+            }
+        },
+        "convolution": {
+            "enabled": false,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "indicator/gauge": {
+            "components": {
+                "labels": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "ticks": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "round"
+        },
+        "indicator/numeric": {
+            "components": {
+                "icon": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "vertical",
+            "subtype": "simple"
+        },
+        "labels": {
+            "categories": true,
+            "color": "red",
+            "decimals": false,
+            "enabled": true,
+            "fontFamily": "Open Sans",
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": false,
+            "position": "left"
+        },
+        "narration": {
+            "labels": [
+                {
+                    "id": "adjudication_type",
+                    "plural": "Adjudication Type",
+                    "singular": "Adjudication Type",
+                    "title": "Adjudication Type"
+                },
+                {
+                    "id": "status_type",
+                    "plural": "Status Type",
+                    "singular": "Status Type",
+                    "title": "Status Type"
+                }
+            ]
+        },
+        "skin": "2",
+        "subtype": "round"
+    },
+    "subtype": "pie/classic",
+    "title": "Volume by Adjudication Type",
+    "type": "chart/pie"
+}

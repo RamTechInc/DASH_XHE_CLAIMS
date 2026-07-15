@@ -1,0 +1,213 @@
+{
+    "analyticalEngine": {
+        "customTranslationMode": null,
+        "generateDependenciesMode": null,
+        "queryAeMode": "LEGACY"
+    },
+    "buildDestination": {
+        "database": null,
+        "destination": "elasticube",
+        "schema": null
+    },
+    "datamodelId": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "datasets": [
+        "./0180cd47-c197-4457-a1e4-d870a357f105/dataset.json",
+        "./0279b647-7e04-4894-b04f-8d118e223bdd/dataset.json",
+        "./04ea8eaa-de98-4825-99df-bedadffae74f/dataset.json",
+        "./0634ed39-20fc-4f94-9042-b7a906fb1d64/dataset.json",
+        "./064927c9-5e08-460d-980d-b79a9801740f/dataset.json",
+        "./09299308-8005-451f-ba42-f9d37c04fe68/dataset.json",
+        "./0d83445b-de2e-41fb-b507-d4491ddc69d6/dataset.json",
+        "./12830b99-6055-4c87-9544-61841af38f09/dataset.json",
+        "./15331b5f-359b-403f-b87e-36ea157e36b6/dataset.json",
+        "./225fe0a1-9e21-4fcb-ba07-b29c27d9345e/dataset.json",
+        "./24e01efc-c292-4752-acf8-112cbbc9a63a/dataset.json",
+        "./27c36592-e0d3-4d4f-9c65-021ceab7a464/dataset.json",
+        "./289965bc-ea8b-492e-ae13-f083861ed9b5/dataset.json",
+        "./347d5923-10d0-4ac7-b367-385b091a37d0/dataset.json",
+        "./34a7c086-5070-429e-aa65-ffd8382680e5/dataset.json",
+        "./35cbc25c-4ecb-44c8-8563-e3cf4559f13b/dataset.json",
+        "./390097fe-d967-482b-97e7-214f44912d5b/dataset.json",
+        "./3c7f69b2-157d-43ef-ad2e-ca1145d158e8/dataset.json",
+        "./3f88cdcd-b22e-4b4f-9fd9-cf86e8a2e288/dataset.json",
+        "./4083b6b9-3548-48e8-adff-5a7423da5689/dataset.json",
+        "./4231cf45-92d7-458e-baef-1a6dd1f36a95/dataset.json",
+        "./42f94dac-94b1-4b49-b372-f2e1168145ec/dataset.json",
+        "./4307a012-4982-46b3-a1a1-6c51b97480ef/dataset.json",
+        "./443531a4-923c-485e-960b-b66d61dbf6f3/dataset.json",
+        "./46c77d85-12b2-4a38-8a2e-a9e6dee86c15/dataset.json",
+        "./49fb59bd-7435-4614-a33b-61b2105429cc/dataset.json",
+        "./4c81990b-6987-4a6b-93d8-3f62ecbe64d9/dataset.json",
+        "./4e5a0643-3a14-485b-aa7f-7bc72357baa4/dataset.json",
+        "./51d07fc2-d5c9-4987-899a-7f4b2b5a63bd/dataset.json",
+        "./547a6a86-c20b-4d9b-87d8-62f001eae0d6/dataset.json",
+        "./5a7a1fb8-2a93-4f6a-a815-2c32268db4a8/dataset.json",
+        "./5ade883f-aa0a-493e-84f5-5a5bf72cd987/dataset.json",
+        "./5d9c6314-7096-4825-ba83-fcdd63fe984f/dataset.json",
+        "./641ae553-c333-4db0-b801-43fa44c93f24/dataset.json",
+        "./64df68be-097e-4637-9212-db43b53f0c52/dataset.json",
+        "./68257063-db96-4340-8b71-d422b07b344a/dataset.json",
+        "./693ee40c-ca92-45f0-ab7c-cb64ee07f148/dataset.json",
+        "./69ff2683-03d8-4bcf-82c3-e87c44faf6d9/dataset.json",
+        "./6c0f56b5-bcf4-4c9f-8d33-333e24d9d03d/dataset.json",
+        "./6f057324-bdfe-4e3b-9918-4897180d3847/dataset.json",
+        "./6f6f8ef7-b7a9-455e-b48f-d508a1f96425/dataset.json",
+        "./71576e64-9240-465f-bacb-75102e7c23e9/dataset.json",
+        "./7560dde3-7759-4de8-b236-41610aebfde7/dataset.json",
+        "./76138c2f-0f20-4e5b-9d24-b903babfface/dataset.json",
+        "./7708dee9-600e-4910-beaf-6671c867867b/dataset.json",
+        "./7b89e11d-4d2f-4b34-98e9-637951cbd3d7/dataset.json",
+        "./7c75b102-e058-41b2-8ca1-3cdc8fbf8680/dataset.json",
+        "./7c808746-ddc5-42c8-b38f-b9f25e1a739a/dataset.json",
+        "./82d811ec-378d-4122-b784-18ff7c6db6b2/dataset.json",
+        "./84240684-721c-464a-8380-9e9a6ccbe62b/dataset.json",
+        "./84a5ead5-3264-4724-bb14-3bad444579af/dataset.json",
+        "./8bf753c9-ea5d-4cd1-a7e4-6b972aa6ba4f/dataset.json",
+        "./96f7f904-7285-419f-8167-f316a1a5b27d/dataset.json",
+        "./98c1980a-53e5-4be0-8ff0-abf41026394c/dataset.json",
+        "./9ad7ccda-dd6a-41cb-8fe8-656d72a8a390/dataset.json",
+        "./9f0efee7-e574-4048-8bcc-602f001762a3/dataset.json",
+        "./a01a92ca-61e9-4eb2-931b-f4bb2126337f/dataset.json",
+        "./a61d2795-ffce-49cb-82ec-fe04e856c034/dataset.json",
+        "./a7b92b15-232c-412e-94c7-9efb38ddf298/dataset.json",
+        "./a7e93de9-30be-41bf-b3cd-bfee80cb3991/dataset.json",
+        "./a804269a-14ed-4c5e-a8f1-16444acffe53/dataset.json",
+        "./a8c61796-e64f-4225-b719-de6b9707ded4/dataset.json",
+        "./acb62a32-4c45-4291-868f-6e4a229fffa6/dataset.json",
+        "./ace1cb31-8866-438f-9360-67450bc10dd9/dataset.json",
+        "./b4ab04ad-c13a-4456-a0c0-19f4e188fd3b/dataset.json",
+        "./b53ab48e-1b43-4b53-8095-d0b2a8592a09/dataset.json",
+        "./bb136a3c-ed8d-4735-9fe2-938c24709b57/dataset.json",
+        "./bf9f90d8-4cb8-4fab-9559-a4c9ca531e0d/dataset.json",
+        "./c60aa6b7-7196-4e51-88bb-bb906e1cac95/dataset.json",
+        "./c74bfc72-001d-43d2-842e-e2e69eaecc20/dataset.json",
+        "./c750baa4-6d8a-426b-8283-0e5779a8fdba/dataset.json",
+        "./c85f0e79-0303-4064-b0b7-af3a7bee2bc8/dataset.json",
+        "./c9d36dc9-16fb-4eea-b2fa-f69f0fe2aa2d/dataset.json",
+        "./cc65f478-5bf0-4911-9d1d-c4ffc40a673e/dataset.json",
+        "./cc9cf68b-653d-4616-b5ea-35d19b6b4848/dataset.json",
+        "./ccc8c695-d563-4c13-b595-009e6466702d/dataset.json",
+        "./cdc31023-fe56-45a1-b354-ac262c4b6002/dataset.json",
+        "./ce009c76-5438-49fd-9266-23c0050bb4c6/dataset.json",
+        "./ceba3469-fa21-494f-8e41-e976ff8fb1fb/dataset.json",
+        "./cf0c1732-761f-460c-bd8d-6c95d0954e19/dataset.json",
+        "./d02fe263-01a9-41e4-863a-26ee93f6f8b8/dataset.json",
+        "./d0c701c5-2524-4f45-900a-a5eb29ddc93f/dataset.json",
+        "./d1a57487-5c3b-4606-a041-3341327bf6a8/dataset.json",
+        "./d1b933e0-33d5-40ce-9ae1-6b9d44fd0d10/dataset.json",
+        "./dcc687b6-b2b0-4838-9625-13caea7e4043/dataset.json",
+        "./de72d917-2905-47d8-95f6-f2f06b319789/dataset.json",
+        "./e4755a5f-8de9-4779-80f6-411423b85b44/dataset.json",
+        "./e5ebd7ce-4f90-4785-8473-d01df215255e/dataset.json",
+        "./e6934bb6-9edb-4b3c-a106-8a57c06a2e75/dataset.json",
+        "./e766e620-c3fa-439b-87aa-5f1ec2963ffc/dataset.json",
+        "./ea42c519-b7d4-417e-b85c-6a7ee16b04b3/dataset.json",
+        "./f2840c39-3845-4685-abae-7c05c2c99b80/dataset.json",
+        "./f5afa3e5-f34f-4378-b620-8e53d5c40edf/dataset.json",
+        "./fad31bde-35c3-4545-993d-4276d2cfdc7e/dataset.json",
+        "./fc879d70-724c-45e9-aa2c-96f445b1e6de/dataset.json"
+    ],
+    "dependencies": {
+        "perspectives": [
+            "./be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e/perspective.json"
+        ]
+    },
+    "experiments": {
+    },
+    "fiscal": "system",
+    "hierarchies": [
+    ],
+    "modelStatistics": {
+        "allTablesPerCollection": true,
+        "enableModelStatistics": true,
+        "maxTablesPerCollection": 10
+    },
+    "oid": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "relationType": "regular",
+    "relations": "./relations.json",
+    "relationsTables": [
+        {
+            "firstTable": "b0a9af76-9f55-49ae-bedd-dca40f849d38",
+            "joinType": "default",
+            "secondTable": "77ab8224-24ef-435b-9c10-4a0464989033"
+        },
+        {
+            "firstTable": "8029eb09-5f9c-44f9-bab0-a812a37a1464",
+            "joinType": "default",
+            "secondTable": "47f6e160-0d7c-4467-ad6c-4eda27cba156"
+        },
+        {
+            "firstTable": "8dfdf0b3-5188-45d6-98ec-4e13d7a66aa9",
+            "joinType": "default",
+            "secondTable": "4d2fc076-99ce-41b2-8a98-08c4ba440944"
+        },
+        {
+            "firstTable": "ad19d4de-ff6a-46dd-aa35-615aa4906097",
+            "joinType": "default",
+            "secondTable": "2db258db-1334-4245-bd50-4326f4510e64"
+        },
+        {
+            "firstTable": "12b7791c-8d6b-4e34-88a6-7869dad8dd42",
+            "joinType": "default",
+            "secondTable": "f2ea245c-2c36-4899-9422-cdec24e318a4"
+        },
+        {
+            "firstTable": "621ebfa9-7abd-41ab-a3b1-066c5847fe47",
+            "joinType": "default",
+            "secondTable": "77ab8224-24ef-435b-9c10-4a0464989033"
+        },
+        {
+            "firstTable": "fee133d0-3eb4-4822-b673-886c3a519ee4",
+            "joinType": "default",
+            "secondTable": "b596e56c-c1c8-4af3-b915-85f101469aac"
+        },
+        {
+            "firstTable": "1a05a6c8-6d41-4e7a-9b2c-4720ec9436f5",
+            "joinType": "default",
+            "secondTable": "18045696-a161-4356-b4aa-8d9c2609f8a3"
+        },
+        {
+            "firstTable": "27dc1677-9626-4283-821b-5b591318cbb2",
+            "joinType": "default",
+            "secondTable": "77ab8224-24ef-435b-9c10-4a0464989033"
+        },
+        {
+            "firstTable": "2e5e4a67-4c75-4216-853f-64ffbe4f4400",
+            "joinType": "default",
+            "secondTable": "77ab8224-24ef-435b-9c10-4a0464989033"
+        },
+        {
+            "firstTable": "3fe7b1ca-c53a-4f61-a87b-c516a9bcaf24",
+            "joinType": "default",
+            "secondTable": "b35c7c4a-9592-4928-964d-0676a1b10834"
+        },
+        {
+            "firstTable": "4ea28bd2-6c60-4ba1-ab78-ff38e9f4b86e",
+            "joinType": "default",
+            "secondTable": "b35c7c4a-9592-4928-964d-0676a1b10834"
+        },
+        {
+            "firstTable": "2dd4c9c1-78b1-4158-bf48-75dd520362be",
+            "joinType": "default",
+            "secondTable": "b35c7c4a-9592-4928-964d-0676a1b10834"
+        },
+        {
+            "firstTable": "c2893edf-6b41-4fcb-840c-4abd3bb0ddbf",
+            "joinType": "default",
+            "secondTable": "b35c7c4a-9592-4928-964d-0676a1b10834"
+        },
+        {
+            "firstTable": "aa52461d-ec62-4e35-a0eb-601221f9f1ad",
+            "joinType": "default",
+            "secondTable": "b35c7c4a-9592-4928-964d-0676a1b10834"
+        },
+        {
+            "firstTable": "d5e90256-9f0c-412f-b53c-8fa33519642a",
+            "joinType": "default",
+            "secondTable": "b35c7c4a-9592-4928-964d-0676a1b10834"
+        }
+    ],
+    "schemaId": null,
+    "title": "Claims",
+    "type": "extract"
+}

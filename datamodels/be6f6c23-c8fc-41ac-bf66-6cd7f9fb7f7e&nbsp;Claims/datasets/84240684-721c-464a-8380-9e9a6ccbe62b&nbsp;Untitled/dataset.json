@@ -1,0 +1,10 @@
+{
+    "connection": "./connection.json",
+    "database": "",
+    "elasticube": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "oid": "84240684-721c-464a-8380-9e9a6ccbe62b",
+    "schemaName": "",
+    "tables": [
+    ],
+    "type": "extract"
+}

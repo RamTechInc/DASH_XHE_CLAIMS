@@ -1,0 +1,396 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the claim average age by status for up to two years. \n•\tPlacing the mouse over this widget will display the total number of claims per status. \n•\tTo view information for a specific claim status, select the desired claim status on the widget. The widgets will adjust to reflect information for that specific claim status only. Utilizing filter features will only affect that user’s view.\n•\tTo filter all corresponding widgets by grouped selection, left click and drag across the desired information. Click select. All correlating widgets will adjust.\n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "drillHistory": [
+            {
+                "jaql": {
+                    "column": "Processor ID",
+                    "datatype": "text",
+                    "dim": "[CLAIM_STATUS.Processor ID]",
+                    "merged": true,
+                    "table": "CLAIM_STATUS",
+                    "title": "Processor ID"
+                },
+                "parent": {
+                    "jaql": {
+                        "column": "Current Status",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Current Status]",
+                        "merged": true,
+                        "table": "CLAIM_STATUS",
+                        "title": "Current Status"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Current Status",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Current Status]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Full Denial"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "CLAIM_STATUS",
+                        "title": "Current Status"
+                    }
+                }
+            },
+            {
+                "jaql": {
+                    "column": "Claim Form",
+                    "datatype": "text",
+                    "dim": "[MAIN_CLAIM.Claim Form]",
+                    "merged": true,
+                    "table": "MAIN_CLAIM",
+                    "title": "Claim Form"
+                },
+                "parent": {
+                    "jaql": {
+                        "column": "Processor ID",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Processor ID]",
+                        "merged": true,
+                        "table": "CLAIM_STATUS",
+                        "title": "Processor ID"
+                    },
+                    "parent": {
+                        "jaql": {
+                            "column": "Current Status",
+                            "datatype": "text",
+                            "dim": "[CLAIM_STATUS.Current Status]",
+                            "merged": true,
+                            "table": "CLAIM_STATUS",
+                            "title": "Current Status"
+                        }
+                    },
+                    "through": {
+                        "jaql": {
+                            "column": "Current Status",
+                            "datatype": "text",
+                            "dim": "[CLAIM_STATUS.Current Status]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Full Denial"
+                                ],
+                                "multiSelection": true
+                            },
+                            "table": "CLAIM_STATUS",
+                            "title": "Current Status"
+                        }
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Processor ID",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Processor ID]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "AGREEN  "
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "CLAIM_STATUS",
+                        "title": "Processor ID"
+                    }
+                }
+            },
+            {
+                "jaql": {
+                    "column": "Submitting Provider Name",
+                    "datatype": "text",
+                    "dim": "[SUBMITTING_PROVIDER_INFO.Submitting Provider Name]",
+                    "merged": true,
+                    "table": "SUBMITTING_PROVIDER_INFO",
+                    "title": "Submitting Provider Name"
+                },
+                "parent": {
+                    "instanceid": "5BFB6-BBFB-6F",
+                    "jaql": {
+                        "column": "Current Status",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Current Status]",
+                        "merged": true,
+                        "table": "CLAIM_STATUS",
+                        "title": "Current Status"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Current Status",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Current Status]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Full Denial"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "CLAIM_STATUS",
+                        "title": "Current Status"
+                    }
+                }
+            }
+        ],
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "instanceid": "2A2CA-0038-BE",
+                        "jaql": {
+                            "column": "Current Status",
+                            "datatype": "text",
+                            "dim": "[Claim Status.Current Status]",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Current Status"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "EC9C5-7DC4-29",
+                        "jaql": {
+                            "context": {
+                                "[B72D2-D56]": {
+                                    "agg": "avg",
+                                    "column": "Age",
+                                    "datatype": "numeric",
+                                    "dim": "[Claim Aging.Age]",
+                                    "table": "Claim Aging",
+                                    "title": "Average Age"
+                                }
+                            },
+                            "formula": "[B72D2-D56]",
+                            "sort": "desc",
+                            "title": "[Average Age]",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a7f",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "current_status",
+                    "plural": "Current Status",
+                    "singular": "Current Status",
+                    "title": "Current Status"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": false,
+                "stacked": false,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": true,
+                "text": "Days"
+            }
+        }
+    },
+    "subtype": "column/classic",
+    "title": "Average Age per Status",
+    "type": "chart/column"
+}

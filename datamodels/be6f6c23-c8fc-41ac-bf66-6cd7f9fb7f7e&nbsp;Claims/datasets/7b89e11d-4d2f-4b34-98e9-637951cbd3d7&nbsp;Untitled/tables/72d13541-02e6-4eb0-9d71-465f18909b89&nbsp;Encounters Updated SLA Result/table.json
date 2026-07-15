@@ -1,0 +1,58 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "4d5f4362-4e84-43b8-9a3a-23dfb9094302",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "8d1bdd00-9d25-45f1-a2bf-ec374dd8f2ef",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "e520c5da-5a52-4a20-93fb-d08fcdf51d6e",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Updated Encounter Timeliness SLA Result",
+            "oid": "2c4d9b1c-0ad8-4d94-b96c-19bf84213e50",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "f9174b65-756b-41d6-be42-65dbb86596cb",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Updated Encounter Acceptance SLA Result",
+            "oid": "4fb5097b-edfe-4fc0-a5c7-367d34a4131b",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "dataset": "7b89e11d-4d2f-4b34-98e9-637951cbd3d7",
+    "expression": {
+        "expression": "./table.sql",
+        "isDatabaseDialect": false,
+        "oid": "1a96a9ec-dd91-4d5e-ac8a-5ec1d7bfc315"
+    },
+    "hidden": false,
+    "id": "Encounters Updated SLA Result",
+    "isMaterialized": null,
+    "name": "Encounters Updated SLA Result",
+    "oid": "72d13541-02e6-4eb0-9d71-465f18909b89",
+    "tupleTransformations": [
+    ],
+    "type": "custom"
+}

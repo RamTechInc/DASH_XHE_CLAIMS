@@ -1,0 +1,777 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63d2ac9460e8b60036ca2a75",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "Displays the current volume of claims by inventory status. \n•\tPlacing the mouse over this widget will display the total number of claims that reflect that percentage. \n•\tTo view information for a specific claim status, select the desired claim status on the widget. The widgets will adjust to reflect information for that specific claim status only. Utilizing filter features will only affect that user’s view. \n•\tTo clear the filter from a widget, select clear selection. To restore the work session dashboard and clear any filters, select the options icon located at the top right corner of the dialog. Select Restore Dashboard.",
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "ignoreFiltersSource": false,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "drillHistory": [
+            {
+                "format": {
+                    "members": {
+                        "   15-29 Days": {
+                            "color": "#9b9bd7",
+                            "inResultset": true,
+                            "sortData": "   15-29 Days",
+                            "title": "   15-29 Days"
+                        },
+                        "  30-59 Days": {
+                            "color": "#6EDA55",
+                            "inResultset": true,
+                            "sortData": "  30-59 Days",
+                            "title": "  30-59 Days"
+                        },
+                        " 60-89 Days": {
+                            "color": "#fc7570",
+                            "inResultset": true,
+                            "sortData": " 60-89 Days",
+                            "title": " 60-89 Days"
+                        },
+                        "90+ Days": {
+                            "color": "#00cee6",
+                            "inResultset": true,
+                            "sortData": "90+ Days",
+                            "title": "90+ Days"
+                        }
+                    }
+                },
+                "jaql": {
+                    "column": "SUSPEND_AGE_GROUP",
+                    "datatype": "text",
+                    "dim": "[CLAIM_AGING.SUSPEND_AGE_GROUP]",
+                    "merged": true,
+                    "table": "CLAIM_AGING",
+                    "title": "SUSPEND_AGE_GROUP"
+                },
+                "parent": {
+                    "format": {
+                        "members": {
+                            "ALW": {
+                                "color": "#00cee6",
+                                "sortData": "ALW",
+                                "title": "ALW"
+                            },
+                            "Allowed": {
+                                "color": "#fbb755",
+                                "inResultset": true,
+                                "sortData": "Allowed",
+                                "title": "Allowed"
+                            },
+                            "DN": {
+                                "color": "#218A8C",
+                                "sortData": "DN",
+                                "title": "DN"
+                            },
+                            "DN ": {
+                                "color": "#9b9bd7",
+                                "sortData": "DN ",
+                                "title": "DN "
+                            },
+                            "DN-INV": {
+                                "color": "#06e5ff",
+                                "sortData": "DN-INV",
+                                "title": "DN-INV"
+                            },
+                            "Full Denial": {
+                                "color": "#269fa1",
+                                "sortData": "Full Denial",
+                                "title": "Full Denial"
+                            },
+                            "Full Denial-INV": {
+                                "color": "#00cee6",
+                                "inResultset": true,
+                                "sortData": "Full Denial-INV",
+                                "title": "Full Denial-INV"
+                            },
+                            "O": {
+                                "color": "#b2b2f7",
+                                "sortData": "O",
+                                "title": "O"
+                            },
+                            "Open": {
+                                "color": "#218a8c",
+                                "inResultset": true,
+                                "sortData": "Open",
+                                "title": "Open"
+                            },
+                            "PD": {
+                                "color": "#7efb62",
+                                "sortData": "PD",
+                                "title": "PD"
+                            },
+                            "PD ": {
+                                "color": "#6EDA55",
+                                "sortData": "PD ",
+                                "title": "PD "
+                            },
+                            "PP": {
+                                "color": "#ff8a86",
+                                "sortData": "PP",
+                                "title": "PP"
+                            },
+                            "PP ": {
+                                "color": "#fc7570",
+                                "sortData": "PP ",
+                                "title": "PP "
+                            },
+                            "Paid In Full": {
+                                "color": "#9b9bd7",
+                                "sortData": "Paid In Full",
+                                "title": "Paid In Full"
+                            },
+                            "Partial Denial": {
+                                "color": "#6eda55",
+                                "sortData": "Partial Denial",
+                                "title": "Partial Denial"
+                            },
+                            "Payment Pending": {
+                                "color": "#06e5ff",
+                                "inResultset": true,
+                                "sortData": "Payment Pending",
+                                "title": "Payment Pending"
+                            },
+                            "SUS": {
+                                "color": "#fbb755",
+                                "sortData": "SUS",
+                                "title": "SUS"
+                            },
+                            "Suspended": {
+                                "color": "#b2b2f7",
+                                "inResultset": true,
+                                "sortData": "Suspended",
+                                "title": "Suspended"
+                            },
+                            "VD": {
+                                "color": "#ffc26a",
+                                "sortData": "VD",
+                                "title": "VD"
+                            },
+                            "Void": {
+                                "color": "#7efb62",
+                                "sortData": "Void",
+                                "title": "Void"
+                            },
+                            "Voided": {
+                                "color": "#fc7570",
+                                "sortData": "Voided",
+                                "title": "Voided"
+                            }
+                        }
+                    },
+                    "jaql": {
+                        "column": "CUR_STATUS",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.CUR_STATUS]",
+                        "merged": true,
+                        "table": "CLAIM_STATUS",
+                        "title": "CUR_STATUS1"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "CUR_STATUS",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.CUR_STATUS]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Suspended"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "CLAIM_STATUS",
+                        "title": "CUR_STATUS1"
+                    }
+                }
+            },
+            {
+                "format": {
+                    "members": {
+                        "Aaron Weisbrot": {
+                            "color": "#5CA793",
+                            "inResultset": true,
+                            "sortData": "Aaron Weisbrot",
+                            "title": "Aaron Weisbrot"
+                        },
+                        "Accredited Care, Inc%46": {
+                            "color": "#A2B86C",
+                            "inResultset": true,
+                            "sortData": "Accredited Care, Inc.",
+                            "title": "Accredited Care, Inc."
+                        },
+                        "Apex Medical Transport, Inc%46": {
+                            "color": "#EBC844",
+                            "inResultset": true,
+                            "sortData": "Apex Medical Transport, Inc.",
+                            "title": "Apex Medical Transport, Inc."
+                        },
+                        "Blossom Modern Home Care Solutions": {
+                            "color": "#117899",
+                            "sortData": "Blossom Modern Home Care Solutions",
+                            "title": "Blossom Modern Home Care Solutions"
+                        },
+                        "Bridgeway Transportation": {
+                            "color": "#ECAA38",
+                            "inResultset": true,
+                            "sortData": "Bridgeway Transportation",
+                            "title": "Bridgeway Transportation"
+                        },
+                        "Care For You Dba Community Care Par": {
+                            "color": "#EF8B2C",
+                            "inResultset": true,
+                            "sortData": "Care For You Dba Community Care Par",
+                            "title": "Care For You Dba Community Care Par"
+                        },
+                        "Diamond Hill Nursing And Rehabilita": {
+                            "color": "#F16C20",
+                            "inResultset": true,
+                            "sortData": "Diamond Hill Nursing And Rehabilita",
+                            "title": "Diamond Hill Nursing And Rehabilita"
+                        },
+                        "Fort Hudson Home Care, Inc%46": {
+                            "color": "#D94E1F",
+                            "inResultset": true,
+                            "sortData": "Fort Hudson Home Care, Inc.",
+                            "title": "Fort Hudson Home Care, Inc."
+                        },
+                        "Guilfoyle Ambulance Service, Inc%46": {
+                            "color": "#C02E1D",
+                            "inResultset": true,
+                            "sortData": "Guilfoyle Ambulance Service, Inc.",
+                            "title": "Guilfoyle Ambulance Service, Inc."
+                        },
+                        "Hart Hearing Centers": {
+                            "color": "#893B32",
+                            "inResultset": true,
+                            "sortData": "Hart Hearing Centers",
+                            "title": "Hart Hearing Centers"
+                        },
+                        "Independent @ Home (Nasc)": {
+                            "color": "#60B8CC",
+                            "sortData": "Independent @ Home (Nasc)",
+                            "title": "Independent @ Home (Nasc)"
+                        },
+                        "Kinney Drugs Corp": {
+                            "color": "#0D3C55",
+                            "inResultset": true,
+                            "sortData": "Kinney Drugs Corp",
+                            "title": "Kinney Drugs Corp"
+                        },
+                        "Kinney Drugs Corp%46": {
+                            "color": "#0F5B78",
+                            "inResultset": true,
+                            "sortData": "Kinney Drugs Corp.",
+                            "title": "Kinney Drugs Corp."
+                        },
+                        "L Woerner  - Lhcsa Hcr Catskill": {
+                            "color": "#148ab0",
+                            "inResultset": true,
+                            "sortData": "L Woerner  - Lhcsa Hcr Catskill",
+                            "title": "L Woerner  - Lhcsa Hcr Catskill"
+                        },
+                        "Lincare Inc": {
+                            "color": "#6ed4eb",
+                            "inResultset": true,
+                            "sortData": "Lincare Inc",
+                            "title": "Lincare Inc"
+                        },
+                        "Medcare Equipment Company Llc": {
+                            "color": "#6ac0a9",
+                            "inResultset": true,
+                            "sortData": "Medcare Equipment Company Llc",
+                            "title": "Medcare Equipment Company Llc"
+                        },
+                        "National Seating &amp; Mobility": {
+                            "color": "#bad47c",
+                            "inResultset": true,
+                            "sortData": "National Seating &amp; Mobility",
+                            "title": "National Seating &amp; Mobility"
+                        },
+                        "Nicci Nelson": {
+                            "color": "#ffdb53",
+                            "inResultset": true,
+                            "sortData": "Nicci Nelson",
+                            "title": "Nicci Nelson"
+                        },
+                        "Nursecore Management - Albany": {
+                            "color": "#ffbb46",
+                            "inResultset": true,
+                            "sortData": "Nursecore Management - Albany",
+                            "title": "Nursecore Management - Albany"
+                        },
+                        "Orthofix Inc": {
+                            "color": "#ff9a3b",
+                            "inResultset": true,
+                            "sortData": "Orthofix Inc",
+                            "title": "Orthofix Inc"
+                        },
+                        "Parkland Ambulance Service": {
+                            "color": "#ff7b2f",
+                            "inResultset": true,
+                            "sortData": "Parkland Ambulance Service",
+                            "title": "Parkland Ambulance Service"
+                        },
+                        "People First Mobility, Llc": {
+                            "color": "#fa5a24",
+                            "inResultset": true,
+                            "sortData": "People First Mobility, Llc",
+                            "title": "People First Mobility, Llc"
+                        },
+                        "Seneca View Nursing": {
+                            "color": "#dd3521",
+                            "inResultset": true,
+                            "sortData": "Seneca View Nursing",
+                            "title": "Seneca View Nursing"
+                        },
+                        "The Pines Machias": {
+                            "color": "#9e4439",
+                            "inResultset": true,
+                            "sortData": "The Pines Machias",
+                            "title": "The Pines Machias"
+                        },
+                        "Warren County Health Services": {
+                            "color": "#0f4562",
+                            "inResultset": true,
+                            "sortData": "Warren County Health Services",
+                            "title": "Warren County Health Services"
+                        }
+                    }
+                },
+                "jaql": {
+                    "column": "Submitting Provider Name",
+                    "datatype": "text",
+                    "dim": "[SUBMITTING_PROVIDER_INFO.Submitting Provider Name]",
+                    "merged": true,
+                    "table": "SUBMITTING_PROVIDER_INFO",
+                    "title": "Submitting Provider Name"
+                },
+                "parent": {
+                    "format": {
+                        "members": {
+                            "Allowed": {
+                                "color": "#117899",
+                                "inResultset": true,
+                                "sortData": "Allowed",
+                                "title": "Allowed"
+                            },
+                            "Full Denial-INV": {
+                                "color": "#60B8CC",
+                                "inResultset": true,
+                                "sortData": "Full Denial-INV",
+                                "title": "Full Denial-INV"
+                            },
+                            "Open": {
+                                "color": "#5CA793",
+                                "inResultset": true,
+                                "sortData": "Open",
+                                "title": "Open"
+                            },
+                            "Payment Pending": {
+                                "color": "#A2B86C",
+                                "inResultset": true,
+                                "sortData": "Payment Pending",
+                                "title": "Payment Pending"
+                            },
+                            "Suspended": {
+                                "color": "#EBC844",
+                                "inResultset": true,
+                                "sortData": "Suspended",
+                                "title": "Suspended"
+                            }
+                        }
+                    },
+                    "instanceid": "14CA7-5CD7-34",
+                    "jaql": {
+                        "column": "Current Status",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Current Status]",
+                        "merged": true,
+                        "table": "CLAIM_STATUS",
+                        "title": "Current Status"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Current Status",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Current Status]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Allowed"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "CLAIM_STATUS",
+                        "title": "Current Status"
+                    }
+                }
+            },
+            {
+                "jaql": {
+                    "column": "Line Suspend Error",
+                    "datatype": "text",
+                    "dim": "[CLAIM_LINE_SUSPEND_ERRORS.Line Suspend Error]",
+                    "merged": true,
+                    "table": "CLAIM_LINE_SUSPEND_ERRORS",
+                    "title": "Line Suspend Error"
+                },
+                "parent": {
+                    "format": {
+                        "continuous": false,
+                        "members": {
+                            "Allowed": {
+                                "color": "#117899",
+                                "inResultset": true,
+                                "sortData": "Allowed",
+                                "title": "Allowed"
+                            },
+                            "Full Denial": {
+                                "color": "#ECAA38",
+                                "sortData": "Full Denial",
+                                "title": "Full Denial"
+                            },
+                            "Full Denial-INV": {
+                                "color": "#60B8CC",
+                                "inResultset": true,
+                                "sortData": "Full Denial-INV",
+                                "title": "Full Denial-INV"
+                            },
+                            "Open": {
+                                "color": "#5CA793",
+                                "inResultset": true,
+                                "sortData": "Open",
+                                "title": "Open"
+                            },
+                            "Paid In Full": {
+                                "color": "#EF8B2C",
+                                "sortData": "Paid In Full",
+                                "title": "Paid In Full"
+                            },
+                            "Partial Denial": {
+                                "color": "#F16C20",
+                                "sortData": "Partial Denial",
+                                "title": "Partial Denial"
+                            },
+                            "Payment Pending": {
+                                "color": "#A2B86C",
+                                "inResultset": true,
+                                "sortData": "Payment Pending",
+                                "title": "Payment Pending"
+                            },
+                            "Suspended": {
+                                "color": "#EBC844",
+                                "inResultset": true,
+                                "sortData": "Suspended",
+                                "title": "Suspended"
+                            },
+                            "Void": {
+                                "color": "#D94E1F",
+                                "sortData": "Void",
+                                "title": "Void"
+                            }
+                        }
+                    },
+                    "instanceid": "14CA7-5CD7-34",
+                    "jaql": {
+                        "column": "Current Status",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Current Status]",
+                        "merged": true,
+                        "table": "CLAIM_STATUS",
+                        "title": "Current Status"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Current Status",
+                        "datatype": "text",
+                        "dim": "[CLAIM_STATUS.Current Status]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "Suspended"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "CLAIM_STATUS",
+                        "title": "Current Status"
+                    }
+                }
+            }
+        ],
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "continuous": false,
+                            "members": {
+                            }
+                        },
+                        "instanceid": "412DE-CCD3-D0",
+                        "jaql": {
+                            "column": "Current Status",
+                            "datatype": "text",
+                            "dim": "[Claim Status.Current Status]",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Current Status"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color_bkp": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviateAll": false,
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": true
+                                }
+                            }
+                        },
+                        "instanceid": "A842C-DDC2-ED",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "sort": "desc",
+                            "table": "Claim",
+                            "title": "Claim Count"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "31896-23A7-1C",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Status Type",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aClaims",
+                                "fullname": "localhost/Claims",
+                                "id": "localhost_aClaims",
+                                "live": false,
+                                "title": "Claims"
+                            },
+                            "datatype": "text",
+                            "dim": "[Status Type.Status Type]",
+                            "filter": {
+                                "explicit": true,
+                                "members": [
+                                    "Inventory"
+                                ],
+                                "multiSelection": true
+                            },
+                            "merged": true,
+                            "table": "Status Type",
+                            "title": "Status Type"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63d2ac9460e8b60036ca2a80",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillTarget": {
+            "caption": "Claims Details",
+            "folder": null,
+            "oid": "65c55e5f5bb13200325873c6"
+        },
+        "drillToAnywhere": true,
+        "selector": true,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "automaticHeight": false,
+        "convolution": {
+            "enabled": false,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "labels": {
+            "categories": true,
+            "color": "red",
+            "decimals": false,
+            "enabled": true,
+            "fontFamily": "Open Sans",
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "current_status",
+                    "plural": "Current Status",
+                    "singular": "Current Status",
+                    "title": "Current Status"
+                },
+                {
+                    "id": "status_type",
+                    "plural": "Status Type",
+                    "singular": "Status Type",
+                    "title": "Status Type"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "pie/classic",
+    "title": "Current Inventory Status Volume",
+    "type": "chart/pie"
+}
