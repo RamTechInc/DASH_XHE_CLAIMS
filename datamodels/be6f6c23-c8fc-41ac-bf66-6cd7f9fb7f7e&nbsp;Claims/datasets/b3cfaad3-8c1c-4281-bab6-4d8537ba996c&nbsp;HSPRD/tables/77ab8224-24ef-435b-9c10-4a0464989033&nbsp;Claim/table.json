@@ -119,9 +119,9 @@
             "isUpsertBy": false,
             "name": "DRG_CODE",
             "oid": "9c8bea69-642c-4273-9a36-9d7f7c0ed521",
-            "precision": 254,
+            "precision": 4,
             "scale": 0,
-            "size": 254,
+            "size": 4,
             "type": 18
         },
         {
@@ -150,14 +150,15 @@
         }
     ],
     "configOptions": {
-        "importQuery": "WITH REOPENED_CLAIM AS (\r\nSELECT DEV.CEV_CLM_ID AS CLM_ID\r\nFROM HS.CEV_CLM_EV AS DEV \r\nJOIN HS.CEV_CLM_EV AS OEV ON DEV.CEV_CLM_ID = OEV.CEV_CLM_ID AND OEV.CEV_DEL_TS IS NULL AND TRIM(OEV.CEV_TYPE) = 'PD' AND OEV.CEV_ADD_TS > DEV.CEV_ADD_TS \r\nWHERE DEV.CEV_DEL_TS IS NULL AND TRIM(DEV.CEV_TYPE) = 'DN' \r\nWITH UR),\r\nCRF AS (\r\nSELECT \r\nCRF_CLM_ID,\r\nCRF_REF_QUAL,\r\nCRF_REF_NUM\r\n\r\nFROM HS.CRF_CLM_REF WHERE CRF_REF_QUAL IN ('EJ','BB')\r\nWITH UR)\r\n\r\nSELECT DISTINCT \r\nCLM.CLM_ID\t\tAS CLAIM_ID,\r\nCLM.CLM_CLM_ID      AS ORIGINAL_CLAIM_ID,\r\nCASE\r\n\tWHEN REO.CLM_ID IS NULL THEN CLM.CLM_TYPE\r\n\tELSE 'REOPENED'\r\nEND\t\t\t\t\tAS CLAIM_TYPE,\r\nCASE CLM.CLM_SCREEN\r\n    WHEN '001' THEN 'Dental'\r\n\tWHEN '002' THEN 'Institutional'\r\n\tWHEN '003' THEN 'Professional'\r\n\tELSE CLM.CLM_SCREEN\r\nEND \t\t\t\tAS CLAIM_FORM,\r\nCLM.CLM_FC_CD || CLM.CLM_FQ_TY_CD\r\n\t\t\t\tAS BILL_TYPE,\r\nCLREF.CRF_REF_NUM\tAS HS_MATCHED_AUTH,\r\nCLM.CLM_MBR_BASE_PPT_ID\tAS PLAN_ID,\r\nCASE\r\n    WHEN CLNCI.CAU_CLM_ID IS NULL THEN 'Clean'\r\n    ELSE 'Unclean'\r\nEND AS          NC_IND,\r\nCASE\r\n\tWHEN ADJCHK.CEV_CLM_ID IS NULL THEN 'Auto'\r\n\tELSE 'Manual'\r\nEND \t\t\t\t\t\tAS ADJUDICATION,\r\nREPLACE(CLM.CLM_DRG_CD,'    ',null)      AS DRG_CODE,\r\nCASE \r\n    WHEN CLM.CLM_BEN_ASGN_CD = 'Y' THEN 'Provider Submission'\r\n    ELSE 'Member Submission'\r\nEND                                     AS CLAIM_SUBMITTER,\r\nPAT.CRF_REF_NUM\t            AS \"Patient Account Number\"\r\n\r\nFROM        HS.CLM_CLAIM        AS CLM\r\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN \tCRF \t    AS CLREF ON CLM.CLM_ID = CLREF.CRF_CLM_ID AND CLREF.CRF_REF_QUAL = 'BB'\r\nLEFT JOIN   HS.CAU_CLM_AUD\t\tAS CLNCI ON CLM.CLM_ID = CLNCI.CAU_CLM_ID AND CLNCI.CAU_TYPE IN ('NC','C')\r\nLEFT JOIN   HS.CEV_CLM_EV \t\tAS ADJCHK ON CLM.CLM_ID = ADJCHK.CEV_CLM_ID AND ADJCHK.CEV_DEL_TS IS NULL AND ADJCHK.CEV_TYPE NOT IN ('O','PD','PP') AND ADJCHK.CEV_USER_ID IN (SELECT DISTINCT OPR_ID FROM HS.OPR_OPERATOR WITH UR)\r\nLEFT JOIN \tREOPENED_CLAIM\t\tAS REO ON CLM.CLM_ID = REO.CLM_ID\r\nLEFT JOIN \tCRF \t    AS PAT ON CLM.CLM_ID = PAT.CRF_CLM_ID AND PAT.CRF_REF_QUAL = 'EJ'\r\n\r\nWITH UR\r\n\r\n\r\n"
+        "importQuery": "WITH REOPENED_CLAIM AS (\r\nSELECT DEV.CEV_CLM_ID AS CLM_ID\r\nFROM HS.CEV_CLM_EV AS DEV \r\nJOIN HS.CEV_CLM_EV AS OEV ON DEV.CEV_CLM_ID = OEV.CEV_CLM_ID AND OEV.CEV_DEL_TS IS NULL AND TRIM(OEV.CEV_TYPE) = 'PD' AND OEV.CEV_ADD_TS > DEV.CEV_ADD_TS \r\nWHERE DEV.CEV_DEL_TS IS NULL AND TRIM(DEV.CEV_TYPE) = 'DN' \r\nWITH UR),\r\nCRF AS (\r\nSELECT \r\nCRF_CLM_ID,\r\nCRF_REF_QUAL,\r\nCRF_REF_NUM\r\n\r\nFROM HS.CRF_CLM_REF WHERE CRF_REF_QUAL IN ('EJ','BB')\r\nWITH UR)\r\n\r\nSELECT DISTINCT \r\nCLM.CLM_ID\t\tAS CLAIM_ID,\r\nCLM.CLM_CLM_ID      AS ORIGINAL_CLAIM_ID,\r\nCASE\r\n\tWHEN REO.CLM_ID IS NULL THEN CLM.CLM_TYPE\r\n\tELSE 'REOPENED'\r\nEND\t\t\t\t\tAS CLAIM_TYPE,\r\nCASE CLM.CLM_SCREEN\r\n    WHEN '001' THEN 'Dental'\r\n\tWHEN '002' THEN 'Institutional'\r\n\tWHEN '003' THEN 'Professional'\r\n\tELSE CLM.CLM_SCREEN\r\nEND \t\t\t\tAS CLAIM_FORM,\r\nCLM.CLM_FC_CD || CLM.CLM_FQ_TY_CD\r\n\t\t\t\tAS BILL_TYPE,\r\nCLREF.CRF_REF_NUM\tAS HS_MATCHED_AUTH,\r\nCLM.CLM_MBR_BASE_PPT_ID\tAS PLAN_ID,\r\nCASE\r\n    WHEN CLNCI.CAU_CLM_ID IS NULL THEN 'Clean'\r\n    ELSE 'Unclean'\r\nEND AS          NC_IND,\r\nCASE\r\n\tWHEN ADJCHK.CEV_CLM_ID IS NULL THEN 'Auto'\r\n\tELSE 'Manual'\r\nEND \t\t\t\t\t\tAS ADJUDICATION,\r\nCASE \r\n\tWHEN CLM.CLM_DRG_CD = '    ' THEN NULL\r\n\tELSE CLM.CLM_DRG_CD\r\nEND     AS DRG_CODE,\r\nCASE \r\n    WHEN CLM.CLM_BEN_ASGN_CD = 'Y' THEN 'Provider Submission'\r\n    ELSE 'Member Submission'\r\nEND                                     AS CLAIM_SUBMITTER,\r\nPAT.CRF_REF_NUM\t            AS \"Patient Account Number\"\r\n\r\nFROM        HS.CLM_CLAIM        AS CLM\r\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN \tCRF \t    AS CLREF ON CLM.CLM_ID = CLREF.CRF_CLM_ID AND CLREF.CRF_REF_QUAL = 'BB'\r\nLEFT JOIN   HS.CAU_CLM_AUD\t\tAS CLNCI ON CLM.CLM_ID = CLNCI.CAU_CLM_ID AND CLNCI.CAU_TYPE IN ('NC','C')\r\nLEFT JOIN   HS.CEV_CLM_EV \t\tAS ADJCHK ON CLM.CLM_ID = ADJCHK.CEV_CLM_ID AND ADJCHK.CEV_DEL_TS IS NULL AND ADJCHK.CEV_TYPE NOT IN ('O','PD','PP') AND ADJCHK.CEV_USER_ID IN (SELECT DISTINCT OPR_ID FROM HS.OPR_OPERATOR WITH UR)\r\nLEFT JOIN \tREOPENED_CLAIM\t\tAS REO ON CLM.CLM_ID = REO.CLM_ID\r\nLEFT JOIN \tCRF \t    AS PAT ON CLM.CLM_ID = PAT.CRF_CLM_ID AND PAT.CRF_REF_QUAL = 'EJ'\r\n\r\nWITH UR\r\n\r\n\r\n"
     },
-    "dataset": "ace1cb31-8866-438f-9360-67450bc10dd9",
+    "dataset": "b3cfaad3-8c1c-4281-bab6-4d8537ba996c",
     "hidden": false,
-    "id": "tq_JtItlMo8I",
+    "id": "tq_WHUAHZ98c",
     "isMaterialized": false,
     "name": "Claim",
     "oid": "77ab8224-24ef-435b-9c10-4a0464989033",
+    "primaryKeyColumnNames": null,
     "schemaName": "HSPRD",
     "tupleTransformations": [
         {
