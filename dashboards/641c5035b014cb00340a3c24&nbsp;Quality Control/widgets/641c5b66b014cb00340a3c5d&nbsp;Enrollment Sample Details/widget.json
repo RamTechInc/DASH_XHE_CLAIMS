@@ -1,0 +1,257 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "641c5035b014cb00340a3c24",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aEnrollment",
+        "fullname": "localhost/Enrollment",
+        "id": "localhost_aEnrollment",
+        "live": false,
+        "title": "Enrollment"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Application Plan Information.Plan Name]",
+                            "index": 0
+                        },
+                        "format": {
+                        },
+                        "instanceid": "A6F17-8900-BE",
+                        "jaql": {
+                            "column": "Plan Name",
+                            "datatype": "text",
+                            "dim": "[Application Plan Information.Plan Name]",
+                            "merged": true,
+                            "table": "Application Plan Information",
+                            "title": "Plan Name"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "4C1F8-4DD7-3F",
+                        "jaql": {
+                            "column": "Member MBI",
+                            "datatype": "text",
+                            "dim": "[Member Information.Member MBI]",
+                            "merged": true,
+                            "table": "Member Information",
+                            "title": "Member MBI"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "9B153-4B32-C1",
+                        "jaql": {
+                            "column": "Member Name",
+                            "datatype": "text",
+                            "dim": "[Member Information.Member Name]",
+                            "merged": true,
+                            "table": "Member Information",
+                            "title": "Member Name"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "3FEED-56D8-49",
+                        "jaql": {
+                            "column": "Member DOB",
+                            "datatype": "datetime",
+                            "dim": "[Member Information.Member DOB (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Member Information",
+                            "title": "Member DOB"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "BCD6F-07EE-F9",
+                        "jaql": {
+                            "column": "Processor ID",
+                            "datatype": "text",
+                            "dim": "[Quality Control.Processor ID]",
+                            "merged": true,
+                            "table": "Quality Control",
+                            "title": "Processor ID"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "3B649-16D8-4C",
+                        "jaql": {
+                            "column": "Processor Name",
+                            "datatype": "text",
+                            "dim": "[Quality Control.Processor Name]",
+                            "merged": true,
+                            "table": "Quality Control",
+                            "title": "Processor Name"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "5AC7C-22C2-B3",
+                        "jaql": {
+                            "column": "QC Process Area",
+                            "datatype": "text",
+                            "dim": "[Quality Control.QC Process Area]",
+                            "merged": true,
+                            "table": "Quality Control",
+                            "title": "QC Process Area"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "0F32C-C7E0-0F",
+                        "jaql": {
+                            "column": "Process Date",
+                            "datatype": "datetime",
+                            "dim": "[Quality Control.Process Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Quality Control",
+                            "title": "Process Date"
+                        }
+                    }
+                ],
+                "name": "Columns"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "641c5b66b014cb00340a3c5d",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "designPanelConfig": {
+            "selectedItem": -1,
+            "selectedItemInner": -1,
+            "shouldRender": false
+        },
+        "selector": false,
+        "shouldRefreshData": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "shownErrorAboutCustomFormats": false,
+    "style": {
+        "enablePresets": true,
+        "enableToolbar": true,
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "plan_name",
+                    "plural": "Plan Name",
+                    "singular": "Plan Name",
+                    "title": "Plan Name"
+                },
+                {
+                    "id": "member_mbi",
+                    "plural": "Member MBI",
+                    "singular": "Member MBI",
+                    "title": "Member MBI"
+                },
+                {
+                    "id": "member_name",
+                    "plural": "Member Name",
+                    "singular": "Member Name",
+                    "title": "Member Name"
+                },
+                {
+                    "id": "member_dob",
+                    "plural": "Member DOB",
+                    "singular": "Member DOB",
+                    "title": "Member DOB"
+                },
+                {
+                    "id": "processor_id",
+                    "plural": "Processor ID",
+                    "singular": "Processor ID",
+                    "title": "Processor ID"
+                },
+                {
+                    "id": "processor_name",
+                    "plural": "Processor Name",
+                    "singular": "Processor Name",
+                    "title": "Processor Name"
+                },
+                {
+                    "id": "qc_process_area",
+                    "plural": "QC Process Area",
+                    "singular": "QC Process Area",
+                    "title": "QC Process Area"
+                },
+                {
+                    "id": "process_date",
+                    "plural": "Process Date",
+                    "singular": "Process Date",
+                    "title": "Process Date"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        }
+    },
+    "subtype": "Advanced Table With Aggregation",
+    "title": "Enrollment Sample Details",
+    "type": "Advanced Table With Aggregation"
+}

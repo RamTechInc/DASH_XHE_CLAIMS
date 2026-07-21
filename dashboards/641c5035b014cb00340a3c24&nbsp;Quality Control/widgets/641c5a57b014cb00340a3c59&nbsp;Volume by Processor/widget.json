@@ -1,0 +1,706 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "641c5035b014cb00340a3c24",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aEnrollment",
+        "fullname": "LocalHost/Enrollment",
+        "id": "aLOCALHOST_aENROLLMENT",
+        "title": "Enrollment"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "displayDashboardsPane": false,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "members": {
+                                "AMBER WACHTER": {
+                                    "color": "#6eda55",
+                                    "sortData": "AMBER WACHTER",
+                                    "title": "AMBER WACHTER"
+                                },
+                                "Alisa Tulio": {
+                                    "color": "#269fa1",
+                                    "sortData": "Alisa Tulio",
+                                    "title": "Alisa Tulio"
+                                },
+                                "Amanda Schotzko": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "Amanda Schotzko",
+                                    "title": "Amanda Schotzko"
+                                },
+                                "Amber Knutson": {
+                                    "color": "#6eda55",
+                                    "sortData": "Amber Knutson",
+                                    "title": "Amber Knutson"
+                                },
+                                "Ashley Dunham": {
+                                    "color": "#6eda55",
+                                    "sortData": "Ashley Dunham",
+                                    "title": "Ashley Dunham"
+                                },
+                                "Ashley Hicks": {
+                                    "color": "#6EDA55",
+                                    "sortData": "Ashley Hicks",
+                                    "title": "Ashley Hicks"
+                                },
+                                "Azaria Davenport": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "Azaria Davenport",
+                                    "title": "Azaria Davenport"
+                                },
+                                "BEQ Response Queue": {
+                                    "color": "#00cee6",
+                                    "sortData": "BEQ Response Queue",
+                                    "title": "BEQ Response Queue"
+                                },
+                                "Beth Shoemaker": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "Beth Shoemaker",
+                                    "title": "Beth Shoemaker"
+                                },
+                                "CARRIE WILLIAMS": {
+                                    "color": "#ffc26a",
+                                    "sortData": "CARRIE WILLIAMS",
+                                    "title": "CARRIE WILLIAMS"
+                                },
+                                "CHRISTINE PAGNOTTI": {
+                                    "color": "#fbb755",
+                                    "sortData": "CHRISTINE PAGNOTTI",
+                                    "title": "CHRISTINE PAGNOTTI"
+                                },
+                                "COURTNEY SARGENT": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "COURTNEY SARGENT",
+                                    "title": "COURTNEY SARGENT"
+                                },
+                                "Carmen Davis": {
+                                    "color": "#6eda55",
+                                    "sortData": "Carmen Davis",
+                                    "title": "Carmen Davis"
+                                },
+                                "Carol Longcoy": {
+                                    "color": "#ff8a86",
+                                    "sortData": "Carol Longcoy",
+                                    "title": "Carol Longcoy"
+                                },
+                                "Cecelia Sitting Bear": {
+                                    "color": "#7efb62",
+                                    "sortData": "Cecelia Sitting Bear",
+                                    "title": "Cecelia Sitting Bear"
+                                },
+                                "Cecilia E Ybarra": {
+                                    "color": "#269fa1",
+                                    "sortData": "Cecilia E Ybarra",
+                                    "title": "Cecilia E Ybarra"
+                                },
+                                "Chanelle Hernandez": {
+                                    "color": "#00cee6",
+                                    "sortData": "Chanelle Hernandez",
+                                    "title": "Chanelle Hernandez"
+                                },
+                                "Charlette Campbell": {
+                                    "color": "#218A8C",
+                                    "sortData": "Charlette Campbell",
+                                    "title": "Charlette Campbell"
+                                },
+                                "Chris Bott": {
+                                    "color": "#00cee6",
+                                    "sortData": "Chris Bott",
+                                    "title": "Chris Bott"
+                                },
+                                "Courtney Meyer": {
+                                    "color": "#06e5ff",
+                                    "sortData": "Courtney Meyer",
+                                    "title": "Courtney Meyer"
+                                },
+                                "Dallan Yeoman": {
+                                    "color": "#ffc26a",
+                                    "sortData": "Dallan Yeoman",
+                                    "title": "Dallan Yeoman"
+                                },
+                                "Daniel Weiss": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "Daniel Weiss",
+                                    "title": "Daniel Weiss"
+                                },
+                                "Darci Cottrell": {
+                                    "color": "#fbb755",
+                                    "sortData": "Darci Cottrell",
+                                    "title": "Darci Cottrell"
+                                },
+                                "Dawn Olson": {
+                                    "color": "#ff8a86",
+                                    "sortData": "Dawn Olson",
+                                    "title": "Dawn Olson"
+                                },
+                                "Diana Garcia": {
+                                    "color": "#ffc26a",
+                                    "sortData": "Diana Garcia",
+                                    "title": "Diana Garcia"
+                                },
+                                "Eric Lee": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "Eric Lee",
+                                    "title": "Eric Lee"
+                                },
+                                "Erika Johnson": {
+                                    "color": "#00cee6",
+                                    "sortData": "Erika Johnson",
+                                    "title": "Erika Johnson"
+                                },
+                                "Erika Salinas": {
+                                    "color": "#06e5ff",
+                                    "sortData": "Erika Salinas",
+                                    "title": "Erika Salinas"
+                                },
+                                "Gabriel Bacine": {
+                                    "color": "#6eda55",
+                                    "sortData": "Gabriel Bacine",
+                                    "title": "Gabriel Bacine"
+                                },
+                                "Hailey Stuffel": {
+                                    "color": "#269fa1",
+                                    "sortData": "Hailey Stuffel",
+                                    "title": "Hailey Stuffel"
+                                },
+                                "Halle G Mercado": {
+                                    "color": "#6eda55",
+                                    "sortData": "Halle G Mercado",
+                                    "title": "Halle G Mercado"
+                                },
+                                "Hollie Scott": {
+                                    "color": "#7efb62",
+                                    "sortData": "Hollie Scott",
+                                    "title": "Hollie Scott"
+                                },
+                                "JENNA TULIO": {
+                                    "color": "#06e5ff",
+                                    "sortData": "JENNA TULIO",
+                                    "title": "JENNA TULIO"
+                                },
+                                "Jack Arnett": {
+                                    "color": "#06e5ff",
+                                    "sortData": "Jack Arnett",
+                                    "title": "Jack Arnett"
+                                },
+                                "Jamie Knodel": {
+                                    "color": "#00cee6",
+                                    "sortData": "Jamie Knodel",
+                                    "title": "Jamie Knodel"
+                                },
+                                "Jessica Dalldorf": {
+                                    "color": "#218a8c",
+                                    "sortData": "Jessica Dalldorf",
+                                    "title": "Jessica Dalldorf"
+                                },
+                                "Jose C Damian": {
+                                    "color": "#fc7570",
+                                    "sortData": "Jose C Damian",
+                                    "title": "Jose C Damian"
+                                },
+                                "KATHERYN NEAL": {
+                                    "color": "#218a8c",
+                                    "sortData": "KATHERYN NEAL",
+                                    "title": "KATHERYN NEAL"
+                                },
+                                "KEVIN BUCK": {
+                                    "color": "#ffc26a",
+                                    "sortData": "KEVIN BUCK",
+                                    "title": "KEVIN BUCK"
+                                },
+                                "KYLE DEMPSEY": {
+                                    "color": "#fbb755",
+                                    "sortData": "KYLE DEMPSEY",
+                                    "title": "KYLE DEMPSEY"
+                                },
+                                "Karry Richardson": {
+                                    "color": "#ff8a86",
+                                    "sortData": "Karry Richardson",
+                                    "title": "Karry Richardson"
+                                },
+                                "Katelynn Garcia-Marroquin": {
+                                    "color": "#7efb62",
+                                    "sortData": "Katelynn Garcia-Marroquin",
+                                    "title": "Katelynn Garcia-Marroquin"
+                                },
+                                "Katie Mertes": {
+                                    "color": "#fc7570",
+                                    "sortData": "Katie Mertes",
+                                    "title": "Katie Mertes"
+                                },
+                                "Katy Heineman": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "Katy Heineman",
+                                    "title": "Katy Heineman"
+                                },
+                                "Kayla D Maldonado": {
+                                    "color": "#ffc26a",
+                                    "sortData": "Kayla D Maldonado",
+                                    "title": "Kayla D Maldonado"
+                                },
+                                "Kennedy Fossum": {
+                                    "color": "#fbb755",
+                                    "sortData": "Kennedy Fossum",
+                                    "title": "Kennedy Fossum"
+                                },
+                                "Kim Peace": {
+                                    "color": "#ffc26a",
+                                    "sortData": "Kim Peace",
+                                    "title": "Kim Peace"
+                                },
+                                "Kimberlyn Marion": {
+                                    "color": "#218a8c",
+                                    "sortData": "Kimberlyn Marion",
+                                    "title": "Kimberlyn Marion"
+                                },
+                                "Kyle Klintworth": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "Kyle Klintworth",
+                                    "title": "Kyle Klintworth"
+                                },
+                                "LINDSEY EVANS": {
+                                    "color": "#7efb62",
+                                    "sortData": "LINDSEY EVANS",
+                                    "title": "LINDSEY EVANS"
+                                },
+                                "Laine Steier": {
+                                    "color": "#fc7570",
+                                    "sortData": "Laine Steier",
+                                    "title": "Laine Steier"
+                                },
+                                "Larinda Collette": {
+                                    "color": "#06e5ff",
+                                    "sortData": "Larinda Collette",
+                                    "title": "Larinda Collette"
+                                },
+                                "Lisa Hodgson": {
+                                    "color": "#fbb755",
+                                    "sortData": "Lisa Hodgson",
+                                    "title": "Lisa Hodgson"
+                                },
+                                "Lisa Mikkelsen": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "Lisa Mikkelsen",
+                                    "title": "Lisa Mikkelsen"
+                                },
+                                "Lisa Waagmeester": {
+                                    "color": "#06e5ff",
+                                    "sortData": "Lisa Waagmeester",
+                                    "title": "Lisa Waagmeester"
+                                },
+                                "Lorie Ellis": {
+                                    "color": "#218a8c",
+                                    "sortData": "Lorie Ellis",
+                                    "title": "Lorie Ellis"
+                                },
+                                "Maria L Ramon": {
+                                    "color": "#06e5ff",
+                                    "sortData": "Maria L Ramon",
+                                    "title": "Maria L Ramon"
+                                },
+                                "Mark A Flores": {
+                                    "color": "#00cee6",
+                                    "sortData": "Mark A Flores",
+                                    "title": "Mark A Flores"
+                                },
+                                "Megan Shanks": {
+                                    "color": "#fbb755",
+                                    "sortData": "Megan Shanks",
+                                    "title": "Megan Shanks"
+                                },
+                                "Mickel Gonzel": {
+                                    "color": "#ffc26a",
+                                    "sortData": "Mickel Gonzel",
+                                    "title": "Mickel Gonzel"
+                                },
+                                "Miriam A Leija": {
+                                    "color": "#269fa1",
+                                    "sortData": "Miriam A Leija",
+                                    "title": "Miriam A Leija"
+                                },
+                                "Misti Hintz": {
+                                    "color": "#218a8c",
+                                    "sortData": "Misti Hintz",
+                                    "title": "Misti Hintz"
+                                },
+                                "Misty Kanta": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "Misty Kanta",
+                                    "title": "Misty Kanta"
+                                },
+                                "Mitchell Lamont": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "Mitchell Lamont",
+                                    "title": "Mitchell Lamont"
+                                },
+                                "Molly Moline": {
+                                    "color": "#fc7570",
+                                    "sortData": "Molly Moline",
+                                    "title": "Molly Moline"
+                                },
+                                "Natalie M Cantu": {
+                                    "color": "#7efb62",
+                                    "sortData": "Natalie M Cantu",
+                                    "title": "Natalie M Cantu"
+                                },
+                                "Nathan Ovenden": {
+                                    "color": "#fbb755",
+                                    "sortData": "Nathan Ovenden",
+                                    "title": "Nathan Ovenden"
+                                },
+                                "Nathanael Sellars": {
+                                    "color": "#06e5ff",
+                                    "sortData": "Nathanael Sellars",
+                                    "title": "Nathanael Sellars"
+                                },
+                                "Nick Tulio": {
+                                    "color": "#fc7570",
+                                    "sortData": "Nick Tulio",
+                                    "title": "Nick Tulio"
+                                },
+                                "Paige Acton": {
+                                    "color": "#269fa1",
+                                    "sortData": "Paige Acton",
+                                    "title": "Paige Acton"
+                                },
+                                "Rafael Fondon Jr": {
+                                    "color": "#ff8a86",
+                                    "sortData": "Rafael Fondon Jr",
+                                    "title": "Rafael Fondon Jr"
+                                },
+                                "Randi Frodermann": {
+                                    "color": "#fc7570",
+                                    "sortData": "Randi Frodermann",
+                                    "title": "Randi Frodermann"
+                                },
+                                "Raven Rios": {
+                                    "color": "#6eda55",
+                                    "sortData": "Raven Rios",
+                                    "title": "Raven Rios"
+                                },
+                                "Reanna A Torres": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "Reanna A Torres",
+                                    "title": "Reanna A Torres"
+                                },
+                                "Reanna Reed": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "Reanna Reed",
+                                    "title": "Reanna Reed"
+                                },
+                                "Rebecca Baker": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "Rebecca Baker",
+                                    "title": "Rebecca Baker"
+                                },
+                                "Rebecca McGowan": {
+                                    "color": "#00cee6",
+                                    "sortData": "Rebecca McGowan",
+                                    "title": "Rebecca McGowan"
+                                },
+                                "Rena Nielsen": {
+                                    "color": "#269fa1",
+                                    "sortData": "Rena Nielsen",
+                                    "title": "Rena Nielsen"
+                                },
+                                "SHAE PASSARELLI": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "SHAE PASSARELLI",
+                                    "title": "SHAE PASSARELLI"
+                                },
+                                "Samantha Cisneros": {
+                                    "color": "#00cee6",
+                                    "sortData": "Samantha Cisneros",
+                                    "title": "Samantha Cisneros"
+                                },
+                                "Samantha Rokusek": {
+                                    "color": "#fc7570",
+                                    "sortData": "Samantha Rokusek",
+                                    "title": "Samantha Rokusek"
+                                },
+                                "Sara Lorenzen": {
+                                    "color": "#ff8a86",
+                                    "sortData": "Sara Lorenzen",
+                                    "title": "Sara Lorenzen"
+                                },
+                                "Sarah Stark": {
+                                    "color": "#269fa1",
+                                    "sortData": "Sarah Stark",
+                                    "title": "Sarah Stark"
+                                },
+                                "Sheri Otta": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "Sheri Otta",
+                                    "title": "Sheri Otta"
+                                },
+                                "Tamara Foxworth": {
+                                    "color": "#ff8a86",
+                                    "sortData": "Tamara Foxworth",
+                                    "title": "Tamara Foxworth"
+                                },
+                                "Tara Fetterman": {
+                                    "color": "#7efb62",
+                                    "sortData": "Tara Fetterman",
+                                    "title": "Tara Fetterman"
+                                },
+                                "Tiffany Pfitzer": {
+                                    "color": "#218a8c",
+                                    "sortData": "Tiffany Pfitzer",
+                                    "title": "Tiffany Pfitzer"
+                                },
+                                "Tonya Elizondo": {
+                                    "color": "#7efb62",
+                                    "sortData": "Tonya Elizondo",
+                                    "title": "Tonya Elizondo"
+                                },
+                                "Travis Caviezel": {
+                                    "color": "#218a8c",
+                                    "sortData": "Travis Caviezel",
+                                    "title": "Travis Caviezel"
+                                },
+                                "Tyler Gray": {
+                                    "color": "#7efb62",
+                                    "sortData": "Tyler Gray",
+                                    "title": "Tyler Gray"
+                                },
+                                "Valory R Gomez": {
+                                    "color": "#fbb755",
+                                    "sortData": "Valory R Gomez",
+                                    "title": "Valory R Gomez"
+                                },
+                                "Vanessa Nguyen": {
+                                    "color": "#fc7570",
+                                    "sortData": "Vanessa Nguyen",
+                                    "title": "Vanessa Nguyen"
+                                },
+                                "Victoria Longoria": {
+                                    "color": "#ff8a86",
+                                    "sortData": "Victoria Longoria",
+                                    "title": "Victoria Longoria"
+                                },
+                                "Yanneth E Garcia": {
+                                    "color": "#ff8a86",
+                                    "sortData": "Yanneth E Garcia",
+                                    "title": "Yanneth E Garcia"
+                                }
+                            }
+                        },
+                        "instanceid": "759A1-7358-F0",
+                        "jaql": {
+                            "column": "Processor Name",
+                            "datatype": "text",
+                            "dim": "[Quality Control.Processor Name]",
+                            "merged": true,
+                            "table": "Quality Control",
+                            "title": "Processor Name"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color_bkp": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "824C2-C8DA-9C",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Member HSN",
+                            "datatype": "text",
+                            "dim": "[Member Information.Member HSN]",
+                            "merged": true,
+                            "sort": "desc",
+                            "table": "Member Information",
+                            "title": "# of unique Member HSN"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "641c5a57b014cb00340a3c59",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillToAnywhere": true,
+        "selector": true,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "style": {
+        "automaticHeight": false,
+        "convolution": {
+            "enabled": false,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "labels": {
+            "categories": true,
+            "color": "red",
+            "decimals": false,
+            "enabled": true,
+            "fontFamily": "Open Sans",
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "processor_name",
+                    "plural": "Processor Name",
+                    "singular": "Processor Name",
+                    "title": "Processor Name"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "pie/classic",
+    "title": "Volume by Processor",
+    "type": "chart/pie"
+}

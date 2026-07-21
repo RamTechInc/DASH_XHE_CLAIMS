@@ -1,0 +1,74 @@
+{
+    "allowChangeSubscription": false,
+    "dataExploration": false,
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": "",
+    "filters": "./filters.json",
+    "hierarchies": [
+    ],
+    "layout": "./layout.json",
+    "oid": "641c5035b014cb00340a3c24",
+    "script": "./script.js",
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "style": {
+        "palette": {
+            "colors": [
+                "#00cee6",
+                "#9b9bd7",
+                "#6EDA55",
+                "#fc7570",
+                "#fbb755",
+                "#218A8C"
+            ],
+            "name": "Vivid"
+        }
+    },
+    "subscription": {
+        "active": false,
+        "context": {
+            "dashboardid": "641c5035b014cb00340a3c24"
+        },
+        "emailSettings": {
+            "isEmail": true,
+            "isPdf": false
+        },
+        "executionPerDay": 1,
+        "isDataChange": true,
+        "reportType": {
+            "inline": true
+        },
+        "schedule": "* * * * * *",
+        "startAt": "2023-03-23",
+        "subscribe": false,
+        "timezone": 240,
+        "type": "onUpdate",
+        "tzName": "America/New_York"
+    },
+    "title": "Quality Control",
+    "widgets": [
+        "./widgets/641c50c8b014cb00340a3c26/widget.json",
+        "./widgets/641c5150b014cb00340a3c2f/widget.json",
+        "./widgets/641c5162b014cb00340a3c31/widget.json",
+        "./widgets/641c51a9b014cb00340a3c35/widget.json",
+        "./widgets/641c532bb014cb00340a3c37/widget.json",
+        "./widgets/641c5380b014cb00340a3c3b/widget.json",
+        "./widgets/641c53b3b014cb00340a3c3d/widget.json",
+        "./widgets/641c53e5b014cb00340a3c41/widget.json",
+        "./widgets/641c548eb014cb00340a3c4d/widget.json",
+        "./widgets/641c5955b014cb00340a3c4f/widget.json",
+        "./widgets/641c5998b014cb00340a3c51/widget.json",
+        "./widgets/641c5a57b014cb00340a3c59/widget.json",
+        "./widgets/641c5b66b014cb00340a3c5d/widget.json",
+        "./widgets/641c5bd4b014cb00340a3c61/widget.json",
+        "./widgets/65c3ba64c70db000326eca80/widget.json"
+    ]
+}

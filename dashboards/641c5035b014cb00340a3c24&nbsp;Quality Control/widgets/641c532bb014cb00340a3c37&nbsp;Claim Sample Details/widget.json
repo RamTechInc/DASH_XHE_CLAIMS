@@ -1,0 +1,333 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "641c5035b014cb00340a3c24",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Claim.Claim ID]",
+                            "index": 0
+                        },
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "decimals": "auto",
+                                "number": {
+                                    "separated": false
+                                }
+                            }
+                        },
+                        "instanceid": "07D7F-6483-70",
+                        "jaql": {
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim ID"
+                        }
+                    },
+                    {
+                        "field": {
+                            "id": "[Claim Plan Information.Plan Name]",
+                            "index": 1
+                        },
+                        "format": {
+                        },
+                        "instanceid": "A107A-66E4-2F",
+                        "jaql": {
+                            "column": "Plan Name",
+                            "datatype": "text",
+                            "dim": "[Claim Plan Information.Plan Name]",
+                            "merged": true,
+                            "table": "Claim Plan Information",
+                            "title": "Plan Name"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "36D83-B1AB-50",
+                        "jaql": {
+                            "column": "Claim Type",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim Type]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Type"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "0EC70-B04C-10",
+                        "jaql": {
+                            "column": "Claim Form",
+                            "datatype": "text",
+                            "dim": "[Claim.Claim Form]",
+                            "merged": true,
+                            "table": "Claim",
+                            "title": "Claim Form"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "91AD5-BC3E-A1",
+                        "jaql": {
+                            "column": "Current Status",
+                            "datatype": "text",
+                            "dim": "[Claim Status.Current Status]",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Current Status"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "MM/dd/yyyy",
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "FFEB0-4A72-CC",
+                        "jaql": {
+                            "column": "Current Status Date",
+                            "datatype": "datetime",
+                            "dim": "[Claim Status.Current Status Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Current Status Date"
+                        }
+                    },
+                    {
+                        "format": {
+                        },
+                        "instanceid": "34B7B-5C48-1A",
+                        "jaql": {
+                            "column": "Processor ID",
+                            "datatype": "text",
+                            "dim": "[Claim Status.Processor ID]",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Processor ID"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "CCD35-4E07-C0",
+                        "jaql": {
+                            "column": "Claim Billed Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Billed Amount]",
+                            "table": "Claim Amount",
+                            "title": "Claim Billed Amount"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "22728-6AFB-6B",
+                        "jaql": {
+                            "column": "Claim Allowed Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Allowed Amount]",
+                            "table": "Claim Amount",
+                            "title": "Claim Allowed Amount"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 2
+                            }
+                        },
+                        "instanceid": "23A07-1E00-A1",
+                        "jaql": {
+                            "column": "Claim Paid Amount",
+                            "datatype": "numeric",
+                            "dim": "[Claim Amount.Claim Paid Amount]",
+                            "table": "Claim Amount",
+                            "title": "Claim Paid Amount"
+                        }
+                    }
+                ],
+                "name": "Columns"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "641c532bb014cb00340a3c37",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "designPanelConfig": {
+            "selectedItem": -1,
+            "selectedItemInner": -1,
+            "shouldRender": true
+        },
+        "selector": false,
+        "shouldRefreshData": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "shownErrorAboutCustomFormats": false,
+    "style": {
+        "enablePresets": true,
+        "enableToolbar": true,
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "claim_id",
+                    "plural": "Claim ID",
+                    "singular": "Claim ID",
+                    "title": "Claim ID"
+                },
+                {
+                    "id": "plan_name",
+                    "plural": "Plan Name",
+                    "singular": "Plan Name",
+                    "title": "Plan Name"
+                },
+                {
+                    "id": "claim_type",
+                    "plural": "Claim Type",
+                    "singular": "Claim Type",
+                    "title": "Claim Type"
+                },
+                {
+                    "id": "claim_form",
+                    "plural": "Claim Form",
+                    "singular": "Claim Form",
+                    "title": "Claim Form"
+                },
+                {
+                    "id": "current_status",
+                    "plural": "Current Status",
+                    "singular": "Current Status",
+                    "title": "Current Status"
+                },
+                {
+                    "id": "current_status_date",
+                    "plural": "Current Status Date",
+                    "singular": "Current Status Date",
+                    "title": "Current Status Date"
+                },
+                {
+                    "id": "processor_id",
+                    "plural": "Processor ID",
+                    "singular": "Processor ID",
+                    "title": "Processor ID"
+                },
+                {
+                    "id": "claim_billed_amount",
+                    "plural": "Claim Billed Amount",
+                    "singular": "Claim Billed Amount",
+                    "title": "Claim Billed Amount"
+                },
+                {
+                    "id": "claim_allowed_amount",
+                    "plural": "Claim Allowed Amount",
+                    "singular": "Claim Allowed Amount",
+                    "title": "Claim Allowed Amount"
+                },
+                {
+                    "id": "claim_paid_amount",
+                    "plural": "Claim Paid Amount",
+                    "singular": "Claim Paid Amount",
+                    "title": "Claim Paid Amount"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        }
+    },
+    "subtype": "Advanced Table With Aggregation",
+    "title": "Claim Sample Details",
+    "type": "Advanced Table With Aggregation"
+}

@@ -1,0 +1,378 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "641c5035b014cb00340a3c24",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "LocalHost/Claims",
+        "id": "aLOCALHOST_aCLAIMS",
+        "title": "Claims"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "displayDashboardsPane": false,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "members": {
+                                "AKESSLER": {
+                                    "color": "#269fa1",
+                                    "sortData": "AKESSLER",
+                                    "title": "AKESSLER"
+                                },
+                                "ATULIO  ": {
+                                    "color": "#fbb755",
+                                    "sortData": "ATULIO  ",
+                                    "title": "ATULIO  "
+                                },
+                                "BEICHELB": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "BEICHELB",
+                                    "title": "BEICHELB"
+                                },
+                                "CFLOOD  ": {
+                                    "color": "#269fa1",
+                                    "sortData": "CFLOOD  ",
+                                    "title": "CFLOOD  "
+                                },
+                                "CLMTEST ": {
+                                    "color": "#ff8a86",
+                                    "sortData": "CLMTEST ",
+                                    "title": "CLMTEST "
+                                },
+                                "CLONGCOY": {
+                                    "color": "#7efb62",
+                                    "sortData": "CLONGCOY",
+                                    "title": "CLONGCOY"
+                                },
+                                "CONVERT ": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "CONVERT ",
+                                    "title": "CONVERT "
+                                },
+                                "CVESELY ": {
+                                    "color": "#00cee6",
+                                    "sortData": "CVESELY ",
+                                    "title": "CVESELY "
+                                },
+                                "DCOTTREL": {
+                                    "color": "#6eda55",
+                                    "sortData": "DCOTTREL",
+                                    "title": "DCOTTREL"
+                                },
+                                "EDI837D ": {
+                                    "color": "#06e5ff",
+                                    "sortData": "EDI837D ",
+                                    "title": "EDI837D "
+                                },
+                                "EDI837I ": {
+                                    "color": "#ffc26a",
+                                    "sortData": "EDI837I ",
+                                    "title": "EDI837I "
+                                },
+                                "EDI837P ": {
+                                    "color": "#6EDA55",
+                                    "sortData": "EDI837P ",
+                                    "title": "EDI837P "
+                                },
+                                "JCOSLETT": {
+                                    "color": "#fc7570",
+                                    "sortData": "JCOSLETT",
+                                    "title": "JCOSLETT"
+                                },
+                                "JTULIO  ": {
+                                    "color": "#218a8c",
+                                    "sortData": "JTULIO  ",
+                                    "title": "JTULIO  "
+                                },
+                                "KHEINEMA": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "KHEINEMA",
+                                    "title": "KHEINEMA"
+                                },
+                                "KRICHARD": {
+                                    "color": "#06e5ff",
+                                    "sortData": "KRICHARD",
+                                    "title": "KRICHARD"
+                                },
+                                "LEVANS  ": {
+                                    "color": "#00cee6",
+                                    "sortData": "LEVANS  ",
+                                    "title": "LEVANS  "
+                                },
+                                "LGENESKY": {
+                                    "color": "#7efb62",
+                                    "sortData": "LGENESKY",
+                                    "title": "LGENESKY"
+                                },
+                                "LWINTER ": {
+                                    "color": "#ffc26a",
+                                    "sortData": "LWINTER ",
+                                    "title": "LWINTER "
+                                },
+                                "MCSB265A": {
+                                    "color": "#00cee6",
+                                    "sortData": "MCSB265A",
+                                    "title": "MCSB265A"
+                                },
+                                "MCSB281 ": {
+                                    "color": "#218A8C",
+                                    "sortData": "MCSB281 ",
+                                    "title": "MCSB281 "
+                                },
+                                "MCSB436 ": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "MCSB436 ",
+                                    "title": "MCSB436 "
+                                },
+                                "MCSO488 ": {
+                                    "color": "#fc7570",
+                                    "sortData": "MCSO488 ",
+                                    "title": "MCSO488 "
+                                },
+                                "OCR837D ": {
+                                    "color": "#fc7570",
+                                    "sortData": "OCR837D ",
+                                    "title": "OCR837D "
+                                },
+                                "OCR837I ": {
+                                    "color": "#6eda55",
+                                    "sortData": "OCR837I ",
+                                    "title": "OCR837I "
+                                },
+                                "OCR837P ": {
+                                    "color": "#b2b2f7",
+                                    "sortData": "OCR837P ",
+                                    "title": "OCR837P "
+                                },
+                                "RMCGOWAN": {
+                                    "color": "#ff8a86",
+                                    "sortData": "RMCGOWAN",
+                                    "title": "RMCGOWAN"
+                                },
+                                "TFETTERM": {
+                                    "color": "#fbb755",
+                                    "sortData": "TFETTERM",
+                                    "title": "TFETTERM"
+                                }
+                            }
+                        },
+                        "instanceid": "74322-FBA0-7D",
+                        "jaql": {
+                            "column": "Processor ID",
+                            "datatype": "text",
+                            "dim": "[Claim Status.Processor ID]",
+                            "merged": true,
+                            "table": "Claim Status",
+                            "title": "Processor ID"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "6EFBA-79EC-64",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Claim ID",
+                            "datatype": "numeric",
+                            "dim": "[Claim.Claim ID]",
+                            "merged": true,
+                            "sort": "desc",
+                            "table": "Claim",
+                            "title": "# of unique Claim ID"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "641c5998b014cb00340a3c51",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillToAnywhere": true,
+        "selector": true,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "script": "./script.js",
+    "style": {
+        "automaticHeight": false,
+        "convolution": {
+            "enabled": false,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "labels": {
+            "categories": true,
+            "color": "red",
+            "decimals": false,
+            "enabled": true,
+            "fontFamily": "Open Sans",
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": false,
+            "position": "bottom"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "processor_id",
+                    "plural": "Processor ID",
+                    "singular": "Processor ID",
+                    "title": "Processor ID"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": false,
+                "stacked": false,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "pie/classic",
+    "title": "Volume by Processor",
+    "type": "chart/pie"
+}

@@ -1,0 +1,59 @@
+{
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "641c5035b014cb00340a3c24",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aClaims",
+        "fullname": "localhost/Claims",
+        "id": "localhost_aClaims",
+        "live": false,
+        "title": "Claims"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "641c5162b014cb00340a3c31",
+    "options": {
+        "dashboardFiltersMode": "filter",
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "hideFromWidgetList": true,
+        "selector": false,
+        "supportsHierarchies": false,
+        "toolbarButton": {
+            "css": "add-rich-text",
+            "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "style": {
+        "content": {
+            "bgColor": "#00adc1",
+            "html": "<font size=\"5\" color=\"#000000\">Claims Quality Sample</font>",
+            "textAlign": "center",
+            "vAlign": "valign-middle"
+        }
+    },
+    "subtype": "richtexteditor",
+    "title": "RICHTEXT_MAIN.TITLE",
+    "type": "richtexteditor"
+}
