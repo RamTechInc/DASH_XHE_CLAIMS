@@ -13,6 +13,7 @@
         "title": "Claims"
     },
     "desc": null,
+    "lastOpened": null,
     "metadata": {
         "ignore": {
             "all": false,
