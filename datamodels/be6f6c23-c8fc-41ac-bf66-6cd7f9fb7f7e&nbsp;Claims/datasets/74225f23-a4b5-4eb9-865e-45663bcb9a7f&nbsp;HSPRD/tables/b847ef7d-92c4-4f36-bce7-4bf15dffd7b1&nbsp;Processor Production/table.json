@@ -1,0 +1,77 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "b4cea0cd-1b98-4f7f-825d-3621f0c2761e",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "Allowed Status Date",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Allowed Status Date",
+            "oid": "90ddeddf-dab5-43b6-b24c-0cdde279f706",
+            "precision": 26,
+            "scale": 0,
+            "size": 29,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "Allowed Processor ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Allowed Processor ID",
+            "oid": "24b3d613-66bf-454a-a967-ccd505871a38",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "Processor Name",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Processor Name",
+            "oid": "1cd671e0-f981-46b3-a519-164a57b69a45",
+            "precision": 50,
+            "scale": 0,
+            "size": 50,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\r\nCEV.CEV_CLM_ID AS CLAIM_ID,\r\nCEV.CEV_ADD_TS AS \"Allowed Status Date\",\r\nCEV.CEV_USER_ID\tAS \"Allowed Processor ID\",\r\nINITCAP(OPR.OPR_NAME) AS \"Processor Name\"\r\n\r\nFROM HS.CEV_CLM_EV AS CEV\r\nJOIN HS.CDT_CLM_DT       AS CDT ON CEV.CEV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nJOIN HS.OPR_OPERATOR\tAS OPR ON CEV.CEV_USER_ID = OPR.OPR_ID AND OPR.OPR_DEL_TS IS NULL\r\n\r\nWHERE CEV.CEV_DEL_TS IS NULL\r\nAND CEV.CEV_TYPE = 'ALW'\r\n\r\nWITH UR\r\n"
+    },
+    "dataset": "74225f23-a4b5-4eb9-865e-45663bcb9a7f",
+    "hidden": false,
+    "id": "tq_H6tf4kbM9",
+    "isMaterialized": false,
+    "name": "Processor Production",
+    "oid": "b847ef7d-92c4-4f36-bce7-4bf15dffd7b1",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "b4cea0cd-1b98-4f7f-825d-3621f0c2761e",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

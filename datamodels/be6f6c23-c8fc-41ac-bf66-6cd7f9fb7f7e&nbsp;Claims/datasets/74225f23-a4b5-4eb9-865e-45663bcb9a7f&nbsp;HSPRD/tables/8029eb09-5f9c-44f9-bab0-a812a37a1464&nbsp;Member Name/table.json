@@ -1,0 +1,54 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "HSN",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "HSN",
+            "oid": "8b01d3a4-acac-4981-bc94-2fc430b29a3a",
+            "precision": 30,
+            "scale": 0,
+            "size": 30,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "MEMBER_NAME",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MEMBER_NAME",
+            "oid": "b50a0c8e-c05d-443f-acdd-689355a8251d",
+            "precision": 61,
+            "scale": 0,
+            "size": 61,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\r\nHSN.CID_ID\t\tAS HSN,\r\nINITCAP(CSO.CSO_FIRST_NM) || ' ' || INITCAP(CSO.CSO_LAST_NM)\tAS MEMBER_NAME\r\n\r\nFROM HS.CSO_CUS_ORG\tAS CSO\r\nJOIN HS.CID_CUST_ID\tAS HSN ON CSO.CSO_CUS_ID = HSN.CID_CUS_ID AND HSN.CID_DEL_TS IS NULL AND HSN.CID_TYPE = 'HSN'\r\n\r\nWHERE CSO.CSO_DEL_TS IS NULL\r\nWITH UR"
+    },
+    "dataset": "74225f23-a4b5-4eb9-865e-45663bcb9a7f",
+    "hidden": false,
+    "id": "tq_0iIQxbXyY",
+    "isMaterialized": false,
+    "name": "Member Name",
+    "oid": "8029eb09-5f9c-44f9-bab0-a812a37a1464",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "b50a0c8e-c05d-443f-acdd-689355a8251d",
+                "displayName": "Member Name",
+                "name": "Member Name",
+                "oid": null
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "base"
+}

@@ -1,0 +1,362 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "22581a6b-83f9-4590-8195-b0aa43c147d8",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "SUBMITTING_PROV_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SUBMITTING_PROV_ID",
+            "oid": "adab8da7-0461-4f67-ae44-bccf7a7aabd5",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "SUBMITTING_PROV_NETWORK_STATUS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SUBMITTING_PROV_NETWORK_STATUS",
+            "oid": "ee31f8c7-82c1-4357-b838-82aa711b91b2",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "SUBMITTING_PROV_TIN",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SUBMITTING_PROV_TIN",
+            "oid": "2b9d0633-d621-4d49-ab00-d05be98fdef3",
+            "precision": 30,
+            "scale": 0,
+            "size": 30,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "RENDERING_PROV_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "RENDERING_PROV_ID",
+            "oid": "81fa0459-d334-4c44-83bf-270d8eaac378",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "RENDERING_PROV_NETWORK_STATUS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "RENDERING_PROV_NETWORK_STATUS",
+            "oid": "0df12c1b-5a49-4f3b-9b7a-c3aecdda513e",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "PCP_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PCP_ID",
+            "oid": "49545fc2-8ec7-47e2-a57e-00695e211c3e",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "PCP_NETWORK_STATUS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "PCP_NETWORK_STATUS",
+            "oid": "d4d9f2a4-63ed-4c4b-a7cd-3523d95b6e8e",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "BILLING_PROV_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "BILLING_PROV_ID",
+            "oid": "24fe7c9c-8aaa-42d4-ae5f-c5e5ef4ebb43",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "BILLING_PROV_NETWORK_STATUS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "BILLING_PROV_NETWORK_STATUS",
+            "oid": "129a9d75-5d70-4de8-be70-15c4d3ced950",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "REFERRING_PROV_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "REFERRING_PROV_ID",
+            "oid": "649495f8-cc90-449d-b00a-dcd48b9cb289",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "REFERRING_PROV_NETWORK_STATUS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "REFERRING_PROV_NETWORK_STATUS",
+            "oid": "a087598e-cfd4-492c-a80b-0a71232b6696",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "SERVICING_PROV_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SERVICING_PROV_ID",
+            "oid": "2829e511-07dd-4cf4-be8c-462414a111ee",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "SERVICING_PROV_NETWORK_STATUS",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SERVICING_PROV_NETWORK_STATUS",
+            "oid": "37733f68-2ef7-4791-9107-d85d86086c9a",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "WITH PVCR AS (SELECT\r\nPVCR_PRV_ID,\r\nPVCR_EFF_DT,\r\nNVL(PVCR_EXP_DT,'12/31/9999') AS EXP_DT,\r\nPVCR_PLN_SHT_NM,\r\nPVCR_PRD_SHT_NM,\r\nPVCR_PVC_TYPE,\r\nPVCR_RULE_VAL_C\r\nFROM HS.PVCR_PVC_RULE \r\nWHERE PVCR_DEL_TS IS NULL \r\nAND PVCR_RULE_QUAL = 'TS' \r\nWITH UR),\r\n\r\nCPV AS (SELECT\r\nCPV_CLM_ID,\r\nCPV_PRV_ID,\r\nCPV_ENT_CD\r\nFROM HS.CPV_CLM_PRV\r\nWHERE CPV_ENT_CD IN ('SB','82','RN','P3','87','DN','77')\r\nWITH UR)\r\n\r\nSELECT DISTINCT\r\nCLM.CSV_CLM_ID AS CLAIM_ID,\r\nSUB.CPV_PRV_ID\tAS SUBMITTING_PROV_ID,\r\nSUBN.PVCR_RULE_VAL_C\tAS SUBMITTING_PROV_NETWORK_STATUS,\r\nSUBTIN.PVI_ID AS SUBMITTING_PROV_TIN,\r\nREN.CPV_PRV_ID\tAS RENDERING_PROV_ID,\r\nRENN.PVCR_RULE_VAL_C\tAS RENDERING_PROV_NETWORK_STATUS,\r\nPCP.CPV_PRV_ID\tAS PCP_ID,\r\nPCPN.PVCR_RULE_VAL_C\tAS PCP_NETWORK_STATUS,\r\nBIL.CPV_PRV_ID\tAS BILLING_PROV_ID,\r\nBILN.PVCR_RULE_VAL_C\tAS BILLING_PROV_NETWORK_STATUS,\r\nREF.CPV_PRV_ID\tAS REFERRING_PROV_ID,\r\nREFN.PVCR_RULE_VAL_C\tAS REFERRING_PROV_NETWORK_STATUS,\r\nSER.CPV_PRV_ID\tAS SERVICING_PROV_ID,\r\nSERN.PVCR_RULE_VAL_C\tAS SERVICING_PROV_NETWORK_STATUS\r\n\r\nFROM HS.CSV_CLM_SRV         AS CLM\r\nJOIN HS.CDT_CLM_DT       AS RCP ON CLM.CSV_CLM_ID = RCP.CDT_CLM_ID AND RCP.CDT_DT_QUAL = '050' AND RCP.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nJOIN HS.CDT_CLM_DT\t\tAS CDT ON CLM.CSV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '150'\r\nLEFT JOIN HS.PPT_PRD_PLAN_TIER AS PPT ON  CLM.CSV_PPT_ID = PPT.PPT_ID\r\nLEFT JOIN CPV\tAS SUB ON CLM.CSV_CLM_ID = SUB.CPV_CLM_ID AND SUB.CPV_ENT_CD = 'SB'\r\nLEFT JOIN PVCR AS SUBN ON SUB.CPV_PRV_ID = SUBN.PVCR_PRV_ID \r\n                                    AND CDT.CDT_DT BETWEEN SUBN.PVCR_EFF_DT AND SUBN.EXP_DT\r\n                                    AND SUBN.PVCR_PLN_SHT_NM = PPT.PPT_PLN_SHT_NM\r\n                                    AND SUBN.PVCR_PRD_SHT_NM = PPT.PPT_PRD_SHT_NM\r\n                                    AND SUBN.PVCR_PVC_TYPE = NVL(CLM.CSV_PVC_TYPE,SUBN.PVCR_PVC_TYPE)\r\nLEFT JOIN HS.V_TIN_ON_CLAIM AS SUBTIN ON SUB.CPV_PRV_ID = SUBTIN.PVI_PRV_ID AND CDT.CDT_DT BETWEEN SUBTIN.RELATION_START_DT_1 AND NVL(SUBTIN.RELATION_END_DT_1,'12/31/9999') AND CDT.CDT_DT BETWEEN SUBTIN.PVI_EFF_DT AND NVL(SUBTIN.PVI_EXP_DT,'12/31/9999')                               \r\nLEFT JOIN CPV\tAS REN ON CLM.CSV_CLM_ID = REN.CPV_CLM_ID AND REN.CPV_ENT_CD IN ('82','RN')\r\nLEFT JOIN PVCR AS RENN ON REN.CPV_PRV_ID = RENN.PVCR_PRV_ID \r\n                                    AND CDT.CDT_DT BETWEEN RENN.PVCR_EFF_DT AND RENN.EXP_DT \r\n                                    AND RENN.PVCR_PLN_SHT_NM = PPT.PPT_PLN_SHT_NM\r\n                                    AND RENN.PVCR_PRD_SHT_NM = PPT.PPT_PRD_SHT_NM\r\n                                    AND RENN.PVCR_PVC_TYPE = NVL(CLM.CSV_PVC_TYPE,RENN.PVCR_PVC_TYPE)\r\nLEFT JOIN CPV\tAS PCP ON CLM.CSV_CLM_ID = PCP.CPV_CLM_ID AND PCP.CPV_ENT_CD = 'P3'\r\nLEFT JOIN PVCR AS PCPN ON PCP.CPV_PRV_ID = PCPN.PVCR_PRV_ID \r\n                                    AND CDT.CDT_DT BETWEEN PCPN.PVCR_EFF_DT AND PCPN.EXP_DT \r\n                                    AND PCPN.PVCR_PLN_SHT_NM = PPT.PPT_PLN_SHT_NM\r\n                                    AND PCPN.PVCR_PRD_SHT_NM = PPT.PPT_PRD_SHT_NM\r\n                                    AND PCPN.PVCR_PVC_TYPE = NVL(CLM.CSV_PVC_TYPE,PCPN.PVCR_PVC_TYPE)\r\nLEFT JOIN CPV\tAS BIL ON CLM.CSV_CLM_ID = BIL.CPV_CLM_ID AND BIL.CPV_ENT_CD = '87'\r\nLEFT JOIN PVCR AS BILN ON BIL.CPV_PRV_ID = BILN.PVCR_PRV_ID \r\n                                    AND CDT.CDT_DT BETWEEN BILN.PVCR_EFF_DT AND BILN.EXP_DT \r\n                                    AND BILN.PVCR_PLN_SHT_NM = PPT.PPT_PLN_SHT_NM\r\n                                    AND BILN.PVCR_PRD_SHT_NM = PPT.PPT_PRD_SHT_NM\r\n                                    AND BILN.PVCR_PVC_TYPE = NVL(CLM.CSV_PVC_TYPE,BILN.PVCR_PVC_TYPE)\r\nLEFT JOIN CPV\tAS REF ON CLM.CSV_CLM_ID = REF.CPV_CLM_ID AND REF.CPV_ENT_CD = 'DN'\r\nLEFT JOIN PVCR AS REFN ON REF.CPV_PRV_ID = REFN.PVCR_PRV_ID \r\n                                    AND CDT.CDT_DT BETWEEN REFN.PVCR_EFF_DT AND REFN.EXP_DT \r\n                                    AND REFN.PVCR_PLN_SHT_NM = PPT.PPT_PLN_SHT_NM\r\n                                    AND REFN.PVCR_PRD_SHT_NM = PPT.PPT_PRD_SHT_NM\r\n                                    AND REFN.PVCR_PVC_TYPE = NVL(CLM.CSV_PVC_TYPE,REFN.PVCR_PVC_TYPE)\r\nLEFT JOIN CPV\tAS SER ON CLM.CSV_CLM_ID = SER.CPV_CLM_ID AND SER.CPV_ENT_CD = '77'\r\nLEFT JOIN PVCR AS SERN ON SER.CPV_PRV_ID = SERN.PVCR_PRV_ID \r\n                                    AND CDT.CDT_DT BETWEEN SERN.PVCR_EFF_DT AND SERN.EXP_DT\r\n                                    AND SERN.PVCR_PLN_SHT_NM = PPT.PPT_PLN_SHT_NM\r\n                                    AND SERN.PVCR_PRD_SHT_NM = PPT.PPT_PRD_SHT_NM\r\n                                    AND SERN.PVCR_PVC_TYPE = NVL(CLM.CSV_PVC_TYPE,SERN.PVCR_PVC_TYPE)\r\nWITH UR"
+    },
+    "dataset": "74225f23-a4b5-4eb9-865e-45663bcb9a7f",
+    "hidden": false,
+    "id": "tq_eywTEY1Ft",
+    "isMaterialized": false,
+    "name": "Claim Providers",
+    "oid": "b35c7c4a-9592-4928-964d-0676a1b10834",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "adab8da7-0461-4f67-ae44-bccf7a7aabd5",
+                "displayName": "Submitting Provider ID",
+                "name": "Submitting Provider ID",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "81fa0459-d334-4c44-83bf-270d8eaac378",
+                "displayName": "Rendering Provider ID",
+                "name": "Rendering Provider ID",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "49545fc2-8ec7-47e2-a57e-00695e211c3e",
+                "displayName": "PCP ID",
+                "name": "PCP ID",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "24fe7c9c-8aaa-42d4-ae5f-c5e5ef4ebb43",
+                "displayName": "Billing Provider ID",
+                "name": "Billing Provider ID",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "649495f8-cc90-449d-b00a-dcd48b9cb289",
+                "displayName": "Referring Provider ID",
+                "name": "Referring Provider ID",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "2829e511-07dd-4cf4-be8c-462414a111ee",
+                "displayName": "Servicing Provider ID",
+                "name": "Servicing Provider ID",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "22581a6b-83f9-4590-8195-b0aa43c147d8",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        },
+        {
+            "arguments": {
+                "column": "ee31f8c7-82c1-4357-b838-82aa711b91b2",
+                "displayName": "Submitting Provider Network Status",
+                "name": "Submitting Provider Network Status",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "0df12c1b-5a49-4f3b-9b7a-c3aecdda513e",
+                "displayName": "Rendering Provider Network Status",
+                "name": "Rendering Provider Network Status",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "d4d9f2a4-63ed-4c4b-a7cd-3523d95b6e8e",
+                "displayName": "PCP Network Status",
+                "name": "PCP Network Status",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "129a9d75-5d70-4de8-be70-15c4d3ced950",
+                "displayName": "Billing Provider Network Status",
+                "name": "Billing Provider Network Status",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "a087598e-cfd4-492c-a80b-0a71232b6696",
+                "displayName": "Referring Provider Network Status",
+                "name": "Referring Provider Network Status",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "37733f68-2ef7-4791-9107-d85d86086c9a",
+                "displayName": "Servicing Provider Network Status",
+                "name": "Servicing Provider Network Status",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "adab8da7-0461-4f67-ae44-bccf7a7aabd5",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        },
+        {
+            "arguments": {
+                "column": "81fa0459-d334-4c44-83bf-270d8eaac378",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        },
+        {
+            "arguments": {
+                "column": "49545fc2-8ec7-47e2-a57e-00695e211c3e",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        },
+        {
+            "arguments": {
+                "column": "24fe7c9c-8aaa-42d4-ae5f-c5e5ef4ebb43",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        },
+        {
+            "arguments": {
+                "column": "649495f8-cc90-449d-b00a-dcd48b9cb289",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        },
+        {
+            "arguments": {
+                "column": "2829e511-07dd-4cf4-be8c-462414a111ee",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        },
+        {
+            "arguments": {
+                "column": "2b9d0633-d621-4d49-ab00-d05be98fdef3",
+                "displayName": "Submitting Provider TIN",
+                "name": "Submitting Provider TIN",
+                "oid": null
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "base"
+}

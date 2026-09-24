@@ -1,0 +1,83 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "df208de1-a210-4a62-b79e-757ced0d6671",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "MSG_CD",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MSG_CD",
+            "oid": "51b56a4b-a433-47d8-9b12-fd981ba822ea",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "MSG_DESC",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "MSG_DESC",
+            "oid": "0f53d170-1f5c-4390-aed7-82d577c614e1",
+            "precision": 254,
+            "scale": 0,
+            "size": 254,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \r\nCLAIM.CLM_ID AS CLAIM_ID,\r\nCERRMS.CMSG_ID AS MSG_CD,\r\nINITCAP(CERRMS.CMSG_DESC) AS MSG_DESC\r\n\r\nFROM        HS.CLM_CLAIM\t\tAS CLAIM\r\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLAIM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN\tHS.CER_CLM_ERROR\tAS CLERR ON CLAIM.CLM_ID = CLERR.CER_CLM_ID AND CLERR.CER_OVRID_CD IS NULL\r\nLEFT JOIN\tHS.CMSG_CLM_MSG\tAS CERRMS ON CLERR.CER_CD  = CERRMS.CMSG_ID \r\n\r\nWITH UR"
+    },
+    "dataset": "74225f23-a4b5-4eb9-865e-45663bcb9a7f",
+    "hidden": false,
+    "id": "tq_sWu80Z61P",
+    "isMaterialized": false,
+    "name": "Claim Messages",
+    "oid": "7b29243d-0ce3-4b28-869b-7208050f7427",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "51b56a4b-a433-47d8-9b12-fd981ba822ea",
+                "displayName": "Message Code",
+                "name": "Message Code",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "0f53d170-1f5c-4390-aed7-82d577c614e1",
+                "displayName": "Message",
+                "name": "Message",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "df208de1-a210-4a62-b79e-757ced0d6671",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

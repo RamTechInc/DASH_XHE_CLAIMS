@@ -1,0 +1,95 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "691739cb-426a-43bb-b591-439933005722",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "RECEIPT_DT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "RECEIPT_DT",
+            "oid": "cb526047-adb7-4866-a3d6-661e2904dd7f",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": true,
+            "id": "FIRST_DAY_RCPT_DT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "FIRST_DAY_RCPT_DT",
+            "oid": "23af9339-9227-42b2-9974-620823c4f079",
+            "precision": 21,
+            "scale": 0,
+            "size": 21,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "ADJ_RECEIPT_DT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "ADJ_RECEIPT_DT",
+            "oid": "2b502c84-bd77-41d9-987a-a3c8d29b86bb",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \r\nCDT.CDT_CLM_ID AS CLAIM_ID,\r\nCDT.CDT_DT AS RECEIPT_DT,\r\nFIRST_DAY(CDT.CDT_DT) || CLM.CLM_MBR_BASE_PPT_ID AS FIRST_DAY_RCPT_DT,\r\nCASE \r\n\tWHEN DAYOFWEEK(CDT.CDT_DT) = '7' THEN ADD_DAYS(CDT.CDT_DT,2) \r\n\tWHEN DAYOFWEEK(CDT.CDT_DT) = '1' THEN ADD_DAYS(CDT.CDT_DT,1)\r\n\tELSE CDT.CDT_DT\r\nEND\t\t\t\t\t\tAS ADJ_RECEIPT_DT\r\n\r\nFROM HS.CDT_CLM_DT \tAS CDT\r\nJOIN\tHS.CLM_CLAIM\tAS CLM ON CDT.CDT_CLM_ID = CLM.CLM_ID\r\nWHERE CDT.CDT_DT_QUAL = '050' \r\nAND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\n\r\nWITH UR"
+    },
+    "dataset": "74225f23-a4b5-4eb9-865e-45663bcb9a7f",
+    "hidden": false,
+    "id": "tq_MSqe0D8b9",
+    "isMaterialized": false,
+    "name": "Receipt Date",
+    "oid": "f2ea245c-2c36-4899-9422-cdec24e318a4",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "cb526047-adb7-4866-a3d6-661e2904dd7f",
+                "displayName": "Receipt Date",
+                "name": "Receipt Date",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "2b502c84-bd77-41d9-987a-a3c8d29b86bb",
+                "displayName": "Adjusted Receipt Date",
+                "name": "Adjusted Receipt Date",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "691739cb-426a-43bb-b591-439933005722",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

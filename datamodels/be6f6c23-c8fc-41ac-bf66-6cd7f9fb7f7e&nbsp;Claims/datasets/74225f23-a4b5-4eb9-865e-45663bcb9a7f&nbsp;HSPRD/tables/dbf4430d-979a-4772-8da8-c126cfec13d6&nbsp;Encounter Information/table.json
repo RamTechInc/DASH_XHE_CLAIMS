@@ -1,0 +1,101 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "56cdd578-dac4-48e3-a45a-e4fbea3ecab3",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "Encounter Category of Service",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter Category of Service",
+            "oid": "ec1453eb-f4c5-4a02-9c03-a0d62f35db77",
+            "precision": 30,
+            "scale": 0,
+            "size": 30,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "Encounter Provider Specialty",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter Provider Specialty",
+            "oid": "051c3953-715d-447c-a546-a3271f52ba59",
+            "precision": 30,
+            "scale": 0,
+            "size": 30,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "Encounter Submission Date",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter Submission Date",
+            "oid": "2252aa54-1cf5-4212-8757-4533f18e51a6",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": false,
+            "id": "Encounter Resubmission Date",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter Resubmission Date",
+            "oid": "02146e7c-4a1b-451c-bce5-695ae1818c4c",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        },
+        {
+            "hidden": false,
+            "id": "Encounter Void Date",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Encounter Void Date",
+            "oid": "ba56411b-3d28-4abf-af41-080df01ed8ad",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        }
+    ],
+    "configOptions": {
+        "importQuery": "\r\nSELECT DISTINCT \r\nCLM.CLM_ID AS CLAIM_ID,\r\nNVL(SUBSTRING(SUB.CRS_ADDL_INFO,11,2),SUBSTRING(ORI.CRS_ADDL_INFO,11,2)) AS \"Encounter Category of Service\",\r\nNVL(SUBSTRING(SUB.CRS_ADDL_INFO,13,3),SUBSTRING(ORI.CRS_ADDL_INFO,13,3)) AS \"Encounter Provider Specialty\", \r\nDATE(SUB.CRS_ADD_TS)\tAS \"Encounter Submission Date\",\r\nDATE(RSB.CRS_ADD_TS)\tAS \"Encounter Resubmission Date\",\r\nDATE(VOD.CRS_ADD_TS)\tAS \"Encounter Void Date\"\r\n\r\nFROM \t\tHS.CLM_CLAIM\t\tAS CLM\r\nJOIN        \tHS.CDT_CLM_DT       AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN\t\tHS.CRS_CLM_RESULT\tAS SUB ON CLM.CLM_ID = SUB.CRS_CLM_ID AND SUB.CRS_DEL_TS IS NULL AND SUB.CRS_TYPE IN ('023','024','025','049','050','051') --AND SUB.CRS_ADDL_INFO IN ('998403440','998403441','998403446','998403447','998403442','998403443','998403448','998403449','998403444','998403445')\r\n\t\t\t\t\t\t\t\t\tAND SUB.CRS_ADD_TS = (SELECT CRS_ADD_TS FROM HS.CRS_CLM_RESULT WHERE CRS_DEL_TS IS NULL AND CRS_TYPE IN ('023','024','025','049','050','051') AND SUB.CRS_CLM_ID = CRS_CLM_ID/* AND CRS_ADDL_INFO IN ('998403440','998403441','998403446','998403447','998403442','998403443','998403448','998403449','998403444','998403445')*/ ORDER BY CRS_ADD_TS ASC FETCH FIRST 1 ROWS ONLY WITH UR)\r\nLEFT JOIN \tHS.CRS_CLM_RESULT\tAS RSB ON CLM.CLM_ID = RSB.CRS_CLM_ID AND RSB.CRS_DEL_TS IS NULL AND RSB.CRS_TYPE IN ('095','059') \r\nLEFT JOIN\t\tHS.CRS_CLM_RESULT\tAS VOD ON CLM.CLM_ID = VOD.CRS_CLM_ID AND VOD.CRS_DEL_TS IS NULL AND VOD.CRS_TYPE IN ('026','077') \r\nLEFT JOIN\t\tHS.CRS_CLM_RESULT\tAS ORI ON CLM.CLM_CLM_ID = ORI.CRS_CLM_ID AND ORI.CRS_DEL_TS IS NULL AND ORI.CRS_TYPE IN ('023','024','025','049','050','051')/* AND ORI.CRS_ADDL_INFO IN ('998403440','998403441','998403446','998403447','998403442','998403443','998403448','998403449','998403444','998403445')*/\r\n\t\t\t\t\t\t\t\t\tAND ORI.CRS_ADD_TS = (SELECT CRS_ADD_TS FROM HS.CRS_CLM_RESULT WHERE CRS_DEL_TS IS NULL AND CRS_TYPE IN ('023','024','025','049','050','051') AND ORI.CRS_CLM_ID = CRS_CLM_ID /*AND CRS_ADDL_INFO IN ('998403440','998403441','998403446','998403447','998403442','998403443','998403448','998403449','998403444','998403445')*/ ORDER BY CRS_ADD_TS ASC FETCH FIRST 1 ROWS ONLY WITH UR)\r\n\r\nWITH UR"
+    },
+    "dataset": "74225f23-a4b5-4eb9-865e-45663bcb9a7f",
+    "hidden": false,
+    "id": "tq_4CHnVsgV1",
+    "isMaterialized": false,
+    "name": "Encounter Information",
+    "oid": "dbf4430d-979a-4772-8da8-c126cfec13d6",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "56cdd578-dac4-48e3-a45a-e4fbea3ecab3",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

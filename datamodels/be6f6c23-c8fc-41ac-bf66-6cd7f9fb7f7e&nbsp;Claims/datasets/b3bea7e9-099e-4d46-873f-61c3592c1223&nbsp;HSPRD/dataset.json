@@ -1,0 +1,11 @@
+{
+    "connection": "./connection.json",
+    "database": "HSPRD",
+    "elasticube": "be6f6c23-c8fc-41ac-bf66-6cd7f9fb7f7e",
+    "oid": "b3bea7e9-099e-4d46-873f-61c3592c1223",
+    "schemaName": "HSPRD",
+    "tables": [
+        "./6b80ec67-d0d6-473c-9dca-b4c7822d2cdf/table.json"
+    ],
+    "type": "extract"
+}

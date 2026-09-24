@@ -1,0 +1,231 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "2820c684-ebe2-4d1d-9afb-5eee1292e6ae",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_BILLED_AMT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_BILLED_AMT",
+            "oid": "e55c875b-3922-4d62-9ab0-12cc22cfc168",
+            "precision": 31,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_UCR",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_UCR",
+            "oid": "6e9c9a21-5c57-4e08-8bb4-d7a392d6884a",
+            "precision": 31,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_ALLOWED_AMOUNT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ALLOWED_AMOUNT",
+            "oid": "99b08e86-648f-43a9-ac84-deb074aa9327",
+            "precision": 31,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_DEDUCTIBLE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_DEDUCTIBLE",
+            "oid": "7b200dce-9387-48d2-ac3f-a68375e59e5e",
+            "precision": 31,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_COPAY_COINSURANCE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_COPAY_COINSURANCE",
+            "oid": "9ca92d62-d939-4fa8-a285-9c1ba3ee1529",
+            "precision": 31,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_SEQUESTRATION",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_SEQUESTRATION",
+            "oid": "63f8a0a2-0bed-4e47-b61b-4f24fbae2f7e",
+            "precision": 31,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_CAPITATION",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_CAPITATION",
+            "oid": "5749d733-0790-472f-8a5a-bcfeb883636b",
+            "precision": 31,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_INTEREST_AMT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_INTEREST_AMT",
+            "oid": "74f6d3b0-9ae5-42ab-a4d7-f625b5ca86fc",
+            "precision": 31,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "CLAIM_PAID_AMT",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_PAID_AMT",
+            "oid": "07c805b6-0434-4de8-a837-2833fc56c287",
+            "precision": 31,
+            "scale": 2,
+            "size": 40,
+            "type": 5
+        }
+    ],
+    "configOptions": {
+        "importQuery": "WITH PAID AS (\r\nSELECT DISTINCT\r\nCAJ_CLM_ID,\r\nCAM_AMT,\r\n(CAM_AMT -SUM(CAJ_AMT)) AS PAID_AMT\r\nFROM HS.CAM_CLM_AMT\r\nLEFT JOIN HS.CAJ_CLM_ADJ ON CAM_CLM_ID = CAJ_CLM_ID\r\nWHERE CAM_AMT_QUAL = 'E9'\r\nGROUP BY CAJ_CLM_ID,CAM_AMT\r\nWITH UR),\r\nADJUST AS\r\n(SELECT DISTINCT\r\nCAJ_CLM_ID,\r\nCAJ_AMT,\r\nCAJ_RSN_CD,\r\nCAJ_GRP_CD\r\nFROM HS.CAJ_CLM_ADJ\r\nWHERE CAJ_RSN_CD IN ('UCR','253','CAP')\r\nWITH UR),\r\nCOPAY AS\r\n(SELECT DISTINCT\r\nCAJ_CLM_ID,\r\nSUM(CAJ_AMT) AS COP\r\nFROM HS.CAJ_CLM_ADJ\r\nWHERE CAJ_GRP_CD = 'PR' AND CAJ_RSN_CD IN (SELECT CTY_TYPE FROM HS.CTY_CNSTRNT_TYPE WHERE CTY_DESC NOT LIKE '%DED%' AND CTY_MIN_MAX NOT IN ('M','R','L') WITH UR)\r\nGROUP BY CAJ_CLM_ID\r\nWITH UR),\r\nADDL_UCR AS\r\n(SELECT DISTINCT\r\nCAJ_CLM_ID,\r\nSUM(CAJ_AMT) AS ADDL_UCR\r\nFROM HS.CAJ_CLM_ADJ\r\nWHERE EXISTS (SELECT CSAJ_CSV_CLM_ID FROM HS.CSAJ_CSV_ADJ WHERE CSAJ_CSV_CLM_ID = CAJ_CLM_ID and CSAJ_GRP_CD = CAJ_GRP_CD and CSAJ_RSN_CD = CAJ_RSN_CD AND CSAJ_CMSG_IND = 'Y' and CSAJ_CAT_IND IS NULL)\r\nGROUP BY CAJ_CLM_ID\r\nWITH UR)\r\nSELECT\r\nCLM.CLM_ID AS CLAIM_ID,\r\nSUM(NVL(PAID.CAM_AMT,0)) AS CLAIM_BILLED_AMT,\r\nSUM(NVL(UCR.CAJ_AMT,0)) + SUM(NVL(ADDL_UCR_ADJ.ADDL_UCR,0)) AS CLAIM_UCR,\r\nSUM(NVL(PAID.CAM_AMT,0)) - (SUM(NVL(UCR.CAJ_AMT,0)) + SUM(NVL(ADDL_UCR_ADJ.ADDL_UCR,0))) AS CLAIM_ALLOWED_AMOUNT,\r\nSUM(NVL(DED.CAJ_AMT,0)) AS CLAIM_DEDUCTIBLE,\r\nSUM(NVL(COP.COP,0)) AS CLAIM_COPAY_COINSURANCE,\r\nSUM(NVL(SEQ.CAJ_AMT,0)) AS CLAIM_SEQUESTRATION,\r\nSUM(NVL(CAP.CAJ_AMT,0)) AS CLAIM_CAPITATION,\r\nSUM(NVL(INT.CAM_AMT,0)) AS CLAIM_INTEREST_AMT,\r\nSUM(NVL(PAID.PAID_AMT,0)) AS CLAIM_PAID_AMT\r\nFROM HS.CLM_CLAIM AS CLM\r\nJOIN HS.CDT_CLM_DT AS CDT ON CLM.CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN ADJUST AS UCR ON CLM.CLM_ID = UCR.CAJ_CLM_ID AND UCR.CAJ_GRP_CD = 'NC' AND UCR.CAJ_RSN_CD = 'UCR'\r\nLEFT JOIN HS.CAJ_CLM_ADJ AS DED ON CLM.CLM_ID = DED.CAJ_CLM_ID AND DED.CAJ_RSN_CD IN (SELECT CTY_TYPE FROM HS.CTY_CNSTRNT_TYPE WHERE CTY_DESC LIKE '%DED%' WITH UR)\r\nLEFT JOIN COPAY AS COP ON CLM.CLM_ID = COP.CAJ_CLM_ID\r\nLEFT JOIN ADJUST AS SEQ ON CLM.CLM_ID = SEQ.CAJ_CLM_ID AND SEQ.CAJ_RSN_CD = '253'\r\nLEFT JOIN ADJUST AS CAP ON CLM.CLM_ID = CAP.CAJ_CLM_ID AND CAP.CAJ_RSN_CD = 'CAP'\r\nLEFT JOIN PAID AS PAID ON CLM.CLM_ID = PAID.CAJ_CLM_ID\r\nLEFT JOIN ADDL_UCR AS ADDL_UCR_ADJ ON CLM.CLM_ID = ADDL_UCR_ADJ.CAJ_CLM_ID\r\nLEFT JOIN HS.CAM_CLM_AMT AS INT ON CLM.CLM_ID = INT.CAM_CLM_ID AND INT.CAM_AMT_QUAL IN ('I','004')\r\nGROUP BY CLM.CLM_ID"
+    },
+    "dataset": "b3bea7e9-099e-4d46-873f-61c3592c1223",
+    "hidden": false,
+    "id": "tq_hU55B0hPb",
+    "isMaterialized": false,
+    "name": "Claim Amount",
+    "oid": "6b80ec67-d0d6-473c-9dca-b4c7822d2cdf",
+    "primaryKeyColumnNames": null,
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "e55c875b-3922-4d62-9ab0-12cc22cfc168",
+                "displayName": "Claim Billed Amount",
+                "name": "Claim Billed Amount",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "6e9c9a21-5c57-4e08-8bb4-d7a392d6884a",
+                "displayName": "Claim UCR",
+                "name": "Claim UCR",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "99b08e86-648f-43a9-ac84-deb074aa9327",
+                "displayName": "Claim Allowed Amount",
+                "name": "Claim Allowed Amount",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "7b200dce-9387-48d2-ac3f-a68375e59e5e",
+                "displayName": "Claim Deductible",
+                "name": "Claim Deductible",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "9ca92d62-d939-4fa8-a285-9c1ba3ee1529",
+                "displayName": "Claim Copay/Coinsurance",
+                "name": "Claim Copay/Coinsurance",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "63f8a0a2-0bed-4e47-b61b-4f24fbae2f7e",
+                "displayName": "Claim Sequestration",
+                "name": "Claim Sequestration",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "07c805b6-0434-4de8-a837-2833fc56c287",
+                "displayName": "Claim Paid Amount",
+                "name": "Claim Paid Amount",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "2820c684-ebe2-4d1d-9afb-5eee1292e6ae",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        },
+        {
+            "arguments": {
+                "column": "74f6d3b0-9ae5-42ab-a4d7-f625b5ca86fc",
+                "displayName": "Claim Interest Amount",
+                "name": "Claim Interest Amount",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "5749d733-0790-472f-8a5a-bcfeb883636b",
+                "displayName": "Claim Capitation",
+                "name": "Claim Capitation",
+                "oid": null
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "base"
+}

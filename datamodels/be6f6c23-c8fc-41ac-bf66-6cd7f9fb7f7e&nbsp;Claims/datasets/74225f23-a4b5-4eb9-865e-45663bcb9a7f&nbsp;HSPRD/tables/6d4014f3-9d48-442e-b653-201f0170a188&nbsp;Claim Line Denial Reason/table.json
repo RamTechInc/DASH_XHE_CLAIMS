@@ -1,0 +1,99 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CLAIM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_ID",
+            "oid": "a903b4ad-5af1-49e9-a106-26fe451d1c45",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": true,
+            "id": "CLAIM_LINE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CLAIM_LINE",
+            "oid": "1cb35eac-871b-4846-adfa-d852920e5e20",
+            "precision": 0,
+            "scale": 0,
+            "size": 6,
+            "type": 16
+        },
+        {
+            "hidden": true,
+            "id": "LINE_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "LINE_ID",
+            "oid": "7914d3ad-20c5-49cb-9532-e5d1fe62c602",
+            "precision": 18,
+            "scale": 0,
+            "size": 18,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "DENIAL_CD",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "DENIAL_CD",
+            "oid": "058ddc33-2cb2-4316-85cd-27cdd402e9e2",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "DENIAL_REASON",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "DENIAL_REASON",
+            "oid": "34f250d0-7e48-41d5-b2e2-f96923f6d336",
+            "precision": 254,
+            "scale": 0,
+            "size": 254,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT \r\nCLAIM.CSV_CLM_ID AS CLAIM_ID,\r\nCLAIM.CSV_LN_NUM AS CLAIM_LINE,\r\nCLAIM.CSV_CLM_ID || ' ' || CLAIM.CSV_LN_NUM AS LINE_ID,\r\nERRMS.CMSG_ID AS DENIAL_CD,\r\nINITCAP(ERRMS.CMSG_DESC) AS DENIAL_REASON\r\n\r\nFROM       \tHS.CSV_CLM_SRV\t\tAS CLAIM\r\nJOIN        HS.CDT_CLM_DT       AS CDT ON CLAIM.CSV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nLEFT JOIN\tHS.CSER_CSV_ERROR\tAS LIERR ON CLAIM.CSV_CLM_ID = LIERR.CSER_CSV_CLM_ID AND CLAIM.CSV_LN_NUM = LIERR.CSER_CSV_LN_NUM AND LIERR.CSER_OVRID_CD IS NULL\r\nLEFT JOIN\tHS.CMSG_CLM_MSG\tAS ERRMS ON LIERR.CSER_CD  = ERRMS.CMSG_ID AND ERRMS.CMSG_SUS_DN_CD = 'D'\r\nWITH UR"
+    },
+    "dataset": "74225f23-a4b5-4eb9-865e-45663bcb9a7f",
+    "hidden": false,
+    "id": "tq_gqHi6TyZS",
+    "isMaterialized": false,
+    "name": "Claim Line Denial Reason",
+    "oid": "6d4014f3-9d48-442e-b653-201f0170a188",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "058ddc33-2cb2-4316-85cd-27cdd402e9e2",
+                "displayName": "Line Denial Code",
+                "name": "Line Denial Code",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "34f250d0-7e48-41d5-b2e2-f96923f6d336",
+                "displayName": "Line Denial Reason",
+                "name": "Line Denial Reason",
+                "oid": null
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "base"
+}

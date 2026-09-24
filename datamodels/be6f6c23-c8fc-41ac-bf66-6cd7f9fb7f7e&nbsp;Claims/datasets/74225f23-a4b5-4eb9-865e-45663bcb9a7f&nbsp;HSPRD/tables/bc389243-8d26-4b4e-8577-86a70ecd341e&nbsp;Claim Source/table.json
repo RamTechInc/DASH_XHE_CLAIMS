@@ -1,0 +1,104 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": true,
+            "id": "CEV_CLM_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CEV_CLM_ID",
+            "oid": "c81fc5c9-788d-4898-853c-f40f80ed17fe",
+            "precision": 0,
+            "scale": 0,
+            "size": 11,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "SOURCE_FORM",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "SOURCE_FORM",
+            "oid": "f5494b20-1d82-4913-a714-efe179ce1f83",
+            "precision": 7,
+            "scale": 0,
+            "size": 7,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "ORIGIN_USER_ID",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "ORIGIN_USER_ID",
+            "oid": "eab8e228-5948-41a8-ba35-d9c9149f7340",
+            "precision": 8,
+            "scale": 0,
+            "size": 8,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "ORIGIN_DATE",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "ORIGIN_DATE",
+            "oid": "06f4a22a-ea3a-4375-9153-60f48a6e15a2",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 31
+        }
+    ],
+    "configOptions": {
+        "importQuery": "SELECT DISTINCT\r\nCEV.CEV_CLM_ID,\r\nCASE\r\n\tWHEN LEFT(CEV.CEV_USER_ID,4) = 'EDI8' THEN 'EDI'\r\n\tWHEN LEFT(CEV.CEV_USER_ID,3) = 'OCR' THEN 'Paper'\r\n\tWHEN TRIM(CEV.CEV_USER_ID) = 'CONVERT' THEN 'Convert'\r\n\tELSE 'Manual'\r\nEND\t\t\t\t\t\tAS SOURCE_FORM,\r\nCEV.CEV_USER_ID             AS ORIGIN_USER_ID,\r\nCEV.CEV_EV_DT\t\t\t\tAS ORIGIN_DATE\r\n\r\nFROM HS.CEV_CLM_EV AS CEV\r\nJOIN        HS.CDT_CLM_DT       AS CDT ON CEV.CEV_CLM_ID = CDT.CDT_CLM_ID AND CDT.CDT_DT_QUAL = '050' AND CDT.CDT_DT >= CURRENT_DATE - 2 YEAR\r\nWHERE CEV.CEV_DEL_TS IS NULL\r\nAND CEV.CEV_ADD_TS = (SELECT CEV_ADD_TS FROM HS.CEV_CLM_EV WHERE CEV_CLM_ID = CEV.CEV_CLM_ID AND CEV_DEL_TS IS NULL ORDER BY CEV_ADD_TS ASC FETCH FIRST 1 ROWS ONLY WITH UR)\r\nWITH UR"
+    },
+    "dataset": "74225f23-a4b5-4eb9-865e-45663bcb9a7f",
+    "hidden": false,
+    "id": "tq_63aGoP2Fp",
+    "isMaterialized": false,
+    "name": "Claim Source",
+    "oid": "bc389243-8d26-4b4e-8577-86a70ecd341e",
+    "schemaName": "HSPRD",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "f5494b20-1d82-4913-a714-efe179ce1f83",
+                "displayName": "Claim Origin Form",
+                "name": "Claim Origin Form",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "06f4a22a-ea3a-4375-9153-60f48a6e15a2",
+                "displayName": "Origin Date",
+                "name": "Origin Date",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "eab8e228-5948-41a8-ba35-d9c9149f7340",
+                "displayName": "Claim Origin User ID",
+                "name": "Claim Origin User ID",
+                "oid": null
+            },
+            "type": "rename-column"
+        },
+        {
+            "arguments": {
+                "column": "c81fc5c9-788d-4898-853c-f40f80ed17fe",
+                "oid": null,
+                "type": 22
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}
